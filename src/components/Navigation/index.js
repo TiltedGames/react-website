@@ -19,7 +19,7 @@ import {
     NavigationButtonLink
 } from './NavigationElements';
 
-
+// takes in toggle parameters to open/close sidebar
 const NavigationBar = ({toggle}) => {
   return(
       <>

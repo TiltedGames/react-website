@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5326dec3-9647-4f82-be61-f55db75aae95" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/SidebarElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/SidebarElements.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Sidebar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +45,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1622396596730</updated>
-      <workItem from="1622396601453" duration="12349000" />
+      <workItem from="1622396601453" duration="13634000" />
     </task>
     <servers />
   </component>
