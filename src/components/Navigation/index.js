@@ -20,7 +20,7 @@ import {
 } from './NavigationElements';
 
 
-const NavigationBar = () => {
+const NavigationBar = ({toggle}) => {
   return(
       <>
         <Navigation>
@@ -29,7 +29,7 @@ const NavigationBar = () => {
                     Tilted Games
                 </NavigationLogo>
 
-                <MobileIcon>
+                <MobileIcon onClick={toggle}>
                     <FaBars />
                 </MobileIcon>
 

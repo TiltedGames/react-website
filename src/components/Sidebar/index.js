@@ -12,10 +12,10 @@ import {
 } from "./SidebarElements";
 import { FaGithubSquare } from "react-icons/fa";
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen, toggle }) => {
     return (
-        <SidebarContainer>
-            <SidebarIcon>
+        <SidebarContainer isOpen={isOpen } onClick={toggle}>
+            <SidebarIcon onClick={toggle}>
                 <SidebarCloseIcon />
             </SidebarIcon>
             <SidebarWrapper>

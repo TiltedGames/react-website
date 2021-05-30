@@ -1,14 +1,12 @@
 import './App.css';
-import NavigationBar from './components/Navigation';        // import navigation menus
-import Sidebar from './components/Sidebar';                 // import sidebar
 import { BrowserRouter as Router } from 'react-router-dom'; // import router for loading components
+import Home from './pages/index'                            // import home page
 
 // main app
 function App() {
   return (
     <Router>
-        <Sidebar />
-        <NavigationBar />
+        <Home />
     </Router>
   );
 }
