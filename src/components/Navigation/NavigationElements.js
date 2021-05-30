@@ -16,7 +16,7 @@ export const Navigation = styled.nav `
   top: 0;
   z-index: 10;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 768px) {
 
   }
 
@@ -47,7 +47,7 @@ export const NavigationLogo = styled(LinkRouter) `
 export const MobileIcon = styled.div `
   display:none;
   
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 768px) {
     display: block;
     position:absolute;
     top:0;
@@ -66,7 +66,7 @@ export const NavigationMenu = styled.ul `
   text-align: center;
   margin-right: -22px;
   
-  @media screen and (max-width:760px) {
+  @media screen and (max-width:768px) {
     display: none;
   }
 `
@@ -83,10 +83,6 @@ export const NavigationLinks = styled(LinkScroll) `
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
-
-  &.active {
-    border-bottom: 3px solid #01bf71;
-  }
 `
 
 export const NavigationButton = styled.nav `
@@ -98,7 +94,7 @@ export const NavigationButton = styled.nav `
   margin:0;
   padding:0;
   
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `
