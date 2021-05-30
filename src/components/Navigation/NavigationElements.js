@@ -49,7 +49,7 @@ export const MobileIcon = styled.div `
   
   @media screen and (max-width: 760px) {
     display: block;
-    position:absolute;;
+    position:absolute;
     top:0;
     right:0;
     transform: translate(-100%, 60%);
@@ -72,7 +72,7 @@ export const NavigationMenu = styled.ul `
 `
 
 export const NavigationItem = styled.li `
-  height: 80px;
+  height: 9vh;
 `
 
 export const NavigationLinks = styled(LinkScroll) `

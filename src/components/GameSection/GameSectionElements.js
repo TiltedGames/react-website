@@ -5,15 +5,16 @@ export const GameContainer = styled.div `
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 30px;
-  height: 1000px;
+  padding: 0;
+  margin:0;
+  height: calc(100vh - 80px);
   position: relative;
   z-index: 1;
 `
 
 export const GameBackground = styled.div `
   position: relative;
-  top:0;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
@@ -23,9 +24,13 @@ export const GameBackground = styled.div `
 `
 
 export const VideoBackground = styled.video `
-  width: 100%;
-  height: 100%;
+  backgroundPosition: center;
+  backgroundSize: cover;
+  backgroundRepeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
   -o-object-fit: cover;
   object-fit: cover;
+  
   background: #282828;
 `
