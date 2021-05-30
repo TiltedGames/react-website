@@ -3,12 +3,15 @@ import { Link as LinkRouter } from 'react-router-dom'
 import { Link as LinkScroll } from 'react-scroll'
 
 export const Navigation = styled.nav `
+  font-weight: bold;
+  
   background: #000;
   height: 80px;
   //margin-top:-80px;
   display: flex;
   justify-content: center;
-  align-item: 1rem;
+  align-items: center;
+  font-size: 1rem;
   position: sticky;
   top: 0;
   z-index: 10;

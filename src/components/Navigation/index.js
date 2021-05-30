@@ -1,5 +1,12 @@
 import React from 'react';
-import { FaBars, FaGithubSquare } from 'react-icons/fa'
+
+// import navigation icons (hamburger menu / github icons)
+import {
+    FaBars,
+    FaGithubSquare
+} from 'react-icons/fa'
+
+// import navigation components
 import {
     Navigation,
     NavigationContainer,
@@ -18,7 +25,9 @@ const NavigationBar = () => {
       <>
         <Navigation>
             <NavigationContainer>
-                <NavigationLogo to='/'>Tilted Games</NavigationLogo>
+                <NavigationLogo to='/'>
+                    Tilted Games
+                </NavigationLogo>
 
                 <MobileIcon>
                     <FaBars />
@@ -26,13 +35,19 @@ const NavigationBar = () => {
 
                 <NavigationMenu>
                     <NavigationItem>
-                        <NavigationLinks to='recoup'>Games</NavigationLinks>
+                        <NavigationLinks to='recoup'>
+                            Games
+                        </NavigationLinks>
                     </NavigationItem>
                     <NavigationItem>
-                        <NavigationLinks to='server'>Tools</NavigationLinks>
+                        <NavigationLinks to='server'>
+                            Tools
+                        </NavigationLinks>
                     </NavigationItem>
                     <NavigationItem>
-                        <NavigationLinks to='contact'>Get in Touch</NavigationLinks>
+                        <NavigationLinks to='contact'>
+                            Get in Touch
+                        </NavigationLinks>
                     </NavigationItem>
                 </NavigationMenu>
 
