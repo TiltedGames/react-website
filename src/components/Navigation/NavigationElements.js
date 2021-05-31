@@ -48,6 +48,10 @@ export const NavigationLogo = styled(LinkRouter) `
   margin-left: 24px;
   font-weight: bold;
   text-decoration: none;
+  border:1px solid #ddd;
+  margin-top: 20px;
+  padding: 5px 10px;
+  height:50%;
 `
 
 export const MobileIcon = styled.div `

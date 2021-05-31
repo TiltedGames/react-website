@@ -2,14 +2,14 @@ import styled from 'styled-components'
 import { Link } from 'react-scroll'
 import {MdArrowForward, MdKeyboardArrowRight} from "react-icons/all";
 
-const lightButtonBG = '#0c0f38';
-const lightButtonText = '#fdd430';
-const lightButtonHoverBG = '#fdd430';
-const lightButtonHoverText = '#0c0f38';
+const lightButtonBG = '#000';
+const lightButtonText = '#fff';
+const lightButtonHoverBG = '#fff';
+const lightButtonHoverText = '#000';
 
 const darkButtonBG = '#fff';
-const darkButtonText = '#0c0f38';
-const darkButtonHoverBG = '#0c0f38';
+const darkButtonText = '#000';
+const darkButtonHoverBG = '#000';
 const darkButtonHoverText = '#fff';
 
 const bigButtonPadding = '14px 48px';
@@ -96,11 +96,11 @@ export const OSIcon = styled.li `
   height:100%;
   margin:10px;
   padding:10px;
-  color: #0c0f38;
+  color: #000;
   
   &:hover {
-    background: #0c0f38;
-    color:#ddd;
+    background: #000;
+    color:#fff;
   }
 `
 

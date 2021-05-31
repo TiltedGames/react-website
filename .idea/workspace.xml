@@ -5,10 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ButtonElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ButtonElement.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/GameSection/GameSectionElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameSection/GameSectionElements.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GameSection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameSection/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigation/NavigationElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/NavigationElements.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/SidebarElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/SidebarElements.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +48,7 @@
       <updated>1622396596730</updated>
       <workItem from="1622396601453" duration="24150000" />
       <workItem from="1622437735115" duration="49000" />
+      <workItem from="1622446178808" duration="1190000" />
     </task>
     <servers />
   </component>

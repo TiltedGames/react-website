@@ -6,7 +6,7 @@ export const GameContainer = styled.div `
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0;
+  padding:0;
   margin-top: -80px;
   height: 100vh;
   position: relative;
@@ -47,7 +47,9 @@ export const GameHeader = styled.h1 `
   font-size: 48px;
   text-align: center;
   position:fixed;
-  top: 10vh;
+  top: 20vh;
+  padding:10px 10px;
+  border:1px solid #ddd;
   
   @media screen and (max-width: 768px) {
     font-size: 40px;
@@ -64,6 +66,7 @@ export const GameP = styled.p `
   font-size: 24px;
   text-align: center;
   max-width: 600px;
+  padding:20px 5px;
 
   @media screen and (max-width: 768px) {
     font-size: 24px;
