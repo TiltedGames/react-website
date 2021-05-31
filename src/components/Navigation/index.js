@@ -11,6 +11,7 @@ import {
     Navigation,
     NavigationContainer,
     NavigationLogo,
+    NavigationLogoLink,
     MobileIcon,
     NavigationMenu,
     NavigationItem,
@@ -25,9 +26,9 @@ const NavigationBar = ({toggle}) => {
       <>
         <Navigation>
             <NavigationContainer>
-                <NavigationLogo to='/'>
-                    Tilted Games
-                </NavigationLogo>
+                <NavigationLogoLink to='/'>
+                    <NavigationLogo />
+                </NavigationLogoLink>
 
                 <MobileIcon onClick={toggle}>
                     <FaBars />

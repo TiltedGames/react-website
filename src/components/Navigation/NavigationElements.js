@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { Link as LinkRouter } from 'react-router-dom'
 import { Link as LinkScroll } from 'react-scroll'
+import smallLogoImage from '../../img/text-logo-small.png';
 
 export const Navigation = styled.nav `
   font-weight: bold;
@@ -38,7 +39,7 @@ export const NavigationContainer = styled.div `
   max-width: 1100px;
 `
 
-export const NavigationLogo = styled(LinkRouter) `
+export const NavigationLogoLink = styled(LinkRouter) `
   color: #fff;
   justify-self: flex-start;
   cursor: pointer;
@@ -48,10 +49,13 @@ export const NavigationLogo = styled(LinkRouter) `
   margin-left: 24px;
   font-weight: bold;
   text-decoration: none;
-  border:1px solid #ddd;
-  margin-top: 20px;
-  padding: 5px 10px;
-  height:50%;
+`
+
+export const NavigationLogo = styled.div `
+  background-image: url(${smallLogoImage});
+  border: 1px solid #fff;
+  width: 166px;
+  height: 60px;
 `
 
 export const MobileIcon = styled.div `
