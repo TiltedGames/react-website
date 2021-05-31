@@ -8,18 +8,27 @@ import {
     GameHeader,
     GameContent,
     GameP,
-    GameButtonWrapper,
-    ArrowForward,
-    ArrowRight
 } from "./GameSectionElements";
 // import button
-import { Button } from '../ButtonElement';
+import {
+    GameButtonWrapper,
+    ArrowForward,
+    ArrowRight,
+    OSIcons,
+    OSIcon,
+    DownloadButton
+} from '../ButtonElement';
+import {
+    FaApple,
+    FaLinux,
+    FaWindows
+} from "react-icons/all";
 
 const GameSection = () => {
     const [hover, setHover] = useState(false)
 
     const onHover = () => {
-        setHover(hover)
+        setHover(!hover)
     }
 
     return (
@@ -34,17 +43,23 @@ const GameSection = () => {
                 <GameP>
                     Recoup is still early in development. Stay tuned for more updates!
                 </GameP>
-                <GameButtonWrapper>
-                    <a href='https://github.com/TiltedGames/'>
-                        <Button
-                            onMouseEnter={onHover}
-                            onMouseLeave={onHover}
-                            light='true'
-                            big='true'
-                        >
-                            Download (Alpha) { hover ? <ArrowForward /> : <ArrowRight /> }
-                        </Button>
-                    </a>
+                <GameButtonWrapper
+                    onMouseEnter={onHover}
+                    onMouseLeave={onHover}
+                >
+                    <DownloadButton
+                        light='true'
+                        big='true'
+                    >
+                        Download (Alpha) { hover ? <ArrowForward /> : <ArrowRight /> }
+                    </DownloadButton>
+                    { hover &&
+                    <OSIcons>
+                        <a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Windows).zip"><OSIcon><FaWindows size={50} /></OSIcon></a>
+                        <a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(macOS).zip"><OSIcon><FaApple size={50} /></OSIcon></a>
+                        <a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Linux).zip"><OSIcon><FaLinux size={50} /></OSIcon></a>
+                    </OSIcons>
+                    }
                 </GameButtonWrapper>
             </GameContent>
         </GameContainer>

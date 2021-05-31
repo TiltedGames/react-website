@@ -15,8 +15,8 @@ import { FaGithubSquare } from "react-icons/fa";
 // takes in isOpen/toggle parameters to open/close
 const Sidebar = ({ isOpen, toggle }) => {
     return (
-        <SidebarContainer isOpen={isOpen } onClick={toggle}>
-            <SidebarIcon onClick={toggle}>
+        <SidebarContainer isOpen={ isOpen } onClick={ toggle }>
+            <SidebarIcon onClick={ toggle }>
                 <SidebarCloseIcon />
             </SidebarIcon>
             <SidebarWrapper>

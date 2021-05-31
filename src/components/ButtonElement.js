@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-scroll'
+import {MdArrowForward, MdKeyboardArrowRight} from "react-icons/all";
 
 const lightButtonBG = '#0c0f38';
 const lightButtonText = '#fdd430';
@@ -27,7 +28,6 @@ export const Button = styled(Link) `
   border: none;
   cursor: pointer;
   
-  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,3 +41,69 @@ export const Button = styled(Link) `
     color:${({ light }) => (light ? darkButtonHoverText : lightButtonHoverText)};
   }
 `
+
+export const GameButtonWrapper = styled.div `
+  position: fixed;
+  bottom: 10vh;
+`
+
+export const ArrowForward = styled(MdArrowForward) `
+  margin-left: 8px;
+  font-size: 20px;
+`
+
+export const ArrowRight = styled(MdKeyboardArrowRight) `
+  margin-left: 8px;
+  font-size: 20px;
+`
+
+export const DownloadButton = styled.div `
+  background: ${({ light }) => (light ? darkButtonBG : lightButtonBG)};
+  color:${({ light }) => (light ? darkButtonText : lightButtonText)};
+  padding: ${({ big }) => (big ? bigButtonPadding : smallButtonPadding)};
+  font-size: ${({ big }) => (big ? bigFontSize : smallFontSize)};
+  white-space: nowrap;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: ${({ light }) => (light ? darkButtonHoverBG : lightButtonHoverBG)};
+    color:${({ light }) => (light ? darkButtonHoverText : lightButtonHoverText)};
+  }
+`
+
+export const OSIcons = styled.ul `
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  padding:0;
+  height:100%;
+  margin:0;
+  background: #fff;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+`
+
+export const OSIcon = styled.li `
+  display:inline-flex;
+  height:100%;
+  margin:10px;
+  padding:10px;
+  color: #0c0f38;
+  
+  &:hover {
+    background: #0c0f38;
+    color:#ddd;
+  }
+`
+
+// create styled list that pops out on button click
+
+// image links are hard coded

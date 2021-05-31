@@ -78,7 +78,7 @@ export const NavigationMenu = styled.ul `
 `
 
 export const NavigationItem = styled.li `
-  height: 9vh;
+  height: 10vh;
 `
 
 export const NavigationLinks = styled(LinkScroll) `

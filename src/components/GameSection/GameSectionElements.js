@@ -73,19 +73,3 @@ export const GameP = styled.p `
     font-size: 18px;
   }
 `
-
-export const GameButtonWrapper = styled.div `
-  margin-top: 32px;
-  position: fixed;
-  bottom: 10vh;
-`
-
-export const ArrowForward = styled(MdArrowForward) `
-  margin-left: 8px;
-  font-size: 20px;
-`
-
-export const ArrowRight = styled(MdKeyboardArrowRight) `
-  margin-left: 8px;
-  font-size: 20px;
-`
