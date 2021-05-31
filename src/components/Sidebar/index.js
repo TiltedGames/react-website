@@ -8,7 +8,7 @@ import {
     SidebarMenu,
     SidebarButtonWrap,
     SidebarLink,
-    SidebarRoute
+    SidebarGithubLink
 } from "./SidebarElements";
 import { FaGithubSquare } from "react-icons/fa";
 
@@ -32,9 +32,9 @@ const Sidebar = ({ isOpen, toggle }) => {
                     </SidebarLink>
                 </SidebarMenu>
                 <SidebarButtonWrap>
-                    <SidebarRoute to='/'>
+                    <SidebarGithubLink href='https://github.com/TiltedGames/'>
                         <FaGithubSquare size={50} />
-                    </SidebarRoute>
+                    </SidebarGithubLink>
                 </SidebarButtonWrap>
             </SidebarWrapper>
         </SidebarContainer>

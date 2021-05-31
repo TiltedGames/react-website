@@ -52,7 +52,7 @@ const NavigationBar = ({toggle}) => {
                 </NavigationMenu>
 
                 <NavigationButton>
-                    <NavigationButtonLink>
+                    <NavigationButtonLink href='https://github.com/TiltedGames/'>
                         <FaGithubSquare />
                     </NavigationButtonLink>
                 </NavigationButton>

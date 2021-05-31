@@ -72,7 +72,7 @@ export const SidebarButtonWrap = styled.div `
   justify-content: center;
 `
 
-export const SidebarRoute = styled(LinkRouter) `
+export const SidebarGithubLink = styled.a`
   margin:0;
   padding:0;
   color:#fff;

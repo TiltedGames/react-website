@@ -15,12 +15,14 @@ export const Navigation = styled.nav `
   position: sticky;
   top: 0;
   z-index: 10;
+  transition: all 0.2s ease-in-out;
 
   @media screen and (max-width: 768px) {
 
   }
   
   &:hover {
+    transition: all 0.2s ease-in-out;
     background: #000;
   }
 
@@ -103,7 +105,7 @@ export const NavigationButton = styled.nav `
   }
 `
 
-export const NavigationButtonLink = styled(LinkRouter) `
+export const NavigationButtonLink = styled.a `
   margin:0;
   padding:5px 5px 0 5px;
   color:#fff;

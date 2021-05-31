@@ -35,15 +35,16 @@ const GameSection = () => {
                     Recoup is still early in development. Stay tuned for more updates!
                 </GameP>
                 <GameButtonWrapper>
-                    <Button
-                        to='download'
-                        onMouseEnter={onHover}
-                        onMouseLeave={onHover}
-                        light='true'
-                        big='true'
-                    >
-                        Download (Alpha) { hover ? <ArrowForward /> : <ArrowRight /> }
-                    </Button>
+                    <a href='https://github.com/TiltedGames/'>
+                        <Button
+                            onMouseEnter={onHover}
+                            onMouseLeave={onHover}
+                            light='true'
+                            big='true'
+                        >
+                            Download (Alpha) { hover ? <ArrowForward /> : <ArrowRight /> }
+                        </Button>
+                    </a>
                 </GameButtonWrapper>
             </GameContent>
         </GameContainer>
