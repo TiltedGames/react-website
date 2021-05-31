@@ -36,17 +36,17 @@ const NavigationBar = ({toggle}) => {
 
                 <NavigationMenu>
                     <NavigationItem>
-                        <NavigationLinks to='recoup'>
+                        <NavigationLinks to='/'>
                             Games
                         </NavigationLinks>
                     </NavigationItem>
                     <NavigationItem>
-                        <NavigationLinks to='server'>
+                        <NavigationLinks to='/tools'>
                             Tools
                         </NavigationLinks>
                     </NavigationItem>
                     <NavigationItem>
-                        <NavigationLinks to='contact'>
+                        <NavigationLinks to='/contact'>
                             Get in Touch
                         </NavigationLinks>
                     </NavigationItem>

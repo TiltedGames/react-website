@@ -65,22 +65,29 @@ export const ArrowDown = styled(MdKeyboardArrowDown) `
 
         END SECTION: ALL BUTTONS
 
+
+
+
+
+
+
         BEGIN SECTION: GAME DOWNLOAD BUTTONS
 
  */
 
 export const OSIcons = styled.ul `
-  justify-content: space-between;
+  justify-content: right;
   z-index: 1;
-  padding:10px;
-  height:100%;
-  margin:0;
-  background: ${ osIconsBg };
+  height: 5vh;
+  min-height:60px;
   align-items: center;
   list-style: none;
   text-align: center;
   display: flex;
+  margin-top: min(-5vh, -60px);
+  padding: 0 100%;
   visibility: hidden;
+  transition: all 0.2s ease-in-out;
 `
 
 export const WinIcon = styled(FaWindows) `
@@ -90,20 +97,23 @@ export const WinIcon = styled(FaWindows) `
 `
 
 export const MacIcon = styled(FaApple) `
-  margin:10px;
-  padding:5px;
+  margin: 10px;
+  padding: 5px;
   color: ${ osIconsColor };
 `
 
 export const LinIcon = styled(FaLinux) `
-  margin:10px;
-  padding:5px;
+  margin: 10px;
+  padding: 5px;
   color: ${ osIconsColor };
 `
 
 export const WinIconWrapper = styled.li `
-  display:inline-flex;
+  display: inline-flex;
   height: 100%;
+  align-items: center;
+  width: 68px;
+  background: ${ osIconsBg };
 
   &:hover {
     background: ${ osIconsHoverBg };
@@ -117,7 +127,9 @@ export const WinIconWrapper = styled.li `
 export const MacIconWrapper = styled.li `
   display:inline-flex;
   height: 100%;
-
+  align-items: center;
+  background: ${ osIconsBg };
+  
   &:hover {
     background: ${ osIconsHoverBg };
 
@@ -130,6 +142,8 @@ export const MacIconWrapper = styled.li `
 export const LinIconWrapper = styled.li `
   display:inline-flex;
   height: 100%;
+  align-items: center;
+  background: ${ osIconsBg };
 
   &:hover {
     background: ${ osIconsHoverBg };
@@ -153,13 +167,14 @@ export const DownloadButton = styled.div `
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.2s ease-in-out;
+  height: 5vh;
+  min-height:60px;
 `
 
 // for all buttons, sets button heights to 10% of the visible viewport (10vh)
 export const DownloadButtonWrapper = styled.div `
   position: fixed;
-  bottom: 10vh;
+  bottom: 15vh;
   
   &:hover {
     ${ OSIcons } {
@@ -176,6 +191,11 @@ export const DownloadButtonWrapper = styled.div `
 /*
 
         END SECTION: GAME DOWNLOAD BUTTONS
+
+
+
+
+
 
         BEGIN SECTION: CONTACT FORM BUTTONS
 

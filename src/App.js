@@ -1,12 +1,24 @@
 import './App.css';
-import { BrowserRouter as Router } from 'react-router-dom'; // import router for loading components
-import Home from './pages/index'                            // import home page
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'; // import router for loading components
+import Home from './pages/index.js';
+import Tools from './pages/tools.js';
+import Contact from './pages/contact.js';
 
 // main app
 function App() {
   return (
     <Router>
-        <Home />
+        <Switch>
+            <Route exact path='/'>
+                <Home />
+            </Route>
+            <Route path='/tools'>
+                <Tools />
+            </Route>
+            <Route path='/contact'>
+                <Contact />
+            </Route>
+        </Switch>
     </Router>
   );
 }

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { Link as LinkRouter } from 'react-router-dom'
-import { Link as LinkScroll } from 'react-scroll'
+import { NavLink as LinkRouter } from 'react-router-dom'
+//import { Link as LinkScroll } from 'react-scroll'
 import smallLogoImage from '../../img/text-logo-small.png';
 
 export const Navigation = styled.nav `
@@ -88,7 +88,7 @@ export const NavigationItem = styled.li `
   height: 10vh;
 `
 
-export const NavigationLinks = styled(LinkScroll) `
+export const NavigationLinks = styled(LinkRouter) `
   color: #fff;
   display: flex;
   align-items: center;

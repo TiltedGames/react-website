@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5326dec3-9647-4f82-be61-f55db75aae95" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/ToolsSection/ToolsSectionElements.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ToolsSection/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/contact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ButtonElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ButtonElements.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContactSection/GameSectionElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactSection/ContactSectionElements.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContactSection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactSection/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/GameSection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameSection/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/NavigationElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/NavigationElements.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +31,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="1tGXr5llDs0iH5nlT7XonoDG6ys" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -31,7 +44,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/ContactSection" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -39,8 +52,20 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\noahc\Desktop\react-website\src\components" />
+      <recent name="C:\Users\noahc\Desktop\react-website\src\pages" />
       <recent name="C:\Users\noahc\Desktop\react-website\src\components\ContactSection" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="tools.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/pages/tools.js" working-dir="$PROJECT_DIR$/src/pages">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.tools.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -53,7 +78,7 @@
       <workItem from="1622396601453" duration="24150000" />
       <workItem from="1622437735115" duration="49000" />
       <workItem from="1622446178808" duration="1190000" />
-      <workItem from="1622479036413" duration="12015000" />
+      <workItem from="1622479036413" duration="19934000" />
     </task>
     <servers />
   </component>

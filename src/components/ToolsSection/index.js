@@ -2,13 +2,13 @@ import React, { useState } from 'react'
 import Video from '../../video/video.mp4'   // import background video
 // import game section elements
 import {
-    ContactContainer,
-    ContactBackground,
+    ToolsContainer,
+    ToolsBackground,
     VideoBackground,
-    ContactHeader,
-    ContactContent,
-    ContactP
-} from "./ContactSectionElements";
+    ToolsHeader,
+    ToolsContent,
+    ToolsP
+} from "./ToolsSectionElements";
 // import button
 import {
     ButtonWrapper,
@@ -17,7 +17,7 @@ import {
     SendButton
 } from '../ButtonElements';
 
-const ContactSection = () => {
+const ToolsSection = () => {
     const [hover, setHover] = useState(false)
 
     const onHover = () => {
@@ -25,17 +25,17 @@ const ContactSection = () => {
     }
 
     return (
-        <ContactContainer>
-            <ContactBackground>
+        <ToolsContainer>
+            <ToolsBackground>
                 <VideoBackground autoPlay loop muted src={Video} type='video/mp4' />
-            </ContactBackground>
-            <ContactContent>
-                <ContactHeader>
-                    Contact
-                </ContactHeader>
-                <ContactP>
+            </ToolsBackground>
+            <ToolsContent>
+                <ToolsHeader>
+                    Tools
+                </ToolsHeader>
+                <ToolsP>
                     Recoup is still early in development. Stay tuned for more updates!
-                </ContactP>
+                </ToolsP>
                 <ButtonWrapper
                     onMouseEnter={onHover}
                     onMouseLeave={onHover}
@@ -47,9 +47,9 @@ const ContactSection = () => {
                         Send { hover ? <ArrowForward /> : <ArrowRight /> }
                     </SendButton>
                 </ButtonWrapper>
-            </ContactContent>
-        </ContactContainer>
+            </ToolsContent>
+        </ToolsContainer>
     );
 }
 
-export default ContactSection;
+export default ToolsSection;

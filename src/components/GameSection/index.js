@@ -20,7 +20,7 @@ import {
     WinIcon,
     MacIcon,
     LinIcon,
-    DownloadButton
+    DownloadButton, ArrowForward, ArrowRight
 } from '../ButtonElements';
 
 const GameSection = () => {
@@ -50,7 +50,7 @@ const GameSection = () => {
                         light={ hover ? 'true' : 'false' }
                         big='true'
                     >
-                        Download (Alpha) <ArrowDown />
+                        Download (Alpha) { hover ? <ArrowForward /> : <ArrowRight /> }
                     </DownloadButton>
                     <OSIcons
                         show={ hover ? 'true' : 'false' }
