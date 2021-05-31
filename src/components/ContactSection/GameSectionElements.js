@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { MdArrowForward, MdKeyboardArrowRight } from "react-icons/all";
 
-export const GameContainer = styled.div `
+export const ContactContainer = styled.div `
   background: #0c0c0c;
   display: flex;
   justify-content: center;
@@ -23,7 +24,7 @@ export const GameContainer = styled.div `
   }
 `
 
-export const GameBackground = styled.div `
+export const ContactBackground = styled.div `
   position: relative;
   top: 0;
   right: 0;
@@ -42,7 +43,7 @@ export const VideoBackground = styled.video `
   background: #282828;
 `
 
-export const GameContent = styled.div `
+export const ContactContent = styled.div `
   z-index: 3;
   max-width: 1200px;
   position: absolute;
@@ -52,7 +53,7 @@ export const GameContent = styled.div `
   align-items: center;
 `
 
-export const GameHeader = styled.h1 `
+export const ContactHeader = styled.h1 `
   color: #fff;
   font-size: 48px;
   text-align: center;
@@ -70,7 +71,7 @@ export const GameHeader = styled.h1 `
   }
 `
 
-export const GameP = styled.p `
+export const ContactP = styled.p `
   margin: 96px 0;
   color: #fff;
   font-size: 24px;
