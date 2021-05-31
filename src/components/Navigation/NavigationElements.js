@@ -5,7 +5,7 @@ import { Link as LinkScroll } from 'react-scroll'
 export const Navigation = styled.nav `
   font-weight: bold;
   
-  background: #000;
+  background: transparent;
   height: 80px;
   //margin-top:-80px;
   display: flex;
@@ -18,6 +18,10 @@ export const Navigation = styled.nav `
 
   @media screen and (max-width: 768px) {
 
+  }
+  
+  &:hover {
+    background: #000;
   }
 
 `

@@ -7,8 +7,8 @@ export const GameContainer = styled.div `
   justify-content: center;
   align-items: center;
   padding: 0;
-  margin:0;
-  height: calc(100vh - 80px);
+  margin-top: -80px;
+  height: 100vh;
   position: relative;
   z-index: 1;
 `
