@@ -14,7 +14,9 @@ import {
     DownloadButtonWrapper,
     ArrowDown,
     OSIcons,
-    OSIcon,
+    WinIconWrapper,
+    MacIconWrapper,
+    LinIconWrapper,
     WinIcon,
     MacIcon,
     LinIcon,
@@ -53,9 +55,9 @@ const GameSection = () => {
                     <OSIcons
                         show={ hover ? 'true' : 'false' }
                     >
-                        <OSIcon><a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Windows).zip"><WinIcon size={50} /></a></OSIcon>
-                        <OSIcon><a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(macOS).zip"><MacIcon size={50} /></a></OSIcon>
-                        <OSIcon><a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Linux).zip"><LinIcon size={50} /></a></OSIcon>
+                        <WinIconWrapper><a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Windows).zip"><WinIcon size={48} /></a></WinIconWrapper>
+                        <MacIconWrapper><a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(macOS).zip"><MacIcon size={48} /></a></MacIconWrapper>
+                        <LinIconWrapper><a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Linux).zip"><LinIcon size={48} /></a></LinIconWrapper>
                     </OSIcons>
                 </DownloadButtonWrapper>
             </GameContent>

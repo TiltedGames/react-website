@@ -3,9 +3,8 @@ import { Link } from 'react-scroll'
 import {
     FaWindows,
     FaApple,
-    FaLinux, MdArrowDropDown, MdKeyboardArrowDown
-} from "react-icons/all";
-import {
+    FaLinux,
+    MdKeyboardArrowDown,
     MdArrowForward,
     MdKeyboardArrowRight
 } from "react-icons/all";
@@ -14,6 +13,11 @@ const buttonBG = '#fff';
 const buttonText = '#000';
 const buttonHoverBG = '#fff';
 const buttonHoverText = '#000';
+
+const downloadButtonBg = '#fff';
+const downloadButtonText = '#000';
+const downloadButtonHoverBg = '#fff';
+const downloadButtonHoverText = '#000';
 
 const bigButtonPadding = '14px 48px';
 const smallButtonPadding = '12px 30px';
@@ -68,63 +72,78 @@ export const ArrowDown = styled(MdKeyboardArrowDown) `
 export const OSIcons = styled.ul `
   justify-content: space-between;
   z-index: 1;
-  padding:0;
+  padding:10px;
   height:100%;
   margin:0;
-  background: ${ osIconsBg }
+  background: ${ osIconsBg };
   align-items: center;
   list-style: none;
   text-align: center;
-  background: #fff;
   display: flex;
   visibility: hidden;
 `
 
-export const OSIcon = styled.li `
-  display:inline-flex;
-  height: 100%;
-`
-
 export const WinIcon = styled(FaWindows) `
   margin: 10px;
-  padding: 10px;
-  background: transparent;
-  color: #000;
-  
-  &:hover {
-    background: #000;
-    color:#fff;
-  }
+  padding: 5px;
+  color: ${ osIconsColor };
 `
 
 export const MacIcon = styled(FaApple) `
   margin:10px;
-  padding:10px;
-  background: transparent;
-  color: #000;
-  
-  &:hover {
-    background: #000;
-    color:#fff;
-  }
+  padding:5px;
+  color: ${ osIconsColor };
 `
 
 export const LinIcon = styled(FaLinux) `
   margin:10px;
-  padding:10px;
-  background: transparent;
-  color: #000;
-  
+  padding:5px;
+  color: ${ osIconsColor };
+`
+
+export const WinIconWrapper = styled.li `
+  display:inline-flex;
+  height: 100%;
+
   &:hover {
-    background: #000;
-    color:#fff;
+    background: ${ osIconsHoverBg };
+
+    ${ WinIcon } {
+      color: ${ osIconsHoverColor };
+    }
+  }
+`
+
+export const MacIconWrapper = styled.li `
+  display:inline-flex;
+  height: 100%;
+
+  &:hover {
+    background: ${ osIconsHoverBg };
+
+    ${ MacIcon } {
+      color: ${ osIconsHoverColor };
+    }
+  }
+`
+
+export const LinIconWrapper = styled.li `
+  display:inline-flex;
+  height: 100%;
+
+  &:hover {
+    background: ${ osIconsHoverBg };
+    
+    ${ LinIcon } {
+      color: ${ osIconsHoverColor };
+    }
   }
 `
 
 // download button for game section, expands with OS icons
 export const DownloadButton = styled.div `
-  background: #fff;
-  color: #000;
+  color: ${ downloadButtonText };
+  background: ${ downloadButtonBg };
   padding: ${ ({ big }) => (big ? bigButtonPadding : smallButtonPadding) };
   font-size: ${ ({ big }) => (big ? bigFontSize : smallFontSize) };
   white-space: nowrap;
@@ -145,6 +164,11 @@ export const DownloadButtonWrapper = styled.div `
   &:hover {
     ${ OSIcons } {
       visibility: visible;
+    }
+
+    ${ DownloadButton } {
+      background: ${ downloadButtonHoverBg };
+      color: ${ downloadButtonHoverText };
     }
   }
 `
@@ -178,6 +202,8 @@ export const SendButton = styled.div `
   }
 `
 
-// create styled list that pops out on button click
+/*
 
-// image links are hard coded
+        END SECTION: CONTACT FORM BUTTONS
+
+ */
