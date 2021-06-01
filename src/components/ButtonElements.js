@@ -76,18 +76,19 @@ export const ArrowDown = styled(MdKeyboardArrowDown) `
  */
 
 export const OSIcons = styled.ul `
-  justify-content: right;
+  justify-content: space-around;
   z-index: 1;
   height: 5vh;
-  min-height:60px;
+  min-height:90px;
   align-items: center;
   list-style: none;
   text-align: center;
   display: flex;
-  margin-top: min(-5vh, -60px);
-  padding: 0 100%;
+  width: 100%;
+  margin-top: max(-5vh, -88px);
   visibility: hidden;
   transition: all 0.2s ease-in-out;
+  background: ${ osIconsBg };
 `
 
 export const WinIcon = styled(FaWindows) `
@@ -110,11 +111,11 @@ export const LinIcon = styled(FaLinux) `
 
 export const WinIconWrapper = styled.li `
   display: inline-flex;
-  height: 100%;
   align-items: center;
   width: 68px;
   background: ${ osIconsBg };
-
+  border-radius: 100px;
+  
   &:hover {
     background: ${ osIconsHoverBg };
 
@@ -126,9 +127,9 @@ export const WinIconWrapper = styled.li `
 
 export const MacIconWrapper = styled.li `
   display:inline-flex;
-  height: 100%;
   align-items: center;
   background: ${ osIconsBg };
+  border-radius: 100px;
   
   &:hover {
     background: ${ osIconsHoverBg };
@@ -141,9 +142,9 @@ export const MacIconWrapper = styled.li `
 
 export const LinIconWrapper = styled.li `
   display:inline-flex;
-  height: 100%;
   align-items: center;
   background: ${ osIconsBg };
+  border-radius: 100px;
 
   &:hover {
     background: ${ osIconsHoverBg };
@@ -168,7 +169,7 @@ export const DownloadButton = styled.div `
   justify-content: center;
   align-items: center;
   height: 5vh;
-  min-height:60px;
+  min-height:90px;
 `
 
 // for all buttons, sets button heights to 10% of the visible viewport (10vh)
@@ -179,6 +180,7 @@ export const DownloadButtonWrapper = styled.div `
   &:hover {
     ${ OSIcons } {
       visibility: visible;
+      margin-top: 0;
     }
 
     ${ DownloadButton } {

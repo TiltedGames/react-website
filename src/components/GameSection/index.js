@@ -42,25 +42,25 @@ const GameSection = () => {
                 <GameP>
                     Recoup is still early in development. Stay tuned for more updates!
                 </GameP>
-                <DownloadButtonWrapper
-                    onMouseEnter={ onHover }
-                    onMouseLeave={ onHover }
-                >
-                    <DownloadButton
-                        light={ hover ? 'true' : 'false' }
-                        big='true'
-                    >
-                        Download (Alpha) { hover ? <ArrowForward /> : <ArrowRight /> }
-                    </DownloadButton>
-                    <OSIcons
-                        show={ hover ? 'true' : 'false' }
-                    >
-                        <WinIconWrapper><a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Windows).zip"><WinIcon size={48} /></a></WinIconWrapper>
-                        <MacIconWrapper><a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(macOS).zip"><MacIcon size={48} /></a></MacIconWrapper>
-                        <LinIconWrapper><a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Linux).zip"><LinIcon size={48} /></a></LinIconWrapper>
-                    </OSIcons>
-                </DownloadButtonWrapper>
             </GameContent>
+            <DownloadButtonWrapper
+                onMouseEnter={ onHover }
+                onMouseLeave={ onHover }
+            >
+                <DownloadButton
+                    light={ hover ? 'true' : 'false' }
+                    big='true'
+                >
+                    Download (Alpha) { hover ? <ArrowForward /> : <ArrowRight /> }
+                </DownloadButton>
+                <OSIcons
+                    show={ hover ? 'true' : 'false' }
+                >
+                    <WinIconWrapper><a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Windows).zip"><WinIcon size={48} /></a></WinIconWrapper>
+                    <MacIconWrapper><a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(macOS).zip"><MacIcon size={48} /></a></MacIconWrapper>
+                    <LinIconWrapper><a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Linux).zip"><LinIcon size={48} /></a></LinIconWrapper>
+                </OSIcons>
+            </DownloadButtonWrapper>
         </GameContainer>
     );
 }
