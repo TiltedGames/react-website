@@ -2,119 +2,154 @@ import React from 'react';
 import {
     RoundLogo,
     GithubIcon,
-    NavBarWrapper,
-    NavBar,
-    NavSection,
-    NavSubitems,
-    NavSubitemContent,
-    LinkText,
-    SelectionCaret,
-    AltSelectionCaret,
-    GithubSelectionCaret,
-    TextLinkWrapper,
+    Wrapper,
+    Bar,
+    Page,
+    GithubPage,
+    SubpageLinks,
+    SubpageLink,
+    Label,
+    Caret,
+    HomeCaret,
+    GithubCaret,
+    LinkWrapper,
     GithubPageLinkWrapper,
     GithubPageLink
 } from './NavigationElements';
 
 const NavigationBar = ({ toggle }) => { return(<>
+
     {/* Wrapper for the navigation bar (for position control) */}
-    <NavBarWrapper>
+    <Wrapper>
+
         {/* [UL] Navigation bar implemented */}
-        <NavBar>
+        <Bar>
 
             {/* [LI] Tilted Games (logo) section */}
-            <NavSection>
+            <Page>
                 {/* [IMG] */}
-                <AltSelectionCaret />
+                <HomeCaret />
                 {/* [IMG] */}
                 <RoundLogo />
-            </NavSection>
+            </Page>
 
             {/* [LI] Recoup section */}
-            <NavSection>
+            <Page>
                 {/* [DIV] (white vertical line) */}
-                <TextLinkWrapper>
+                <LinkWrapper>
+
                     {/* [IMG] */}
-                    <SelectionCaret />
-                    {/* [P] */}
-                    <LinkText>Recoup</LinkText>
+                    <Caret />
+                    {/* [LABEL] */}
+                    <Label>Recoup</Label>
+
                     {/* [UL] Subpage links */}
-                    <NavSubitems>
+                    <SubpageLinks>
                         {/* [LI] */}
-                        <NavSubitemContent>Concept Art</NavSubitemContent>
+                        <SubpageLink>
+                            {/* [LABEL] */}
+                            <Label>Concept Art</Label>
+                        </SubpageLink>
+
                         {/* [LI] */}
-                        <NavSubitemContent>Download</NavSubitemContent>
-                    </NavSubitems>
-                </TextLinkWrapper>
-            </NavSection>
+                        <SubpageLink>
+                            {/* [LABEL] */}
+                            <Label>Download</Label>
+                        </SubpageLink>
+                    </SubpageLinks>
+
+                </LinkWrapper>
+            </Page>
 
             {/* [LI] Game server section */}
-            <NavSection>
+            <Page>
                 {/* [DIV] (white vertical line) */}
-                <TextLinkWrapper>
+                <LinkWrapper>
+
                     {/* [IMG] */}
-                    <SelectionCaret />
-                    {/* [P] */}
-                    <LinkText>Game server</LinkText>
+                    <Caret />
+                    {/* [LABEL] */}
+                    <Label>Game server</Label>
                     {/* [UL] Subpage links */}
-                    <NavSubitems>
+
+                    <SubpageLinks>
                         {/* [LI] */}
-                        <NavSubitemContent>Download</NavSubitemContent>
+                        <SubpageLink>
+                            {/* [LABEL] */}
+                            <Label>Download</Label>
+                        </SubpageLink>
+
                         {/* [LI] */}
-                        <NavSubitemContent>Help on Github</NavSubitemContent>
-                    </NavSubitems>
-                </TextLinkWrapper>
-            </NavSection>
+                        <SubpageLink>
+                            {/* [LABEL] */}
+                            <Label>Help on Github</Label>
+                        </SubpageLink>
+                    </SubpageLinks>
+                </LinkWrapper>
+            </Page>
 
             {/* [LI] Contact section */}
-            <NavSection>
+            <Page>
                 {/* [DIV] (white vertical line) */}
-                <TextLinkWrapper style={{ paddingBottom: '30px' }}>
+                <LinkWrapper style={{ paddingBottom: '30px' }}>
+
                     {/* [IMG] */}
-                    <SelectionCaret />
-                    {/* [P] */}
-                    <LinkText>Contact</LinkText>
+                    <Caret />
+                    {/* [LABEL] */}
+                    <Label>Contact</Label>
+
                     {/* [UL] Subpage links */}
-                    <NavSubitems>
+                    <SubpageLinks>
                         {/* [LI] */}
-                        <NavSubitemContent>Report a bug</NavSubitemContent>
-                    </NavSubitems>
-                </TextLinkWrapper>
-            </NavSection>
+                        <SubpageLink>
+                            {/* [LABEL] */}
+                            <Label>Report a bug</Label>
+                        </SubpageLink>
+                    </SubpageLinks>
+
+                </LinkWrapper>
+            </Page>
 
             {/* [LI] Github section */}
-            <NavSection>
-                {/* [IMG] */}
-                <GithubSelectionCaret />
-                {/* [ A [IMG] ] */}
-                <a href='#' style={{ textDecoration: 'none' }}><GithubIcon size={48} /></a>
+            <GithubPage>
                 {/* [UL] (animated white vertical line) */}
                 <GithubPageLinkWrapper>
+
+                    {/* [IMG] */}
+                    <GithubCaret />
+                    <a href='#' style={{ textDecoration: 'none' }}>
+                        {/* [IMG] */}
+                        <GithubIcon size={48} />
+                    </a>
+
                     {/* [LI] */}
                     <GithubPageLink>
                         <a href='#' style={{ textDecoration: 'none' }}>
-                            {/* [P] */}
-                            <LinkText>Recoup</LinkText>
+                            {/* [LABEL] */}
+                            <Label>Recoup</Label>
                         </a>
                     </GithubPageLink>
+
                     {/* [LI] */}
                     <GithubPageLink>
                         <a href='#' style={{ textDecoration: 'none' }}>
-                            {/* [P] */}
-                            <LinkText>Game Server</LinkText>
+                            {/* [LABEL] */}
+                            <Label>Game Server</Label>
                         </a>
                     </GithubPageLink>
+
                     {/* [LI] */}
                     <GithubPageLink>
                         <a href='#' style={{ textDecoration: 'none' }}>
-                            {/* [P] */}
-                            <LinkText>This Website</LinkText>
+                            {/* [LABEL] */}
+                            <Label>This Website</Label>
                         </a>
                     </GithubPageLink>
+
                 </GithubPageLinkWrapper>
-            </NavSection>
-        </NavBar>
-    </NavBarWrapper>
+            </GithubPage>
+        </Bar>
+    </Wrapper>
 </>);
 };
 

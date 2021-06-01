@@ -8,43 +8,11 @@ import {ArrowForward, ArrowRight} from "../ButtonElements";
 
 /*
 
-        IMAGE COMPONENTS
+        IMAGE COMPONENT SECTION
 
  */
 
-export const NavigationLogoLink = styled(LinkRouter) `
-  color: #fff;
-  justify-self: flex-start;
-  cursor: pointer;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  margin-left: 24px;
-  font-weight: bold;
-  text-decoration: none;
-`
-
-export const GithubIcon = styled(FaGithub) `
-  position: absolute;
-  top: -6px;
-  left: -23px;
-`
-
-export const MobileIcon = styled.div `
-  display:none;
-  
-  @media screen and (max-width: 768px) {
-    display: block;
-    position:absolute;
-    top:0;
-    right:0;
-    transform: translate(-100%, 60%);
-    font-size:1.8rem;
-    cursor: pointer;
-    color: #fff;
-  }
-`
-
+// round Tilted Games logo
 export const RoundLogo = styled.span  `
   position: absolute;
   top: -4px;
@@ -57,30 +25,60 @@ export const RoundLogo = styled.span  `
   margin-top: -16px;
 `
 
-export const AltSelectionCaret = styled(ArrowRight) `
+// Github icon (from fontawesome)
+export const GithubIcon = styled(FaGithub) `
+  position: absolute;
+  top: -6px;
+  left: -23px;
+`
+
+// icon for mobile menu display
+export const MobileIcon = styled.div `
+  // hidden by default
+  display:none;
+  
+  // show if narrow device/viewport
+  @media screen and (max-width: 768px) {
+    display: block;
+    position:absolute;
+    top:0;
+    right:0;
+    transform: translate(-100%, 60%);
+    font-size:1.8rem;
+    cursor: pointer;
+    color: #fff;
+  }
+`
+
+// caret for the home icon link
+export const HomeCaret = styled(ArrowRight) `
   position: absolute;
   top: -4px;
   left: -54px;
   visibility: hidden;
 `
 
-export const GithubSelectionCaret = styled(ArrowRight) `
-  position: absolute;
-  top: 8px;
-  left: -54px;
-  visibility: hidden;
-`
-
-export const SelectionCaret = styled(ArrowRight) `
+// caret for the middle links
+export const Caret = styled(ArrowRight) `
   position: absolute;
   top: 54px;
   left: -40px;
   visibility: hidden;
 `
 
+// caret for the Github icon link
+export const GithubCaret = styled(ArrowRight) `
+  position: absolute;
+  top: 8px;
+  left: -54px;
+  visibility: hidden;
+`
+
+
+
 /*
 
-        GITHUB SECTION
+        GITHUB LINKS SECTION
 
  */
 
@@ -101,14 +99,16 @@ export const GithubPageLink = styled.li `
 
 `
 
+
+
 /*
 
-        INTERNAL LINK SECTION
+        INTERNAL LINKS SECTION
 
  */
 
 // wrapper that places the vertical nav bar
-export const NavBarWrapper = styled.div `
+export const Wrapper = styled.div `
   z-index: 1000;
   position: absolute;
   left: 50px;
@@ -118,12 +118,12 @@ export const NavBarWrapper = styled.div `
 `
 
 // wrapper for middle item (part of vertical bar)
-export const TextLinkWrapper = styled.div `
+export const LinkWrapper = styled.div `
   border-left: 3px solid #fff;
 `
 
 // subpage list (in-site)
-export const NavSubitems = styled.ul `
+export const SubpageLinks = styled.ul `
   list-style: none;
   text-align: left;
   position: relative;
@@ -132,7 +132,7 @@ export const NavSubitems = styled.ul `
 `
 
 // subpage list item
-export const NavSubitemContent = styled.li `
+export const SubpageLink = styled.li `
   position: initial;
   padding: 0 0 22px 0;
   color: #fff;
@@ -141,30 +141,44 @@ export const NavSubitemContent = styled.li `
   transition: all 0.2s ease-in-out;
 `
 
-// nav bar is implemented as a list
-export const NavBar = styled.ul `
-  text-align: center;
+// navigation bar
+export const Bar = styled.ul `
   list-style: none;
 `
 
-export const NavSection = styled.li `
+// navigation section
+export const Page = styled.li `
   position:relative;
   padding-top:16px;
   
   &:hover {
-    ${ SelectionCaret } {
+    ${ Caret } {
       visibility: visible;
     }
     
-    ${ AltSelectionCaret } {
+    ${ HomeCaret } {
       visibility: visible;
     }
+    
+    ${ SubpageLink } {
+      margin-left: 0;
+      visibility: visible;
+      padding:30px 0 0 60px;
+    }
+  }
+`
 
-    ${ GithubSelectionCaret } {
+// navigation section
+export const GithubPage = styled.li `
+  position:relative;
+  padding-top:16px;
+  
+  &:hover {
+    ${ GithubCaret } {
       visibility: visible;
     }
     
-    ${ NavSubitemContent } {
+    ${ SubpageLink } {
       margin-left: 0;
       visibility: visible;
       padding:30px 0 0 60px;
@@ -176,7 +190,7 @@ export const NavSection = styled.li `
   }
 `
 
-export const LinkText = styled.div `
+export const Label = styled.label `
   padding-left: 40px;
   padding-top: 40px;
   text-align: left;
