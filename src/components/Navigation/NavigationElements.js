@@ -6,7 +6,11 @@ import roundLogo from '../../img/round-logo.png';
 import {FaArrowRight, FaGithub} from "react-icons/all";
 import {ArrowForward, ArrowRight} from "../ButtonElements";
 
-// all image elements
+/*
+
+        IMAGE COMPONENTS
+
+ */
 
 export const NavigationLogoLink = styled(LinkRouter) `
   color: #fff;
@@ -53,8 +57,6 @@ export const RoundLogo = styled.span  `
   margin-top: -16px;
 `
 
-// carets for left-side of vertical bar
-
 export const AltSelectionCaret = styled(ArrowRight) `
   position: absolute;
   top: -4px;
@@ -76,8 +78,36 @@ export const SelectionCaret = styled(ArrowRight) `
   visibility: hidden;
 `
 
-// wrapper that places the vertical nav bar
+/*
 
+        GITHUB SECTION
+
+ */
+
+// subpage list
+export const GithubPageLinkWrapper = styled.ul `
+  border-left: 0;
+  margin-top: 24px;
+  //padding: 0 0 24px 0;
+  list-style: none;
+  text-align: left;
+  position: relative;
+  visibility: hidden;
+  padding:0;
+`
+
+// subpage item
+export const GithubPageLink = styled.li `
+
+`
+
+/*
+
+        INTERNAL LINK SECTION
+
+ */
+
+// wrapper that places the vertical nav bar
 export const NavBarWrapper = styled.div `
   z-index: 1000;
   position: absolute;
@@ -88,13 +118,11 @@ export const NavBarWrapper = styled.div `
 `
 
 // wrapper for middle item (part of vertical bar)
-
 export const TextLinkWrapper = styled.div `
   border-left: 3px solid #fff;
 `
 
 // subpage list (in-site)
-
 export const NavSubitems = styled.ul `
   list-style: none;
   text-align: left;
@@ -103,24 +131,7 @@ export const NavSubitems = styled.ul `
   padding:0;
 `
 
-// subpage list (on github)
-
-export const GithubPageLinkWrapper = styled.div `
-  border-left: 0;
-  margin-top: 24px;
-  padding: 0 0 24px 0;
-`
-
-export const GithubSubitems = styled.ul `
-  list-style: none;
-  text-align: left;
-  position: relative;
-  visibility: hidden;
-  padding:0;
-`
-
 // subpage list item
-
 export const NavSubitemContent = styled.li `
   position: initial;
   padding: 0 0 22px 0;
@@ -131,7 +142,6 @@ export const NavSubitemContent = styled.li `
 `
 
 // nav bar is implemented as a list
-
 export const NavBar = styled.ul `
   text-align: center;
   list-style: none;
@@ -166,24 +176,10 @@ export const NavSection = styled.li `
   }
 `
 
-export const NavItemContent = styled.div `
+export const LinkText = styled.div `
   padding-left: 40px;
   padding-top: 40px;
   text-align: left;
   color: #fff;
   text-decoration: none;
-`
-
-// clickable button areas
-
-export const HomeLinkSelectionArea = styled.div `
-  
-`
-
-export const LinkSelectionArea = styled.div `
-
-`
-
-export const GithubLinkSelectionArea = styled.div `
-
 `

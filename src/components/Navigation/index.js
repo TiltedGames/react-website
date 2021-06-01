@@ -1,6 +1,4 @@
 import React from 'react';
-
-// import navigation components
 import {
     RoundLogo,
     GithubIcon,
@@ -9,127 +7,114 @@ import {
     NavSection,
     NavSubitems,
     NavSubitemContent,
-    NavItemContent,
-    HomeLinkSelectionArea,
-    LinkSelectionArea,
-    GithubLinkSelectionArea,
+    LinkText,
     SelectionCaret,
     AltSelectionCaret,
     GithubSelectionCaret,
     TextLinkWrapper,
-    GithubPageLinkWrapper
+    GithubPageLinkWrapper,
+    GithubPageLink
 } from './NavigationElements';
 
 const NavigationBar = ({ toggle }) => { return(<>
+    {/* Wrapper for the navigation bar (for position control) */}
+    <NavBarWrapper>
+        {/* [UL] Navigation bar implemented */}
+        <NavBar>
 
-    <NavBarWrapper>  {/* Wrapper for the navigation bar (for position control) */}
-
-        <NavBar> {/* [UL] Navigation bar implemented */}
-
-            <NavSection> {/* [LI] Tilted Games (logo) section */}
-                <HomeLinkSelectionArea>
-                    <RoundLogo />
-                </HomeLinkSelectionArea>
-
+            {/* [LI] Tilted Games (logo) section */}
+            <NavSection>
+                {/* [IMG] */}
                 <AltSelectionCaret />
+                {/* [IMG] */}
+                <RoundLogo />
             </NavSection>
 
-            <NavSection> {/* [LI] Recoup section */}
+            {/* [LI] Recoup section */}
+            <NavSection>
+                {/* [DIV] (white vertical line) */}
                 <TextLinkWrapper>
-
-                    <LinkSelectionArea>
-                        <NavItemContent>Recoup</NavItemContent>
-                    </LinkSelectionArea>
-
+                    {/* [IMG] */}
                     <SelectionCaret />
-
+                    {/* [P] */}
+                    <LinkText>Recoup</LinkText>
+                    {/* [UL] Subpage links */}
                     <NavSubitems>
-
+                        {/* [LI] */}
                         <NavSubitemContent>Concept Art</NavSubitemContent>
-
-
+                        {/* [LI] */}
                         <NavSubitemContent>Download</NavSubitemContent>
-
                     </NavSubitems>
-
                 </TextLinkWrapper>
             </NavSection>
 
-            <NavSection> {/* [LI] Game server section */}
+            {/* [LI] Game server section */}
+            <NavSection>
+                {/* [DIV] (white vertical line) */}
                 <TextLinkWrapper>
-
-                    <LinkSelectionArea />
+                    {/* [IMG] */}
                     <SelectionCaret />
-
-                    <NavItemContent>Game server</NavItemContent>
-
+                    {/* [P] */}
+                    <LinkText>Game server</LinkText>
+                    {/* [UL] Subpage links */}
                     <NavSubitems>
+                        {/* [LI] */}
                         <NavSubitemContent>Download</NavSubitemContent>
+                        {/* [LI] */}
                         <NavSubitemContent>Help on Github</NavSubitemContent>
                     </NavSubitems>
-
                 </TextLinkWrapper>
             </NavSection>
 
-            <NavSection> {/* [LI] Contact section */}
+            {/* [LI] Contact section */}
+            <NavSection>
+                {/* [DIV] (white vertical line) */}
                 <TextLinkWrapper style={{ paddingBottom: '30px' }}>
-
-                    <LinkSelectionArea />
+                    {/* [IMG] */}
                     <SelectionCaret />
-
-                    <NavItemContent>Contact</NavItemContent>
-
+                    {/* [P] */}
+                    <LinkText>Contact</LinkText>
+                    {/* [UL] Subpage links */}
                     <NavSubitems>
+                        {/* [LI] */}
                         <NavSubitemContent>Report a bug</NavSubitemContent>
                     </NavSubitems>
-
                 </TextLinkWrapper>
             </NavSection>
 
-            <NavSection> {/* [LI] Github section */}
+            {/* [LI] Github section */}
+            <NavSection>
+                {/* [IMG] */}
+                <GithubSelectionCaret />
+                {/* [ A [IMG] ] */}
+                <a href='#' style={{ textDecoration: 'none' }}><GithubIcon size={48} /></a>
+                {/* [UL] (animated white vertical line) */}
                 <GithubPageLinkWrapper>
-
-                    <a href='#' style={{ textDecoration: 'none' }}>
-                        <GithubLinkSelectionArea />
-                        <GithubIcon size={48} />
-                    </a>
-
-                    <GithubSelectionCaret />
-
-                </GithubPageLinkWrapper>
-                <GithubPageLinkWrapper>
-                    <LinkSelectionArea />
-                    <SelectionCaret />
-                    <a href='#' style={{ textDecoration: 'none' }}>
-                        <NavItemContent>Recoup</NavItemContent>
-                    </a>
-                </GithubPageLinkWrapper>
-                <GithubPageLinkWrapper>
-                    <LinkSelectionArea />
-                    <SelectionCaret />
-                    <a href='#' style={{ textDecoration: 'none' }}>
-                        <NavItemContent>Game server</NavItemContent>
-                    </a>
-                </GithubPageLinkWrapper>
-                <GithubPageLinkWrapper>
-                    <LinkSelectionArea />
-                    <SelectionCaret />
-                    <a href='#' style={{ textDecoration: 'none' }}>
-                        <NavItemContent>This site</NavItemContent>
-                    </a>
-                </GithubPageLinkWrapper>
-                <GithubPageLinkWrapper>
-                    <LinkSelectionArea />
-                    <SelectionCaret />
-                    <a href='#' style={{ textDecoration: 'none' }}>
-                        <NavItemContent>Donate</NavItemContent>
-                    </a>
+                    {/* [LI] */}
+                    <GithubPageLink>
+                        <a href='#' style={{ textDecoration: 'none' }}>
+                            {/* [P] */}
+                            <LinkText>Recoup</LinkText>
+                        </a>
+                    </GithubPageLink>
+                    {/* [LI] */}
+                    <GithubPageLink>
+                        <a href='#' style={{ textDecoration: 'none' }}>
+                            {/* [P] */}
+                            <LinkText>Game Server</LinkText>
+                        </a>
+                    </GithubPageLink>
+                    {/* [LI] */}
+                    <GithubPageLink>
+                        <a href='#' style={{ textDecoration: 'none' }}>
+                            {/* [P] */}
+                            <LinkText>This Website</LinkText>
+                        </a>
+                    </GithubPageLink>
                 </GithubPageLinkWrapper>
             </NavSection>
-
         </NavBar>
     </NavBarWrapper>
-
 </>);
 };
 
