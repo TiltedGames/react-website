@@ -149,7 +149,7 @@ export const NavigationButtonLink = styled.a `
 export const RoundLogo = styled.div  `
   position: absolute;
   top: -4px;
-  left: -21px;
+  left: -22px;
   background: url(${ roundLogo }) no-repeat;
   background-size: cover;
   height:48px;
@@ -227,7 +227,7 @@ export const VerticalNavItemContent = styled.div `
 export const GithubIcon = styled(FaGithub) `
   position: absolute;
   top: -6px;
-  left: -21px;
+  left: -23px;
 `
 
 export const HomePageLinkSelectionArea = styled.div `
