@@ -2,9 +2,9 @@ import React from 'react';
 
 // import navigation components
 import {
-    VerticalNavBarWrapper,
-    VerticalNavBar,
-    VerticalNavItem,
+    NavBarWrapper,
+    lNavBar,
+    PageLink,
     VerticalNavItemContent,
     HomePageLinkSelectionArea,
     LinkSelectionArea,
@@ -12,9 +12,11 @@ import {
     SelectionCaret,
     AltSelectionCaret,
     GithubSelectionCaret,
-    VerticalNavSubitems,
-    VerticalNavSubitemContent,
-    MiddleItemWrapper,
+    NavSubitems,
+    GithubSubitems,
+    NavSubitemContent,
+    SitePageLinkWrapper,
+    GithubPageLinkWrapper,
     RoundLogo,
     GithubIcon
 } from './NavigationElements';
@@ -23,80 +25,112 @@ import {
 const NavigationBar = ({toggle}) => {
     return(
         <>
-            <VerticalNavBarWrapper>
-                <VerticalNavBar>
-                    <VerticalNavItem>
+            <NavBarWrapper>
+                <lNavBar>
+                    <PageLink>
                         <a href='#'>
                             <HomePageLinkSelectionArea></HomePageLinkSelectionArea>
                         </a>
                         <RoundLogo></RoundLogo>
                         <AltSelectionCaret />
-                    </VerticalNavItem>
-                    <MiddleItemWrapper>
-                        <VerticalNavItem>
+                    </PageLink>
+                    <SitePageLinkWrapper>
+                        <PageLink>
                             <LinkSelectionArea></LinkSelectionArea>
                             <SelectionCaret />
                             <a href='#' style={{ textDecoration: 'none' }}>
                                 <VerticalNavItemContent>Recoup</VerticalNavItemContent>
                             </a>
-                            <VerticalNavSubitems>
+                            <NavSubitems>
                                 <a href='#' style={{ textDecoration: 'none' }}>
-                                    <VerticalNavSubitemContent>
+                                    <NavSubitemContent>
                                         Concept Art
-                                    </VerticalNavSubitemContent>
+                                    </NavSubitemContent>
                                 </a>
                                 <a href='#' style={{ textDecoration: 'none' }}>
-                                    <VerticalNavSubitemContent>
+                                    <NavSubitemContent>
                                         Download
-                                    </VerticalNavSubitemContent>
+                                    </NavSubitemContent>
                                 </a>
-                            </VerticalNavSubitems>
-                        </VerticalNavItem>
-                    </MiddleItemWrapper>
-                    <MiddleItemWrapper>
-                        <VerticalNavItem>
+                            </NavSubitems>
+                        </PageLink>
+                    </SitePageLinkWrapper>
+                    <SitePageLinkWrapper>
+                        <PageLink>
                             <LinkSelectionArea></LinkSelectionArea>
                             <SelectionCaret />
                             <a href='#' style={{ textDecoration: 'none' }}>
                                 <VerticalNavItemContent>Game server</VerticalNavItemContent>
                             </a>
-                            <VerticalNavSubitems>
+                            <NavSubitems>
                                 <a href='#' style={{ textDecoration: 'none' }}>
-                                    <VerticalNavSubitemContent>
+                                    <NavSubitemContent>
                                         Download
-                                    </VerticalNavSubitemContent>
+                                    </NavSubitemContent>
                                 </a>
                                 <a href='#' style={{ textDecoration: 'none' }}>
-                                    <VerticalNavSubitemContent>
+                                    <NavSubitemContent>
                                         Help on Github
-                                    </VerticalNavSubitemContent>
+                                    </NavSubitemContent>
                                 </a>
-                            </VerticalNavSubitems>
-                        </VerticalNavItem>
-                    </MiddleItemWrapper>
-                    <MiddleItemWrapper style={{ paddingBottom: '40px' }}>
-                        <VerticalNavItem>
+                            </NavSubitems>
+                        </PageLink>
+                    </SitePageLinkWrapper>
+                    <SitePageLinkWrapper style={{ paddingBottom: '40px' }}>
+                        <PageLink>
                             <LinkSelectionArea></LinkSelectionArea>
                             <SelectionCaret />
                             <a href='#' style={{ textDecoration: 'none' }}>
                                 <VerticalNavItemContent>Contact</VerticalNavItemContent>
                             </a>
-                            <VerticalNavSubitems>
+                            <NavSubitems>
                                 <a href='#' style={{ textDecoration: 'none' }}>
-                                    <VerticalNavSubitemContent>
+                                    <NavSubitemContent>
                                         Report a bug
-                                    </VerticalNavSubitemContent>
+                                    </NavSubitemContent>
                                 </a>
-                            </VerticalNavSubitems>
-                        </VerticalNavItem>
-                    </MiddleItemWrapper>
-                    <VerticalNavItem>
-                        <GithubLinkSelectionArea></GithubLinkSelectionArea>
-                        <GithubIcon size={48} />
-                        <GithubSelectionCaret />
-                    </VerticalNavItem>
-                </VerticalNavBar>
-            </VerticalNavBarWrapper>
+                            </NavSubitems>
+                        </PageLink>
+                    </SitePageLinkWrapper>
+                    <GithubPageLinkWrapper>
+                        <PageLink>
+                            <GithubLinkSelectionArea></GithubLinkSelectionArea>
+                            <GithubIcon size={48} />
+                            <GithubSelectionCaret />
+                            <a href='#' style={{ textDecoration: 'none' }}>
+                            </a>
+                        </PageLink>
+                        <PageLink>
+                            <LinkSelectionArea></LinkSelectionArea>
+                            <SelectionCaret />
+                            <a href='#' style={{ textDecoration: 'none' }}>
+                                <VerticalNavItemContent>Recoup</VerticalNavItemContent>
+                            </a>
+                        </PageLink>
+                        <PageLink>
+                            <LinkSelectionArea></LinkSelectionArea>
+                            <SelectionCaret />
+                            <a href='#' style={{ textDecoration: 'none' }}>
+                                <VerticalNavItemContent>Game server</VerticalNavItemContent>
+                            </a>
+                        </PageLink>
+                        <PageLink>
+                            <LinkSelectionArea></LinkSelectionArea>
+                            <SelectionCaret />
+                            <a href='#' style={{ textDecoration: 'none' }}>
+                                <VerticalNavItemContent>This site</VerticalNavItemContent>
+                            </a>
+                        </PageLink>
+                        <PageLink>
+                            <LinkSelectionArea></LinkSelectionArea>
+                            <SelectionCaret />
+                            <a href='#' style={{ textDecoration: 'none' }}>
+                                <VerticalNavItemContent>Donate</VerticalNavItemContent>
+                            </a>
+                        </PageLink>
+                    </GithubPageLinkWrapper>
+                </lNavBar>
+            </NavBarWrapper>
         </>
     );
 };

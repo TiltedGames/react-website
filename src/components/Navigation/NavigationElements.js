@@ -6,45 +6,7 @@ import roundLogo from '../../img/round-logo.png';
 import {FaArrowRight, FaGithub} from "react-icons/all";
 import {ArrowForward, ArrowRight} from "../ButtonElements";
 
-/*
-
-        START OLD NAVIGATION
-
- */
-
-export const Navigation = styled.nav `
-  font-weight: bold;
-  background: transparent;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  transition: all 0.2s ease-in-out;
-
-  @media screen and (max-width: 768px) {
-
-  }
-  
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #000;
-  }
-
-`
-
-export const NavigationContainer = styled.div `
-  display: flex;
-  justify-content: space-between;
-  height: 80px;
-  z-index: 1;
-  width: 100%;
-  padding: 0 24px;
-  max-width: 1100px;
-`
+// all image elements
 
 export const NavigationLogoLink = styled(LinkRouter) `
   color: #fff;
@@ -58,11 +20,10 @@ export const NavigationLogoLink = styled(LinkRouter) `
   text-decoration: none;
 `
 
-export const NavigationLogo = styled.div `
-  background-image: url(${smallLogoImage});
-  border: 1px solid #fff;
-  width: 166px;
-  height: 60px;
+export const GithubIcon = styled(FaGithub) `
+  position: absolute;
+  top: -6px;
+  left: -23px;
 `
 
 export const MobileIcon = styled.div `
@@ -80,72 +41,6 @@ export const MobileIcon = styled.div `
   }
 `
 
-export const NavigationMenu = styled.ul `
-  display: flex;
-  align-items: center;
-  list-style: none;
-  text-align: center;
-  margin-right: -22px;
-  
-  @media screen and (max-width:768px) {
-    display: none;
-  }
-`
-
-export const NavigationItem = styled.li `
-  height: 10vh;
-`
-
-export const NavigationLinks = styled(LinkRouter) `
-  color: #fff;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  padding: 0 1rem;
-  height: 100%;
-  cursor: pointer;
-`
-
-export const NavigationButton = styled.nav `
-  display: flex;
-  align-items: center;
-  font-size:1.8rem;
-  cursor: pointer;
-  color: #fff;
-  margin:0;
-  padding:0;
-  
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-`
-
-export const NavigationButtonLink = styled.a `
-  margin:0;
-  padding:5px 5px 0 5px;
-  color:#fff;
-  white-space: nowrap;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-  
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    color: #ddd;
-  }
-`
-/*
-
-        END OLD NAVIGATION
-
-
-
-        START NEW NAVIGATION
-
- */
-
 export const RoundLogo = styled.div  `
   position: absolute;
   top: -4px;
@@ -158,48 +53,93 @@ export const RoundLogo = styled.div  `
   margin-top: -16px;
 `
 
+// carets for left-side of vertical bar
+
 export const AltSelectionCaret = styled(ArrowRight) `
   position: absolute;
   top: -4px;
-  left: -48px;
+  left: -54px;
   visibility: hidden;
 `
 
 export const GithubSelectionCaret = styled(ArrowRight) `
   position: absolute;
   top: 8px;
-  left: -48px;
+  left: -54px;
   visibility: hidden;
 `
 
 export const SelectionCaret = styled(ArrowRight) `
   position: absolute;
-  top: 64px;
+  top: 54px;
   left: -40px;
   visibility: hidden;
 `
 
-export const VerticalNavBarWrapper = styled.div `
+// wrapper that places the vertical nav bar
+
+export const NavBarWrapper = styled.div `
   z-index: 1000;
   position: absolute;
-  left: 35px;
-  top: calc(50vh - 380px);
+  left: 50px;
+  top: calc(50vh - 330px);
   color: #fff;
   
 `
 
-export const VerticalNavBar = styled.ul `
+// wrapper for middle item (part of vertical bar)
+
+export const SitePageLinkWrapper = styled.div `
+  border-left: 3px solid #fff;
+`
+
+// subpage list (in-site)
+
+export const NavSubitems = styled.ul `
+  list-style: none;
+  text-align: left;
+  position: relative;
+  visibility: hidden;
+  padding:0;
+`
+
+// subpage list (on github)
+
+export const GithubPageLinkWrapper = styled.div `
+  border-left: 0;
+  margin-top: 24px;
+  padding: 0 0 24px 0;
+`
+
+export const GithubSubitems = styled.ul `
+  list-style: none;
+  text-align: left;
+  position: relative;
+  visibility: hidden;
+  padding:0;
+`
+
+// subpage list item
+
+export const NavSubitemContent = styled.li `
+  position: initial;
+  padding: 0 0 22px 0;
+  color: #fff;
+  text-decoration: none;
+  margin-left:-300px;
+  transition: all 0.2s ease-in-out;
+`
+
+// nav bar is implemented as a list
+
+export const lNavBar = styled.ul `
   text-align: center;
   list-style: none;
 `
 
-export const MiddleItemWrapper = styled.div `
-  border-left: 3px solid #fff;
-`
-
-export const VerticalNavItem = styled.li `
+export const PageLink = styled.li `
   position:relative;
-  padding-top:26px;
+  padding-top:16px;
   
   &:hover {
     ${ SelectionCaret } {
@@ -213,6 +153,16 @@ export const VerticalNavItem = styled.li `
     ${ GithubSelectionCaret } {
       visibility: visible;
     }
+    
+    ${ NavSubitemContent } {
+      margin-left: 0;
+      visibility: visible;
+      padding:30px 0 0 60px;
+    }
+    
+    ${ GithubPageLinkWrapper } {
+      border-left: 3px solid #fff;
+    }
   }
 `
 
@@ -224,11 +174,7 @@ export const VerticalNavItemContent = styled.div `
   text-decoration: none;
 `
 
-export const GithubIcon = styled(FaGithub) `
-  position: absolute;
-  top: -6px;
-  left: -23px;
-`
+// clickable button areas
 
 export const HomePageLinkSelectionArea = styled.div `
   
@@ -240,18 +186,4 @@ export const LinkSelectionArea = styled.div `
 
 export const GithubLinkSelectionArea = styled.div `
 
-`
-
-export const VerticalNavSubitems = styled.ul `
-  list-style: none;
-  text-align: left;
-  padding:30px 0 0 60px;
-  position: relative;
-`
-
-export const VerticalNavSubitemContent = styled.li `
-  position: initial;
-  height: 50px;
-  color: #fff;
-  text-decoration: none;
 `
