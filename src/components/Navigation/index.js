@@ -2,44 +2,46 @@ import React from 'react';
 
 // import navigation components
 import {
+    RoundLogo,
+    GithubIcon,
     NavBarWrapper,
-    lNavBar,
+    NavBar,
     PageLink,
-    VerticalNavItemContent,
-    HomePageLinkSelectionArea,
+    NavSubitems,
+    NavSubitemContent,
+    NavItemContent,
+    HomeLinkSelectionArea,
     LinkSelectionArea,
     GithubLinkSelectionArea,
     SelectionCaret,
     AltSelectionCaret,
     GithubSelectionCaret,
-    NavSubitems,
-    GithubSubitems,
-    NavSubitemContent,
-    SitePageLinkWrapper,
-    GithubPageLinkWrapper,
-    RoundLogo,
-    GithubIcon
+    TextLinkWrapper,
+    GithubPageLinkWrapper
 } from './NavigationElements';
 
 // takes in toggle parameters to open/close sidebar
-const NavigationBar = ({toggle}) => {
+const NavigationBar = ({ toggle }) => {
     return(
         <>
             <NavBarWrapper>
-                <lNavBar>
+                <NavBar>
                     <PageLink>
                         <a href='#'>
-                            <HomePageLinkSelectionArea></HomePageLinkSelectionArea>
+                            <RoundLogo></RoundLogo>
+                            <HomeLinkSelectionArea></HomeLinkSelectionArea>
                         </a>
                         <RoundLogo></RoundLogo>
                         <AltSelectionCaret />
                     </PageLink>
-                    <SitePageLinkWrapper>
+                    <TextLinkWrapper>
                         <PageLink>
                             <LinkSelectionArea></LinkSelectionArea>
                             <SelectionCaret />
                             <a href='#' style={{ textDecoration: 'none' }}>
-                                <VerticalNavItemContent>Recoup</VerticalNavItemContent>
+                                <NavItemContent>
+                                    Recoup
+                                </NavItemContent>
                             </a>
                             <NavSubitems>
                                 <a href='#' style={{ textDecoration: 'none' }}>
@@ -54,13 +56,15 @@ const NavigationBar = ({toggle}) => {
                                 </a>
                             </NavSubitems>
                         </PageLink>
-                    </SitePageLinkWrapper>
-                    <SitePageLinkWrapper>
+                    </TextLinkWrapper>
+                    <TextLinkWrapper>
                         <PageLink>
                             <LinkSelectionArea></LinkSelectionArea>
                             <SelectionCaret />
                             <a href='#' style={{ textDecoration: 'none' }}>
-                                <VerticalNavItemContent>Game server</VerticalNavItemContent>
+                                <NavItemContent>
+                                    Game server
+                                </NavItemContent>
                             </a>
                             <NavSubitems>
                                 <a href='#' style={{ textDecoration: 'none' }}>
@@ -75,13 +79,15 @@ const NavigationBar = ({toggle}) => {
                                 </a>
                             </NavSubitems>
                         </PageLink>
-                    </SitePageLinkWrapper>
-                    <SitePageLinkWrapper style={{ paddingBottom: '40px' }}>
+                    </TextLinkWrapper>
+                    <TextLinkWrapper style={{ paddingBottom: '40px' }}>
                         <PageLink>
                             <LinkSelectionArea></LinkSelectionArea>
                             <SelectionCaret />
                             <a href='#' style={{ textDecoration: 'none' }}>
-                                <VerticalNavItemContent>Contact</VerticalNavItemContent>
+                                <NavItemContent>
+                                    Contact
+                                </NavItemContent>
                             </a>
                             <NavSubitems>
                                 <a href='#' style={{ textDecoration: 'none' }}>
@@ -91,7 +97,7 @@ const NavigationBar = ({toggle}) => {
                                 </a>
                             </NavSubitems>
                         </PageLink>
-                    </SitePageLinkWrapper>
+                    </TextLinkWrapper>
                     <GithubPageLinkWrapper>
                         <PageLink>
                             <GithubLinkSelectionArea></GithubLinkSelectionArea>
@@ -104,32 +110,40 @@ const NavigationBar = ({toggle}) => {
                             <LinkSelectionArea></LinkSelectionArea>
                             <SelectionCaret />
                             <a href='#' style={{ textDecoration: 'none' }}>
-                                <VerticalNavItemContent>Recoup</VerticalNavItemContent>
+                                <NavItemContent>
+                                    Recoup
+                                </NavItemContent>
                             </a>
                         </PageLink>
                         <PageLink>
                             <LinkSelectionArea></LinkSelectionArea>
                             <SelectionCaret />
                             <a href='#' style={{ textDecoration: 'none' }}>
-                                <VerticalNavItemContent>Game server</VerticalNavItemContent>
+                                <NavItemContent>
+                                    Game server
+                                </NavItemContent>
                             </a>
                         </PageLink>
                         <PageLink>
                             <LinkSelectionArea></LinkSelectionArea>
                             <SelectionCaret />
                             <a href='#' style={{ textDecoration: 'none' }}>
-                                <VerticalNavItemContent>This site</VerticalNavItemContent>
+                                <NavItemContent>
+                                    This site
+                                </NavItemContent>
                             </a>
                         </PageLink>
                         <PageLink>
                             <LinkSelectionArea></LinkSelectionArea>
                             <SelectionCaret />
                             <a href='#' style={{ textDecoration: 'none' }}>
-                                <VerticalNavItemContent>Donate</VerticalNavItemContent>
+                                <NavItemContent>
+                                    Donate
+                                </NavItemContent>
                             </a>
                         </PageLink>
                     </GithubPageLinkWrapper>
-                </lNavBar>
+                </NavBar>
             </NavBarWrapper>
         </>
     );

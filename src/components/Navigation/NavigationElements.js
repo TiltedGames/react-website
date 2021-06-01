@@ -89,7 +89,7 @@ export const NavBarWrapper = styled.div `
 
 // wrapper for middle item (part of vertical bar)
 
-export const SitePageLinkWrapper = styled.div `
+export const TextLinkWrapper = styled.div `
   border-left: 3px solid #fff;
 `
 
@@ -132,7 +132,7 @@ export const NavSubitemContent = styled.li `
 
 // nav bar is implemented as a list
 
-export const lNavBar = styled.ul `
+export const NavBar = styled.ul `
   text-align: center;
   list-style: none;
 `
@@ -166,7 +166,7 @@ export const PageLink = styled.li `
   }
 `
 
-export const VerticalNavItemContent = styled.div `
+export const NavItemContent = styled.div `
   padding-left: 40px;
   padding-top: 40px;
   text-align: left;
@@ -176,7 +176,7 @@ export const VerticalNavItemContent = styled.div `
 
 // clickable button areas
 
-export const HomePageLinkSelectionArea = styled.div `
+export const HomeLinkSelectionArea = styled.div `
   
 `
 
