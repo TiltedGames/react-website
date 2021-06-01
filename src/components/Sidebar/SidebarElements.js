@@ -46,7 +46,6 @@ export const SidebarMenu = styled.ul `
   @media screen and (max-width: 480px) {
     grid-template-rows: repeat(6, 80px);
   }
-  
 `
 
 export const SidebarLink = styled(LinkScroll) `

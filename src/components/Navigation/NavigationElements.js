@@ -2,10 +2,17 @@ import styled from 'styled-components'
 import { NavLink as LinkRouter } from 'react-router-dom'
 //import { Link as LinkScroll } from 'react-scroll'
 import smallLogoImage from '../../img/text-logo-small.png';
+import {FaArrowRight} from "react-icons/all";
+import {ArrowForward, ArrowRight} from "../ButtonElements";
+
+/*
+
+        START OLD NAVIGATION
+
+ */
 
 export const Navigation = styled.nav `
   font-weight: bold;
-  
   background: transparent;
   height: 80px;
   display: flex;
@@ -127,4 +134,76 @@ export const NavigationButtonLink = styled.a `
     transition: all 0.2s ease-in-out;
     color: #ddd;
   }
+`
+/*
+
+        END OLD NAVIGATION
+
+
+
+        START NEW NAVIGATION
+
+ */
+
+
+export const SelectionCaret = styled(ArrowRight) `
+  position: absolute;
+  top: 0;
+  left: -40px;
+  visibility: hidden;
+`
+
+export const VerticalNavBarWrapper = styled.div `
+  z-index:1000;
+  position: absolute;
+  left: 20vw;
+  top: calc(50vw - 200px);
+  color: #fff;
+`
+
+export const VerticalNavBar = styled.ul `
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 128px);
+  text-align: center;
+  list-style: none;
+`
+
+export const VerticalNavItem = styled.li `
+  height: 100px;
+  position:relative;
+  
+  &:hover {
+    ${ SelectionCaret } {
+      visibility: visible;
+    }
+  }
+`
+
+export const VerticalSeparator = styled.div `
+  position:absolute;
+  top:23px;
+  left:5px;
+  height: 100px;
+  width: 1px;
+  background: #fff;
+`
+
+export const VerticalNavItemNumber = styled.div `
+  position:absolute;
+  top:-5px;
+  left:-10px;
+  padding:5px 10px;
+  margin:0;
+  border-radius: 100px;
+  border:1px solid #fff;
+`
+
+export const VerticalNavItemContent = styled.div `
+  position:absolute;
+  top:0;
+  left: 30px;
+  width: 250px;
+  padding-left: 10px;
+  text-align: left;
 `

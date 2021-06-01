@@ -6,7 +6,6 @@ export const GameContainer = styled.div `
   justify-content: center;
   align-items: center;
   padding:0;
-  margin-top: -80px;
   height: 100vh;
   position: relative;
   z-index: 1;
