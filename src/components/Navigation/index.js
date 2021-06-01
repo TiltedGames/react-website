@@ -1,30 +1,18 @@
 import React from 'react';
 
-// import navigation icons (hamburger menu / github icons)
-import {
-    FaBars,
-    FaGithubSquare
-} from 'react-icons/fa'
-
 // import navigation components
 import {
-    Navigation,
-    NavigationContainer,
-    NavigationLogo,
-    NavigationLogoLink,
-    MobileIcon,
-    NavigationMenu,
-    NavigationItem,
-    NavigationLinks,
-    NavigationButton,
-    NavigationButtonLink,
     VerticalNavBarWrapper,
     VerticalNavBar,
     VerticalNavItem,
     VerticalSeparator,
     VerticalNavItemNumber,
     VerticalNavItemContent,
-    SelectionCaret
+    SelectionCaret,
+    AltSelectionCaret,
+    GithubSelectionCaret,
+    RoundLogo,
+    GithubIcon
 } from './NavigationElements';
 
 // takes in toggle parameters to open/close sidebar
@@ -35,9 +23,8 @@ const NavigationBar = ({toggle}) => {
               <VerticalNavBar>
                   <VerticalNavItem>
                       <VerticalSeparator></VerticalSeparator>
-                      <VerticalNavItemNumber>1</VerticalNavItemNumber>
-                      <SelectionCaret />
-                      <VerticalNavItemContent>Home</VerticalNavItemContent>
+                      <RoundLogo></RoundLogo>
+                      <AltSelectionCaret />
                   </VerticalNavItem>
                   <VerticalNavItem>
                       <VerticalSeparator></VerticalSeparator>
@@ -52,9 +39,14 @@ const NavigationBar = ({toggle}) => {
                       <VerticalNavItemContent>Tools</VerticalNavItemContent>
                   </VerticalNavItem>
                   <VerticalNavItem>
+                      <VerticalSeparator></VerticalSeparator>
                       <VerticalNavItemNumber>4</VerticalNavItemNumber>
                       <SelectionCaret />
-                      <VerticalNavItemContent>Get in Touch</VerticalNavItemContent>
+                      <VerticalNavItemContent>Contact</VerticalNavItemContent>
+                  </VerticalNavItem>
+                  <VerticalNavItem>
+                      <GithubIcon size={48} />
+                      <GithubSelectionCaret />
                   </VerticalNavItem>
               </VerticalNavBar>
           </VerticalNavBarWrapper>

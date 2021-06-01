@@ -2,7 +2,8 @@ import styled from 'styled-components'
 import { NavLink as LinkRouter } from 'react-router-dom'
 //import { Link as LinkScroll } from 'react-scroll'
 import smallLogoImage from '../../img/text-logo-small.png';
-import {FaArrowRight} from "react-icons/all";
+import roundLogo from '../../img/round-logo.png';
+import {FaArrowRight, FaGithub} from "react-icons/all";
 import {ArrowForward, ArrowRight} from "../ButtonElements";
 
 /*
@@ -145,6 +146,31 @@ export const NavigationButtonLink = styled.a `
 
  */
 
+export const RoundLogo = styled.div  `
+  position: absolute;
+  top: -6px;
+  left: -16px;
+  background: url(${ roundLogo }) no-repeat;
+  background-size: cover;
+  height:48px;
+  width:48px;
+  border-radius:100px;
+  margin-top: -16px;
+`
+
+export const AltSelectionCaret = styled(ArrowRight) `
+  position: absolute;
+  top: -8px;
+  left: -48px;
+  visibility: hidden;
+`
+
+export const GithubSelectionCaret = styled(ArrowRight) `
+  position: absolute;
+  top: 8px;
+  left: -48px;
+  visibility: hidden;
+`
 
 export const SelectionCaret = styled(ArrowRight) `
   position: absolute;
@@ -156,15 +182,16 @@ export const SelectionCaret = styled(ArrowRight) `
 export const VerticalNavBarWrapper = styled.div `
   z-index:1000;
   position: absolute;
-  left: 20vw;
-  top: calc(50vw - 200px);
+  left: 80px;
+  top: 80px;
   color: #fff;
+  
 `
 
 export const VerticalNavBar = styled.ul `
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 128px);
+  grid-template-rows: repeat(4, 130px);
   text-align: center;
   list-style: none;
 `
@@ -177,15 +204,23 @@ export const VerticalNavItem = styled.li `
     ${ SelectionCaret } {
       visibility: visible;
     }
+    
+    ${ AltSelectionCaret } {
+      visibility: visible;
+    }
+
+    ${ GithubSelectionCaret } {
+      visibility: visible;
+    }
   }
 `
 
 export const VerticalSeparator = styled.div `
   position:absolute;
-  top:23px;
+  top:26px;
   left:5px;
   height: 100px;
-  width: 1px;
+  width: 3px;
   background: #fff;
 `
 
@@ -196,14 +231,21 @@ export const VerticalNavItemNumber = styled.div `
   padding:5px 10px;
   margin:0;
   border-radius: 100px;
-  border:1px solid #fff;
+  border:3px solid #fff;
 `
 
 export const VerticalNavItemContent = styled.div `
   position:absolute;
-  top:0;
-  left: 30px;
+  top:2px;
+  left: 24px;
   width: 250px;
   padding-left: 10px;
   text-align: left;
 `
+
+export const GithubIcon = styled(FaGithub) `
+  position: absolute;
+  top: -6px;
+  left: -18px;
+`
+

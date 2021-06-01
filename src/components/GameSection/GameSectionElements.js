@@ -56,7 +56,7 @@ export const GameHeader = styled.h1 `
   font-size: 48px;
   text-align: center;
   position:fixed;
-  top: 20vh;
+  top: 10vh;
   padding:10px 10px;
   border:1px solid #ddd;
   

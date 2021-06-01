@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/src/components/GameSection/GameSectionElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameSection/GameSectionElements.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigation/NavigationElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/NavigationElements.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/SidebarElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/SidebarElements.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +71,7 @@
       <workItem from="1622446178808" duration="1190000" />
       <workItem from="1622479036413" duration="22488000" />
       <workItem from="1622511374969" duration="4889000" />
-      <workItem from="1622520695174" duration="1389000" />
+      <workItem from="1622520695174" duration="5690000" />
     </task>
     <servers />
   </component>
