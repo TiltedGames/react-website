@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigation/NavigationElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/NavigationElements.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/video/video.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/src/video/video.mp4" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +70,7 @@
       <workItem from="1622446178808" duration="1190000" />
       <workItem from="1622479036413" duration="22488000" />
       <workItem from="1622511374969" duration="4889000" />
-      <workItem from="1622520695174" duration="8530000" />
+      <workItem from="1622520695174" duration="12573000" />
     </task>
     <servers />
   </component>

@@ -149,7 +149,7 @@ export const NavigationButtonLink = styled.a `
 export const RoundLogo = styled.div  `
   position: absolute;
   top: -4px;
-  left: -16px;
+  left: -21px;
   background: url(${ roundLogo }) no-repeat;
   background-size: cover;
   height:48px;
@@ -174,7 +174,7 @@ export const GithubSelectionCaret = styled(ArrowRight) `
 
 export const SelectionCaret = styled(ArrowRight) `
   position: absolute;
-  top: 0;
+  top: 64px;
   left: -40px;
   visibility: hidden;
 `
@@ -182,23 +182,24 @@ export const SelectionCaret = styled(ArrowRight) `
 export const VerticalNavBarWrapper = styled.div `
   z-index: 1000;
   position: absolute;
-  right: 160px;
-  top: calc(50vh - 250px);
+  left: 35px;
+  top: calc(50vh - 380px);
   color: #fff;
   
 `
 
 export const VerticalNavBar = styled.ul `
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, 130px);
   text-align: center;
   list-style: none;
 `
 
+export const MiddleItemWrapper = styled.div `
+  border-left: 3px solid #fff;
+`
+
 export const VerticalNavItem = styled.li `
-  height: 100px;
   position:relative;
+  padding-top:26px;
   
   &:hover {
     ${ SelectionCaret } {
@@ -215,36 +216,18 @@ export const VerticalNavItem = styled.li `
   }
 `
 
-export const VerticalSeparator = styled.div `
-  position:absolute;
-  top:0;
-  left:5px;
-  height: 130px;
-  width: 3px;
-  background: #fff;
-`
-
-export const VerticalNavItemNumber = styled.div `
-  position:absolute;
-  top:-5px;
-  left:-11px;
-  padding:5px 10px;
-  margin:0;
-  border-radius: 100px;
-  border:3px solid #fff;
-`
-
 export const VerticalNavItemContent = styled.div `
-  position:absolute;
-  top:2px;
-  padding-left: 20px;
+  padding-left: 40px;
+  padding-top: 40px;
   text-align: left;
+  color: #fff;
+  text-decoration: none;
 `
 
 export const GithubIcon = styled(FaGithub) `
   position: absolute;
   top: -6px;
-  left: -18px;
+  left: -21px;
 `
 
 export const HomePageLinkSelectionArea = styled.div `
@@ -257,4 +240,18 @@ export const LinkSelectionArea = styled.div `
 
 export const GithubLinkSelectionArea = styled.div `
 
+`
+
+export const VerticalNavSubitems = styled.ul `
+  list-style: none;
+  text-align: left;
+  padding:30px 0 0 60px;
+  position: relative;
+`
+
+export const VerticalNavSubitemContent = styled.li `
+  position: initial;
+  height: 50px;
+  color: #fff;
+  text-decoration: none;
 `
