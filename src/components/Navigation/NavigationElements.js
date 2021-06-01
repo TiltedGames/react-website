@@ -41,7 +41,7 @@ export const MobileIcon = styled.div `
   }
 `
 
-export const RoundLogo = styled.div  `
+export const RoundLogo = styled.span  `
   position: absolute;
   top: -4px;
   left: -22px;
@@ -137,7 +137,7 @@ export const NavBar = styled.ul `
   list-style: none;
 `
 
-export const PageLink = styled.li `
+export const NavSection = styled.li `
   position:relative;
   padding-top:16px;
   
