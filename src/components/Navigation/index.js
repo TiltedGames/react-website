@@ -8,6 +8,9 @@ import {
     VerticalSeparator,
     VerticalNavItemNumber,
     VerticalNavItemContent,
+    HomePageLinkSelectionArea,
+    LinkSelectionArea,
+    GithubLinkSelectionArea,
     SelectionCaret,
     AltSelectionCaret,
     GithubSelectionCaret,
@@ -22,29 +25,31 @@ const NavigationBar = ({toggle}) => {
           <VerticalNavBarWrapper>
               <VerticalNavBar>
                   <VerticalNavItem>
+                      <HomePageLinkSelectionArea></HomePageLinkSelectionArea>
                       <VerticalSeparator></VerticalSeparator>
                       <RoundLogo></RoundLogo>
                       <AltSelectionCaret />
                   </VerticalNavItem>
                   <VerticalNavItem>
+                      <LinkSelectionArea></LinkSelectionArea>
                       <VerticalSeparator></VerticalSeparator>
-                      <VerticalNavItemNumber>2</VerticalNavItemNumber>
                       <SelectionCaret />
                       <VerticalNavItemContent>Recoup</VerticalNavItemContent>
                   </VerticalNavItem>
                   <VerticalNavItem>
+                      <LinkSelectionArea></LinkSelectionArea>
                       <VerticalSeparator></VerticalSeparator>
-                      <VerticalNavItemNumber>3</VerticalNavItemNumber>
                       <SelectionCaret />
                       <VerticalNavItemContent>Tools</VerticalNavItemContent>
                   </VerticalNavItem>
                   <VerticalNavItem>
+                      <LinkSelectionArea></LinkSelectionArea>
                       <VerticalSeparator></VerticalSeparator>
-                      <VerticalNavItemNumber>4</VerticalNavItemNumber>
                       <SelectionCaret />
                       <VerticalNavItemContent>Contact</VerticalNavItemContent>
                   </VerticalNavItem>
                   <VerticalNavItem>
+                      <GithubLinkSelectionArea></GithubLinkSelectionArea>
                       <GithubIcon size={48} />
                       <GithubSelectionCaret />
                   </VerticalNavItem>

@@ -148,7 +148,7 @@ export const NavigationButtonLink = styled.a `
 
 export const RoundLogo = styled.div  `
   position: absolute;
-  top: -6px;
+  top: -4px;
   left: -16px;
   background: url(${ roundLogo }) no-repeat;
   background-size: cover;
@@ -160,7 +160,7 @@ export const RoundLogo = styled.div  `
 
 export const AltSelectionCaret = styled(ArrowRight) `
   position: absolute;
-  top: -8px;
+  top: -4px;
   left: -48px;
   visibility: hidden;
 `
@@ -180,10 +180,10 @@ export const SelectionCaret = styled(ArrowRight) `
 `
 
 export const VerticalNavBarWrapper = styled.div `
-  z-index:1000;
+  z-index: 1000;
   position: absolute;
-  left: 80px;
-  top: 80px;
+  right: 160px;
+  top: calc(50vh - 250px);
   color: #fff;
   
 `
@@ -191,7 +191,7 @@ export const VerticalNavBarWrapper = styled.div `
 export const VerticalNavBar = styled.ul `
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 130px);
+  grid-template-rows: repeat(5, 130px);
   text-align: center;
   list-style: none;
 `
@@ -217,9 +217,9 @@ export const VerticalNavItem = styled.li `
 
 export const VerticalSeparator = styled.div `
   position:absolute;
-  top:26px;
+  top:0;
   left:5px;
-  height: 100px;
+  height: 130px;
   width: 3px;
   background: #fff;
 `
@@ -227,7 +227,7 @@ export const VerticalSeparator = styled.div `
 export const VerticalNavItemNumber = styled.div `
   position:absolute;
   top:-5px;
-  left:-10px;
+  left:-11px;
   padding:5px 10px;
   margin:0;
   border-radius: 100px;
@@ -237,9 +237,7 @@ export const VerticalNavItemNumber = styled.div `
 export const VerticalNavItemContent = styled.div `
   position:absolute;
   top:2px;
-  left: 24px;
-  width: 250px;
-  padding-left: 10px;
+  padding-left: 20px;
   text-align: left;
 `
 
@@ -249,3 +247,14 @@ export const GithubIcon = styled(FaGithub) `
   left: -18px;
 `
 
+export const HomePageLinkSelectionArea = styled.div `
+  
+`
+
+export const LinkSelectionArea = styled.div `
+
+`
+
+export const GithubLinkSelectionArea = styled.div `
+
+`
