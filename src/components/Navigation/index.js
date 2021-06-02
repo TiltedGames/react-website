@@ -3,7 +3,7 @@ import {
     RoundLogo,
     GithubIcon,
     Wrapper,
-    Bar,
+    Pages,
     Page,
     GithubPage,
     SubpageLinks,
@@ -13,10 +13,10 @@ import {
     GithubCaret,
     LinkWrapper,
     GithubPageLinkWrapper,
-    GithubPageLink
+    GithubSubpageLink
 } from './NavigationElements';
 
-const NavigationBar = ({toggle }) => {
+const NavigationBar = ({ toggle }) => {
 
     // states for subpage expansion (toggle via hover / active page)
     const [RecoupExpanded, toggleRecoupExpanded] = useState(false);
@@ -28,13 +28,13 @@ const NavigationBar = ({toggle }) => {
     const onHover_3 = () => { toggleContactExpanded(!ContactExpanded) }
     const onHover_4 = () => { toggleGithubExpanded(!GithubExpanded) }
 
-    return(<>
+    return (<>
 
         {/* Wrapper for the navigation bar (for position control) */}
         <Wrapper>
 
             {/* [UL] Navigation bar implemented */}
-            <Bar>
+            <Pages>
 
                 {/* [LI] Tilted Games (logo) section */}
                 <Page
@@ -68,22 +68,39 @@ const NavigationBar = ({toggle }) => {
                         <Label>Recoup</Label>
 
                         {/* [UL] Subpage links */}
-                        <SubpageLinks>
+                        <SubpageLinks
+                            style = {
+                                RecoupExpanded
+                                    ? { height: 'auto', visibility: 'visible' }
+                                    : { }
+                            }
+                        >
 
                             {/* [LI] */}
-                            <SubpageLink>
+                            <SubpageLink
+                                style = {
+                                    RecoupExpanded
+                                        ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' }
+                                        : { }
+                                }
+                            >
                                 {/* [LABEL] */}
                                 <Label>Concept Art</Label>
                             </SubpageLink>
 
                             {/* [LI] */}
-                            <SubpageLink>
+                            <SubpageLink
+                                style = {
+                                    RecoupExpanded
+                                        ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' }
+                                        : { }
+                                }
+                            >
                                 {/* [LABEL] */}
                                 <Label>Download</Label>
                             </SubpageLink>
 
                         </SubpageLinks>
-
                     </LinkWrapper>
 
                 </Page>
@@ -106,16 +123,34 @@ const NavigationBar = ({toggle }) => {
                         <Label>Game server</Label>
 
                         {/* [UL] Subpage links */}
-                        <SubpageLinks>
+                        <SubpageLinks
+                            style = {
+                                ServerExpanded
+                                    ? { height: 'auto', visibility: 'visible' }
+                                    : { }
+                            }
+                        >
 
                             {/* [LI] */}
-                            <SubpageLink>
+                            <SubpageLink
+                                style = {
+                                    ServerExpanded
+                                        ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' }
+                                        : { }
+                                }
+                            >
                                 {/* [LABEL] */}
                                 <Label>Download</Label>
                             </SubpageLink>
 
                             {/* [LI] */}
-                            <SubpageLink>
+                            <SubpageLink
+                                style = {
+                                    ServerExpanded
+                                        ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' }
+                                        : { }
+                                }
+                            >
                                 {/* [LABEL] */}
                                 <Label>Help on Github</Label>
                             </SubpageLink>
@@ -145,16 +180,23 @@ const NavigationBar = ({toggle }) => {
                         {/* [LABEL] */}
                         <Label>Contact</Label>
 
-                        {/* [UL] Subpage links */}
-                        <SubpageLinks>
+                        <SubpageLinks
+                        >
 
                             {/* [LI] */}
-                            <SubpageLink>
+                            <SubpageLink
+                                style = {
+                                    ContactExpanded
+                                        ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' }
+                                        : { }
+                                }
+                            >
                                 {/* [LABEL] */}
                                 <Label>Report a bug</Label>
                             </SubpageLink>
 
                         </SubpageLinks>
+
 
                     </LinkWrapper>
 
@@ -166,24 +208,24 @@ const NavigationBar = ({toggle }) => {
                     onMouseLeave={ onHover_4 }
                 >
 
+                    {/* [IMG] */}
+                    <GithubCaret
+                        style={ GithubExpanded && { visibility: 'visible' } }
+                    />
+
+                    <a
+                        href='#'
+                        style={ { textDecoration: 'none', color: '#fff' } }
+                    >
+                        {/* [IMG] */}
+                        <GithubIcon size={48} />
+                    </a>
+
                     {/* [UL] (animated white vertical line) */}
                     <GithubPageLinkWrapper>
 
-                        {/* [IMG] */}
-                        <GithubCaret
-                            style={ GithubExpanded && { visibility: 'visible' } }
-                        />
-
-                        <a
-                            href='#'
-                            style={ { textDecoration: 'none' } }
-                        >
-                            {/* [IMG] */}
-                            <GithubIcon size={48} />
-                        </a>
-
                         {/* [LI] */}
-                        <GithubPageLink>
+                        <GithubSubpageLink>
                             <a
                                 href='#'
                                 style={ { textDecoration: 'none' } }
@@ -191,10 +233,10 @@ const NavigationBar = ({toggle }) => {
                                 {/* [LABEL] */}
                                 <Label>Recoup</Label>
                             </a>
-                        </GithubPageLink>
+                        </GithubSubpageLink>
 
                         {/* [LI] */}
-                        <GithubPageLink>
+                        <GithubSubpageLink>
                             <a
                                 href='#'
                                 style={ { textDecoration: 'none' } }
@@ -202,10 +244,10 @@ const NavigationBar = ({toggle }) => {
                                 {/* [LABEL] */}
                                 <Label>Game Server</Label>
                             </a>
-                        </GithubPageLink>
+                        </GithubSubpageLink>
 
                         {/* [LI] */}
-                        <GithubPageLink>
+                        <GithubSubpageLink>
                             <a
                                 href='#'
                                 style={ { textDecoration: 'none' } }
@@ -213,13 +255,13 @@ const NavigationBar = ({toggle }) => {
                                 {/* [LABEL] */}
                                 <Label>This Website</Label>
                             </a>
-                        </GithubPageLink>
+                        </GithubSubpageLink>
 
                     </GithubPageLinkWrapper>
 
                 </GithubPage>
 
-            </Bar>
+            </Pages>
 
         </Wrapper>
     </>);

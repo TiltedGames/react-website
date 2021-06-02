@@ -13,25 +13,9 @@ import {useState} from "react";
 
 /*
 
-        MAIN NAVIGATION COMPONENTS
+        IMAGE COMPONENTS
 
  */
-
-// wrapper (clear, controls placement)
-export const Wrapper = styled.div `
-  z-index: 1000;
-  position: absolute;
-  right: 20px;
-  top: 80px;
-  color: #fff;
-`
-
-// list (all pages)
-export const Bar = styled.ul `
-  list-style: none;
-  margin: 0;
-  padding: 0;
-`
 
 // round Tilted Games logo
 export const RoundLogo = styled.span  `
@@ -72,6 +56,28 @@ export const MobileIcon = styled.div `
   }
 `
 
+/*
+
+        MAIN NAVIGATION COMPONENTS
+
+ */
+
+// wrapper (clear, controls placement)
+export const Wrapper = styled.div `
+  z-index: 1000;
+  position: absolute;
+  right: 20px;
+  top: 80px;
+  color: #fff;
+`
+
+// list (all pages)
+export const Pages = styled.ul `
+  list-style: none;
+  margin: 0;
+  padding: 0;
+`
+
 // label (all links)
 export const Label = styled.label `
   padding-left: 40px;
@@ -86,15 +92,13 @@ export const Label = styled.label `
 
  */
 
-// caret (Github page link)
-export const GithubCaret = styled(ArrowRight) `
-  position: absolute;
-  top: 8px;
-  left: -54px;
-  visibility: hidden;
+// Github page item
+export const GithubSubpageLink = styled.li `
+  position: relative;
+  padding: 0;
 `
 
-// subpage list
+// Github subpage list
 export const GithubPageLinkWrapper = styled.ul `
   border-left: 0;
   margin-top: 24px;
@@ -105,15 +109,18 @@ export const GithubPageLinkWrapper = styled.ul `
   padding: 0;
 `
 
-// subpage item
-export const GithubPageLink = styled.li `
-
-`
-
-// navigation section
+// Github subpage list item
 export const GithubPage = styled.li `
   position: relative;
   padding-top: 16px;
+`
+
+// Github caret
+export const GithubCaret = styled(ArrowRight) `
+  position: absolute;
+  top: 8px;
+  left: -54px;
+  visibility: hidden;
 `
 
 
@@ -123,41 +130,45 @@ export const GithubPage = styled.li `
 
  */
 
-// caret (internal page links)
-export const Caret = styled(ArrowRight) `
-  position: absolute;
-  top: 27px;
-  left: -40px;
-  visibility: hidden;
+// list item (of in-site page list)
+export const Page = styled.li `
+  position: relative;
+  padding: 0;
 `
 
-// clear wrapper for middle item (part of vertical bar)
+// clear wrapper (part of vertical bar)
 export const LinkWrapper = styled.div `
   border-left: 3px solid #fff;
   padding: 30px 0;
 `
 
-// list (in-site subpages)
+// in-site subpage list
 export const SubpageLinks = styled.ul `
   list-style: none;
   text-align: left;
   position: relative;
   padding: 0;
-  height: 0;
+  visibility: visible;
   transition: all 0.2s ease-in-out;
 `
 
-// list item (in-site subpages)
+
+// list item (of in-site subpages)
 export const SubpageLink = styled.li `
   position: initial;
-  padding: 30px 0 0 20px;
+  padding: 0 0 0 20px;
   color: #fff;
   text-decoration: none;
+  //padding: 30px 0 0 20px;
+  transition: all 0.2s ease-in-out;
   visibility: hidden;
+  height: 0;
 `
 
-// list item (in-site page list)
-export const Page = styled.li `
-  position: relative;
-  padding: 0;
+// caret (for internal page links)
+export const Caret = styled(ArrowRight) `
+  position: absolute;
+  top: 27px;
+  left: -40px;
+  visibility: hidden;
 `
