@@ -115,14 +115,6 @@ export const GithubPage = styled.li `
   padding-top: 16px;
 `
 
-// Github caret
-export const GithubCaret = styled(ArrowRight) `
-  position: absolute;
-  top: 8px;
-  left: -54px;
-  visibility: hidden;
-`
-
 
 /*
 
@@ -149,7 +141,7 @@ export const SubpageLinks = styled.ul `
   position: relative;
   padding: 0;
   visibility: visible;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.25s ease-in-out;
 `
 
 
@@ -160,7 +152,7 @@ export const SubpageLink = styled.li `
   color: #fff;
   text-decoration: none;
   //padding: 30px 0 0 20px;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.25s ease-in-out;
   visibility: hidden;
   height: 0;
 `

@@ -7,7 +7,7 @@ import {
     VideoBackground,
     AboutHeader,
     AboutContent,
-    AboutP,
+    AboutP, AboutSubheader,
 } from "./AboutSectionElements";
 
 const AboutSection = () => {
@@ -26,8 +26,11 @@ const AboutSection = () => {
                 <AboutHeader>
                     We are Tilted Games
                 </AboutHeader>
+                <AboutSubheader>
+                    And we're looking to bring a new and exciting experience to you.
+                </AboutSubheader>
                 <AboutP>
-                    And we're developing a game named Recoup! We're a small team of game developers, artists, publicists, financial specialists, and engineers looking to bring a new and exciting experience to you. At the moment, all of our software is open source, covered by the MIT license.
+                    We are a small team of game developers, artists, publicists, financial specialists, and engineers developing a game named Recoup! At the moment, all of our software is open source, covered by the MIT license.
                 </AboutP>
             </AboutContent>
         </AboutContainer>

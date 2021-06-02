@@ -100,6 +100,18 @@ const NavigationBar = ({ toggle }) => {
                                 <Label>Download</Label>
                             </SubpageLink>
 
+                            {/* [LI] */}
+                            <SubpageLink
+                                style = {
+                                    RecoupExpanded
+                                        ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' }
+                                        : { }
+                                }
+                            >
+                                {/* [LABEL] */}
+                                <Label>Report a bug</Label>
+                            </SubpageLink>
+
                         </SubpageLinks>
                     </LinkWrapper>
 
@@ -169,7 +181,7 @@ const NavigationBar = ({ toggle }) => {
 
                     {/* [DIV] (white vertical line) */}
                     <LinkWrapper
-                        style={ { paddingBottom: '30px' } }
+                        style={ { paddingBottom: '50px' } }
                     >
 
                         {/* [IMG] */}
@@ -180,38 +192,16 @@ const NavigationBar = ({ toggle }) => {
                         {/* [LABEL] */}
                         <Label>Contact</Label>
 
-                        <SubpageLinks
-                        >
-
-                            {/* [LI] */}
-                            <SubpageLink
-                                style = {
-                                    ContactExpanded
-                                        ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' }
-                                        : { }
-                                }
-                            >
-                                {/* [LABEL] */}
-                                <Label>Report a bug</Label>
-                            </SubpageLink>
-
-                        </SubpageLinks>
-
-
                     </LinkWrapper>
 
                 </Page>
 
-                {/* [LI] Github section */}
-                <GithubPage
-                    onMouseEnter={ onHover_4 }
-                    onMouseLeave={ onHover_4 }
+                {/* [LI] Github (logo) section */}
+                <Page
+                    style={
+                        { zIndex: '1000', paddingBottom: '32px' }
+                    }
                 >
-
-                    {/* [IMG] */}
-                    <GithubCaret
-                        style={ GithubExpanded && { visibility: 'visible' } }
-                    />
 
                     <a
                         href='#'
@@ -221,45 +211,24 @@ const NavigationBar = ({ toggle }) => {
                         <GithubIcon size={48} />
                     </a>
 
-                    {/* [UL] (animated white vertical line) */}
-                    <GithubPageLinkWrapper>
+                </Page>
 
-                        {/* [LI] */}
-                        <GithubSubpageLink>
-                            <a
-                                href='#'
-                                style={ { textDecoration: 'none' } }
-                            >
-                                {/* [LABEL] */}
-                                <Label>Recoup</Label>
-                            </a>
-                        </GithubSubpageLink>
+                {/* [LI] (Github) Recoup section */}
+                <Page
+                    onMouseEnter={ onHover_4 }
+                    onMouseLeave={ onHover_4 }
+                >
 
-                        {/* [LI] */}
-                        <GithubSubpageLink>
-                            <a
-                                href='#'
-                                style={ { textDecoration: 'none' } }
-                            >
-                                {/* [LABEL] */}
-                                <Label>Game Server</Label>
-                            </a>
-                        </GithubSubpageLink>
+                    {/* [DIV] (white vertical line) */}
+                    <LinkWrapper>
 
-                        {/* [LI] */}
-                        <GithubSubpageLink>
-                            <a
-                                href='#'
-                                style={ { textDecoration: 'none' } }
-                            >
-                                {/* [LABEL] */}
-                                <Label>This Website</Label>
-                            </a>
-                        </GithubSubpageLink>
 
-                    </GithubPageLinkWrapper>
+                        {/* [LABEL] */}
+                        <Label>Contact</Label>
 
-                </GithubPage>
+                    </LinkWrapper>
+
+                </Page>
 
             </Pages>
 

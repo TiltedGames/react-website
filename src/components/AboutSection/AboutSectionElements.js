@@ -44,20 +44,18 @@ export const AboutContent = styled.div `
   z-index: 3;
   max-width: 1200px;
   position: absolute;
+  top: 80px;
+  left: 80px;
   padding: 8px 24px;
   display: flex;
   flex-direction: column;
-  align-items: center;
 `
 
 export const AboutHeader = styled.h1 `
   width: 70vw;
-  margin-left: calc(-30vw + 80px);
   color: #fff;
   font-size: 200px;
   text-align: left;
-  position:fixed;
-  top: 50px;
   padding-left: 0;
   
   @media screen and (max-width: 2048px) {
@@ -67,35 +65,57 @@ export const AboutHeader = styled.h1 `
   @media screen and (max-width: 1080px) {
     font-size: 160px;
     width: 60vw;
-    margin-left: calc(-40vw + 80px);
   }
   
   @media screen and (max-width: 768px) {
     font-size: 60px;
     width: 40vw;
-    margin-left: calc(-60vw + 80px);
   }
 
   @media screen and (max-width: 480px) {
     font-size: 50px;
     width: 40vw;
-    margin-left: calc(-60vw + 80px);
+  }
+`
+
+export const AboutSubheader = styled.h1 `
+  width: 70vw;
+  color: #fff;
+  font-size: 100px;
+  text-align: left;
+  margin-top: 96px;
+  
+  @media screen and (max-width: 2048px) {
+    font-size: 90px;
+  }
+
+  @media screen and (max-width: 1080px) {
+    font-size: 80px;
+    width: 60vw;
+  }
+  
+  @media screen and (max-width: 768px) {
+    font-size: 40px;
+    width: 40vw;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 30px;
+    width: 40vw;
   }
 `
 
 export const AboutP = styled.p `
-  margin: 96px 0;
+  margin-top: 250px;
   color: #fff;
-  font-size: 24px;
-  text-align: center;
-  max-width: 600px;
-  padding:20px 5px;
+  font-size: 36px;
+  text-align: right;
 
   @media screen and (max-width: 768px) {
-    font-size: 24px;
+    font-size: 30px;
   }
 
-  @media screen and (max-width: 768px) {
-    font-size: 18px;
+  @media screen and (max-width: 480px) {
+    font-size: 24px;
   }
 `
