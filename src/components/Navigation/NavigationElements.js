@@ -52,14 +52,6 @@ export const GithubIcon = styled(FaGithub) `
   left: -23px;
 `
 
-// caret (home icon link)
-export const HomeCaret = styled(ArrowRight) `
-  position: absolute;
-  top: -4px;
-  left: -54px;
-  visibility: hidden;
-`
-
 // mobile menu display icon
 export const MobileIcon = styled.div `
   // hidden by default
@@ -181,10 +173,6 @@ export const Page = styled.li `
   &:hover {
     
     ${ Caret } {
-      visibility: visible;
-    }
-    
-    ${ HomeCaret } {
       visibility: visible;
     }
     

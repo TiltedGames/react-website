@@ -17,7 +17,7 @@ const Contact = () => {
     return (
         <>
             <Sidebar isOpen={ isOpen } toggle={ toggle }/>
-            <NavigationBar toggle={ toggle }/>
+            <NavigationBar currentPage='3' toggle={ toggle }/>
             <ContactSection />
         </>
     );

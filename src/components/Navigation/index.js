@@ -10,14 +10,13 @@ import {
     SubpageLink,
     Label,
     Caret,
-    HomeCaret,
     GithubCaret,
     LinkWrapper,
     GithubPageLinkWrapper,
     GithubPageLink
 } from './NavigationElements';
 
-const NavigationBar = ({ currentPage }) => { return(<>
+const NavigationBar = ({ currentPage, toggle }) => { return(<>
 
     {/* Wrapper for the navigation bar (for position control) */}
     <Wrapper>
@@ -27,9 +26,6 @@ const NavigationBar = ({ currentPage }) => { return(<>
 
             {/* [LI] Tilted Games (logo) section */}
             <Page style={{ zIndex: '1000', paddingBottom: '32px' }}>
-
-                {/* [IMG] */}
-                <HomeCaret />
 
                 {/* [IMG] */}
                 <RoundLogo />
@@ -43,7 +39,7 @@ const NavigationBar = ({ currentPage }) => { return(<>
                 <LinkWrapper>
 
                     {/* [IMG] */}
-                    <Caret />
+                    <Caret style={currentPage === '1' && {visibility: 'visible'}} />
 
                     {/* [LABEL] */}
                     <Label>Recoup</Label>
@@ -76,7 +72,7 @@ const NavigationBar = ({ currentPage }) => { return(<>
                 <LinkWrapper>
 
                     {/* [IMG] */}
-                    <Caret />
+                    <Caret style={currentPage === '2' && {visibility: 'visible'}} />
 
                     {/* [LABEL] */}
                     <Label>Game server</Label>
@@ -109,7 +105,7 @@ const NavigationBar = ({ currentPage }) => { return(<>
                 <LinkWrapper style={{ paddingBottom: '30px' }}>
 
                     {/* [IMG] */}
-                    <Caret />
+                    <Caret style={currentPage === '3' && {visibility: 'visible'}} />
 
                     {/* [LABEL] */}
                     <Label>Contact</Label>

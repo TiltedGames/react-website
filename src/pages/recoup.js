@@ -1,13 +1,9 @@
 import React, { useState } from 'react'
 import NavigationBar from '../components/Navigation';        // import navigation menus
 import Sidebar from '../components/Sidebar';
-import ToolsSection from "../components/ToolsSection";
+import GameSection from '../components/GameSection';
 
-// set default to bug report
-// other options: get involved, make a suggestion, ask a question
-// floating option: looking to make a donation? (github sponsor link)
-
-const Tools = () => {
+const Recoup = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => {
@@ -17,10 +13,10 @@ const Tools = () => {
     return (
         <>
             <Sidebar isOpen={ isOpen } toggle={ toggle }/>
-            <NavigationBar currentPage='2' toggle={ toggle }/>
-            <ToolsSection />
+            <NavigationBar currentPage='0' toggle={toggle}/>
+            <GameSection />
         </>
     );
 }
 
-export default Tools
+export default Recoup;

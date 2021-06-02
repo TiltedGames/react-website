@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import NavigationBar from '../components/Navigation';        // import navigation menus
 import Sidebar from '../components/Sidebar';
-import GameSection from '../components/GameSection';
+import AboutSection from '../components/AboutSection';
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,10 +13,10 @@ const Home = () => {
     return (
         <>
             <Sidebar isOpen={ isOpen } toggle={ toggle }/>
-            <NavigationBar toggle={toggle}/>
-            <GameSection />
+            <NavigationBar currentPage='0' toggle={toggle}/>
+            <AboutSection />
         </>
     );
 }
 
-export default Home
+export default Home;

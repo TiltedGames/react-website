@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'; // import router for loading components
 import Home from './pages/index.js';
+import Recoup from './pages/recoup.js';
 import Tools from './pages/tools.js';
 import Contact from './pages/contact.js';
 
