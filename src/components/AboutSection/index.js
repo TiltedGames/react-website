@@ -7,7 +7,9 @@ import {
     VideoBackground,
     AboutHeader,
     AboutContent,
-    AboutP, AboutSubheader,
+    AboutP,
+    AboutSubheader,
+    AboutInfo
 } from "./AboutSectionElements";
 
 const AboutSection = () => {
@@ -19,19 +21,18 @@ const AboutSection = () => {
 
     return (
         <AboutContainer>
-            <AboutBackground>
-                <VideoBackground autoPlay loop muted src={Video} type='video/mp4' />
-            </AboutBackground>
             <AboutContent>
                 <AboutHeader>
                     We are Tilted Games
                 </AboutHeader>
-                <AboutSubheader>
-                    And we're looking to bring a new and exciting experience to you.
-                </AboutSubheader>
-                <AboutP>
-                    We are a small team of game developers, artists, publicists, financial specialists, and engineers developing a game named Recoup! At the moment, all of our software is open source, covered by the MIT license.
-                </AboutP>
+                <AboutInfo>
+                    <AboutSubheader>
+                        A small team of passionate game developers, artists, and engineers
+                    </AboutSubheader>
+                    <AboutP>
+                        And we're looking to bring a new and exciting experience to you! We're working on a game named Recoup. At the moment, all of our software is open source, covered by the MIT license.
+                    </AboutP>
+                </AboutInfo>
             </AboutContent>
         </AboutContainer>
     );

@@ -80,7 +80,7 @@ export const MobileIcon = styled.div `
 export const Wrapper = styled.div `
   z-index: 1000;
   position: absolute;
-  right: 30px;
+  right: 10px;
   top: 80px;
   color: #fff;
 `

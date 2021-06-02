@@ -1,62 +1,47 @@
 import styled from 'styled-components'
+import aboutBg from '../../img/stock_1.jpg'
 
 export const AboutContainer = styled.div `
-  background: #0c0c0c;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
-  height: 100vh;
   position: relative;
   z-index: 1;
-  
-  :before {
-    content: '';
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%);
-    z-index: 2;
-  }
 `
 
 export const AboutBackground = styled.div `
-  position: relative;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  width: inherit;
+  height: inherit;
   overflow: hidden;
 `
 
 export const VideoBackground = styled.video `
+  z-index: -1000;
+  position: absolute;
   width: 100vw;
-  height: 100vh;
-  -o-object-fit: cover;
-  object-fit: cover;
+  margin-left: -40px;
+  height: inherit;
+  overflow: hidden;
   background: #282828;
 `
 
 export const AboutContent = styled.div `
   z-index: 3;
-  max-width: 1200px;
+  max-width: 70vw;
   position: absolute;
-  top: 80px;
-  left: 80px;
-  padding: 8px 24px;
+  top: 40px;
+  left: 40px;
   display: flex;
   flex-direction: column;
 `
 
-export const AboutHeader = styled.h1 `
-  width: 70vw;
+export const AboutHeader = styled.span `
   color: #fff;
   font-size: 200px;
   text-align: left;
-  padding-left: 0;
+  padding: 0;
+  margin-bottom: 60px;
   
   @media screen and (max-width: 2048px) {
     font-size: 180px;
@@ -64,26 +49,44 @@ export const AboutHeader = styled.h1 `
 
   @media screen and (max-width: 1080px) {
     font-size: 160px;
-    width: 60vw;
+    max-width: 60vw;
   }
   
   @media screen and (max-width: 768px) {
     font-size: 60px;
-    width: 40vw;
+    max-width: 40vw;
   }
 
   @media screen and (max-width: 480px) {
     font-size: 50px;
-    width: 40vw;
+    max-width: 40vw;
+  }
+`
+
+export const AboutInfo = styled.div `
+  max-width: 70vw;
+  padding:30px;
+  height: min-content;
+  background: url(${ aboutBg }) no-repeat;
+
+  @media screen and (max-width: 1080px) {
+    max-width: 60vw;
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 40vw;
+  }
+
+  @media screen and (max-width: 480px) {
+    max-width: 40vw;
   }
 `
 
 export const AboutSubheader = styled.h1 `
-  width: 70vw;
-  color: #fff;
+  color: #000;
   font-size: 100px;
   text-align: left;
-  margin-top: 96px;
+  padding: 60px 0;
   
   @media screen and (max-width: 2048px) {
     font-size: 90px;
@@ -91,28 +94,26 @@ export const AboutSubheader = styled.h1 `
 
   @media screen and (max-width: 1080px) {
     font-size: 80px;
-    width: 60vw;
   }
   
   @media screen and (max-width: 768px) {
     font-size: 40px;
-    width: 40vw;
   }
 
   @media screen and (max-width: 480px) {
     font-size: 30px;
-    width: 40vw;
   }
 `
 
 export const AboutP = styled.p `
   margin-top: 250px;
-  color: #fff;
-  font-size: 36px;
-  text-align: right;
-
+  color: #000;
+  font-size: 48px;
+  text-align: left;
+  padding: 0;
+  
   @media screen and (max-width: 768px) {
-    font-size: 30px;
+    font-size: 36px;
   }
 
   @media screen and (max-width: 480px) {
