@@ -72,7 +72,7 @@ export const MobileIcon = styled.div `
 
 /*
 
-        MAIN NAVIGATION COMPONENTS
+        NAVIGATION COMPONENTS
 
  */
 
@@ -80,7 +80,7 @@ export const MobileIcon = styled.div `
 export const Wrapper = styled.div `
   z-index: 1000;
   position: absolute;
-  right: 20px;
+  right: 30px;
   top: 80px;
   color: #fff;
 `
@@ -90,6 +90,9 @@ export const Pages = styled.ul `
   list-style: none;
   margin: 0;
   padding: 0;
+  text-align: left;
+  position: relative;
+  transition: all 0.25s ease-in-out;
 `
 
 // label (all links)
@@ -99,42 +102,9 @@ export const Label = styled.label `
   color: #fff;
 `
 
-
-/*
-
-        GITHUB SECTION
-
- */
-
-// Github page item
-export const GithubSubpageLink = styled.li `
-  position: relative;
-  padding: 0;
+export const GithubContainer = styled.div `
+  transition: all 0.25s ease-in-out;
 `
-
-// Github subpage list
-export const GithubPageLinkWrapper = styled.ul `
-  border-left: 0;
-  margin-top: 24px;
-  list-style: none;
-  text-align: left;
-  position: relative;
-  visibility: hidden;
-  padding: 0;
-`
-
-// Github subpage list item
-export const GithubPage = styled.li `
-  position: relative;
-  padding-top: 16px;
-`
-
-
-/*
-
-        INTERNAL LINKS SECTION
-
- */
 
 // list item (of in-site page list)
 export const Page = styled.li `
@@ -154,7 +124,6 @@ export const SubpageLinks = styled.ul `
   text-align: left;
   position: relative;
   padding: 0;
-  visibility: visible;
   transition: all 0.25s ease-in-out;
 `
 
