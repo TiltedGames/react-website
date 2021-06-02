@@ -60,4 +60,5 @@ export const Column_FullWidth = styled.div `
   float: left;
   width: 100%;
   box-sizing: border-box;
+  text-align: center;
 `

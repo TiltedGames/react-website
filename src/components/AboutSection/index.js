@@ -12,7 +12,9 @@ import {
     Row_Content,
     Column_HalfWidth,
     Column_FullWidth,
-    Column_Dynamic, Column_Header_Left, Column_Header_Right
+    Column_Dynamic,
+    Column_Header_Left,
+    Column_Header_Right
 } from "../PageLayoutElements";
 
 const AboutSection = () => {
@@ -25,11 +27,11 @@ const AboutSection = () => {
     return (
         <PageContent>
             <Row_Header>
-            <Column_Header_Left>
-                <AboutHeader>
-                    We are <br />Tilted<br /> Games
-                </AboutHeader>
-            </Column_Header_Left>
+                <Column_Header_Left>
+                    <AboutHeader>
+                        We are <br />Tilted<br /> Games
+                    </AboutHeader>
+                </Column_Header_Left>
                 <Column_Header_Right>
                     <AboutSubheader>
                         Passionate artists, creators, developers, and engineers

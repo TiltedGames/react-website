@@ -3,8 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="5326dec3-9647-4f82-be61-f55db75aae95" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AboutSection/AboutSectionElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutSection/AboutSectionElements.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/AboutSection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutSection/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ButtonElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ButtonElements.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContactSection/ContactSectionElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactSection/ContactSectionElements.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContactSection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactSection/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GameSection/GameSectionElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameSection/GameSectionElements.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GameSection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameSection/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PageLayoutElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PageLayoutElements.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToolsSection/ToolsSectionElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolsSection/ToolsSectionElements.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToolsSection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolsSection/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +81,7 @@
       <workItem from="1622511374969" duration="4889000" />
       <workItem from="1622520695174" duration="43612000" />
       <workItem from="1622603018734" duration="15360000" />
-      <workItem from="1622619274169" duration="17460000" />
+      <workItem from="1622619274169" duration="19872000" />
     </task>
     <servers />
   </component>

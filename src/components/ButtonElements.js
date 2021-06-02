@@ -174,8 +174,8 @@ export const DownloadButton = styled.div `
 
 // for all buttons, sets button heights to 10% of the visible viewport (10vh)
 export const DownloadButtonWrapper = styled.div `
-  position: fixed;
-  bottom: 15vh;
+  
+  margin: 30px auto;
   
   &:hover {
     ${ OSIcons } {

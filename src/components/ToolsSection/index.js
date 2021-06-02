@@ -1,21 +1,29 @@
 import React, { useState } from 'react'
 import Video from '../../video/video.mp4'   // import background video
-// import game section elements
+// import page display elements
 import {
-    ToolsContainer,
-    ToolsBackground,
-    VideoBackground,
+    Column_FullWidth,
+    Column_Header_Left,
+    Column_Header_Right,
+    PageContent, Row_Content,
+    Row_Header
+} from "../PageLayoutElements";
+// import tools section elements
+import {
     ToolsHeader,
-    ToolsContent,
-    ToolsP
-} from "./ToolsSectionElements";
-// import button
+    ToolsSubheader
+} from "../ToolsSection/ToolsSectionElements";
+// import button elements
 import {
-    ButtonWrapper,
     ArrowForward,
     ArrowRight,
-    SendButton
+    DownloadButtonWrapper,
+    DownloadButton,
+    OSIcons,
+    WinIconWrapper,
+    WinIcon,
 } from '../ButtonElements';
+
 
 const ToolsSection = () => {
     const [hover, setHover] = useState(false)
@@ -25,30 +33,40 @@ const ToolsSection = () => {
     }
 
     return (
-        <ToolsContainer>
-            <ToolsBackground>
-                <VideoBackground autoPlay loop muted src={Video} type='video/mp4' />
-            </ToolsBackground>
-            <ToolsContent>
-                <ToolsHeader>
-                    Tools
-                </ToolsHeader>
-                <ToolsP>
-                    Recoup is still early in development. Stay tuned for more updates!
-                </ToolsP>
-                <ButtonWrapper
-                    onMouseEnter={onHover}
-                    onMouseLeave={onHover}
-                >
-                    <SendButton
-                        light='true'
-                        big='true'
+        <PageContent>
+            <Row_Header>
+                <Column_Header_Left>
+                    <ToolsHeader>
+                        One<br />Click<br />Server
+                    </ToolsHeader>
+                </Column_Header_Left>
+                <Column_Header_Right>
+                    <ToolsSubheader>
+                        Host your own server for Recoup, or start your own multiplayer project!
+                    </ToolsSubheader>
+                </Column_Header_Right>
+            </Row_Header>
+            <Row_Content>
+                <Column_FullWidth>
+                    <DownloadButtonWrapper
+                        onMouseEnter={ onHover }
+                        onMouseLeave={ onHover }
                     >
-                        Send { hover ? <ArrowForward /> : <ArrowRight /> }
-                    </SendButton>
-                </ButtonWrapper>
-            </ToolsContent>
-        </ToolsContainer>
+                        <DownloadButton
+                            light={ hover ? 'true' : 'false' }
+                            big='true'
+                        >
+                            Download { hover ? <ArrowForward /> : <ArrowRight /> }
+                        </DownloadButton>
+                        <OSIcons
+                            show={ hover ? 'true' : 'false' }
+                        >
+                            <WinIconWrapper><a href="#"><WinIcon size={48} /></a></WinIconWrapper>
+                        </OSIcons>
+                    </DownloadButtonWrapper>
+                </Column_FullWidth>
+            </Row_Content>
+        </PageContent>
     );
 }
 

@@ -1,14 +1,11 @@
 import React, { useState } from 'react'
 import Video from '../../video/video.mp4'   // import background video
-// import game section elements
+// import contact section elements
 import {
-    ContactContainer,
-    ContactBackground,
-    VideoBackground,
     ContactHeader,
-    ContactContent,
-    ContactP
-} from "./ContactSectionElements";
+    ContactP,
+    ContactSubheader
+} from "../ContactSection/ContactSectionElements";
 // import button
 import {
     ButtonWrapper,
@@ -16,6 +13,14 @@ import {
     ArrowRight,
     SendButton
 } from '../ButtonElements';
+import {
+    Column_Dynamic,
+    Column_Header_Left,
+    Column_Header_Right,
+    PageContent,
+    Row_Content,
+    Row_Header
+} from "../PageLayoutElements";
 
 const ContactSection = () => {
     const [hover, setHover] = useState(false)
@@ -25,30 +30,27 @@ const ContactSection = () => {
     }
 
     return (
-        <ContactContainer>
-            <ContactBackground>
-                <VideoBackground autoPlay loop muted src={Video} type='video/mp4' />
-            </ContactBackground>
-            <ContactContent>
-                <ContactHeader>
-                    Contact
-                </ContactHeader>
-                <ContactP>
-                    Recoup is still early in development. Stay tuned for more updates!
-                </ContactP>
-                <ButtonWrapper
-                    onMouseEnter={onHover}
-                    onMouseLeave={onHover}
-                >
-                    <SendButton
-                        light='true'
-                        big='true'
-                    >
-                        Send { hover ? <ArrowForward /> : <ArrowRight /> }
-                    </SendButton>
-                </ButtonWrapper>
-            </ContactContent>
-        </ContactContainer>
+        <PageContent>
+            <Row_Header>
+                <Column_Header_Left>
+                    <ContactHeader>
+                        Hello!
+                    </ContactHeader>
+                </Column_Header_Left>
+                <Column_Header_Right>
+                    <ContactSubheader>
+                        We'd love to hear from you
+                    </ContactSubheader>
+                </Column_Header_Right>
+            </Row_Header>
+            <Row_Content>
+                <Column_Dynamic>
+                    <ContactP>
+                        Run into a bug? Click <a href="3" style={ { color : '#fff', textDecoration : 'none'} }>here</a>!
+                    </ContactP>
+                </Column_Dynamic>
+            </Row_Content>
+        </PageContent>
     );
 }
 
