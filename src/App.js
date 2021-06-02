@@ -4,6 +4,7 @@ import Home from './pages/index.js';
 import Recoup from './pages/recoup.js';
 import Tools from './pages/tools.js';
 import Contact from './pages/contact.js';
+import Github from './pages/github.js';
 
 // main app
 function App() {
@@ -21,6 +22,9 @@ function App() {
             </Route>
             <Route path='/contact'>
                 <Contact />
+            </Route>
+            <Route path='/github'>
+                <Github />
             </Route>
         </Switch>
     </Router>
