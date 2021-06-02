@@ -51,20 +51,35 @@ export const AboutContent = styled.div `
 `
 
 export const AboutHeader = styled.h1 `
+  width: 70vw;
+  margin-left: calc(-30vw + 80px);
   color: #fff;
-  font-size: 48px;
-  text-align: center;
+  font-size: 200px;
+  text-align: left;
   position:fixed;
-  top: 10vh;
-  padding:10px 10px;
-  border:1px solid #ddd;
+  top: 50px;
+  padding-left: 0;
   
-  @media screen and (max-width: 768px) {
-    font-size: 40px;
+  @media screen and (max-width: 2048px) {
+    font-size: 180px;
   }
 
+  @media screen and (max-width: 1080px) {
+    font-size: 160px;
+    width: 60vw;
+    margin-left: calc(-40vw + 80px);
+  }
+  
   @media screen and (max-width: 768px) {
-    font-size: 32px;
+    font-size: 60px;
+    width: 40vw;
+    margin-left: calc(-60vw + 80px);
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 50px;
+    width: 40vw;
+    margin-left: calc(-60vw + 80px);
   }
 `
 

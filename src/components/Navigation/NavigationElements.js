@@ -20,8 +20,8 @@ import {
 export const Wrapper = styled.div `
   z-index: 1000;
   position: absolute;
-  left: 50px;
-  top: calc(50vh - 330px);
+  right: 20px;
+  top: 80px;
   color: #fff;
 `
 
