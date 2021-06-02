@@ -4,7 +4,10 @@ import styled from 'styled-components'
 import roundLogo from '../../img/round-logo.png';
 import {
     FaArrowRight,
-    FaGithub} from "react-icons/all";
+    FaPlus,
+    FaGithub,
+    FaDonate
+} from "react-icons/all";
 import {
     ArrowForward,
     ArrowRight
@@ -26,13 +29,24 @@ export const RoundLogo = styled.span  `
   background-size: cover;
   height: 48px;
   width: 48px;
-  border-radius: 100px;
   margin-top: -16px;
 `
 
 
 // Github icon (from fontawesome)
 export const GithubIcon = styled(FaGithub) `
+  position: absolute;
+  margin: 16px 0;
+  top: -16px;
+  left: -23px;
+  height: 48px;
+  width: 48px;
+  border: 3px solid #fff;
+  border-radius: 100px;
+`
+
+// Github icon (from fontawesome)
+export const DonateIcon = styled(FaDonate) `
   position: absolute;
   top: -6px;
   left: -23px;
@@ -131,7 +145,7 @@ export const Page = styled.li `
 // clear wrapper (part of vertical bar)
 export const LinkWrapper = styled.div `
   border-left: 3px solid #fff;
-  padding: 30px 0;
+  padding: 25px 0;
 `
 
 // in-site subpage list
@@ -158,9 +172,11 @@ export const SubpageLink = styled.li `
 `
 
 // caret (for internal page links)
-export const Caret = styled(ArrowRight) `
+export const Caret = styled(FaPlus) `
   position: absolute;
-  top: 27px;
+  top: 32px;
   left: -40px;
   visibility: hidden;
+  width:10px;
+  height:10px;
 `

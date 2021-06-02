@@ -13,20 +13,30 @@ import {
     GithubCaret,
     LinkWrapper,
     GithubPageLinkWrapper,
-    GithubSubpageLink
+    GithubSubpageLink, DonateIcon
 } from './NavigationElements';
 
 const NavigationBar = ({ toggle }) => {
 
     // states for subpage expansion (toggle via hover / active page)
+    const [AboutExpanded, toggleAboutExpanded] = useState(true);
     const [RecoupExpanded, toggleRecoupExpanded] = useState(false);
     const [ServerExpanded, toggleServerExpanded] = useState(false);
     const [ContactExpanded, toggleContactExpanded] = useState(false);
-    const [GithubExpanded, toggleGithubExpanded] = useState(false);
+    const [GithubHomeExpanded, toggleGithubHomeExpanded] = useState(false);
+    const [GithubRecoupExpanded, toggleGithubRecoupExpanded] = useState(false);
+    const [GithubServerExpanded, toggleGithubServerExpanded] = useState(false);
+    const [GithubWebsiteExpanded, toggleGithubWebsiteExpanded] = useState(false);
+    const [GithubDonateExpanded, toggleGithubDonatExpanded] = useState(false);
+    const onHover_0 = () => { toggleAboutExpanded(!AboutExpanded) }
     const onHover_1 = () => { toggleRecoupExpanded(!RecoupExpanded) }
     const onHover_2 = () => { toggleServerExpanded(!ServerExpanded)}
     const onHover_3 = () => { toggleContactExpanded(!ContactExpanded) }
-    const onHover_4 = () => { toggleGithubExpanded(!GithubExpanded) }
+    const onHover_4 = () => { toggleGithubHomeExpanded(!GithubHomeExpanded) }
+    const onHover_5 = () => { toggleGithubRecoupExpanded(!GithubRecoupExpanded) }
+    const onHover_6 = () => { toggleGithubServerExpanded(!GithubServerExpanded)}
+    const onHover_7 = () => { toggleGithubWebsiteExpanded(!GithubWebsiteExpanded) }
+    const onHover_8 = () => { toggleGithubDonatExpanded(!GithubDonateExpanded) }
 
     return (<>
 
@@ -38,6 +48,9 @@ const NavigationBar = ({ toggle }) => {
 
                 {/* [LI] Tilted Games (logo) section */}
                 <Page
+                    onMouseEnter={ onHover_0 }
+                    onMouseLeave={ onHover_0 }
+
                     style={
                         { zIndex: '1000', paddingBottom: '32px' }
                     }
@@ -45,6 +58,16 @@ const NavigationBar = ({ toggle }) => {
 
                     {/* [IMG] */}
                     <RoundLogo />
+
+                </Page>
+
+                {/* Empty, for spacing */}
+                <Page>
+                    {/* [DIV] (white vertical line) */}
+                    <LinkWrapper>
+
+
+                    </LinkWrapper>
 
                 </Page>
 
@@ -180,9 +203,7 @@ const NavigationBar = ({ toggle }) => {
                 >
 
                     {/* [DIV] (white vertical line) */}
-                    <LinkWrapper
-                        style={ { paddingBottom: '50px' } }
-                    >
+                    <LinkWrapper>
 
                         {/* [IMG] */}
                         <Caret
@@ -196,10 +217,23 @@ const NavigationBar = ({ toggle }) => {
 
                 </Page>
 
+                {/* Empty, for spacing */}
+                <Page>
+                    {/* [DIV] (white vertical line) */}
+                    <LinkWrapper>
+
+
+                    </LinkWrapper>
+
+                </Page>
+
                 {/* [LI] Github (logo) section */}
                 <Page
+                    onMouseEnter={ onHover_4 }
+                    onMouseLeave={ onHover_4 }
+
                     style={
-                        { zIndex: '1000', paddingBottom: '32px' }
+                        { zIndex: '1000', paddingBottom: '48px' }
                     }
                 >
 
@@ -208,25 +242,108 @@ const NavigationBar = ({ toggle }) => {
                         style={ { textDecoration: 'none', color: '#fff' } }
                     >
                         {/* [IMG] */}
-                        <GithubIcon size={48} />
+                        <GithubIcon />
                     </a>
+
+                </Page>
+
+                {/* Empty, for spacing */}
+                <Page>
+                    {/* [DIV] (white vertical line) */}
+                    <LinkWrapper>
+
+
+                    </LinkWrapper>
 
                 </Page>
 
                 {/* [LI] (Github) Recoup section */}
                 <Page
-                    onMouseEnter={ onHover_4 }
-                    onMouseLeave={ onHover_4 }
+                    onMouseEnter={ onHover_5 }
+                    onMouseLeave={ onHover_5 }
                 >
 
                     {/* [DIV] (white vertical line) */}
                     <LinkWrapper>
 
+                        {/* [IMG] */}
+                        <Caret
+                            style={ GithubRecoupExpanded && { visibility: 'visible' } }
+                        />
 
                         {/* [LABEL] */}
-                        <Label>Contact</Label>
+                        <Label>Recoup</Label>
+                    </LinkWrapper>
+
+                </Page>
+
+                {/* [LI] (Github) Game Server section */}
+                <Page
+                    onMouseEnter={ onHover_6 }
+                    onMouseLeave={ onHover_6 }
+                >
+
+                    {/* [DIV] (white vertical line) */}
+                    <LinkWrapper>
+
+                        {/* [IMG] */}
+                        <Caret
+                            style={ GithubServerExpanded && { visibility: 'visible' } }
+                        />
+
+                        {/* [LABEL] */}
+                        <Label>Game server</Label>
+                    </LinkWrapper>
+
+                </Page>
+
+                {/* [LI] (Github) Website section */}
+                <Page
+                    onMouseEnter={ onHover_7 }
+                    onMouseLeave={ onHover_7 }
+                >
+
+                    {/* [DIV] (white vertical line) */}
+                    <LinkWrapper>
+
+                        {/* [IMG] */}
+                        <Caret
+                            style={ GithubWebsiteExpanded && { visibility: 'visible' } }
+                        />
+
+                        {/* [LABEL] */}
+                        <Label>This website</Label>
+                    </LinkWrapper>
+
+                </Page>
+
+                {/* Empty, for spacing between Github / donate icons while no expansion */}
+                <Page>
+                    {/* [DIV] (white vertical line) */}
+                    <LinkWrapper>
+
 
                     </LinkWrapper>
+
+                </Page>
+
+                {/* [LI] Github donate (logo) section */}
+                <Page
+                    onMouseEnter={ onHover_8 }
+                    onMouseLeave={ onHover_8 }
+
+                    style={
+                        { zIndex: '1000', paddingBottom: '40px' }
+                    }
+                >
+
+                    <a
+                        href='#'
+                        style={ { textDecoration: 'none', color: '#fff' } }
+                    >
+                        {/* [IMG] */}
+                        <DonateIcon size={48} />
+                    </a>
 
                 </Page>
 
