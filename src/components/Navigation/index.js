@@ -17,7 +17,7 @@ import {
     GithubPageLink
 } from './NavigationElements';
 
-const NavigationBar = ({ toggle }) => { return(<>
+const NavigationBar = ({ currentPage }) => { return(<>
 
     {/* Wrapper for the navigation bar (for position control) */}
     <Wrapper>
@@ -26,25 +26,31 @@ const NavigationBar = ({ toggle }) => { return(<>
         <Bar>
 
             {/* [LI] Tilted Games (logo) section */}
-            <Page>
+            <Page style={{ zIndex: '1000', paddingBottom: '32px' }}>
+
                 {/* [IMG] */}
                 <HomeCaret />
+
                 {/* [IMG] */}
                 <RoundLogo />
+
             </Page>
 
             {/* [LI] Recoup section */}
             <Page>
+
                 {/* [DIV] (white vertical line) */}
                 <LinkWrapper>
 
                     {/* [IMG] */}
                     <Caret />
+
                     {/* [LABEL] */}
                     <Label>Recoup</Label>
 
                     {/* [UL] Subpage links */}
                     <SubpageLinks>
+
                         {/* [LI] */}
                         <SubpageLink>
                             {/* [LABEL] */}
@@ -56,23 +62,28 @@ const NavigationBar = ({ toggle }) => { return(<>
                             {/* [LABEL] */}
                             <Label>Download</Label>
                         </SubpageLink>
+
                     </SubpageLinks>
 
                 </LinkWrapper>
+
             </Page>
 
             {/* [LI] Game server section */}
             <Page>
+
                 {/* [DIV] (white vertical line) */}
                 <LinkWrapper>
 
                     {/* [IMG] */}
                     <Caret />
+
                     {/* [LABEL] */}
                     <Label>Game server</Label>
-                    {/* [UL] Subpage links */}
 
+                    {/* [UL] Subpage links */}
                     <SubpageLinks>
+
                         {/* [LI] */}
                         <SubpageLink>
                             {/* [LABEL] */}
@@ -84,39 +95,49 @@ const NavigationBar = ({ toggle }) => { return(<>
                             {/* [LABEL] */}
                             <Label>Help on Github</Label>
                         </SubpageLink>
+
                     </SubpageLinks>
+
                 </LinkWrapper>
+
             </Page>
 
             {/* [LI] Contact section */}
             <Page>
+
                 {/* [DIV] (white vertical line) */}
                 <LinkWrapper style={{ paddingBottom: '30px' }}>
 
                     {/* [IMG] */}
                     <Caret />
+
                     {/* [LABEL] */}
                     <Label>Contact</Label>
 
                     {/* [UL] Subpage links */}
                     <SubpageLinks>
+
                         {/* [LI] */}
                         <SubpageLink>
                             {/* [LABEL] */}
                             <Label>Report a bug</Label>
                         </SubpageLink>
+
                     </SubpageLinks>
 
                 </LinkWrapper>
+
             </Page>
 
             {/* [LI] Github section */}
             <GithubPage>
+
                 {/* [UL] (animated white vertical line) */}
                 <GithubPageLinkWrapper>
 
                     {/* [IMG] */}
                     <GithubCaret />
+
                     <a href='#' style={{ textDecoration: 'none' }}>
                         {/* [IMG] */}
                         <GithubIcon size={48} />
@@ -147,8 +168,11 @@ const NavigationBar = ({ toggle }) => { return(<>
                     </GithubPageLink>
 
                 </GithubPageLinkWrapper>
+
             </GithubPage>
+
         </Bar>
+
     </Wrapper>
 </>);
 };

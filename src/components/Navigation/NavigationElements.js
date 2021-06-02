@@ -1,27 +1,47 @@
 import styled from 'styled-components'
-import { NavLink as LinkRouter } from 'react-router-dom'
+//import { NavLink as LinkRouter } from 'react-router-dom'
 //import { Link as LinkScroll } from 'react-scroll'
-import smallLogoImage from '../../img/text-logo-small.png';
 import roundLogo from '../../img/round-logo.png';
-import {FaArrowRight, FaGithub} from "react-icons/all";
-import {ArrowForward, ArrowRight} from "../ButtonElements";
+import {
+    FaArrowRight,
+    FaGithub} from "react-icons/all";
+import {
+    ArrowForward,
+    ArrowRight
+} from "../ButtonElements";
 
 /*
 
-        IMAGE COMPONENT SECTION
+        MAIN NAVIGATION COMPONENTS
 
  */
+
+// wrapper (clear, controls placement)
+export const Wrapper = styled.div `
+  z-index: 1000;
+  position: absolute;
+  left: 50px;
+  top: calc(50vh - 330px);
+  color: #fff;
+`
+
+// list (all pages)
+export const Bar = styled.ul `
+  list-style: none;
+  margin: 0;
+  padding: 0;
+`
 
 // round Tilted Games logo
 export const RoundLogo = styled.span  `
   position: absolute;
-  top: -4px;
+  top: 0;
   left: -22px;
   background: url(${ roundLogo }) no-repeat;
   background-size: cover;
-  height:48px;
-  width:48px;
-  border-radius:100px;
+  height: 48px;
+  width: 48px;
+  border-radius: 100px;
   margin-top: -16px;
 `
 
@@ -32,7 +52,15 @@ export const GithubIcon = styled(FaGithub) `
   left: -23px;
 `
 
-// icon for mobile menu display
+// caret (home icon link)
+export const HomeCaret = styled(ArrowRight) `
+  position: absolute;
+  top: -4px;
+  left: -54px;
+  visibility: hidden;
+`
+
+// mobile menu display icon
 export const MobileIcon = styled.div `
   // hidden by default
   display:none;
@@ -50,23 +78,21 @@ export const MobileIcon = styled.div `
   }
 `
 
-// caret for the home icon link
-export const HomeCaret = styled(ArrowRight) `
-  position: absolute;
-  top: -4px;
-  left: -54px;
-  visibility: hidden;
+// label (all links)
+export const Label = styled.label `
+  padding-left: 40px;
+  text-align: left;
+  color: #fff;
 `
 
-// caret for the middle links
-export const Caret = styled(ArrowRight) `
-  position: absolute;
-  top: 54px;
-  left: -40px;
-  visibility: hidden;
-`
 
-// caret for the Github icon link
+/*
+
+        GITHUB SECTION
+
+ */
+
+// caret (Github page link)
 export const GithubCaret = styled(ArrowRight) `
   position: absolute;
   top: 8px;
@@ -74,24 +100,16 @@ export const GithubCaret = styled(ArrowRight) `
   visibility: hidden;
 `
 
-
-
-/*
-
-        GITHUB LINKS SECTION
-
- */
-
 // subpage list
 export const GithubPageLinkWrapper = styled.ul `
   border-left: 0;
   margin-top: 24px;
-  //padding: 0 0 24px 0;
   list-style: none;
   text-align: left;
   position: relative;
   visibility: hidden;
-  padding:0;
+  padding: 0;
+  //padding: 0 0 24px 0;
 `
 
 // subpage item
@@ -99,6 +117,21 @@ export const GithubPageLink = styled.li `
 
 `
 
+// navigation section
+export const GithubPage = styled.li `
+  position: relative;
+  padding-top: 16px;
+  
+  &:hover {
+    ${ GithubCaret } {
+      visibility: visible;
+    }
+    
+    ${ GithubPageLinkWrapper } {
+      border-left: 3px solid #fff;
+    }
+  }
+`
 
 
 /*
@@ -107,51 +140,46 @@ export const GithubPageLink = styled.li `
 
  */
 
-// wrapper that places the vertical nav bar
-export const Wrapper = styled.div `
-  z-index: 1000;
+// caret (internal page links)
+export const Caret = styled(ArrowRight) `
   position: absolute;
-  left: 50px;
-  top: calc(50vh - 330px);
-  color: #fff;
-  
+  top: 27px;
+  left: -40px;
+  visibility: hidden;
 `
 
-// wrapper for middle item (part of vertical bar)
+// clear wrapper for middle item (part of vertical bar)
 export const LinkWrapper = styled.div `
   border-left: 3px solid #fff;
+  padding: 30px 0;
 `
 
-// subpage list (in-site)
+// list (in-site subpages)
 export const SubpageLinks = styled.ul `
   list-style: none;
   text-align: left;
   position: relative;
-  visibility: hidden;
-  padding:0;
-`
-
-// subpage list item
-export const SubpageLink = styled.li `
-  position: initial;
-  padding: 0 0 22px 0;
-  color: #fff;
-  text-decoration: none;
-  margin-left:-300px;
+  padding: 0;
+  height: 0;
   transition: all 0.2s ease-in-out;
 `
 
-// navigation bar
-export const Bar = styled.ul `
-  list-style: none;
+// list item (in-site subpages)
+export const SubpageLink = styled.li `
+  position: initial;
+  padding:30px 0 0 20px;
+  color: #fff;
+  text-decoration: none;
+  visibility: hidden;
 `
 
-// navigation section
+// list item (in-site page list)
 export const Page = styled.li `
   position:relative;
-  padding-top:16px;
-  
+  padding: 0;
+
   &:hover {
+    
     ${ Caret } {
       visibility: visible;
     }
@@ -161,39 +189,11 @@ export const Page = styled.li `
     }
     
     ${ SubpageLink } {
-      margin-left: 0;
       visibility: visible;
-      padding:30px 0 0 60px;
+    }
+
+    ${ SubpageLinks } {
+      height: auto;
     }
   }
-`
-
-// navigation section
-export const GithubPage = styled.li `
-  position:relative;
-  padding-top:16px;
-  
-  &:hover {
-    ${ GithubCaret } {
-      visibility: visible;
-    }
-    
-    ${ SubpageLink } {
-      margin-left: 0;
-      visibility: visible;
-      padding:30px 0 0 60px;
-    }
-    
-    ${ GithubPageLinkWrapper } {
-      border-left: 3px solid #fff;
-    }
-  }
-`
-
-export const Label = styled.label `
-  padding-left: 40px;
-  padding-top: 40px;
-  text-align: left;
-  color: #fff;
-  text-decoration: none;
 `
