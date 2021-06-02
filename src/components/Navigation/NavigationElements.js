@@ -9,6 +9,7 @@ import {
     ArrowForward,
     ArrowRight
 } from "../ButtonElements";
+import {useState} from "react";
 
 /*
 
@@ -45,6 +46,7 @@ export const RoundLogo = styled.span  `
   margin-top: -16px;
 `
 
+
 // Github icon (from fontawesome)
 export const GithubIcon = styled(FaGithub) `
   position: absolute;
@@ -60,11 +62,11 @@ export const MobileIcon = styled.div `
   // show if narrow device/viewport
   @media screen and (max-width: 768px) {
     display: block;
-    position:absolute;
-    top:0;
-    right:0;
+    position: absolute;
+    top: 0;
+    right: 0;
     transform: translate(-100%, 60%);
-    font-size:1.8rem;
+    font-size: 1.8rem;
     cursor: pointer;
     color: #fff;
   }
@@ -101,7 +103,6 @@ export const GithubPageLinkWrapper = styled.ul `
   position: relative;
   visibility: hidden;
   padding: 0;
-  //padding: 0 0 24px 0;
 `
 
 // subpage item
@@ -113,16 +114,6 @@ export const GithubPageLink = styled.li `
 export const GithubPage = styled.li `
   position: relative;
   padding-top: 16px;
-  
-  &:hover {
-    ${ GithubCaret } {
-      visibility: visible;
-    }
-    
-    ${ GithubPageLinkWrapper } {
-      border-left: 3px solid #fff;
-    }
-  }
 `
 
 
@@ -159,7 +150,7 @@ export const SubpageLinks = styled.ul `
 // list item (in-site subpages)
 export const SubpageLink = styled.li `
   position: initial;
-  padding:30px 0 0 20px;
+  padding: 30px 0 0 20px;
   color: #fff;
   text-decoration: none;
   visibility: hidden;
@@ -167,21 +158,6 @@ export const SubpageLink = styled.li `
 
 // list item (in-site page list)
 export const Page = styled.li `
-  position:relative;
+  position: relative;
   padding: 0;
-
-  &:hover {
-    
-    ${ Caret } {
-      visibility: visible;
-    }
-    
-    ${ SubpageLink } {
-      visibility: visible;
-    }
-
-    ${ SubpageLinks } {
-      height: auto;
-    }
-  }
 `

@@ -14,6 +14,9 @@ function App() {
                 <Home />
             </Route>
             <Route path='/tools'>
+                <Recoup />
+            </Route>
+            <Route path='/tools'>
                 <Tools />
             </Route>
             <Route path='/contact'>

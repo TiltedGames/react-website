@@ -4,16 +4,15 @@ import Sidebar from '../components/Sidebar';
 import AboutSection from '../components/AboutSection';
 
 const Home = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [mobileMenuOpen, toggleMobileMenu] = useState(false);
 
     const toggle = () => {
-        setIsOpen(!isOpen)
+        toggleMobileMenu(!mobileMenuOpen)
     }
 
     return (
         <>
-            <Sidebar isOpen={ isOpen } toggle={ toggle }/>
-            <NavigationBar currentPage='0' toggle={toggle}/>
+            <NavigationBar toggle={ toggle } />
             <AboutSection />
         </>
     );

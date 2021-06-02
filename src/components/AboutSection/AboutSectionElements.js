@@ -5,7 +5,7 @@ export const AboutContainer = styled.div `
   display: flex;
   justify-content: center;
   align-items: center;
-  padding:0;
+  padding: 0;
   height: 100vh;
   position: relative;
   z-index: 1;
