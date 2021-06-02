@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"AAAA,EACE,qBAAsB,CACtB,QAAQ,CACR,SAAS,CACT,mCACF,CAEA,KACE,eACF","file":"main.710017ce.chunk.css","sourcesContent":["* {\r\n  box-sizing: border-box;\r\n  margin:0;\r\n  padding:0;\r\n  font-family: 'Inconsolata', monospace;\r\n}\r\n\r\nbody {\r\n  background: #000;\r\n}"]}
