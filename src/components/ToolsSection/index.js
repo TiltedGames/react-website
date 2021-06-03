@@ -1,18 +1,22 @@
 import React, { useState } from 'react'
-import Video from '../../video/video.mp4'   // import background video
 // import page display elements
 import {
     Column_FullWidth,
     Column_Header_Left,
     Column_Header_Right,
-    PageContent, Row_Content,
-    Row_Header
+    PageContent, Row,
+    Row_EqualHeights
 } from "../PageLayoutElements";
 // import tools section elements
 import {
     ToolsHeader,
     ToolsSubheader
 } from "../ToolsSection/ToolsSectionElements";
+import {
+    Header,
+    Subheader,
+    BoldText
+} from "../PageDesignElements";
 // import button elements
 import {
     ArrowForward,
@@ -34,19 +38,19 @@ const ToolsSection = () => {
 
     return (
         <PageContent>
-            <Row_Header>
+            <Row>
                 <Column_Header_Left>
-                    <ToolsHeader>
+                    <Header>
                         One<br />Click<br />Server
-                    </ToolsHeader>
+                    </Header>
                 </Column_Header_Left>
                 <Column_Header_Right>
-                    <ToolsSubheader>
+                    <Subheader>
                         Host your own server for Recoup, or start your own multiplayer project!
-                    </ToolsSubheader>
+                    </Subheader>
                 </Column_Header_Right>
-            </Row_Header>
-            <Row_Content>
+            </Row>
+            <Row>
                 <Column_FullWidth>
                     <DownloadButtonWrapper
                         onMouseEnter={ onHover }
@@ -65,7 +69,7 @@ const ToolsSection = () => {
                         </OSIcons>
                     </DownloadButtonWrapper>
                 </Column_FullWidth>
-            </Row_Content>
+            </Row>
         </PageContent>
     );
 }

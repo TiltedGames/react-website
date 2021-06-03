@@ -1,12 +1,8 @@
 import React, { useState } from 'react'
-import Video from '../../video/video.mp4'   // import background video
-// import game section elements
 import {
-    GameHeader,
-    GameSubheader,
-    GameContent,
-    GameP,
-} from "./GameSectionElements";
+    Header,
+    Subheader
+} from "../PageDesignElements";
 // import button
 import {
     DownloadButtonWrapper,
@@ -24,8 +20,8 @@ import {
 
 import {
     PageContent,
-    Row_Header,
-    Row_Content,
+    Row_EqualHeights,
+    Row,
     Column_HalfWidth,
     Column_FullWidth,
     Column_Dynamic,
@@ -42,19 +38,19 @@ const GameSection = () => {
 
     return (
         <PageContent>
-            <Row_Header>
+            <Row>
                 <Column_Header_Left>
-                    <GameHeader>
+                    <Header>
                         Recoup
-                    </GameHeader>
+                    </Header>
                 </Column_Header_Left>
                 <Column_Header_Right>
-                    <GameSubheader>
+                    <Subheader>
                         Recoup is still early in development. Stay tuned for more updates!
-                    </GameSubheader>
+                    </Subheader>
                 </Column_Header_Right>
-            </Row_Header>
-            <Row_Content>
+            </Row>
+            <Row>
                 <Column_FullWidth>
                     <DownloadButtonWrapper
                         onMouseEnter={ onHover }
@@ -75,7 +71,7 @@ const GameSection = () => {
                         </OSIcons>
                     </DownloadButtonWrapper>
                 </Column_FullWidth>
-            </Row_Content>
+            </Row>
         </PageContent>
     );
 }

@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import Video from '../../video/video.mp4'   // import background video
 // import contact section elements
 import {
-    ContactHeader,
-    ContactP,
-    ContactSubheader
-} from "../ContactSection/ContactSectionElements";
+    Header,
+    Subheader,
+    BoldText
+} from "../PageDesignElements";
 // import button
 import {
     ButtonWrapper,
@@ -18,8 +17,8 @@ import {
     Column_Header_Left,
     Column_Header_Right,
     PageContent,
-    Row_Content,
-    Row_Header
+    Row,
+    Row_EqualHeights
 } from "../PageLayoutElements";
 
 const ContactSection = () => {
@@ -31,25 +30,25 @@ const ContactSection = () => {
 
     return (
         <PageContent>
-            <Row_Header>
+            <Row>
                 <Column_Header_Left>
-                    <ContactHeader>
+                    <Header>
                         Hello!
-                    </ContactHeader>
+                    </Header>
                 </Column_Header_Left>
                 <Column_Header_Right>
-                    <ContactSubheader>
+                    <Subheader>
                         We'd love to hear from you
-                    </ContactSubheader>
+                    </Subheader>
                 </Column_Header_Right>
-            </Row_Header>
-            <Row_Content>
+            </Row>
+            <Row>
                 <Column_Dynamic>
-                    <ContactP>
+                    <BoldText>
                         Run into a bug? Click <a href="3" style={ { color : '#fff', textDecoration : 'none'} }>here</a>!
-                    </ContactP>
+                    </BoldText>
                 </Column_Dynamic>
-            </Row_Content>
+            </Row>
         </PageContent>
     );
 }

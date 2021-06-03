@@ -1,15 +1,14 @@
 import React, { useState } from 'react'
 import Video from '../../video/video.mp4'   // import background video
-// import game section elements
 import {
-    AboutHeader,
-    AboutP,
-    AboutSubheader
-} from "./AboutSectionElements";
+    Header,
+    Subheader,
+    BoldText
+} from "../PageDesignElements";
 import {
     PageContent,
-    Row_Header,
-    Row_Content,
+    Row_EqualHeights,
+    Row,
     Column_HalfWidth,
     Column_FullWidth,
     Column_Dynamic,
@@ -26,25 +25,25 @@ const AboutSection = () => {
 
     return (
         <PageContent>
-            <Row_Header>
+            <Row>
                 <Column_Header_Left>
-                    <AboutHeader>
+                    <Header>
                         We are <br />Tilted<br /> Games
-                    </AboutHeader>
+                    </Header>
                 </Column_Header_Left>
                 <Column_Header_Right>
-                    <AboutSubheader>
+                    <Subheader>
                         Passionate artists, creators, developers, and engineers
-                    </AboutSubheader>
+                    </Subheader>
                 </Column_Header_Right>
-            </Row_Header>
-            <Row_Content>
+            </Row>
+            <Row>
                 <Column_Dynamic>
-                    <AboutP>
+                    <BoldText>
                         And we're looking to bring a new and exciting experience to you! We're working on a game named Recoup. At the moment, all of our software is open source, covered by the MIT license.
-                    </AboutP>
+                    </BoldText>
                 </Column_Dynamic>
-            </Row_Content>
+            </Row>
         </PageContent>
     );
 }
