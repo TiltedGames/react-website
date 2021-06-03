@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 //import { NavLink as LinkRouter } from 'react-router-dom'
 //import { Link as LinkScroll } from 'react-scroll'
-import roundLogo from '../img/round-logo.png';
+import roundLogo from '../media/img/round-logo.png';
 import {
     FaArrowRight,
     FaPlus,

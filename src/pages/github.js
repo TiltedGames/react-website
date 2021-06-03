@@ -23,9 +23,9 @@ import {
     CloneTextbox,
     CopyButton
 } from "../components/github";
-import RepoImage_1 from "../img/stock_1.jpg"
-import RepoImage_2 from "../img/stock_1.jpg"
-import RepoImage_3 from "../img/stock_1.jpg"
+import RepoImage_1 from "../media/img/stock_1.jpg"
+import RepoImage_2 from "../media/img/stock_1.jpg"
+import RepoImage_3 from "../media/img/stock_1.jpg"
 
 
 const CloneText_1 = 'https://tiltedgames.org';

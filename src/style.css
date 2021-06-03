@@ -3,12 +3,12 @@
 
 @font-face {
   font-family: 'NeutralFace';
-  src: local('NeutralFace'), url(font/NeutralFace.otf) format('opentype');
+  src: local('NeutralFace'), url(media/font/NeutralFace.otf) format('opentype');
 }
 
 @font-face {
   font-family: 'NeutralFace-Bold';
-  src: local('NeutralFace-Bold'), url(font/NeutralFace-Bold.otf) format('opentype');
+  src: local('NeutralFace-Bold'), url(media/font/NeutralFace-Bold.otf) format('opentype');
 }
 
 * {
