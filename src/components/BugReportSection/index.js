@@ -19,7 +19,7 @@ import {
     Row_EqualHeights
 } from "../PageLayoutElements";
 
-const ContactSection = () => {
+const BugReportSection = () => {
     const [hover, setHover] = useState(false)
 
     const onHover = () => {
@@ -31,12 +31,12 @@ const ContactSection = () => {
             <Row>
                 <Column_Heading_Left>
                     <PageHeading>
-                        Contact
+                        Report a bug
                     </PageHeading>
                 </Column_Heading_Left>
                 <Column_Heading_Right>
                     <PageSubheading>
-                        We'd love to hear from you
+                        Your feedback is incredibly helpful!
                     </PageSubheading>
                 </Column_Heading_Right>
             </Row>
@@ -51,4 +51,4 @@ const ContactSection = () => {
     );
 }
 
-export default ContactSection;
+export default BugReportSection;

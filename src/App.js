@@ -6,26 +6,28 @@ import GameSection from "./components/GameSection";
 import ToolsSection from "./components/ToolsSection";
 import GithubSection from "./components/GithubSection";
 import ContactSection from "./components/ContactSection";
+import BugReportSection from "./components/BugReportSection";
 
 // main app
 function App() {
 
-  const [mobileMenuOpen, toggleMobileMenu] = useState(false);
+    const [mobileMenuOpen, toggleMobileMenu] = useState(false);
 
-  const toggle = () => {
-    toggleMobileMenu(!mobileMenuOpen)
-  }
+    const toggle = () => {
+        toggleMobileMenu(!mobileMenuOpen)
+    }
 
-  return (
-      <>
-        <NavigationBar toggle={ toggle } />
-        <AboutSection />
-        <GameSection />
-        <ToolsSection />
-        <GithubSection />
-        <ContactSection />
-      </>
-  );
+    return (
+        <>
+            <NavigationBar toggle={ toggle } />
+            <AboutSection />
+            <GameSection />
+            <ToolsSection />
+            <GithubSection />
+            <ContactSection />
+            <BugReportSection />
+        </>
+    );
 
 }
 

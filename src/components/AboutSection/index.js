@@ -72,9 +72,6 @@ const AboutSection = () => {
             </Row>
             <Row>
                 <Column_FullWidth>
-                    <SectionHeading>
-                        Meet the team
-                    </SectionHeading>
                     <RoleHeading
                         style={ { borderBottom: '3px solid #ad24a4'}}
                     >
