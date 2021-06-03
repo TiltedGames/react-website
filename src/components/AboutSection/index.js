@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Video from '../../video/video.mp4'   // import background video
 import {
     Header,
     Subheader,

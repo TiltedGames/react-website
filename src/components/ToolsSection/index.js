@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-// import page display elements
 import {
     Column_FullWidth,
     Column_Header_Left,
@@ -7,17 +6,11 @@ import {
     PageContent, Row,
     Row_EqualHeights
 } from "../PageLayoutElements";
-// import tools section elements
-import {
-    ToolsHeader,
-    ToolsSubheader
-} from "../ToolsSection/ToolsSectionElements";
 import {
     Header,
     Subheader,
     BoldText
 } from "../PageDesignElements";
-// import button elements
 import {
     ArrowForward,
     ArrowRight,

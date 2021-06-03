@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
-// import contact section elements
 import {
     Header,
     Subheader,
     BoldText
 } from "../PageDesignElements";
-// import button
 import {
     ButtonWrapper,
     ArrowForward,
