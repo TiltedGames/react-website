@@ -23,7 +23,7 @@ export const Row = styled.div `
   }
 `
 
-export const Column_Header_Left = styled.div `
+export const Column_Heading_Left = styled.div `
   width: 30%;
   box-sizing: border-box;
   height: 100%;
@@ -31,7 +31,7 @@ export const Column_Header_Left = styled.div `
   padding: 25px 0 25px 25px;
 `
 
-export const Column_Header_Right = styled.div `
+export const Column_Heading_Right = styled.div `
   background: #fff;
   width: 60%;
   box-sizing: border-box;
@@ -40,14 +40,28 @@ export const Column_Header_Right = styled.div `
   padding: 25px 25px 25px 0;
 `
 
+export const Column_Dynamic_Equal_Height = styled.div `
+  float: left;
+  background: #fff;
+  box-sizing: border-box;
+  display: table-cell;
+  height: 100%;
+  padding: 25px;
+`
+
 export const Column_Dynamic = styled.div `
   float: left;
-  width: 50%;
   box-sizing: border-box;
 
   @media screen and (max-width: 500px) {
     width: 100%;
   }
+`
+
+export const Column_ThirdWidth = styled.div `
+  float: left;
+  width: 40%;
+  box-sizing: border-box;
 `
 
 
@@ -62,5 +76,5 @@ export const Column_FullWidth = styled.div `
   width: 100%;
   box-sizing: border-box;
   text-align: center;
-  padding: 25px;
 `
+

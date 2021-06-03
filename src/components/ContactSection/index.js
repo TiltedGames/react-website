@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {
-    Header,
-    Subheader,
+    PageHeading,
+    PageSubheading,
     BoldText
 } from "../PageDesignElements";
 import {
@@ -12,8 +12,8 @@ import {
 } from '../ButtonElements';
 import {
     Column_Dynamic,
-    Column_Header_Left,
-    Column_Header_Right,
+    Column_Heading_Left,
+    Column_Heading_Right,
     PageContent,
     Row,
     Row_EqualHeights
@@ -29,16 +29,16 @@ const ContactSection = () => {
     return (
         <PageContent>
             <Row>
-                <Column_Header_Left>
-                    <Header>
+                <Column_Heading_Left>
+                    <PageHeading>
                         Hello!
-                    </Header>
-                </Column_Header_Left>
-                <Column_Header_Right>
-                    <Subheader>
+                    </PageHeading>
+                </Column_Heading_Left>
+                <Column_Heading_Right>
+                    <PageSubheading>
                         We'd love to hear from you
-                    </Subheader>
-                </Column_Header_Right>
+                    </PageSubheading>
+                </Column_Heading_Right>
             </Row>
             <Row>
                 <Column_Dynamic>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {
-    Header,
-    Subheader
+    PageHeading,
+    PageSubheading
 } from "../PageDesignElements";
 // import button
 import {
@@ -25,8 +25,8 @@ import {
     Column_HalfWidth,
     Column_FullWidth,
     Column_Dynamic,
-    Column_Header_Left,
-    Column_Header_Right
+    Column_Heading_Left,
+    Column_Heading_Right
 } from "../PageLayoutElements";
 
 const GameSection = () => {
@@ -39,16 +39,16 @@ const GameSection = () => {
     return (
         <PageContent>
             <Row>
-                <Column_Header_Left>
-                    <Header>
+                <Column_Heading_Left>
+                    <PageHeading>
                         Recoup
-                    </Header>
-                </Column_Header_Left>
-                <Column_Header_Right>
-                    <Subheader>
+                    </PageHeading>
+                </Column_Heading_Left>
+                <Column_Heading_Right>
+                    <PageSubheading>
                         Recoup is still early in development. Stay tuned for more updates!
-                    </Subheader>
-                </Column_Header_Right>
+                    </PageSubheading>
+                </Column_Heading_Right>
             </Row>
             <Row>
                 <Column_FullWidth>

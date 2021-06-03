@@ -6,16 +6,34 @@ import {
     Column_HalfWidth,
     Column_FullWidth,
     Column_Dynamic,
-    Column_Header_Left,
-    Column_Header_Right
+    Column_Heading_Left,
+    Column_Heading_Right, Column_Dynamic_Equal_Height
 } from "../PageLayoutElements";
 import {
-    Header,
-    Subheader,
+    PageHeading,
+    PageSubheading,
     BoldText
 } from "../PageDesignElements";
+import {
+    RepoCards,
+    RepoCard,
+    RepoLink,
+    RepoName,
+    RepoDescription,
+    CloneTextbox,
+    CopyButton
+} from "./GithubSectionElements";
+import RepoImage_1 from "../../img/stock_1.jpg"
+import RepoImage_2 from "../../img/stock_1.jpg"
+import RepoImage_3 from "../../img/stock_1.jpg"
+
+
+const CloneText_1 = 'https://tiltedgames.org';
+const CloneText_2 = 'https://tiltedgames.org';
+const CloneText_3 = 'https://tiltedgames.org';
 
 const GithubSection = () => {
+
     const [hover, setHover] = useState(false)
 
     const onHover = () => {
@@ -25,24 +43,82 @@ const GithubSection = () => {
     return (
         <PageContent>
             <Row>
-                <Column_Header_Left>
-                    <Header>
-                        Tilted<br />Games<br />On Github
-                    </Header>
-                </Column_Header_Left>
-                <Column_Header_Right>
-                    <Subheader>
-                        We proudly support open-source software. Access ours on Github, for free!
-                    </Subheader>
-                </Column_Header_Right>
+                <Column_Heading_Left>
+                    <PageHeading>
+                        Tilted<br />
+                        Games<br />
+                        On Github
+                    </PageHeading>
+                </Column_Heading_Left>
+                <Column_Heading_Right>
+                    <PageSubheading>
+                        We proudly support open-source
+                        software. Access ours on Github, for free!
+                    </PageSubheading>
+                </Column_Heading_Right>
             </Row>
             <Row>
                 <Column_FullWidth>
                     <BoldText>
-                        Great software begins with great people. Our goal is not just to create games, but to foster an open environment conducive to learning and creativity. For this reason, we host our development out in the open, on Github, and host <a style={ { color: '#fff' } } href='#'>a Discord server</a> open to the public. Come say hi and see where development is at!
+                        Great software begins with great people.
+                        Our goal is not just to create games,
+                        but to foster an open environment
+                        conducive to learning and creativity.
+                        For this reason, we host our development
+                        out in the open, on Github, and
+                        host <a style={ { color: '#fff' } } href='#'> a Discord server</a> open
+                        to the public. Come say hi and see where
+                        development is at!
                     </BoldText>
                 </Column_FullWidth>
             </Row>
+            <RepoCards>
+                <Column_Dynamic_Equal_Height>
+                        <RepoCard>
+                            <a
+                                href='#'
+                                style={ { color: '#fff'}}
+                            >
+                                <RepoName>Recoup</RepoName>
+                            </a>
+                            <RepoDescription>
+                                This repo hosts the Unity project and all art assets used in the making of Recoup. It also includes binaries ready to play of the current development version.
+                            </RepoDescription>
+                            <CloneTextbox text={ CloneText_1 }></CloneTextbox>
+                            <CopyButton></CopyButton>
+                        </RepoCard>
+                </Column_Dynamic_Equal_Height>
+                <Column_Dynamic_Equal_Height>
+                        <RepoCard>
+                            <a
+                                href='#'
+                                style={ { color: '#fff'}}
+                            >
+                                <RepoName>One Click Server</RepoName>
+                            </a>
+                            <RepoDescription>
+                                This repo hosts the server that drives Recoup. Its a great starting point for making your own multiplayer game or project!
+                            </RepoDescription>
+                            <CloneTextbox text={ CloneText_2 }></CloneTextbox>
+                            <CopyButton></CopyButton>
+                        </RepoCard>
+                </Column_Dynamic_Equal_Height>
+                <Column_Dynamic_Equal_Height>
+                        <RepoCard>
+                            <a
+                                href='#'
+                                style={ { color: '#fff'}}
+                            >
+                                <RepoName>This Website</RepoName>
+                            </a>
+                            <RepoDescription>
+                                Like the website? Check out the React project here!
+                            </RepoDescription>
+                            <CloneTextbox text={ CloneText_3 }></CloneTextbox>
+                            <CopyButton />
+                        </RepoCard>
+                </Column_Dynamic_Equal_Height>
+            </RepoCards>
         </PageContent>
     );
 }

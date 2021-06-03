@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import {
     Column_FullWidth,
-    Column_Header_Left,
-    Column_Header_Right,
+    Column_Heading_Left,
+    Column_Heading_Right,
     PageContent, Row,
     Row_EqualHeights
 } from "../PageLayoutElements";
 import {
-    Header,
-    Subheader,
+    PageHeading,
+    PageSubheading,
     BoldText
 } from "../PageDesignElements";
 import {
@@ -32,16 +32,16 @@ const ToolsSection = () => {
     return (
         <PageContent>
             <Row>
-                <Column_Header_Left>
-                    <Header>
+                <Column_Heading_Left>
+                    <PageHeading>
                         One<br />Click<br />Server
-                    </Header>
-                </Column_Header_Left>
-                <Column_Header_Right>
-                    <Subheader>
+                    </PageHeading>
+                </Column_Heading_Left>
+                <Column_Heading_Right>
+                    <PageSubheading>
                         Host your own server for Recoup, or start your own multiplayer project!
-                    </Subheader>
-                </Column_Header_Right>
+                    </PageSubheading>
+                </Column_Heading_Right>
             </Row>
             <Row>
                 <Column_FullWidth>
