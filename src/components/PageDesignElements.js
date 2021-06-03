@@ -58,7 +58,7 @@ export const SectionHeading = styled.h1 `
   font-family: 'NeutralFace';
   color: #000;
   background: #fff;
-  text-align: left;
+  text-align: center;
   margin: 0;
   padding: 25px;
   font-weight: bold;
