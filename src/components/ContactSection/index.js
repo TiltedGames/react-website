@@ -31,7 +31,7 @@ const ContactSection = () => {
             <Row>
                 <Column_Heading_Left>
                     <PageHeading>
-                        Hello!
+                        Contact
                     </PageHeading>
                 </Column_Heading_Left>
                 <Column_Heading_Right>

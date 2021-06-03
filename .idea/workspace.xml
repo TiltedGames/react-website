@@ -3,9 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="5326dec3-9647-4f82-be61-f55db75aae95" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/AboutSection/AboutSectionElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutSection/AboutSectionElements.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/AboutSection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutSection/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContactSection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactSection/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/NavigationElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/NavigationElements.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PageDesignElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PageDesignElements.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PageLayoutElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PageLayoutElements.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/contact.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/github.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/recoup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +32,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProblemsViewState">
     <option name="selectedIndex" value="1" />
@@ -74,7 +93,7 @@
       <workItem from="1622511374969" duration="4889000" />
       <workItem from="1622520695174" duration="43612000" />
       <workItem from="1622603018734" duration="15360000" />
-      <workItem from="1622619274169" duration="33675000" />
+      <workItem from="1622619274169" duration="39809000" />
     </task>
     <servers />
   </component>

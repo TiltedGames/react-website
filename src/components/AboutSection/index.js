@@ -19,7 +19,7 @@ import {
     Role,
     RoleHeading,
     NextButton,
-    RoleButton_1,
+    RoleButton,
     RoleButton_2,
     RoleButton_3,
     RoleButton_4,
@@ -33,7 +33,10 @@ import {
     Icon_Left,
     Icon_Right
 } from "./AboutSectionElements";
-import {FaArrowLeft, FaArrowRight} from "react-icons/all";
+import {
+    FaArrowLeft,
+    FaArrowRight
+} from "react-icons/all";
 
 const AboutSection = () => {
     const [hover, setHover] = useState(false)
@@ -72,12 +75,16 @@ const AboutSection = () => {
                     <SectionHeading>
                         Meet the team
                     </SectionHeading>
-                    <RoleHeading>
+                    <RoleHeading
+                        style={ { borderBottom: '3px solid #ad24a4'}}
+                    >
                         Artists
                     </RoleHeading>
                     <Role>
                         <Section_1>
-                            <RoleButton_1><FaArrowLeft size={40} /></RoleButton_1>
+                            <RoleButton
+                                style={ { background: '#ad24a4' } }
+                            ><FaArrowLeft size={40} /></RoleButton>
                         </Section_1>
                         <Section_2>
                             <Icon_Left></Icon_Left>
@@ -89,15 +96,21 @@ const AboutSection = () => {
                             <Icon_Right></Icon_Right>
                         </Section_4>
                         <Section_5>
-                            <RoleButton_1><FaArrowRight size={40} /></RoleButton_1>
+                            <RoleButton
+                                style={ { background: '#ad24a4' } }
+                            ><FaArrowRight size={40} /></RoleButton>
                         </Section_5>
                     </Role>
-                    <RoleHeading>
-                        Creativity & P.R.
+                    <RoleHeading
+                        style={ { borderBottom: '3px solid #e3502b'}}
+                    >
+                        Writers
                     </RoleHeading>
                     <Role>
                         <Section_1>
-                            <RoleButton_2><FaArrowLeft size={40} /></RoleButton_2>
+                            <RoleButton
+                                style={ { background: '#e3502b' } }
+                            ><FaArrowLeft size={40} /></RoleButton>
                         </Section_1>
                         <Section_2>
                             <Icon_Left></Icon_Left>
@@ -109,15 +122,21 @@ const AboutSection = () => {
                             <Icon_Right></Icon_Right>
                         </Section_4>
                         <Section_5>
-                            <RoleButton_2><FaArrowRight size={40} /></RoleButton_2>
+                            <RoleButton
+                                style={ { background: '#e3502b' } }
+                            ><FaArrowRight size={40} /></RoleButton>
                         </Section_5>
                     </Role>
-                    <RoleHeading>
-                        Developer (C#)
+                    <RoleHeading
+                        style={ { borderBottom: '3px solid #3ac0cf'}}
+                    >
+                        Developers (C#)
                     </RoleHeading>
                     <Role>
                         <Section_1>
-                            <RoleButton_3><FaArrowLeft size={40} /></RoleButton_3>
+                            <RoleButton
+                                style={ { background: '#3ac0cf' } }
+                            ><FaArrowLeft size={40} /></RoleButton>
                         </Section_1>
                         <Section_2>
                             <Icon_Left></Icon_Left>
@@ -129,15 +148,21 @@ const AboutSection = () => {
                             <Icon_Right></Icon_Right>
                         </Section_4>
                         <Section_5>
-                            <RoleButton_3><FaArrowRight size={40} /></RoleButton_3>
+                            <RoleButton
+                                style={ { background: '#3ac0cf' } }
+                            ><FaArrowRight size={40} /></RoleButton>
                         </Section_5>
                     </Role>
-                    <RoleHeading>
-                        Developer (Web)
+                    <RoleHeading
+                        style={ { borderBottom: '3px solid #4d57a3'}}
+                    >
+                        Developers (Web)
                     </RoleHeading>
                     <Role>
                         <Section_1>
-                            <RoleButton_4><FaArrowLeft size={40} /></RoleButton_4>
+                            <RoleButton
+                                style={ { background: '#4d57a3' } }
+                            ><FaArrowLeft size={40} /></RoleButton>
                         </Section_1>
                         <Section_2>
                             <Icon_Left></Icon_Left>
@@ -149,15 +174,21 @@ const AboutSection = () => {
                             <Icon_Right></Icon_Right>
                         </Section_4>
                         <Section_5>
-                            <RoleButton_4><FaArrowRight size={40} /></RoleButton_4>
+                            <RoleButton
+                                style={ { background: '#4d57a3' } }
+                            ><FaArrowRight size={40} /></RoleButton>
                         </Section_5>
                     </Role>
-                    <RoleHeading>
-                        Finance
+                    <RoleHeading
+                        style={ { borderBottom: '3px solid #30d163'}}
+                    >
+                        Finance & P.R.
                     </RoleHeading>
                     <Role>
                         <Section_1>
-                            <RoleButton_5><FaArrowLeft size={40} /></RoleButton_5>
+                            <RoleButton
+                                style={ { background: '#30d163' } }
+                            ><FaArrowLeft size={40} /></RoleButton>
                         </Section_1>
                         <Section_2>
                             <Icon_Left></Icon_Left>
@@ -169,7 +200,9 @@ const AboutSection = () => {
                             <Icon_Right></Icon_Right>
                         </Section_4>
                         <Section_5>
-                            <RoleButton_5><FaArrowRight size={40} /></RoleButton_5>
+                            <RoleButton
+                                style={ { background: '#30d163' } }
+                            ><FaArrowRight size={40} /></RoleButton>
                         </Section_5>
                     </Role>
                 </Column_FullWidth>

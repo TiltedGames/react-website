@@ -1,34 +1,32 @@
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'; // import router for loading components
-import Home from './pages/index.js';
-import Recoup from './pages/recoup.js';
-import Tools from './pages/tools.js';
-import Contact from './pages/contact.js';
-import Github from './pages/github.js';
+import React, {useState} from "react";
+import NavigationBar from "./components/Navigation";
+import AboutSection from "./components/AboutSection";
+import GameSection from "./components/GameSection";
+import ToolsSection from "./components/ToolsSection";
+import GithubSection from "./components/GithubSection";
+import ContactSection from "./components/ContactSection";
 
 // main app
 function App() {
+
+  const [mobileMenuOpen, toggleMobileMenu] = useState(false);
+
+  const toggle = () => {
+    toggleMobileMenu(!mobileMenuOpen)
+  }
+
   return (
-    <Router>
-        <Switch>
-            <Route exact path='/'>
-                <Home />
-            </Route>
-            <Route path='/tools'>
-                <Recoup />
-            </Route>
-            <Route path='/tools'>
-                <Tools />
-            </Route>
-            <Route path='/contact'>
-                <Contact />
-            </Route>
-            <Route path='/github'>
-                <Github />
-            </Route>
-        </Switch>
-    </Router>
+      <>
+        <NavigationBar toggle={ toggle } />
+        <AboutSection />
+        <GameSection />
+        <ToolsSection />
+        <GithubSection />
+        <ContactSection />
+      </>
   );
+
 }
 
 export default App;

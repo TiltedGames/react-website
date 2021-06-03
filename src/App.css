@@ -18,6 +18,13 @@
   font-family: 'Poppins';
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   background: #000;
+
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }

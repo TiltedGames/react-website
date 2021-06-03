@@ -189,7 +189,7 @@ const NavigationBar = ({ toggle }) => {
                                 }
                             >
                                 {/* [LABEL] */}
-                                <Label>Help on Github</Label>
+                                <Label>Report a bug</Label>
                             </SubpageLink>
 
                         </SubpageLinks>

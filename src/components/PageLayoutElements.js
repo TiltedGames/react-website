@@ -6,6 +6,8 @@ export const PageContent = styled.div `
   position: relative;
   z-index: 1;
   box-sizing: border-box;
+  min-height: 90vh;
+  margin-bottom: 10vh;
 `
 
 // one row should be about the width of a page
@@ -41,7 +43,6 @@ export const Column_Heading_Right = styled.div `
 `
 
 export const Column_Dynamic_Equal_Height = styled.div `
-  float: left;
   background: #fff;
   box-sizing: border-box;
   display: table-cell;

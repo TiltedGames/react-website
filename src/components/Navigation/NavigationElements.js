@@ -79,10 +79,11 @@ export const MobileIcon = styled.div `
 // wrapper (clear, controls placement)
 export const Wrapper = styled.div `
   z-index: 1000;
-  position: absolute;
-  right: 10px;
+  right: 50px;
   top: 80px;
   color: #fff;
+
+  position:fixed;
 `
 
 // list (all pages)

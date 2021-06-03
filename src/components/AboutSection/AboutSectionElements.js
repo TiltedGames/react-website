@@ -33,6 +33,8 @@ export const Icon_Left = styled.div `
   height: 200px;
   background: #fff;
   border-radius: 500px;
+  
+  
 `
 
 export const Icon_Middle = styled.div `
@@ -40,6 +42,26 @@ export const Icon_Middle = styled.div `
   height: 400px;
   background: #fff;
   border-radius: 500px;
+
+  @media screen and (max-width: 2048px) {
+    width: 400px;
+    height: 400px;
+  }
+
+  @media screen and (max-width: 1080px) {
+    width: 125px;
+    height: 125px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 125px;
+    height: 125px;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 80px;
+    height: 80px;
+  }
 `
 
 export const Icon_Right = styled.div `
@@ -53,13 +75,13 @@ export const Icon_Right = styled.div `
 export const Section_1 = styled.div `
   display: inline-block;
   vertical-align: top;
-  margin:0 40px;
+  margin:0 80px;
 `
 
 export const Section_2 = styled.div `
   display: inline-block;
   vertical-align: top;
-  margin:0 10px;
+  margin:0 60px;
 `
 
 export const Section_3 = styled.div `
@@ -70,19 +92,18 @@ export const Section_3 = styled.div `
 export const Section_4 = styled.div `
   display: inline-block;
   vertical-align: top;
-  margin:0 10px;
+  margin:0 60px;
 `
 
 export const Section_5 = styled.div `
   display: inline-block;
-  vertical-align: center;
-  margin:0 40px;
+  vertical-align: top;
+  margin:0 80px;
 `
 
-export const RoleButton_1 = styled.div `
+export const RoleButton = styled.div `
   margin-top: 170px;
   padding: 10px;
-  background: #ad24a4;
   color: #fff;
   border-radius: 100px;
   height: 60px;
@@ -92,7 +113,6 @@ export const RoleButton_1 = styled.div `
 export const RoleButton_2 = styled.div `
   margin-top: 170px;
   padding: 10px;
-  background: #e3502b;
   color: #fff;
   border-radius: 100px;
   height: 60px;

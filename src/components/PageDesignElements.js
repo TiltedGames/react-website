@@ -56,8 +56,7 @@ export const PageSubheading = styled.h1 `
 
 export const SectionHeading = styled.h1 `
   font-family: 'NeutralFace';
-  color: #000;
-  background: #fff;
+  color: #fff;
   text-align: center;
   margin: 0;
   padding: 25px;
