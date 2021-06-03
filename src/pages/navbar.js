@@ -14,7 +14,7 @@ import {
     LinkWrapper,
     GithubPageLinkWrapper,
     GithubSubpageLink, DonateIcon, GithubContainer
-} from './NavigationElements';
+} from '../components/navbar';
 
 const NavigationBar = ({ toggle }) => {
 
@@ -45,7 +45,7 @@ const NavigationBar = ({ toggle }) => {
         {/* Wrapper for the navigation bar (for position control) */}
         <Wrapper>
 
-            {/* [UL] Navigation bar implemented */}
+            {/* [UL] navigation bar implemented */}
             <Pages>
 
                 {/* [LI] Tilted Games (logo) section */}
@@ -142,7 +142,7 @@ const NavigationBar = ({ toggle }) => {
 
                 </Page>
 
-                {/* [LI] Game server section */}
+                {/* [LI] game server section */}
                 <Page
                     onMouseEnter={ onHover_2 }
                     onMouseLeave={ onHover_2 }
@@ -198,7 +198,7 @@ const NavigationBar = ({ toggle }) => {
 
                 </Page>
 
-                {/* [LI] Contact section */}
+                {/* [LI] contact section */}
                 <Page
                     onMouseEnter={ onHover_3 }
                     onMouseLeave={ onHover_3 }
@@ -234,7 +234,7 @@ const NavigationBar = ({ toggle }) => {
                     onMouseLeave={ onHover_4 }
                 >
 
-                    {/* [LI] Github (logo) section */}
+                    {/* [LI] github (logo) section */}
                     <Page
                         onMouseEnter={ onHover_5 }
                         onMouseLeave={ onHover_5 }
@@ -264,7 +264,7 @@ const NavigationBar = ({ toggle }) => {
 
                     </Page>
 
-                    {/* [LI] (Github) Recoup section */}
+                    {/* [LI] (github) Recoup section */}
                     <Page
                         onMouseEnter={ onHover_6 }
                         onMouseLeave={ onHover_6 }
@@ -290,7 +290,7 @@ const NavigationBar = ({ toggle }) => {
 
                     </Page>
 
-                    {/* [LI] (Github) Game Server section */}
+                    {/* [LI] (github) game Server section */}
                     <Page
                         onMouseEnter={ onHover_7 }
                         onMouseLeave={ onHover_7 }
@@ -316,7 +316,7 @@ const NavigationBar = ({ toggle }) => {
 
                     </Page>
 
-                    {/* [LI] (Github) Website section */}
+                    {/* [LI] (github) Website section */}
                     <Page
                         onMouseEnter={ onHover_8 }
                         onMouseLeave={ onHover_8 }
@@ -344,7 +344,7 @@ const NavigationBar = ({ toggle }) => {
 
                 </GithubContainer>
 
-                {/* Empty, for spacing between Github / donate icons while no expansion */}
+                {/* Empty, for spacing between github / donate icons while no expansion */}
                 <Page>
                     {/* [DIV] (white vertical line) */}
                     <LinkWrapper>
@@ -354,7 +354,7 @@ const NavigationBar = ({ toggle }) => {
 
                 </Page>
 
-                {/* [LI] Github donate (logo) section */}
+                {/* [LI] github donate (logo) section */}
                 <Page
                     onMouseEnter={ onHover_9 }
                     onMouseLeave={ onHover_9 }
@@ -370,7 +370,7 @@ const NavigationBar = ({ toggle }) => {
 
                 </Page>
 
-                {/* Empty, for spacing between Github / donate icons while no expansion */}
+                {/* Empty, for spacing between github / donate icons while no expansion */}
                 <Page
                     style = {
                         { paddingTop: '40px' }

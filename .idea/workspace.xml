@@ -2,12 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5326dec3-9647-4f82-be61-f55db75aae95" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/BugReportSection/BugReportSectionElements.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/BugReportSection/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AboutSection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutSection/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ContactSection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactSection/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PageLayout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AboutSection/AboutSectionElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AboutSection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BugReportSection/BugReportSectionElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bugreport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BugReportSection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/bugreport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ButtonElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/buttons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContactSection/ContactSectionElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContactSection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GameSection/GameSectionElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GameSection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GithubSection/GithubSectionElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/github.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GithubSection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/github.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/NavigationElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PageDesignElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/design.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PageLayoutElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/SidebarElements.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToolsSection/ToolsSectionElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tools.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToolsSection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +74,10 @@
       <recent name="C:\Users\noahc\Desktop\react-website\src\pages" />
       <recent name="C:\Users\noahc\Desktop\react-website\src\components\ContactSection" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\noahc\Desktop\react-website\src\components" />
+      <recent name="C:\Users\noahc\Desktop\react-website\src\pages" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="tools.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/pages/tools.js" working-dir="$PROJECT_DIR$/src/pages">
@@ -84,7 +104,7 @@
       <workItem from="1622511374969" duration="4889000" />
       <workItem from="1622520695174" duration="43612000" />
       <workItem from="1622603018734" duration="15360000" />
-      <workItem from="1622619274169" duration="41204000" />
+      <workItem from="1622619274169" duration="43489000" />
     </task>
     <servers />
   </component>

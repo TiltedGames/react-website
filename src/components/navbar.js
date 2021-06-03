@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 //import { NavLink as LinkRouter } from 'react-router-dom'
 //import { Link as LinkScroll } from 'react-scroll'
-import roundLogo from '../../img/round-logo.png';
+import roundLogo from '../img/round-logo.png';
 import {
     FaArrowRight,
     FaPlus,
@@ -11,7 +11,7 @@ import {
 import {
     ArrowForward,
     ArrowRight
-} from "../ButtonElements";
+} from "./buttons";
 import {useState} from "react";
 
 /*
@@ -33,7 +33,7 @@ export const RoundLogo = styled.span  `
 `
 
 
-// Github icon (from fontawesome)
+// github icon (from fontawesome)
 export const GithubIcon = styled(FaGithub) `
   position: absolute;
   margin: 16px 0;
@@ -45,7 +45,7 @@ export const GithubIcon = styled(FaGithub) `
   border-radius: 100px;
 `
 
-// Github icon (from fontawesome)
+// github icon (from fontawesome)
 export const DonateIcon = styled(FaDonate) `
   position: absolute;
   top: -6px;

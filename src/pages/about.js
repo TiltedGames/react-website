@@ -4,7 +4,7 @@ import {
     PageSubheading,
     BoldText,
     SectionHeading
-} from "../PageDesignElements";
+} from "../components/design";
 import {
     PageContent,
     Row_EqualHeights,
@@ -14,7 +14,7 @@ import {
     Column_Dynamic,
     Column_Heading_Left,
     Column_Heading_Right
-} from "../PageLayoutElements";
+} from "../components/layout";
 import {
     Role,
     RoleHeading,
@@ -32,7 +32,7 @@ import {
     Icon_Middle,
     Icon_Left,
     Icon_Right
-} from "./AboutSectionElements";
+} from "../components/about";
 import {
     FaArrowLeft,
     FaArrowRight

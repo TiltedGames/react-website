@@ -8,12 +8,12 @@ import {
     Column_Dynamic,
     Column_Heading_Left,
     Column_Heading_Right, Column_Dynamic_Equal_Height
-} from "../PageLayoutElements";
+} from "../components/layout";
 import {
     PageHeading,
     PageSubheading,
     BoldText
-} from "../PageDesignElements";
+} from "../components/design";
 import {
     RepoCards,
     RepoCard,
@@ -22,10 +22,10 @@ import {
     RepoDescription,
     CloneTextbox,
     CopyButton
-} from "./GithubSectionElements";
-import RepoImage_1 from "../../img/stock_1.jpg"
-import RepoImage_2 from "../../img/stock_1.jpg"
-import RepoImage_3 from "../../img/stock_1.jpg"
+} from "../components/github";
+import RepoImage_1 from "../img/stock_1.jpg"
+import RepoImage_2 from "../img/stock_1.jpg"
+import RepoImage_3 from "../img/stock_1.jpg"
 
 
 const CloneText_1 = 'https://tiltedgames.org';

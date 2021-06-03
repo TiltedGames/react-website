@@ -3,13 +3,13 @@ import {
     PageHeading,
     PageSubheading,
     BoldText
-} from "../PageDesignElements";
+} from "../components/design";
 import {
     ButtonWrapper,
     ArrowForward,
     ArrowRight,
     SendButton
-} from '../ButtonElements';
+} from '../components/buttons';
 import {
     Column_Dynamic,
     Column_Heading_Left,
@@ -17,7 +17,7 @@ import {
     PageContent,
     Row,
     Row_EqualHeights
-} from "../PageLayoutElements";
+} from "../components/layout";
 
 const BugReportSection = () => {
     const [hover, setHover] = useState(false)

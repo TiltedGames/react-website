@@ -1,35 +1,28 @@
 import React, { useState } from 'react'
 import {
-    PageHeading,
-    PageSubheading
-} from "../PageDesignElements";
-// import button
+    Column_FullWidth,
+    Column_Heading_Left,
+    Column_Heading_Right,
+    PageContent, Row,
+    Row_EqualHeights
+} from "../components/layout";
 import {
+    PageHeading,
+    PageSubheading,
+    BoldText
+} from "../components/design";
+import {
+    ArrowForward,
+    ArrowRight,
     DownloadButtonWrapper,
-    ArrowDown,
+    DownloadButton,
     OSIcons,
     WinIconWrapper,
-    MacIconWrapper,
-    LinIconWrapper,
     WinIcon,
-    MacIcon,
-    LinIcon,
-    DownloadButton, ArrowForward, ArrowRight
-} from '../ButtonElements';
+} from '../components/buttons';
 
 
-import {
-    PageContent,
-    Row_EqualHeights,
-    Row,
-    Column_HalfWidth,
-    Column_FullWidth,
-    Column_Dynamic,
-    Column_Heading_Left,
-    Column_Heading_Right
-} from "../PageLayoutElements";
-
-const GameSection = () => {
+const ToolsSection = () => {
     const [hover, setHover] = useState(false)
 
     const onHover = () => {
@@ -41,12 +34,12 @@ const GameSection = () => {
             <Row>
                 <Column_Heading_Left>
                     <PageHeading>
-                        Recoup
+                        One<br />Click<br />Server
                     </PageHeading>
                 </Column_Heading_Left>
                 <Column_Heading_Right>
                     <PageSubheading>
-                        Recoup is still early in development. Stay tuned for more updates!
+                        Host your own server for Recoup, or start your own multiplayer project!
                     </PageSubheading>
                 </Column_Heading_Right>
             </Row>
@@ -60,14 +53,12 @@ const GameSection = () => {
                             light={ hover ? 'true' : 'false' }
                             big='true'
                         >
-                            Download (Alpha) { hover ? <ArrowForward /> : <ArrowRight /> }
+                            Download { hover ? <ArrowForward /> : <ArrowRight /> }
                         </DownloadButton>
                         <OSIcons
                             show={ hover ? 'true' : 'false' }
                         >
-                            <WinIconWrapper><a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Windows).zip"><WinIcon size={48} /></a></WinIconWrapper>
-                            <MacIconWrapper><a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(macOS).zip"><MacIcon size={48} /></a></MacIconWrapper>
-                            <LinIconWrapper><a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Linux).zip"><LinIcon size={48} /></a></LinIconWrapper>
+                            <WinIconWrapper><a href="#"><WinIcon size={48} /></a></WinIconWrapper>
                         </OSIcons>
                     </DownloadButtonWrapper>
                 </Column_FullWidth>
@@ -76,4 +67,4 @@ const GameSection = () => {
     );
 }
 
-export default GameSection;
+export default ToolsSection;
