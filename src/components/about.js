@@ -7,7 +7,7 @@ export const RoleHeading = styled.h1 `
   text-align: center;
   padding: 25px;
   font-weight: bold;
-
+  align-items: center;
   font-size: 60px;
 
   @media screen and (max-width: 2048px) {
@@ -104,45 +104,6 @@ export const Section_5 = styled.div `
 export const RoleButton = styled.div `
   margin-top: 170px;
   padding: 10px;
-  color: #fff;
-  border-radius: 100px;
-  height: 60px;
-  width: 60px;
-`
-
-export const RoleButton_2 = styled.div `
-  margin-top: 170px;
-  padding: 10px;
-  color: #fff;
-  border-radius: 100px;
-  height: 60px;
-  width: 60px;
-`
-
-export const RoleButton_3 = styled.div `
-  margin-top: 170px;
-  padding: 10px;
-  background: #3ac0cf;
-  color: #fff;
-  border-radius: 100px;
-  height: 60px;
-  width: 60px;
-`
-
-export const RoleButton_4 = styled.div `
-  margin-top: 170px;
-  padding: 10px;
-  background: #4d57a3;
-  color: #fff;
-  border-radius: 100px;
-  height: 60px;
-  width: 60px;
-`
-
-export const RoleButton_5 = styled.div `
-  margin-top: 170px;
-  padding: 10px;
-  background: #30d163;
   color: #fff;
   border-radius: 100px;
   height: 60px;

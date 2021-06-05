@@ -18,12 +18,7 @@ import {
 import {
     Role,
     RoleHeading,
-    NextButton,
     RoleButton,
-    RoleButton_2,
-    RoleButton_3,
-    RoleButton_4,
-    RoleButton_5,
     Section_1,
     Section_2,
     Section_3,
@@ -35,7 +30,8 @@ import {
 } from "../components/about";
 import {
     FaArrowLeft,
-    FaArrowRight
+    FaArrowRight,
+    FaPlus
 } from "react-icons/all";
 
 const AboutSection = () => {
@@ -50,22 +46,21 @@ const AboutSection = () => {
             <Row>
                 <Column_Heading_Left>
                     <PageHeading>
-                        We are<br />
-                        Tilted<br />
-                        Games
+                        Tilted Games
                     </PageHeading>
                 </Column_Heading_Left>
                 <Column_Heading_Right>
                     <PageSubheading>
-                        Passionate artists, creators, developers, and engineers
+                        Passionate artists, creators, and engineers
                     </PageSubheading>
                 </Column_Heading_Right>
             </Row>
             <Row>
                 <Column_FullWidth>
                     <BoldText>
-                        And we're looking to bring a new and exciting experience to you!
-                        We're working on a game named Recoup. At the moment, all of our
+                        Our team is working hard to bring a new and exciting experience to you.
+                        Rediscover your lost past as a samurai in <u>Recoup</u>!<br /><br />
+                        At the moment, all of our
                         software is open source, covered by the MIT license.
                     </BoldText>
                 </Column_FullWidth>
@@ -73,9 +68,9 @@ const AboutSection = () => {
             <Row>
                 <Column_FullWidth>
                     <RoleHeading
-                        style={ { borderBottom: '3px solid #ad24a4'}}
+                        style={ { borderTop: '10px solid #ad24a4', borderBottom: '10px solid #ad24a4'}}
                     >
-                        Artists
+                        <FaPlus size={32} />    Artists
                     </RoleHeading>
                     <Role>
                         <Section_1>
@@ -99,9 +94,9 @@ const AboutSection = () => {
                         </Section_5>
                     </Role>
                     <RoleHeading
-                        style={ { borderBottom: '3px solid #e3502b'}}
+                        style={ { borderTop: '10px solid #e3502b', borderBottom: '10px solid #e3502b'}}
                     >
-                        Writers
+                        <FaPlus size={32} />    Writers
                     </RoleHeading>
                     <Role>
                         <Section_1>
@@ -125,9 +120,10 @@ const AboutSection = () => {
                         </Section_5>
                     </Role>
                     <RoleHeading
-                        style={ { borderBottom: '3px solid #3ac0cf'}}
+                        style={ {  borderTop: '10px solid #3ac0cf', borderBottom: '10px solid #3ac0cf'}}
+                        // add onclick to expand the role
                     >
-                        Developers (C#)
+                        <FaPlus size={32} />    Software Engineers
                     </RoleHeading>
                     <Role>
                         <Section_1>
@@ -151,35 +147,9 @@ const AboutSection = () => {
                         </Section_5>
                     </Role>
                     <RoleHeading
-                        style={ { borderBottom: '3px solid #4d57a3'}}
+                        style={ { borderTop: '10px solid #30d163', borderBottom: '10px solid #30d163'}}
                     >
-                        Developers (Web)
-                    </RoleHeading>
-                    <Role>
-                        <Section_1>
-                            <RoleButton
-                                style={ { background: '#4d57a3' } }
-                            ><FaArrowLeft size={40} /></RoleButton>
-                        </Section_1>
-                        <Section_2>
-                            <Icon_Left></Icon_Left>
-                        </Section_2>
-                        <Section_3>
-                            <Icon_Middle></Icon_Middle>
-                        </Section_3>
-                        <Section_4>
-                            <Icon_Right></Icon_Right>
-                        </Section_4>
-                        <Section_5>
-                            <RoleButton
-                                style={ { background: '#4d57a3' } }
-                            ><FaArrowRight size={40} /></RoleButton>
-                        </Section_5>
-                    </Role>
-                    <RoleHeading
-                        style={ { borderBottom: '3px solid #30d163'}}
-                    >
-                        Finance & P.R.
+                        <FaPlus size={32} />    Finance & P.R.
                     </RoleHeading>
                     <Role>
                         <Section_1>

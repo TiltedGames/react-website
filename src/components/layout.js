@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const PageContent = styled.div `
-  max-width: calc(85vw - 75px);
+  max-width: calc(100vw - 200px);
   padding: 0;
   position: relative;
   z-index: 1;
@@ -17,6 +17,10 @@ export const PageContent = styled.div `
 // (note) for equal-height cells, use display: table-cell
 // property in column div for ALL columns in row
 export const Row = styled.div `
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-right: 100px;
+  
   :after {
     content: "";
     display: table;
@@ -26,11 +30,14 @@ export const Row = styled.div `
 `
 
 export const Column_Heading_Left = styled.div `
-  width: 30%;
+  width: 40%;
   box-sizing: border-box;
   height: 100%;
   display: table-cell;
   padding: 25px 0 25px 25px;
+  margin: 0;
+  vertical-align: center;
+  align-items: center;
 `
 
 export const Column_Heading_Right = styled.div `
@@ -40,6 +47,8 @@ export const Column_Heading_Right = styled.div `
   display: table-cell;
   height: 100%;
   padding: 25px 25px 25px 0;
+  vertical-align: center;
+  align-items: center;
 `
 
 export const Column_Dynamic_Equal_Height = styled.div `

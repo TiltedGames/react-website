@@ -45,8 +45,6 @@ const GithubSection = () => {
             <Row>
                 <Column_Heading_Left>
                     <PageHeading>
-                        Tilted<br />
-                        Games<br />
                         On Github
                     </PageHeading>
                 </Column_Heading_Left>

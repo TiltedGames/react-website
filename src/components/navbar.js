@@ -82,7 +82,6 @@ export const Wrapper = styled.div `
   right: 50px;
   top: 80px;
   color: #fff;
-
   position:fixed;
 `
 
