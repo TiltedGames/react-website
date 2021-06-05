@@ -21,10 +21,9 @@ import {
 
 export const RoleHeading = styled.h1 `
   font-family: 'NeutralFace';
-  margin: 100px 0 50px 0;
   color: #fff;
   text-align: center;
-  padding: 25px;
+  padding: 50px 0 10px 0;
   font-weight: bold;
   align-items: center;
   
@@ -143,6 +142,8 @@ export const RoleButton = styled.div `
 export const Role = styled.div `
   text-align: center;
   padding: 25px 0;
+  visibility: hidden;
+  height: 0;
 `
 
 
@@ -164,14 +165,13 @@ const AboutSection = () => {
                 </Column_Heading_Left>
                 <Column_Heading_Right>
                     <PageSubheading>
-                        Passionate artists, creators, and engineers
+                        Bringing a new and exciting experience to you
                     </PageSubheading>
                 </Column_Heading_Right>
             </Row>
             <Row>
                 <Column_FullWidth>
                     <BoldText>
-                        Our team is working hard to bring a new and exciting experience to you.
                         Rediscover your lost past as a samurai in <u>Recoup</u>!<br /><br />
                         At the moment, all of our
                         software is open source, covered by the MIT license.
@@ -179,18 +179,19 @@ const AboutSection = () => {
                 </Column_FullWidth>
             </Row>
             <Row>
-                <Column_FullWidth>
+                <Column_FullWidth
+                    style={ { marginBottom: '80px',borderTop: '10px solid #fff'} }
+                >
                     <RoleHeading
-                        style={ { borderTop: '10px solid #e31e27' } }
+                        style={ { color: '#8430a6' } }
                     >
-                        <Plus />Creativity
+                        <Plus/>
+                        Creativity
                     </RoleHeading>
-                    <Role
-                        style={ { borderBottom: '10px solid #e31e27'}}
-                    >
+                    <Role>
                         <Section_1>
                             <RoleButton
-                                style={ { background: '#e31e27' } }
+                                style={ { background: '#8430a6' } }
                             ><FaArrowLeft size={40} /></RoleButton>
                         </Section_1>
                         <Section_2>
@@ -204,22 +205,25 @@ const AboutSection = () => {
                         </Section_4>
                         <Section_5>
                             <RoleButton
-                                style={ { background: '#e31e27' } }
+                                style={ { background: '#8430a6' } }
                             ><FaArrowRight size={40} /></RoleButton>
                         </Section_5>
                     </Role>
+                </Column_FullWidth>
+                <Column_FullWidth
+                    style={ {  marginBottom: '80px', borderTop: '10px solid #fff' }}
+                >
                     <RoleHeading
-                        style={ {  borderTop: '10px solid #187fba'}}
+                        style={ { color: '#2e30a6' } }
                         // add onclick to expand the role
                     >
-                        <Plus />Software Engineers
+                        <Plus/>
+                        Software Engineers
                     </RoleHeading>
-                    <Role
-                        style={ {  borderBottom: '10px solid #187fba'}}
-                    >
+                    <Role>
                         <Section_1>
                             <RoleButton
-                                style={ { background: '#187fba' } }
+                                style={ { background: '#2e30a6' } }
                             ><FaArrowLeft size={40} /></RoleButton>
                         </Section_1>
                         <Section_2>
@@ -233,21 +237,23 @@ const AboutSection = () => {
                         </Section_4>
                         <Section_5>
                             <RoleButton
-                                style={ { background: '#187fba' } }
+                                style={ { background: '#2e30a6' } }
                             ><FaArrowRight size={40} /></RoleButton>
                         </Section_5>
                     </Role>
+                </Column_FullWidth>
+                <Column_FullWidth
+                    style={ {  borderTop: '10px solid #fff' }}
+                >
                     <RoleHeading
-                        style={ { borderTop: '10px solid #30d163' } }
+                        style={ { color: '#15690e' } }
                     >
-                        <Plus />Finance & P.R.
+                        <Plus/>Finance & P.R.
                     </RoleHeading>
-                    <Role
-                        style={ { borderBottom: '10px solid #30d163'}}
-                    >
+                    <Role>
                         <Section_1>
                             <RoleButton
-                                style={ { background: '#30d163' } }
+                                style={ { background: '#15690e' } }
                             ><FaArrowLeft size={40} /></RoleButton>
                         </Section_1>
                         <Section_2>
@@ -261,7 +267,7 @@ const AboutSection = () => {
                         </Section_4>
                         <Section_5>
                             <RoleButton
-                                style={ { background: '#30d163' } }
+                                style={ { background: '#15690e' } }
                             ><FaArrowRight size={40} /></RoleButton>
                         </Section_5>
                     </Role>

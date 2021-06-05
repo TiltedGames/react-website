@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const PageHeading = styled.div `
-  font-family: 'NeutralFace';
+  font-family: 'NeutralFace-Bold';
   color: #fff;
   font-size: 50px;
   text-align: right;
@@ -76,13 +76,10 @@ export const SectionHeading = styled.h1 `
   }
 `
 
-
-
 export const BoldText = styled.p `
   font-size: 26px;
   text-align: center;
   margin: 0 auto;
-  font-weight: bold;
   background: #000;
   color: #fff;
   width: 100%;

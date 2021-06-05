@@ -24,7 +24,6 @@ export const RoundLogo = styled.span  `
   margin-top: -16px;
 `
 
-
 // github icon (from fontawesome)
 export const GithubIcon = styled(FaGithub) `
   position: absolute;
