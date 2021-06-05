@@ -175,6 +175,7 @@ export const DownloadButton = styled.div `
 export const DownloadButtonWrapper = styled.div `
   
   margin: 30px auto;
+  z-index: 100;
   
   &:hover {
     ${ OSIcons } {

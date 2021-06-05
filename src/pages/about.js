@@ -23,7 +23,7 @@ export const RoleHeading = styled.h1 `
   font-family: 'NeutralFace';
   color: #fff;
   text-align: center;
-  padding: 50px 0 10px 0;
+  padding: 50px 0;
   font-weight: bold;
   align-items: center;
   
@@ -54,8 +54,8 @@ export const Plus = styled(FaPlusCircle) `
 
 export const Minus = styled(FaMinusCircle) `
   color: #fff;
-  width: 36px;
-  height: 36px;
+  margin: 0 25px;
+  padding: 3px;
 `
 
 export const Icon_Left = styled.div `
@@ -142,17 +142,21 @@ export const RoleButton = styled.div `
 export const Role = styled.div `
   text-align: center;
   padding: 25px 0;
-  visibility: hidden;
-  height: 0;
 `
 
 
 const AboutSection = () => {
-    const [hover, setHover] = useState(false)
+    const [expanded_Role_1, toggleExpanded_Role_1] = useState(false);
+    const [expanded_Role_2, toggleExpanded_Role_2] = useState(false);
+    const [expanded_Role_3, toggleExpanded_Role_3] = useState(false);
 
-    const onHover = () => {
-        setHover(!hover)
-    }
+    const Expand_Role_1 = () => { toggleExpanded_Role_1(true) }
+    const Expand_Role_2 = () => { toggleExpanded_Role_2(true) }
+    const Expand_Role_3 = () => { toggleExpanded_Role_3(true) }
+
+    const Toggle_Role_1 = () => { toggleExpanded_Role_1(!expanded_Role_1) }
+    const Toggle_Role_2 = () => { toggleExpanded_Role_2(!expanded_Role_2) }
+    const Toggle_Role_3 = () => { toggleExpanded_Role_3(!expanded_Role_3) }
 
     return (
         <PageContent>
@@ -172,7 +176,8 @@ const AboutSection = () => {
             <Row>
                 <Column_FullWidth>
                     <BoldText>
-                        Rediscover your lost past as a samurai in <u>Recoup</u>!<br /><br />
+                        Rediscover your lost past as a samurai in <u>Recoup</u>!
+                        <br /><br />
                         At the moment, all of our
                         software is open source, covered by the MIT license.
                     </BoldText>
@@ -180,19 +185,29 @@ const AboutSection = () => {
             </Row>
             <Row>
                 <Column_FullWidth
-                    style={ { marginBottom: '80px',borderTop: '10px solid #fff'} }
+                    style={ { marginBottom: '80px' } }
+                    onMouseEnter={ Expand_Role_1 }
+                    onClick={ Toggle_Role_1 }
                 >
                     <RoleHeading
                         style={ { color: '#8430a6' } }
                     >
-                        <Plus/>
+                        { expanded_Role_1 ? <Minus /> : <Plus /> }
                         Creativity
                     </RoleHeading>
-                    <Role>
+                    <Role
+                        style = {
+                            expanded_Role_1
+                                ? { height: 'auto', visibility: 'visible' }
+                                : { height: '0', visibility: 'hidden'}
+                        }
+                    >
                         <Section_1>
                             <RoleButton
                                 style={ { background: '#8430a6' } }
-                            ><FaArrowLeft size={40} /></RoleButton>
+                            >
+                                <FaArrowLeft size={40} />
+                            </RoleButton>
                         </Section_1>
                         <Section_2>
                             <Icon_Left></Icon_Left>
@@ -206,25 +221,37 @@ const AboutSection = () => {
                         <Section_5>
                             <RoleButton
                                 style={ { background: '#8430a6' } }
-                            ><FaArrowRight size={40} /></RoleButton>
+                            >
+                                <FaArrowRight size={40} />
+                            </RoleButton>
                         </Section_5>
                     </Role>
                 </Column_FullWidth>
                 <Column_FullWidth
-                    style={ {  marginBottom: '80px', borderTop: '10px solid #fff' }}
+                    style={ {  marginBottom: '80px' } }
+                    onMouseEnter={ Expand_Role_2 }
+                    onClick={ Toggle_Role_2 }
                 >
                     <RoleHeading
-                        style={ { color: '#2e30a6' } }
+                        style={ { color: '#144691' } }
                         // add onclick to expand the role
                     >
-                        <Plus/>
-                        Software Engineers
+                        { expanded_Role_2 ? <Minus /> : <Plus /> }
+                        Development
                     </RoleHeading>
-                    <Role>
+                    <Role
+                        style = {
+                            expanded_Role_2
+                                ? { height: 'auto', visibility: 'visible' }
+                                : { height: '0', visibility: 'hidden'}
+                        }
+                    >
                         <Section_1>
                             <RoleButton
-                                style={ { background: '#2e30a6' } }
-                            ><FaArrowLeft size={40} /></RoleButton>
+                                style={ { background: '#144691' } }
+                            >
+                                <FaArrowLeft size={40} />
+                            </RoleButton>
                         </Section_1>
                         <Section_2>
                             <Icon_Left></Icon_Left>
@@ -237,24 +264,36 @@ const AboutSection = () => {
                         </Section_4>
                         <Section_5>
                             <RoleButton
-                                style={ { background: '#2e30a6' } }
-                            ><FaArrowRight size={40} /></RoleButton>
+                                style={ { background: '#144691' } }
+                            >
+                                <FaArrowRight size={40} />
+                            </RoleButton>
                         </Section_5>
                     </Role>
                 </Column_FullWidth>
                 <Column_FullWidth
-                    style={ {  borderTop: '10px solid #fff' }}
+                    onMouseEnter={ Expand_Role_3 }
+                    onClick={ Toggle_Role_3 }
                 >
                     <RoleHeading
-                        style={ { color: '#15690e' } }
+                        style={ { color: '#3e9114' } }
                     >
-                        <Plus/>Finance & P.R.
+                        { expanded_Role_3 ? <Minus /> : <Plus /> }
+                        Finance & P.R.
                     </RoleHeading>
-                    <Role>
+                    <Role
+                        style = {
+                            expanded_Role_3
+                                ? { height: 'auto', visibility: 'visible' }
+                                : { height: '0', visibility: 'hidden'}
+                        }
+                    >
                         <Section_1>
                             <RoleButton
-                                style={ { background: '#15690e' } }
-                            ><FaArrowLeft size={40} /></RoleButton>
+                                style={ { background: '#3e9114' } }
+                            >
+                                <FaArrowLeft size={40} />
+                            </RoleButton>
                         </Section_1>
                         <Section_2>
                             <Icon_Left></Icon_Left>
@@ -267,7 +306,7 @@ const AboutSection = () => {
                         </Section_4>
                         <Section_5>
                             <RoleButton
-                                style={ { background: '#15690e' } }
+                                style={ { background: '#3e9114' } }
                             ><FaArrowRight size={40} /></RoleButton>
                         </Section_5>
                     </Role>
