@@ -3,8 +3,8 @@ import {
     Column_FullWidth,
     Column_Heading_Left,
     Column_Heading_Right,
-    PageContent, Row,
-    Row_EqualHeights
+    PageContent,
+    Row
 } from "../components/layout";
 import {
     PageHeading,

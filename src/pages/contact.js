@@ -5,18 +5,11 @@ import {
     BoldText
 } from "../components/design";
 import {
-    ButtonWrapper,
-    ArrowForward,
-    ArrowRight,
-    SendButton
-} from '../components/buttons';
-import {
     Column_Dynamic,
     Column_Heading_Left,
     Column_Heading_Right,
     PageContent,
-    Row,
-    Row_EqualHeights
+    Row
 } from "../components/layout";
 
 const ContactSection = () => {

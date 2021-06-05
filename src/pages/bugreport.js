@@ -5,12 +5,6 @@ import {
     BoldText
 } from "../components/design";
 import {
-    ButtonWrapper,
-    ArrowForward,
-    ArrowRight,
-    SendButton
-} from '../components/buttons';
-import {
     Column_Dynamic,
     Column_Heading_Left,
     Column_Heading_Right,

@@ -3,37 +3,32 @@ import styled from 'styled-components'
 import {
     PageHeading,
     PageSubheading,
-    BoldText,
-    SectionHeading
+    BoldText
 } from "../components/design";
 import {
     PageContent,
-    Row_EqualHeights,
     Row,
-    Column_HalfWidth,
     Column_FullWidth,
-    Column_Dynamic,
     Column_Heading_Left,
     Column_Heading_Right
 } from "../components/layout";
 import {
     FaArrowLeft,
     FaArrowRight,
-    FaPlus,
     FaPlusCircle,
     FaMinusCircle
 } from "react-icons/all";
 
 export const RoleHeading = styled.h1 `
+  font-family: 'NeutralFace';
   margin: 100px 0 50px 0;
-  font-family: 'Poppins', sans-serif;
   color: #fff;
   text-align: center;
   padding: 25px;
   font-weight: bold;
   align-items: center;
+  
   font-size: 60px;
-  font-family: 'NeutralFace';
 
   @media screen and (max-width: 2048px) {
     font-size: 50px;
@@ -70,8 +65,6 @@ export const Icon_Left = styled.div `
   height: 200px;
   background: #fff;
   border-radius: 500px;
-  
-  
 `
 
 export const Icon_Middle = styled.div `
@@ -112,13 +105,13 @@ export const Icon_Right = styled.div `
 export const Section_1 = styled.div `
   display: inline-block;
   vertical-align: top;
-  margin:0 80px;
+  margin-right: 20px;
 `
 
 export const Section_2 = styled.div `
   display: inline-block;
   vertical-align: top;
-  margin:0 60px;
+  margin-right: 20px;
 `
 
 export const Section_3 = styled.div `
@@ -129,13 +122,13 @@ export const Section_3 = styled.div `
 export const Section_4 = styled.div `
   display: inline-block;
   vertical-align: top;
-  margin:0 60px;
+  margin-left: 20px;
 `
 
 export const Section_5 = styled.div `
   display: inline-block;
   vertical-align: top;
-  margin:0 80px;
+  margin-left: 20px;
 `
 
 export const RoleButton = styled.div `
@@ -188,16 +181,16 @@ const AboutSection = () => {
             <Row>
                 <Column_FullWidth>
                     <RoleHeading
-                        style={ { borderTop: '10px solid #ad24a4'}}
+                        style={ { borderTop: '10px solid #e31e27' } }
                     >
-                        <Plus />Artists
+                        <Plus />Creativity
                     </RoleHeading>
                     <Role
-                        style={ { borderBottom: '10px solid #ad24a4'}}
+                        style={ { borderBottom: '10px solid #e31e27'}}
                     >
                         <Section_1>
                             <RoleButton
-                                style={ { background: '#ad24a4' } }
+                                style={ { background: '#e31e27' } }
                             ><FaArrowLeft size={40} /></RoleButton>
                         </Section_1>
                         <Section_2>
@@ -211,50 +204,22 @@ const AboutSection = () => {
                         </Section_4>
                         <Section_5>
                             <RoleButton
-                                style={ { background: '#ad24a4' } }
+                                style={ { background: '#e31e27' } }
                             ><FaArrowRight size={40} /></RoleButton>
                         </Section_5>
                     </Role>
                     <RoleHeading
-                        style={ { borderTop: '10px solid #e3502b' } }
-                    >
-                        <Plus />Writers
-                    </RoleHeading>
-                    <Role
-                        style={ { borderBottom: '10px solid #e3502b'}}
-                    >
-                        <Section_1>
-                            <RoleButton
-                                style={ { background: '#e3502b' } }
-                            ><FaArrowLeft size={40} /></RoleButton>
-                        </Section_1>
-                        <Section_2>
-                            <Icon_Left></Icon_Left>
-                        </Section_2>
-                        <Section_3>
-                            <Icon_Middle></Icon_Middle>
-                        </Section_3>
-                        <Section_4>
-                            <Icon_Right></Icon_Right>
-                        </Section_4>
-                        <Section_5>
-                            <RoleButton
-                                style={ { background: '#e3502b' } }
-                            ><FaArrowRight size={40} /></RoleButton>
-                        </Section_5>
-                    </Role>
-                    <RoleHeading
-                        style={ {  borderTop: '10px solid #3ac0cf'}}
+                        style={ {  borderTop: '10px solid #187fba'}}
                         // add onclick to expand the role
                     >
                         <Plus />Software Engineers
                     </RoleHeading>
                     <Role
-                        style={ {  borderBottom: '10px solid #3ac0cf'}}
+                        style={ {  borderBottom: '10px solid #187fba'}}
                     >
                         <Section_1>
                             <RoleButton
-                                style={ { background: '#3ac0cf' } }
+                                style={ { background: '#187fba' } }
                             ><FaArrowLeft size={40} /></RoleButton>
                         </Section_1>
                         <Section_2>
@@ -268,7 +233,7 @@ const AboutSection = () => {
                         </Section_4>
                         <Section_5>
                             <RoleButton
-                                style={ { background: '#3ac0cf' } }
+                                style={ { background: '#187fba' } }
                             ><FaArrowRight size={40} /></RoleButton>
                         </Section_5>
                     </Role>

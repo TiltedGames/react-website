@@ -1,5 +1,4 @@
 import styled from "styled-components";
-//import Video from '../../video/video.mp4'   // import background video
 
 export const PageHeading = styled.div `
   font-family: 'NeutralFace';

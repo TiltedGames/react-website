@@ -1,11 +1,8 @@
 import React, { useState } from 'react'
 import {
     PageContent,
-    Row_EqualHeights,
     Row,
-    Column_HalfWidth,
     Column_FullWidth,
-    Column_Dynamic,
     Column_Heading_Left,
     Column_Heading_Right, Column_Dynamic_Equal_Height
 } from "../components/layout";

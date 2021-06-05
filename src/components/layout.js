@@ -11,12 +11,6 @@ export const PageContent = styled.div `
   margin-bottom: 5vh;
 `
 
-// one row should be about the width of a page
-// however, this will allow overflow to safely occur
-// new elements are pushed to the highest free available
-// height, under elements in this row
-// (note) for equal-height cells, use display: table-cell
-// property in column div for ALL columns in row
 export const Row = styled.div `
   max-width: 1200px;
   margin: 0 auto;

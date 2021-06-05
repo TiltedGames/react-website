@@ -9,9 +9,8 @@ import GithubSection from "./pages/github";
 import ContactSection from "./pages/contact";
 import BugReportSection from "./pages/bugreport";
 
-// main app
+// entire single-page app
 function App() {
-
     const [mobileMenuOpen, toggleMobileMenu] = useState(false);
 
     const toggle = () => {
@@ -29,7 +28,6 @@ function App() {
             <BugReportSection />
         </>
     );
-
 }
 
 ReactDOM.render(

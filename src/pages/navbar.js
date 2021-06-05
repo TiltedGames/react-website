@@ -5,15 +5,13 @@ import {
     Wrapper,
     Pages,
     Page,
-    GithubPage,
     SubpageLinks,
     SubpageLink,
     Label,
     Caret,
-    GithubCaret,
     LinkWrapper,
-    GithubPageLinkWrapper,
-    GithubSubpageLink, DonateIcon, GithubContainer
+    DonateIcon,
+    GithubContainer
 } from '../components/navbar';
 
 const NavigationBar = ({ toggle }) => {

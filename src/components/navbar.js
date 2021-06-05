@@ -1,18 +1,10 @@
 import styled from 'styled-components'
-//import { NavLink as LinkRouter } from 'react-router-dom'
-//import { Link as LinkScroll } from 'react-scroll'
 import roundLogo from '../media/img/round-logo.png';
 import {
-    FaArrowRight,
     FaPlus,
     FaGithub,
     FaDonate
 } from "react-icons/all";
-import {
-    ArrowForward,
-    ArrowRight
-} from "./buttons";
-import {useState} from "react";
 
 /*
 

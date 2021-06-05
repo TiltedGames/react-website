@@ -6,7 +6,6 @@ import {
 // import button
 import {
     DownloadButtonWrapper,
-    ArrowDown,
     OSIcons,
     WinIconWrapper,
     MacIconWrapper,
