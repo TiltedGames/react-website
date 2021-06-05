@@ -186,11 +186,11 @@ const AboutSection = () => {
             <Row>
                 <Column_FullWidth
                     style={ { marginBottom: '80px' } }
-                    onMouseEnter={ Expand_Role_1 }
-                    onClick={ Toggle_Role_1 }
                 >
                     <RoleHeading
                         style={ { color: '#8430a6' } }
+                        onMouseEnter={ Expand_Role_1 }
+                        onClick={ Toggle_Role_1 }
                     >
                         { expanded_Role_1 ? <Minus /> : <Plus /> }
                         Creativity
@@ -229,12 +229,11 @@ const AboutSection = () => {
                 </Column_FullWidth>
                 <Column_FullWidth
                     style={ {  marginBottom: '80px' } }
-                    onMouseEnter={ Expand_Role_2 }
-                    onClick={ Toggle_Role_2 }
                 >
                     <RoleHeading
                         style={ { color: '#144691' } }
-                        // add onclick to expand the role
+                        onMouseEnter={ Expand_Role_2 }
+                        onClick={ Toggle_Role_2 }
                     >
                         { expanded_Role_2 ? <Minus /> : <Plus /> }
                         Development
@@ -271,12 +270,11 @@ const AboutSection = () => {
                         </Section_5>
                     </Role>
                 </Column_FullWidth>
-                <Column_FullWidth
-                    onMouseEnter={ Expand_Role_3 }
-                    onClick={ Toggle_Role_3 }
-                >
+                <Column_FullWidth>
                     <RoleHeading
                         style={ { color: '#3e9114' } }
+                        onMouseEnter={ Expand_Role_3 }
+                        onClick={ Toggle_Role_3 }
                     >
                         { expanded_Role_3 ? <Minus /> : <Plus /> }
                         Finance & P.R.
