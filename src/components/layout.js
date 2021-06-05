@@ -7,7 +7,8 @@ export const PageContent = styled.div `
   z-index: 1;
   box-sizing: border-box;
   min-height: 90vh;
-  margin-bottom: 10vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 `
 
 // one row should be about the width of a page
@@ -30,7 +31,7 @@ export const Row = styled.div `
 `
 
 export const Column_Heading_Left = styled.div `
-  width: 40%;
+  width: 25%;
   box-sizing: border-box;
   height: 100%;
   display: table-cell;
@@ -38,11 +39,14 @@ export const Column_Heading_Left = styled.div `
   margin: 0;
   vertical-align: center;
   align-items: center;
+  border-bottom: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-top: 1px solid #fff;
 `
 
 export const Column_Heading_Right = styled.div `
   background: #fff;
-  width: 60%;
+  width: 75%;
   box-sizing: border-box;
   display: table-cell;
   height: 100%;

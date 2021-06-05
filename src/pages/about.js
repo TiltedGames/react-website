@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import styled from 'styled-components'
 import {
     PageHeading,
     PageSubheading,
@@ -16,23 +17,141 @@ import {
     Column_Heading_Right
 } from "../components/layout";
 import {
-    Role,
-    RoleHeading,
-    RoleButton,
-    Section_1,
-    Section_2,
-    Section_3,
-    Section_4,
-    Section_5,
-    Icon_Middle,
-    Icon_Left,
-    Icon_Right
-} from "../components/about";
-import {
     FaArrowLeft,
     FaArrowRight,
-    FaPlus
+    FaPlus,
+    FaPlusCircle,
+    FaMinusCircle
 } from "react-icons/all";
+
+export const RoleHeading = styled.h1 `
+  margin: 100px 0 50px 0;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  text-align: center;
+  padding: 25px;
+  font-weight: bold;
+  align-items: center;
+  font-size: 60px;
+  font-family: 'NeutralFace';
+
+  @media screen and (max-width: 2048px) {
+    font-size: 50px;
+  }
+
+  @media screen and (max-width: 1080px) {
+    font-size: 35px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 16px;
+  }
+`
+
+export const Plus = styled(FaPlusCircle) `
+  color: #fff;
+  margin: 0 25px;
+  padding: 3px;
+`
+
+export const Minus = styled(FaMinusCircle) `
+  color: #fff;
+  width: 36px;
+  height: 36px;
+`
+
+export const Icon_Left = styled.div `
+  margin-top: 100px;
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  border-radius: 500px;
+  
+  
+`
+
+export const Icon_Middle = styled.div `
+  width: 400px;
+  height: 400px;
+  background: #fff;
+  border-radius: 500px;
+
+  @media screen and (max-width: 2048px) {
+    width: 400px;
+    height: 400px;
+  }
+
+  @media screen and (max-width: 1080px) {
+    width: 125px;
+    height: 125px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 125px;
+    height: 125px;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 80px;
+    height: 80px;
+  }
+`
+
+export const Icon_Right = styled.div `
+  margin-top: 100px;
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  border-radius: 500px;
+`
+
+export const Section_1 = styled.div `
+  display: inline-block;
+  vertical-align: top;
+  margin:0 80px;
+`
+
+export const Section_2 = styled.div `
+  display: inline-block;
+  vertical-align: top;
+  margin:0 60px;
+`
+
+export const Section_3 = styled.div `
+  display: inline-block;
+  vertical-align: top;
+`
+
+export const Section_4 = styled.div `
+  display: inline-block;
+  vertical-align: top;
+  margin:0 60px;
+`
+
+export const Section_5 = styled.div `
+  display: inline-block;
+  vertical-align: top;
+  margin:0 80px;
+`
+
+export const RoleButton = styled.div `
+  margin-top: 170px;
+  padding: 10px;
+  color: #fff;
+  border-radius: 100px;
+  height: 60px;
+  width: 60px;
+`
+
+export const Role = styled.div `
+  text-align: center;
+  padding: 25px 0;
+`
+
 
 const AboutSection = () => {
     const [hover, setHover] = useState(false)
@@ -46,7 +165,8 @@ const AboutSection = () => {
             <Row>
                 <Column_Heading_Left>
                     <PageHeading>
-                        Tilted Games
+                        Tilted<br />
+                        Games
                     </PageHeading>
                 </Column_Heading_Left>
                 <Column_Heading_Right>
@@ -68,11 +188,13 @@ const AboutSection = () => {
             <Row>
                 <Column_FullWidth>
                     <RoleHeading
-                        style={ { borderTop: '10px solid #ad24a4', borderBottom: '10px solid #ad24a4'}}
+                        style={ { borderTop: '10px solid #ad24a4'}}
                     >
-                        <FaPlus size={32} />    Artists
+                        <Plus />Artists
                     </RoleHeading>
-                    <Role>
+                    <Role
+                        style={ { borderBottom: '10px solid #ad24a4'}}
+                    >
                         <Section_1>
                             <RoleButton
                                 style={ { background: '#ad24a4' } }
@@ -94,11 +216,13 @@ const AboutSection = () => {
                         </Section_5>
                     </Role>
                     <RoleHeading
-                        style={ { borderTop: '10px solid #e3502b', borderBottom: '10px solid #e3502b'}}
+                        style={ { borderTop: '10px solid #e3502b' } }
                     >
-                        <FaPlus size={32} />    Writers
+                        <Plus />Writers
                     </RoleHeading>
-                    <Role>
+                    <Role
+                        style={ { borderBottom: '10px solid #e3502b'}}
+                    >
                         <Section_1>
                             <RoleButton
                                 style={ { background: '#e3502b' } }
@@ -120,12 +244,14 @@ const AboutSection = () => {
                         </Section_5>
                     </Role>
                     <RoleHeading
-                        style={ {  borderTop: '10px solid #3ac0cf', borderBottom: '10px solid #3ac0cf'}}
+                        style={ {  borderTop: '10px solid #3ac0cf'}}
                         // add onclick to expand the role
                     >
-                        <FaPlus size={32} />    Software Engineers
+                        <Plus />Software Engineers
                     </RoleHeading>
-                    <Role>
+                    <Role
+                        style={ {  borderBottom: '10px solid #3ac0cf'}}
+                    >
                         <Section_1>
                             <RoleButton
                                 style={ { background: '#3ac0cf' } }
@@ -147,11 +273,13 @@ const AboutSection = () => {
                         </Section_5>
                     </Role>
                     <RoleHeading
-                        style={ { borderTop: '10px solid #30d163', borderBottom: '10px solid #30d163'}}
+                        style={ { borderTop: '10px solid #30d163' } }
                     >
-                        <FaPlus size={32} />    Finance & P.R.
+                        <Plus />Finance & P.R.
                     </RoleHeading>
-                    <Role>
+                    <Role
+                        style={ { borderBottom: '10px solid #30d163'}}
+                    >
                         <Section_1>
                             <RoleButton
                                 style={ { background: '#30d163' } }
