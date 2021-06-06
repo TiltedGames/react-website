@@ -16,6 +16,8 @@
   margin:0;
   padding:0;
   font-family: 'Poppins', sans-serif;
+  caret-color: transparent;
+
 }
 
 *,
@@ -23,6 +25,7 @@
 *::after {
   box-sizing: border-box;
   position: relative;
+  cursor: none;
 }
 
 body::-webkit-scrollbar {
@@ -42,4 +45,33 @@ body {
   50% {
     background: rgba(200, 200, 200, 0.8);
   }
+}
+
+.cursor {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 200ms ease;
+  transition-property: background-color, opacity, transform, mix-blend-mode;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  background-color: #fff;
+}
+
+.cursor--hidden {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.cursor--link-hovered {
+  transform: translate(-50%, -50%) scale(2);
+  transition: all 0.2s ease-in-out;
+}
+
+.cursor--clicked {
+  transform: translate(-50%, -50%) scale(0.9);
+  transition: all 0.2s ease-in-out;
 }

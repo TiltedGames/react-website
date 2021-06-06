@@ -324,6 +324,8 @@ const MenuButton = styled.div `
 const SlideContent = styled.div `
   width: 30vw;
   height: 40vw;
+  max-width: 600px;
+  max-height: 750px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
