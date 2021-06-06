@@ -10,13 +10,9 @@ import {
 
 const buttonBG = '#fff';
 const buttonText = '#000';
-const buttonHoverBG = '#fff';
-const buttonHoverText = '#000';
 
 const downloadButtonBg = '#fff';
 const downloadButtonText = '#000';
-const downloadButtonHoverBg = '#fff';
-const downloadButtonHoverText = '#000';
 
 const bigButtonPadding = '14px 48px';
 const smallButtonPadding = '12px 30px';
@@ -26,136 +22,65 @@ const smallFontSize = '16px';
 
 const osIconsBg = '#fff';
 const osIconsColor = '#000';
-const osIconsHoverBg = '#000';
-const osIconsHoverColor = '#fff';
 
-/*
-
-        BEGIN SECTION: ALL BUTTONS
-
- */
-
-// for all buttons, sets button heights to 10% of the visible viewport (10vh)
-export const ButtonWrapper = styled.div `
-  position: fixed;
-  bottom: 10vh;
-`
-
-// forward arrow icon
 export const ArrowForward = styled(MdArrowForward) `
   margin-left: 8px;
   font-size: 20px;
 `
 
-// right arrow icon
-export const ArrowRight = styled(MdKeyboardArrowRight) `
-  margin-left: 8px;
-  font-size: 20px;
-`
-
-
-// down arrow icon
-export const ArrowDown = styled(MdKeyboardArrowDown) `
-  margin-left: 8px;
-  font-size: 20px;
-`
-
-/*
-
-        END SECTION: ALL BUTTONS
-
-
-
-
-
-
-
-        BEGIN SECTION: GAME DOWNLOAD BUTTONS
-
- */
-
-export const OSIcons = styled.ul `
+export const DownloadButtons = styled.ul `
   justify-content: space-around;
   z-index: 1;
-  height: 5vh;
+  height: 120px;
   min-height:90px;
   align-items: center;
   list-style: none;
   text-align: center;
   display: flex;
-  width: 100%;
-  margin-top: max(-5vh, -88px);
-  visibility: hidden;
   transition: all 0.2s ease-in-out;
   background: ${ osIconsBg };
+  width: min-content;
+  padding: 40px 0;
+  margin: 50px auto;
 `
 
 export const WinIcon = styled(FaWindows) `
-  margin: 10px;
-  padding: 5px;
   color: ${ osIconsColor };
 `
 
 export const MacIcon = styled(FaApple) `
-  margin: 10px;
-  padding: 5px;
   color: ${ osIconsColor };
 `
 
 export const LinIcon = styled(FaLinux) `
-  margin: 10px;
-  padding: 5px;
   color: ${ osIconsColor };
 `
 
-export const WinIconWrapper = styled.li `
+export const WindowsButton = styled.li `
   display: inline-flex;
   align-items: center;
-  width: 68px;
+  width: min-content;
+  margin: 0 50px;
   background: ${ osIconsBg };
-  border-radius: 100px;
-  
-  &:hover {
-    background: ${ osIconsHoverBg };
-
-    ${ WinIcon } {
-      color: ${ osIconsHoverColor };
-    }
-  }
 `
 
-export const MacIconWrapper = styled.li `
+export const MacButton = styled.li `
   display:inline-flex;
   align-items: center;
   background: ${ osIconsBg };
-  border-radius: 100px;
-  
-  &:hover {
-    background: ${ osIconsHoverBg };
-
-    ${ MacIcon } {
-      color: ${ osIconsHoverColor };
-    }
-  }
+  margin: 0 50px;
+  width: min-content;
 `
 
-export const LinIconWrapper = styled.li `
+export const LinuxButton = styled.li `
   display:inline-flex;
   align-items: center;
   background: ${ osIconsBg };
-  border-radius: 100px;
-
-  &:hover {
-    background: ${ osIconsHoverBg };
-    
-    ${ LinIcon } {
-      color: ${ osIconsHoverColor };
-    }
-  }
+  margin: 0 50px;
+  width: min-content;
 `
 
-// download button for game section, expands with OS icons
-export const DownloadButton = styled.div `
+export const Button = styled.div `
   color: ${ downloadButtonText };
   background: ${ downloadButtonBg };
   padding: ${ ({ big }) => (big ? bigButtonPadding : smallButtonPadding) };
@@ -163,7 +88,6 @@ export const DownloadButton = styled.div `
   white-space: nowrap;
   outline: none;
   border: none;
-  cursor: pointer;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -171,37 +95,10 @@ export const DownloadButton = styled.div `
   min-height:90px;
 `
 
-// for all buttons, sets button heights to 10% of the visible viewport (10vh)
-export const DownloadButtonWrapper = styled.div `
-  
+export const ButtonWrapper = styled.div `
   margin: 30px auto;
   z-index: 100;
-  
-  &:hover {
-    ${ OSIcons } {
-      visibility: visible;
-      margin-top: 0;
-    }
-
-    ${ DownloadButton } {
-      background: ${ downloadButtonHoverBg };
-      color: ${ downloadButtonHoverText };
-    }
-  }
 `
-
-/*
-
-        END SECTION: GAME DOWNLOAD BUTTONS
-
-
-
-
-
-
-        BEGIN SECTION: CONTACT FORM BUTTONS
-
- */
 
 export const SendButton = styled.div `
   background: ${ buttonBG }
@@ -211,21 +108,12 @@ export const SendButton = styled.div `
   white-space: nowrap;
   outline: none;
   border: none;
-  cursor: pointer;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   transition: all 0.2s ease-in-out;
   
   &:hover {
-    transition: all 0.2s ease-in-out;
-    background: ${ buttonHoverBG }
-    color: ${ buttonHoverText }
+    text-decoration: underline;
   }
 `
-
-/*
-
-        END SECTION: CONTACT FORM BUTTONS
-
- */

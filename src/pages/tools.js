@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
     Column_FullWidth,
     Column_Heading_Left,
@@ -9,15 +9,12 @@ import {
 import {
     PageHeading,
     PageSubheading,
-    BoldText
+    BoldText, DownloadText
 } from "../components/design";
 import {
-    ArrowForward,
-    ArrowRight,
-    DownloadButtonWrapper,
-    DownloadButton,
-    OSIcons,
-    WinIconWrapper,
+    ButtonWrapper,
+    DownloadButtons,
+    WindowsButton,
     WinIcon,
 } from '../components/buttons';
 
@@ -28,12 +25,6 @@ import {
 */
 
 const Tools = () => {
-    const [hover, setHover] = useState(false)
-
-    const onHover = () => {
-        setHover(!hover)
-    }
-
     return (
         <PageContent>
             <Row>
@@ -74,22 +65,12 @@ const Tools = () => {
                         Storage<br />
                         Save and load network data incredibly fast using Redis!
                     </BoldText>
-                    <DownloadButtonWrapper
-                        onMouseEnter={ onHover }
-                        onMouseLeave={ onHover }
-                    >
-                        <DownloadButton
-                            light={ hover ? 'true' : 'false' }
-                            big='true'
-                        >
-                            Download { hover ? <ArrowForward /> : <ArrowRight /> }
-                        </DownloadButton>
-                        <OSIcons
-                            show={ hover ? 'true' : 'false' }
-                        >
-                            <WinIconWrapper><a href="#"><WinIcon size={48} /></a></WinIconWrapper>
-                        </OSIcons>
-                    </DownloadButtonWrapper>
+                    <ButtonWrapper>
+                        <DownloadText>Download</DownloadText>
+                        <DownloadButtons>
+                            <WindowsButton><a href="#"><WinIcon size={48} /></a></WindowsButton>
+                        </DownloadButtons>
+                    </ButtonWrapper>
                 </Column_FullWidth>
             </Row>
         </PageContent>

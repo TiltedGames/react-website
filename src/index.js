@@ -10,14 +10,11 @@ import Contact from "./pages/contact";
 import BugReport from "./pages/bugreport";
 import classNames from "classnames";
 
-const isMobile = () => {
-    const ua = navigator.userAgent;
-    return /Android|Mobi/i.test(ua);
-};
-
 function App() {
+    // toggle mobile menu mode
     const [mobileMenuOpen, toggleMobileMenu] = useState(false);
 
+    // cursor
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [clicked, setClicked] = useState(false);
     const [linkHovered, setLinkHovered] = useState(false);
@@ -89,7 +86,6 @@ function App() {
     return(
         <>
             <Cursor />
-
             <NavBar toggle={ toggleMobileMenu } />
             <About />
             <Game />

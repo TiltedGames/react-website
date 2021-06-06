@@ -1,18 +1,17 @@
 import React, { useState } from 'react'
 import {
+    DownloadText,
     PageHeading,
     PageSubheading
 } from "../components/design";
 import {
-    DownloadButtonWrapper,
-    OSIcons,
-    WinIconWrapper,
-    MacIconWrapper,
-    LinIconWrapper,
+    DownloadButtons,
+    WindowsButton,
+    MacButton,
+    LinuxButton,
     WinIcon,
     MacIcon,
-    LinIcon,
-    DownloadButton, ArrowForward, ArrowRight
+    LinIcon
 } from '../components/buttons';
 import {
     PageContent,
@@ -29,12 +28,6 @@ import {
 */
 
 const Game = () => {
-    const [hover, setHover] = useState(false)
-
-    const onHover = () => {
-        setHover(!hover)
-    }
-
     return (
         <PageContent>
             <Row>
@@ -50,25 +43,13 @@ const Game = () => {
                 </Column_Heading_Right>
             </Row>
             <Row>
+                <DownloadText>Download (Alpha)</DownloadText>
                 <Column_FullWidth>
-                    <DownloadButtonWrapper
-                        onMouseEnter={ onHover }
-                        onMouseLeave={ onHover }
-                    >
-                        <DownloadButton
-                            light={ hover ? 'true' : 'false' }
-                            big='true'
-                        >
-                            Download (Alpha) { hover ? <ArrowForward /> : <ArrowRight /> }
-                        </DownloadButton>
-                        <OSIcons
-                            show={ hover ? 'true' : 'false' }
-                        >
-                            <WinIconWrapper><a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Windows).zip"><WinIcon size={48} /></a></WinIconWrapper>
-                            <MacIconWrapper><a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(macOS).zip"><MacIcon size={48} /></a></MacIconWrapper>
-                            <LinIconWrapper><a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Linux).zip"><LinIcon size={48} /></a></LinIconWrapper>
-                        </OSIcons>
-                    </DownloadButtonWrapper>
+                        <DownloadButtons>
+                            <WindowsButton><a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Windows).zip"><WinIcon size={48} /></a></WindowsButton>
+                            <MacButton><a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(macOS).zip"><MacIcon size={48} /></a></MacButton>
+                            <LinuxButton><a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Linux).zip"><LinIcon size={48} /></a></LinuxButton>
+                        </DownloadButtons>
                 </Column_FullWidth>
             </Row>
         </PageContent>

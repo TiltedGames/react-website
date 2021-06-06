@@ -39,7 +39,7 @@ body {
 
 @keyframes pulse {
   0% {
-    background: rgba(200, 200, 200, 0.0);
+    background: rgba(200, 200, 200, 1.0);
   }
 
   50% {
@@ -48,8 +48,8 @@ body {
 }
 
 .cursor {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   border-radius: 100%;
   position: fixed;
   transform: translate(-50%, -50%);
@@ -67,11 +67,11 @@ body {
 }
 
 .cursor--link-hovered {
-  transform: translate(-50%, -50%) scale(2);
+  transform: translate(-50%, -50%) scale(3.5);
   transition: all 0.2s ease-in-out;
 }
 
 .cursor--clicked {
-  transform: translate(-50%, -50%) scale(0.9);
+  transform: translate(-50%, -50%) scale(0.5);
   transition: all 0.2s ease-in-out;
 }

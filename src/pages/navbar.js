@@ -51,7 +51,6 @@ export const MobileIcon = styled.div `
     right: 0;
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
-    cursor: pointer;
     color: #fff;
   }
 `
@@ -169,7 +168,9 @@ const NavBar = ({ toggle }) => {
                 >
 
                     {/* [IMG] */}
-                    <RoundLogo />
+                    <a href='#' style={ { color: '#fff', textDecoration: 'none'}}>
+                        <RoundLogo />
+                    </a>
 
                 </Page>
 
@@ -200,7 +201,9 @@ const NavBar = ({ toggle }) => {
                         />
 
                         {/* [LABEL] */}
-                        <Label>Recoup</Label>
+                        <a href='#' style={ { color: '#fff', textDecoration: 'none'}}>
+                            <Label>Recoup</Label>
+                        </a>
 
                         {/* [UL] Subpage links */}
                         <SubpageLinks
@@ -220,7 +223,9 @@ const NavBar = ({ toggle }) => {
                                 }
                             >
                                 {/* [LABEL] */}
-                                <Label>Concept Art</Label>
+                                <a href='#' style={ { color: '#fff', textDecoration: 'none'}}>
+                                    <Label>Concept Art</Label>
+                                </a>
                             </SubpageLink>
 
                             {/* [LI] */}
@@ -232,7 +237,9 @@ const NavBar = ({ toggle }) => {
                                 }
                             >
                                 {/* [LABEL] */}
-                                <Label>Download</Label>
+                                <a href='#' style={ { color: '#fff', textDecoration: 'none'}}>
+                                    <Label>Download</Label>
+                                </a>
                             </SubpageLink>
 
                             {/* [LI] */}
@@ -244,7 +251,9 @@ const NavBar = ({ toggle }) => {
                                 }
                             >
                                 {/* [LABEL] */}
-                                <Label>Report a bug</Label>
+                                <a href='#' style={ { color: '#fff', textDecoration: 'none'}}>
+                                    <Label>Report a bug</Label>
+                                </a>
                             </SubpageLink>
 
                         </SubpageLinks>
@@ -267,7 +276,9 @@ const NavBar = ({ toggle }) => {
                         />
 
                         {/* [LABEL] */}
-                        <Label>Game server</Label>
+                        <a href='#' style={ { color: '#fff', textDecoration: 'none'}}>
+                            <Label>Game server</Label>
+                        </a>
 
                         {/* [UL] Subpage links */}
                         <SubpageLinks
@@ -299,7 +310,9 @@ const NavBar = ({ toggle }) => {
                                 }
                             >
                                 {/* [LABEL] */}
-                                <Label>Report a bug</Label>
+                                <a href='#' style={ { color: '#fff', textDecoration: 'none'}}>
+                                    <Label>Report a bug</Label>
+                                </a>
                             </SubpageLink>
 
                         </SubpageLinks>
@@ -323,7 +336,9 @@ const NavBar = ({ toggle }) => {
                         />
 
                         {/* [LABEL] */}
-                        <Label>Contact</Label>
+                        <a href='#' style={ { color: '#fff', textDecoration: 'none'}}>
+                            <Label>Contact</Label>
+                        </a>
 
                     </LinkWrapper>
 
@@ -395,7 +410,9 @@ const NavBar = ({ toggle }) => {
                             />
 
                             {/* [LABEL] */}
-                            <Label>Recoup</Label>
+                            <a href='#' style={ { color: '#fff', textDecoration: 'none'}}>
+                                <Label>Recoup</Label>
+                            </a>
                         </LinkWrapper>
 
                     </Page>
@@ -421,7 +438,9 @@ const NavBar = ({ toggle }) => {
                             />
 
                             {/* [LABEL] */}
-                            <Label>Game server</Label>
+                            <a href='#' style={ { color: '#fff', textDecoration: 'none'}}>
+                                <Label>Game server</Label>
+                            </a>
                         </LinkWrapper>
 
                     </Page>
@@ -447,7 +466,9 @@ const NavBar = ({ toggle }) => {
                             />
 
                             {/* [LABEL] */}
-                            <Label>This website</Label>
+                            <a href='#' style={ { color: '#fff', textDecoration: 'none'}}>
+                                <Label>This website</Label>
+                            </a>
                         </LinkWrapper>
 
                     </Page>

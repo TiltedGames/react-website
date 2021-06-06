@@ -76,6 +76,34 @@ export const SectionHeading = styled.h1 `
   }
 `
 
+export const DownloadText = styled.h2 `
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  text-align: center;
+  margin: 100px 0 0 0;
+  padding: 25px;
+  font-weight: bold;
+  align-items: center;
+
+  font-size: 60px;
+
+  @media screen and (max-width: 2048px) {
+    font-size: 50px;
+  }
+
+  @media screen and (max-width: 1080px) {
+    font-size: 35px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 16px;
+  }
+`
+
 export const BoldText = styled.p `
   font-size: 26px;
   text-align: left;

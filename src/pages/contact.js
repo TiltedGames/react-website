@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import {
     PageHeading,
-    PageSubheading,
-    BoldText
+    PageSubheading
 } from "../components/design";
 import {
     Column_Dynamic,
@@ -11,6 +10,10 @@ import {
     PageContent,
     Row
 } from "../components/layout";
+import {
+    Button,
+    ButtonWrapper
+} from "../components/buttons";
 
 /*
 
@@ -41,9 +44,17 @@ const Contact = () => {
             </Row>
             <Row>
                 <Column_Dynamic>
-                    <BoldText>
-
-                    </BoldText>
+                    <ButtonWrapper
+                        onMouseEnter={ onHover }
+                        onMouseLeave={ onHover }
+                    >
+                        <Button
+                            light={ hover ? 'true' : 'false' }
+                            big='true'
+                        >
+                            Send
+                        </Button>
+                    </ButtonWrapper>
                 </Column_Dynamic>
             </Row>
         </PageContent>

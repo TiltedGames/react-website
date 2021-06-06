@@ -1,17 +1,16 @@
 import React, { useState } from 'react'
 import {
     PageHeading,
-    PageSubheading,
-    BoldText
+    PageSubheading
 } from "../components/design";
 import {
     Column_Dynamic,
     Column_Heading_Left,
     Column_Heading_Right,
     PageContent,
-    Row,
-    Row_EqualHeights
+    Row
 } from "../components/layout";
+import {Button, ButtonWrapper} from "../components/buttons";
 
 /*
 
@@ -42,9 +41,17 @@ const BugReport = () => {
             </Row>
             <Row>
                 <Column_Dynamic>
-                    <BoldText>
-
-                    </BoldText>
+                    <ButtonWrapper
+                        onMouseEnter={ onHover }
+                        onMouseLeave={ onHover }
+                    >
+                        <Button
+                            light={ hover ? 'true' : 'false' }
+                            big='true'
+                        >
+                            Send
+                        </Button>
+                    </ButtonWrapper>
                 </Column_Dynamic>
             </Row>
         </PageContent>

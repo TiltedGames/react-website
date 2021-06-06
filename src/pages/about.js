@@ -1,4 +1,4 @@
-import React, {useReducer, useState} from 'react'
+import React, { useReducer, useState, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import {
     PageHeading,
@@ -13,10 +13,7 @@ import {
     Column_Heading_Right
 } from "../components/layout";
 import {
-    FaArrowLeft,
-    FaArrowRight,
-    FaPlusCircle,
-    FaMinusCircle, FaArrowDown, FaArrowAltCircleDown, FaArrowAltCircleUp
+    FaTimesCircle
 } from "react-icons/all";
 
 // member images
@@ -33,16 +30,21 @@ import img_olivia from '../media/img/members/olivia.jpg'
 
 */
 
-const TeamHeading = styled.h1 `
-  font-family: 'NeutralFace', sans-serif;
-  color: #fff;
+const OrganizationInfo = styled.h1 `
+  margin: 100px 0;
+`
+
+const TeamButton = styled.div `
+  font-family: Poppins, sans-serif;
+  color: #000;
   text-align: center;
   margin: 100px 0 50px 0;
   padding: 25px;
   font-weight: bold;
   align-items: center;
-
   font-size: 60px;
+
+  background: rgba(200, 200, 200, 1.0);
 
   @media screen and (max-width: 2048px) {
     font-size: 50px;
@@ -59,19 +61,7 @@ const TeamHeading = styled.h1 `
   @media screen and (max-width: 480px) {
     font-size: 16px;
   }
-`
-
-const OrganizationInfo = styled.h1 `
-  margin: 100px 0;
-`
-
-const Down = styled(FaArrowAltCircleDown) `
-  color: #fff;
-  width: 125px;
-  height: 125px;
-  margin: 0 50px;
-  border-radius: 50%;
-  transform: scale(1);
+  
   animation: pulse 2s infinite;
 `
 
@@ -124,13 +114,13 @@ const SlideContainer = styled.div `
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom:500px;
+  margin-bottom: 250px;
 `
 
 function useTilt(active) {
-    const ref = React.useRef(null);
+    const ref = useRef(null);
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (!ref.current || !active) {
             return;
         }
@@ -174,13 +164,13 @@ const initialState = {
 };
 
 const slidesReducer = (state, event) => {
-    if (event.type === "NEXT") {
+    if (event.type === "PREV") {
         return {
             ...state,
             slideIndex: (state.slideIndex + 1) % slides.length
         };
     }
-    if (event.type === "PREV") {
+    if (event.type === "NEXT") {
         return {
             ...state,
             slideIndex:
@@ -397,6 +387,19 @@ const SlideDescription = styled.p `
   color: #fff;
 `
 
+const Exit = styled(FaTimesCircle) `
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 250px;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+  
+  &:hover {
+    opacity: 1.0;
+  }
+`
+
 
 /*
 
@@ -406,10 +409,8 @@ const SlideDescription = styled.p `
 
 const About = () => {
     // on-click actions
-    const [expanded_Role_1, toggleExpanded_Role_1] = useState(false);
-    const [expanded_Role_2, toggleExpanded_Role_2] = useState(false);
-    const [expanded_Role_3, toggleExpanded_Role_3] = useState(false);
-    const [state, dispatch] = React.useReducer(slidesReducer, initialState);
+    const [showingMembers, toggleShowMembers] = useState(false);
+    const [state, dispatch] = useReducer(slidesReducer, initialState);
 
     return (
         <PageContent>
@@ -446,12 +447,23 @@ const About = () => {
                 <Column_FullWidth
                     style={ { marginBottom: '80px' } }
                 >
-                    { !expanded_Role_1 && <Down onClick={ () => { toggleExpanded_Role_1(!expanded_Role_1) } } /> }
+                        <a href='#'
+                            style={
+                                !showingMembers
+                                ? { height: 'auto', visibility: 'visible',  textDecoration: 'none', color: '#000' }
+                                : { height: '0', visibility: 'hidden',  textDecoration: 'none', color: '#000' }
+                            }
+                        >
+                            <TeamButton onClick={ () => { toggleShowMembers(true) } }>
+                                Meet the team
+                            </TeamButton>
+                        </a>
+
                     <SlideContainer
                         style = {
-                            expanded_Role_1
+                            showingMembers
                                 ? { height: 'auto', visibility: 'visible' }
-                                : { height: '500px', visibility: 'hidden'}
+                                : { height: '0', visibility: 'hidden'}
                         }
                     >
                         <Slides className="slides">
@@ -464,6 +476,18 @@ const About = () => {
                             <MenuButton onClick={ () => dispatch({ type: "PREV" } ) }>›</MenuButton>
                         </Slides>
                     </SlideContainer>
+
+                    { showingMembers &&
+                        <a href='#'
+                           style={
+                               showingMembers
+                                   ? { height: 'auto', visibility: 'visible',  textDecoration: 'none', color: '#000' }
+                                   : { height: '0', visibility: 'hidden',  textDecoration: 'none', color: '#000' }
+                           }
+                        >
+                            <Exit onClick={ () => { toggleShowMembers(false) } }/>
+                        </a>
+                    }
                 </Column_FullWidth>
             </Row>
         </PageContent>
