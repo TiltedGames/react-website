@@ -7,7 +7,12 @@ import {
 import styled from "styled-components";
 import roundLogo from "../media/img/round-logo.png";
 
-// round Tilted Games logo
+/*
+
+        NAVBAR COMPONENTS
+
+*/
+
 export const RoundLogo = styled.span  `
   position: absolute;
   top: 0;
@@ -19,7 +24,6 @@ export const RoundLogo = styled.span  `
   margin-top: -16px;
 `
 
-// github icon (from fontawesome)
 export const GithubIcon = styled(FaGithub) `
   position: absolute;
   margin: 16px 0;
@@ -31,19 +35,15 @@ export const GithubIcon = styled(FaGithub) `
   border-radius: 100px;
 `
 
-// github icon (from fontawesome)
 export const DonateIcon = styled(FaDonate) `
   position: absolute;
   top: -6px;
   left: -23px;
 `
 
-// mobile menu display icon
 export const MobileIcon = styled.div `
-  // hidden by default
   display:none;
   
-  // show if narrow device/viewport
   @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
@@ -56,13 +56,6 @@ export const MobileIcon = styled.div `
   }
 `
 
-/*
-
-        NAVIGATION COMPONENTS
-
- */
-
-// wrapper (clear, controls placement)
 export const Wrapper = styled.div `
   z-index: 1000;
   right: 50px;
@@ -71,7 +64,6 @@ export const Wrapper = styled.div `
   position:fixed;
 `
 
-// list (all pages)
 export const Pages = styled.ul `
   list-style: none;
   margin: 0;
@@ -81,7 +73,6 @@ export const Pages = styled.ul `
   transition: all 0.25s ease-in-out;
 `
 
-// label (all links)
 export const Label = styled.label `
   padding-left: 40px;
   text-align: left;
@@ -92,19 +83,16 @@ export const GithubContainer = styled.div `
   transition: all 0.25s ease-in-out;
 `
 
-// list item (of in-site page list)
 export const Page = styled.li `
   position: relative;
   padding: 0;
 `
 
-// clear wrapper (part of vertical bar)
 export const LinkWrapper = styled.div `
   border-left: 3px solid #fff;
   padding: 25px 0;
 `
 
-// in-site subpage list
 export const SubpageLinks = styled.ul `
   list-style: none;
   text-align: left;
@@ -113,20 +101,16 @@ export const SubpageLinks = styled.ul `
   transition: all 0.25s ease-in-out;
 `
 
-
-// list item (of in-site subpages)
 export const SubpageLink = styled.li `
   position: initial;
   padding: 0 0 0 20px;
   color: #fff;
   text-decoration: none;
-  //padding: 30px 0 0 20px;
   transition: all 0.25s ease-in-out;
   visibility: hidden;
   height: 0;
 `
 
-// caret (for internal page links)
 export const Caret = styled(FaPlus) `
   position: absolute;
   top: 32px;
@@ -136,8 +120,13 @@ export const Caret = styled(FaPlus) `
   height:10px;
 `
 
+/*
 
-const NavigationBar = ({ toggle }) => {
+        NAVBAR COMPONENT
+
+*/
+
+const NavBar = ({ toggle }) => {
 
     // states for subpage expansion (toggle via hover / active page)
     const [AboutExpanded, toggleAboutExpanded] = useState(true);
@@ -511,4 +500,4 @@ const NavigationBar = ({ toggle }) => {
     </>);
 };
 
-export default NavigationBar;
+export default NavBar;

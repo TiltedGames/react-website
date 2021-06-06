@@ -19,6 +19,70 @@ import {
     FaMinusCircle
 } from "react-icons/all";
 
+/*
+
+        CONSTANTS
+
+*/
+
+const Creative_Members = [
+    {
+        name: 'Brennan',
+        member_role: 'Artist',
+        email: 'brennan@tiltedgames.org',
+        description: '2D and 3D artist',
+        image: ''
+    },
+    {
+        name: 'Luke',
+        member_role: 'Story writer',
+        email: 'blaeku@tiltedgames.org',
+        description: '2D and 3D artist',
+        image: ''
+    },
+    {
+        name: 'Olivia',
+        member_role: 'Artist & Map Design',
+        email: 'olivia@tiltedgames.org',
+        description: '2D and 3D artist',
+        image: ''
+    }
+];
+
+const Development_Members = [
+    {
+        name: 'Ian',
+        member_role: 'Software Engineer',
+        email: 'relreo@tiltedgames.org',
+        description: 'Computer Game Science, U.C. Irvine',
+        image: ''
+    },
+    {
+        name: 'Noah Corona',
+        member_role: 'Software Engineer',
+        email: 'noah@tiltedgames.org',
+        description: 'Computer Engineering, U.C. Santa Barbara',
+        image: ''
+    }
+];
+
+const Financial_Members = [
+    {
+        name: 'Johnny Bravo',
+        member_role: 'Accountant & P.R.',
+        email: 'jbravo@tiltedgames.org',
+        description: 'Economics, U.C. Santa Barbara',
+        image:  ''
+    }
+];
+
+
+/*
+
+        ABOUT PAGE COMPONENTS
+
+*/
+
 export const RoleHeading = styled.h1 `
   font-family: 'NeutralFace';
   color: #fff;
@@ -144,59 +208,14 @@ export const Role = styled.div `
   padding: 25px 0;
 `
 
+/*
 
-const AboutSection = () => {
-    const Creative_Members = [
-        {
-            name: 'Brennan',
-            member_role: 'Artist',
-            email: 'brennan@tiltedgames.org',
-            description: '2D and 3D artist',
-            image: ''
-        },
-        {
-            name: 'Luke',
-            member_role: 'Story writer',
-            email: 'blaeku@tiltedgames.org',
-            description: '2D and 3D artist',
-            image: ''
-        },
-        {
-            name: 'Olivia',
-            member_role: 'Artist & Map Design',
-            email: 'olivia@tiltedgames.org',
-            description: '2D and 3D artist',
-            image: ''
-        }
-    ];
+        ABOUT PAGE
 
-    const Development_Members = [
-        {
-            name: 'Ian',
-            member_role: 'Software Engineer',
-            email: 'relreo@tiltedgames.org',
-            description: 'Computer Game Science, U.C. Irvine',
-            image: ''
-        },
-        {
-            name: 'Noah Corona',
-            member_role: 'Software Engineer',
-            email: 'noah@tiltedgames.org',
-            description: 'Computer Engineering, U.C. Santa Barbara',
-            image: ''
-        }
-    ];
+*/
 
-    const Financial_Members = [
-        {
-            name: 'Johnny Bravo',
-            member_role: 'Accountant & P.R.',
-            email: 'jbravo@tiltedgames.org',
-            description: 'Economics, U.C. Santa Barbara',
-            image:  ''
-        }
-    ];
-
+const About = () => {
+    // on-click actions
     const [expanded_Role_1, toggleExpanded_Role_1] = useState(false);
     const [expanded_Role_2, toggleExpanded_Role_2] = useState(false);
     const [expanded_Role_3, toggleExpanded_Role_3] = useState(false);
@@ -343,4 +362,4 @@ const AboutSection = () => {
     );
 }
 
-export default AboutSection;
+export default About;

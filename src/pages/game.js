@@ -3,7 +3,6 @@ import {
     PageHeading,
     PageSubheading
 } from "../components/design";
-// import button
 import {
     DownloadButtonWrapper,
     OSIcons,
@@ -15,20 +14,21 @@ import {
     LinIcon,
     DownloadButton, ArrowForward, ArrowRight
 } from '../components/buttons';
-
-
 import {
     PageContent,
-    Row_EqualHeights,
     Row,
-    Column_HalfWidth,
     Column_FullWidth,
-    Column_Dynamic,
     Column_Heading_Left,
     Column_Heading_Right
 } from "../components/layout";
 
-const GameSection = () => {
+/*
+
+        PAGE COMPONENT
+
+*/
+
+const Game = () => {
     const [hover, setHover] = useState(false)
 
     const onHover = () => {
@@ -75,4 +75,4 @@ const GameSection = () => {
     );
 }
 
-export default GameSection;
+export default Game;

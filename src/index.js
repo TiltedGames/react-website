@@ -1,33 +1,29 @@
 import './style.css';
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
-import NavigationBar from "./pages/navbar";
-import AboutSection from "./pages/about";
-import GameSection from "./pages/game";
-import ToolsSection from "./pages/tools";
-import GithubSection from "./pages/github";
-import ContactSection from "./pages/contact";
-import BugReportSection from "./pages/bugreport";
+import NavBar from "./pages/navbar";
+import About from "./pages/about";
+import Game from "./pages/game";
+import Tools from "./pages/tools";
+import Github from "./pages/github";
+import Contact from "./pages/contact";
+import BugReport from "./pages/bugreport";
 
-// entire single-page app
 function App() {
     const [mobileMenuOpen, toggleMobileMenu] = useState(false);
 
-    const toggle = () => {
-        toggleMobileMenu(!mobileMenuOpen)
-    }
+    const toggle = () => { toggleMobileMenu(!mobileMenuOpen) }
 
-    return (
+    return(
         <>
-            <NavigationBar toggle={ toggle } />
-            <AboutSection />
-            <GameSection />
-            <ToolsSection />
-            <GithubSection />
-            <ContactSection />
-            <BugReportSection />
-        </>
-    );
+            <NavBar toggle={ toggle } />
+            <About />
+            <Game />
+            <Tools />
+            <Github />
+            <Contact />
+            <BugReport />
+        </>);
 }
 
 ReactDOM.render(

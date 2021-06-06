@@ -13,7 +13,13 @@ import {
     Row_EqualHeights
 } from "../components/layout";
 
-const BugReportSection = () => {
+/*
+
+        PAGE COMPONENT
+
+*/
+
+const BugReport = () => {
     const [hover, setHover] = useState(false)
 
     const onHover = () => {
@@ -45,4 +51,4 @@ const BugReportSection = () => {
     );
 }
 
-export default BugReportSection;
+export default BugReport;

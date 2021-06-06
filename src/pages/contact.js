@@ -12,7 +12,13 @@ import {
     Row
 } from "../components/layout";
 
-const ContactSection = () => {
+/*
+
+        PAGE COMPONENT
+
+*/
+
+const Contact = () => {
     const [hover, setHover] = useState(false)
 
     const onHover = () => {
@@ -44,4 +50,4 @@ const ContactSection = () => {
     );
 }
 
-export default ContactSection;
+export default Contact;

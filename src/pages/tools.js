@@ -21,8 +21,13 @@ import {
     WinIcon,
 } from '../components/buttons';
 
+/*
 
-const ToolsSection = () => {
+        PAGE COMPONENT
+
+*/
+
+const Tools = () => {
     const [hover, setHover] = useState(false)
 
     const onHover = () => {
@@ -91,4 +96,4 @@ const ToolsSection = () => {
     );
 }
 
-export default ToolsSection;
+export default Tools;

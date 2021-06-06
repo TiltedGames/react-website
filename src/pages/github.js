@@ -16,9 +16,21 @@ import RepoImage_2 from "../media/img/stock_1.jpg"
 import RepoImage_3 from "../media/img/stock_1.jpg"
 import styled from 'styled-components'
 
+/*
+
+        CONSTANTS
+
+*/
+
 const CloneText_1 = 'https://tiltedgames.org';
 const CloneText_2 = 'https://tiltedgames.org';
 const CloneText_3 = 'https://tiltedgames.org';
+
+/*
+
+        GITHUB PAGE COMPONENTS
+
+*/
 
 export const RepoCards = styled.div `
 
@@ -64,7 +76,13 @@ export const CopyButton = styled.button `
   width: 50%;
 `
 
-const GithubSection = () => {
+/*
+
+        PAGE COMPONENT
+
+*/
+
+const Github = () => {
 
     const [hover, setHover] = useState(false)
 
@@ -153,4 +171,4 @@ const GithubSection = () => {
     );
 }
 
-export default GithubSection;
+export default Github;
