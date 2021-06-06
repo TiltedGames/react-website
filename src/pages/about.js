@@ -24,7 +24,7 @@ import img_brennan from '../media/img/members/brennan.jpg'
 import img_ian from '../media/img/members/ian.jpg'
 import img_johnny from '../media/img/members/johnny.jpg'
 import img_luke from '../media/img/members/luke.jpg'
-import img_noah from '../media/img/members/noah.jpeg';
+import img_noah from '../media/img/members/noah.jpg';
 import img_olivia from '../media/img/members/olivia.jpg'
 
 /*
@@ -120,7 +120,7 @@ const slides = [
         name: "Noah",
         role: 'Comp. Engineering, U.C. Santa Barbara',
         email: 'noah@tiltedgames.org',
-        description: 'Developer (Unity, Server, Web)',
+        description: 'Developer (Unity, Server & Website)',
         image: img_noah
     },
     {
@@ -437,7 +437,7 @@ const About = () => {
                         onClick={ () => { toggleExpanded_Role_1(!expanded_Role_1) } }
                     >
                         { expanded_Role_1 ? <Minus /> : <Plus /> }
-                        Meet the team
+                        Who we are
                     </TeamHeading>
                     <SlideContainer
                         style = {

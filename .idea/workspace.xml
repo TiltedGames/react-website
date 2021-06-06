@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5326dec3-9647-4f82-be61-f55db75aae95" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/design.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/design.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/media/img/members/ian.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/media/img/members/ian.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/media/img/members/johnny.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/media/img/members/johnny.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/github.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/github.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +94,7 @@
       <workItem from="1622928461696" duration="9211000" />
       <workItem from="1622938159897" duration="11283000" />
       <workItem from="1622954827898" duration="32000" />
-      <workItem from="1622954869589" duration="4098000" />
+      <workItem from="1622954869589" duration="4642000" />
     </task>
     <servers />
   </component>
