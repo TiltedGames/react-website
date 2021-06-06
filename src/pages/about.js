@@ -16,7 +16,7 @@ import {
     FaArrowLeft,
     FaArrowRight,
     FaPlusCircle,
-    FaMinusCircle
+    FaMinusCircle, FaArrowDown, FaArrowAltCircleDown, FaArrowAltCircleUp
 } from "react-icons/all";
 
 // member images
@@ -37,11 +37,10 @@ const TeamHeading = styled.h1 `
   font-family: 'NeutralFace', sans-serif;
   color: #fff;
   text-align: center;
-  margin: 100px 0;
+  margin: 100px 0 50px 0;
   padding: 25px;
   font-weight: bold;
   align-items: center;
-  border-bottom: 1px solid #fff;
 
   font-size: 60px;
 
@@ -63,26 +62,15 @@ const TeamHeading = styled.h1 `
 `
 
 const OrganizationInfo = styled.h1 `
-  margin-top: 100px;
+  margin: 100px 0;
 `
 
-const Plus = styled(FaPlusCircle) `
+const Down = styled(FaArrowAltCircleDown) `
   color: #fff;
+  width: 125px;
+  height: 125px;
   margin: 0 50px;
   border-radius: 50%;
-  padding:2px;
-
-  box-shadow: 0 0 0 0  rgba(132, 48, 166, 0.8);
-  transform: scale(1);
-  animation: pulse 2s infinite;
-`
-
-const Minus = styled(FaMinusCircle) `
-  color: #fff;
-  margin: 0 50px;
-  border-radius: 50%;
-
-  box-shadow: 0 0 5px 0  rgba(132, 48, 166, 0.8);
   transform: scale(1);
   animation: pulse 2s infinite;
 `
@@ -136,6 +124,7 @@ const SlideContainer = styled.div `
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom:500px;
 `
 
 function useTilt(active) {
@@ -289,13 +278,31 @@ const MenuButton = styled.div `
   border: none;
   color: white;
   position: absolute;
-  font-size: 15rem;
-  width: 15rem;
-  height: 15rem;
-  top: 10%;
+  font-size: 20rem;
+  width: 20rem;
+  height: 20rem;
+  top: 20%;
   transition: opacity 0.3s;
   opacity: 0.7;
   z-index: 5;
+
+  @media screen and (max-width: 1800px) {
+    top: 5%;
+  }
+
+  @media screen and (max-width: 1400px) {
+    top: 15%;
+    font-size: 10rem;
+    width: 15rem;
+    height: 10rem;
+  }
+
+  @media screen and (max-width: 800px) {
+    top: 30%;
+    font-size: 5rem;
+    width: 15rem;
+    height: 5rem;
+  }
 
   &:hover {
     opacity: 1;
@@ -364,10 +371,14 @@ const SlideTitle = styled.h2 `
   text-transform: uppercase;
   margin: 0;
   color: #fff;
+
+  @media screen and (max-width: 800px) {
+    font-size: 2rem;
+  }
 `
 
 const SlideSubtitle = styled.h3 `
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   text-align:left;
   font-weight: normal;
   letter-spacing: 0.2ch;
@@ -379,7 +390,7 @@ const SlideSubtitle = styled.h3 `
 const SlideDescription = styled.p `
   margin: 0 0 30px 0;
   text-align:left;
-  font-size: 2.0rem;
+  font-size: 1.0rem;
   letter-spacing: 0.2ch;
   color: #fff;
 `
@@ -417,8 +428,8 @@ const About = () => {
                 <Column_FullWidth>
                     <OrganizationInfo>
                         <BoldText>
-                            We're working on a game called Recoup! It's coming to PC, Xbox, Playstation, and
-                            will include online co-op. We are hoping to also support mobile devices and
+                            Our focus is currently on a game called Recoup! It's an online, co-op experience
+                            coming to PC, Xbox, Playstation. We're also hoping to support mobile devices and
                             cross platform play. Check out <a style={ { color: '#fff' } } href="#">the Recoup page</a> to see where we're at!
                             <br /><br />
                             At the moment, all of our
@@ -433,17 +444,12 @@ const About = () => {
                 <Column_FullWidth
                     style={ { marginBottom: '80px' } }
                 >
-                    <TeamHeading
-                        onClick={ () => { toggleExpanded_Role_1(!expanded_Role_1) } }
-                    >
-                        { expanded_Role_1 ? <Minus /> : <Plus /> }
-                        Who we are
-                    </TeamHeading>
+                    { !expanded_Role_1 && <Down onClick={ () => { toggleExpanded_Role_1(!expanded_Role_1) } } /> }
                     <SlideContainer
                         style = {
                             expanded_Role_1
                                 ? { height: 'auto', visibility: 'visible' }
-                                : { height: '0', visibility: 'hidden'}
+                                : { height: '500px', visibility: 'hidden'}
                         }
                     >
                         <Slides className="slides">

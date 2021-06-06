@@ -31,20 +31,15 @@ body::-webkit-scrollbar {
 
 body {
   background: #000;
-
   -ms-overflow-style: none;  /* IE and Edge */
 }
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 5px 0 rgba(132, 48, 166, 0.8);
+    background: rgba(200, 200, 200, 0.0);
   }
 
-  70% {
-    box-shadow: 0 0 5px 10px rgba(132, 48, 166, 0.8);
-  }
-
-  100% {
-    box-shadow: 0 0 5px 0 rgba(132, 48, 166, 0.8);
+  50% {
+    background: rgba(200, 200, 200, 0.8);
   }
 }
