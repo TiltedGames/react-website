@@ -146,6 +146,57 @@ export const Role = styled.div `
 
 
 const AboutSection = () => {
+    const Creative_Members = [
+        {
+            name: 'Brennan',
+            member_role: 'Artist',
+            email: 'brennan@tiltedgames.org',
+            description: '2D and 3D artist',
+            image: ''
+        },
+        {
+            name: 'Luke',
+            member_role: 'Story writer',
+            email: 'blaeku@tiltedgames.org',
+            description: '2D and 3D artist',
+            image: ''
+        },
+        {
+            name: 'Olivia',
+            member_role: 'Artist & Map Design',
+            email: 'olivia@tiltedgames.org',
+            description: '2D and 3D artist',
+            image: ''
+        }
+    ];
+
+    const Development_Members = [
+        {
+            name: 'Ian',
+            member_role: 'Software Engineer',
+            email: 'relreo@tiltedgames.org',
+            description: 'Computer Game Science, U.C. Irvine',
+            image: ''
+        },
+        {
+            name: 'Noah Corona',
+            member_role: 'Software Engineer',
+            email: 'noah@tiltedgames.org',
+            description: 'Computer Engineering, U.C. Santa Barbara',
+            image: ''
+        }
+    ];
+
+    const Financial_Members = [
+        {
+            name: 'Johnny Bravo',
+            member_role: 'Accountant & P.R.',
+            email: 'jbravo@tiltedgames.org',
+            description: 'Economics, U.C. Santa Barbara',
+            image:  ''
+        }
+    ];
+
     const [expanded_Role_1, toggleExpanded_Role_1] = useState(false);
     const [expanded_Role_2, toggleExpanded_Role_2] = useState(false);
     const [expanded_Role_3, toggleExpanded_Role_3] = useState(false);
@@ -202,29 +253,7 @@ const AboutSection = () => {
                                 : { height: '0', visibility: 'hidden'}
                         }
                     >
-                        <Section_1>
-                            <RoleButton
-                                style={ { background: '#8430a6' } }
-                            >
-                                <FaArrowLeft size={40} />
-                            </RoleButton>
-                        </Section_1>
-                        <Section_2>
-                            <Icon_Left></Icon_Left>
-                        </Section_2>
-                        <Section_3>
-                            <Icon_Middle></Icon_Middle>
-                        </Section_3>
-                        <Section_4>
-                            <Icon_Right></Icon_Right>
-                        </Section_4>
-                        <Section_5>
-                            <RoleButton
-                                style={ { background: '#8430a6' } }
-                            >
-                                <FaArrowRight size={40} />
-                            </RoleButton>
-                        </Section_5>
+
                     </Role>
                 </Column_FullWidth>
                 <Column_FullWidth
