@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {useReducer, useState} from 'react'
 import styled from 'styled-components'
 import {
     PageHeading,
@@ -19,63 +19,13 @@ import {
     FaMinusCircle
 } from "react-icons/all";
 
-/*
-
-        CONSTANTS
-
-*/
-
-const Creative_Members = [
-    {
-        name: 'Brennan',
-        member_role: 'Artist',
-        email: 'brennan@tiltedgames.org',
-        description: '2D and 3D artist',
-        image: ''
-    },
-    {
-        name: 'Luke',
-        member_role: 'Story writer',
-        email: 'blaeku@tiltedgames.org',
-        description: '2D and 3D artist',
-        image: ''
-    },
-    {
-        name: 'Olivia',
-        member_role: 'Artist & Map Design',
-        email: 'olivia@tiltedgames.org',
-        description: '2D and 3D artist',
-        image: ''
-    }
-];
-
-const Development_Members = [
-    {
-        name: 'Ian',
-        member_role: 'Software Engineer',
-        email: 'relreo@tiltedgames.org',
-        description: 'Computer Game Science, U.C. Irvine',
-        image: ''
-    },
-    {
-        name: 'Noah Corona',
-        member_role: 'Software Engineer',
-        email: 'noah@tiltedgames.org',
-        description: 'Computer Engineering, U.C. Santa Barbara',
-        image: ''
-    }
-];
-
-const Financial_Members = [
-    {
-        name: 'Johnny Bravo',
-        member_role: 'Accountant & P.R.',
-        email: 'jbravo@tiltedgames.org',
-        description: 'Economics, U.C. Santa Barbara',
-        image:  ''
-    }
-];
-
+// member images
+import img_brennan from '../media/img/members/brennan.jpg'
+import img_ian from '../media/img/members/ian.jpg'
+import img_johnny from '../media/img/members/johnny.jpg'
+import img_luke from '../media/img/members/luke.jpg'
+import img_noah from '../media/img/members/noah.jpeg';
+import img_olivia from '../media/img/members/olivia.jpg'
 
 /*
 
@@ -83,14 +33,16 @@ const Financial_Members = [
 
 */
 
-export const RoleHeading = styled.h1 `
-  font-family: 'NeutralFace';
+const TeamHeading = styled.h1 `
+  font-family: 'NeutralFace', sans-serif;
   color: #fff;
   text-align: center;
-  padding: 50px 0;
+  margin: 100px 0;
+  padding: 25px;
   font-weight: bold;
   align-items: center;
-  
+  border-bottom: 1px solid #fff;
+
   font-size: 60px;
 
   @media screen and (max-width: 2048px) {
@@ -110,103 +62,328 @@ export const RoleHeading = styled.h1 `
   }
 `
 
-export const Plus = styled(FaPlusCircle) `
-  color: #fff;
-  margin: 0 25px;
-  padding: 3px;
-`
-
-export const Minus = styled(FaMinusCircle) `
-  color: #fff;
-  margin: 0 25px;
-  padding: 3px;
-`
-
-export const Icon_Left = styled.div `
+const OrganizationInfo = styled.h1 `
   margin-top: 100px;
-  width: 200px;
-  height: 200px;
-  background: #fff;
-  border-radius: 500px;
 `
 
-export const Icon_Middle = styled.div `
-  width: 400px;
-  height: 400px;
-  background: #fff;
-  border-radius: 500px;
-
-  @media screen and (max-width: 2048px) {
-    width: 400px;
-    height: 400px;
-  }
-
-  @media screen and (max-width: 1080px) {
-    width: 125px;
-    height: 125px;
-  }
-
-  @media screen and (max-width: 768px) {
-    width: 125px;
-    height: 125px;
-  }
-
-  @media screen and (max-width: 480px) {
-    width: 80px;
-    height: 80px;
-  }
-`
-
-export const Icon_Right = styled.div `
-  margin-top: 100px;
-  width: 200px;
-  height: 200px;
-  background: #fff;
-  border-radius: 500px;
-`
-
-export const Section_1 = styled.div `
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 20px;
-`
-
-export const Section_2 = styled.div `
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 20px;
-`
-
-export const Section_3 = styled.div `
-  display: inline-block;
-  vertical-align: top;
-`
-
-export const Section_4 = styled.div `
-  display: inline-block;
-  vertical-align: top;
-  margin-left: 20px;
-`
-
-export const Section_5 = styled.div `
-  display: inline-block;
-  vertical-align: top;
-  margin-left: 20px;
-`
-
-export const RoleButton = styled.div `
-  margin-top: 170px;
-  padding: 10px;
+const Plus = styled(FaPlusCircle) `
   color: #fff;
-  border-radius: 100px;
-  height: 60px;
-  width: 60px;
+  margin: 0 50px;
+  border-radius: 50%;
+  padding:2px;
+
+  box-shadow: 0 0 0 0  rgba(132, 48, 166, 0.8);
+  transform: scale(1);
+  animation: pulse 2s infinite;
 `
 
-export const Role = styled.div `
-  text-align: center;
-  padding: 25px 0;
+const Minus = styled(FaMinusCircle) `
+  color: #fff;
+  margin: 0 50px;
+  border-radius: 50%;
+
+  box-shadow: 0 0 5px 0  rgba(132, 48, 166, 0.8);
+  transform: scale(1);
+  animation: pulse 2s infinite;
 `
+
+const slides = [
+    {
+        name: "Brennan",
+        role: 'Artist, printer',
+        email: 'brennan@tiltedgames.org',
+        description: 'Creative Direction',
+        image: img_brennan
+    },
+    {
+        name: "Ian",
+        role: 'Comp. Game Science, U.C. Irvine',
+        email: 'relreo@tiltedgames.org',
+        description: 'Developer (Unity) & Creative Direction',
+        image: img_ian
+    },
+    {
+        name: "Johnny",
+        role: 'Economics, U.C. Santa Barbara',
+        email: 'jbravo@tiltedgames.org',
+        description: 'Accountant & Public Relations Director',
+        image: img_johnny
+    },
+    {
+        name: "Luke",
+        role: 'Writer',
+        email: 'blaeku@tiltedgames.org',
+        description: 'Publicist & Creative Direction',
+        image: img_luke
+    },
+    {
+        name: "Noah",
+        role: 'Comp. Engineering, U.C. Santa Barbara',
+        email: 'noah@tiltedgames.org',
+        description: 'Developer (Unity, Server, Web)',
+        image: img_noah
+    },
+    {
+        name: "Olivia",
+        role: 'Artist',
+        email: 'olivia@tiltedgames.org',
+        description: 'Creative Direction & Map Design',
+        image: img_olivia
+    }
+];
+
+const SlideContainer = styled.div `
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+function useTilt(active) {
+    const ref = React.useRef(null);
+
+    React.useEffect(() => {
+        if (!ref.current || !active) {
+            return;
+        }
+
+        const state = {
+            rect: undefined,
+            mouseX: undefined,
+            mouseY: undefined
+        };
+
+        let el = ref.current;
+
+        const handleMouseMove = (e) => {
+            if (!el) {
+                return;
+            }
+            if (!state.rect) {
+                state.rect = el.getBoundingClientRect();
+            }
+            state.mouseX = e.clientX;
+            state.mouseY = e.clientY;
+            const px = (state.mouseX - state.rect.left) / state.rect.width;
+            const py = (state.mouseY - state.rect.top) / state.rect.height;
+
+            el.style.setProperty("--px", px);
+            el.style.setProperty("--py", py);
+        };
+
+        el.addEventListener("mousemove", handleMouseMove);
+
+        return () => {
+            el.removeEventListener("mousemove", handleMouseMove);
+        };
+    }, [active]);
+
+    return ref;
+}
+
+const initialState = {
+    slideIndex: 0
+};
+
+const slidesReducer = (state, event) => {
+    if (event.type === "NEXT") {
+        return {
+            ...state,
+            slideIndex: (state.slideIndex + 1) % slides.length
+        };
+    }
+    if (event.type === "PREV") {
+        return {
+            ...state,
+            slideIndex:
+                state.slideIndex === 0 ? slides.length - 1 : state.slideIndex - 1
+        };
+    }
+};
+
+function Slide({ slide, offset }) {
+    const active = offset === 0 ? true : null;
+    const ref = useTilt(active);
+
+    return (
+        <SlideElement
+            ref={ref}
+            className="slide"
+            data-active={active}
+            style={{
+                "--offset": offset,
+                "--dir": offset === 0 ? 0 : offset > 0 ? 1 : -1
+            }}
+        >
+            <SlideBackground
+                className="slideBackground"
+                style={{
+                    backgroundImage: `url('${slide.image}')`
+                }}
+            />
+            <SlideContent
+                className="slideContent"
+                style={{
+                    backgroundImage: `url('${slide.image}')`
+                }}
+            >
+                <SlideContentInner className="slideContentInner">
+                    <SlideTitle className="slideTitle">{slide.name}</SlideTitle>
+                    <SlideSubtitle className="slideSubtitle">{slide.role}</SlideSubtitle>
+                    <SlideDescription className="slideDescription">{slide.description}</SlideDescription>
+                    <SlideDescription className="slideDescription">{slide.email}</SlideDescription>
+                </SlideContentInner>
+            </SlideContent>
+        </SlideElement>
+    );
+}
+
+const SlideElement = styled.div `
+  //transform-style: preserve-3d;
+  // border: solid 1px red;
+
+  // &[data-active] {
+  //   .slideContent > * {
+  //     transform: none;
+  //     opacity: 1;
+  //   }
+  // }
+
+  grid-area: 1 / -1;
+
+  &[data-active] {
+    z-index: 2;
+    pointer-events: auto;
+
+    .slideBackground {
+      opacity: 0.2;
+      transform: none;
+    }
+
+    .slideContentInner {
+      opacity: 1;
+    }
+
+    .slideContent {
+      --x: calc(var(--px) - 0.5);
+      --y: calc(var(--py) - 0.5);
+      opacity: 1;
+
+      transform: perspective(1000px);
+
+      &:hover {
+        transition: none;
+        transform: perspective(1000px) rotateY(calc(var(--x) * 45deg))
+        rotateX(calc(var(--y) * -45deg));
+      }
+    }
+  }
+`
+
+const Slides = styled.div `
+  display: grid;
+`
+
+const MenuButton = styled.div `
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: white;
+  position: absolute;
+  font-size: 15rem;
+  width: 15rem;
+  height: 15rem;
+  top: 10%;
+  transition: opacity 0.3s;
+  opacity: 0.7;
+  z-index: 5;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:first-child {
+    left: -75%;
+  }
+
+  &:last-child {
+    right: -75%;
+  }
+`
+
+const SlideContent = styled.div `
+  width: 30vw;
+  height: 40vw;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease-in-out;
+  opacity: 0.7;
+
+  display: grid;
+  align-content: center;
+
+  transform-style: preserve-3d;
+  transform: perspective(1000px) translateX(calc(100% * var(--offset)))
+  rotateY(calc(-45deg * var(--dir)));
+`
+
+const SlideContentInner = styled.div `
+  transform-style: preserve-3d;
+  transform: translateZ(2rem);
+  transition: opacity 0.3s linear;
+  text-shadow: 0 0.1rem 1rem #000;
+  opacity: 0;
+`
+
+const SlideBackground = styled.div `
+  position: fixed;
+  top: 0;
+  left: -10%;
+  right: -10%;
+  bottom: 0;
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s linear, transform 0.3s ease-in-out;
+  pointer-events: none;
+
+  transform: translateX(calc(10% * var(--dir)));
+`
+
+const SlideTitle = styled.h2 `
+  font-family: NeutralFace-Bold;
+  font-size: 3rem;
+  text-align:left;
+  font-weight: normal;
+  letter-spacing: 0.2ch;
+  text-transform: uppercase;
+  margin: 0;
+  color: #fff;
+`
+
+const SlideSubtitle = styled.h3 `
+  font-size: 2.5rem;
+  text-align:left;
+  font-weight: normal;
+  letter-spacing: 0.2ch;
+  text-transform: uppercase;
+  margin: 30px 0 30px 0;
+  color: #fff;
+`
+
+const SlideDescription = styled.p `
+  margin: 0 0 30px 0;
+  text-align:left;
+  font-size: 2.0rem;
+  letter-spacing: 0.2ch;
+  color: #fff;
+`
+
 
 /*
 
@@ -219,14 +396,7 @@ const About = () => {
     const [expanded_Role_1, toggleExpanded_Role_1] = useState(false);
     const [expanded_Role_2, toggleExpanded_Role_2] = useState(false);
     const [expanded_Role_3, toggleExpanded_Role_3] = useState(false);
-
-    const Expand_Role_1 = () => { toggleExpanded_Role_1(true) }
-    const Expand_Role_2 = () => { toggleExpanded_Role_2(true) }
-    const Expand_Role_3 = () => { toggleExpanded_Role_3(true) }
-
-    const Toggle_Role_1 = () => { toggleExpanded_Role_1(!expanded_Role_1) }
-    const Toggle_Role_2 = () => { toggleExpanded_Role_2(!expanded_Role_2) }
-    const Toggle_Role_3 = () => { toggleExpanded_Role_3(!expanded_Role_3) }
+    const [state, dispatch] = React.useReducer(slidesReducer, initialState);
 
     return (
         <PageContent>
@@ -245,117 +415,47 @@ const About = () => {
             </Row>
             <Row>
                 <Column_FullWidth>
-                    <BoldText>
-                        Rediscover your lost past as a samurai in <u>Recoup</u>!
-                        <br /><br />
-                        At the moment, all of our
-                        software is open source, covered by the MIT license.
-                    </BoldText>
+                    <OrganizationInfo>
+                        <BoldText>
+                            We're working on a game called Recoup! It's coming to PC, Xbox, Playstation, and
+                            will include online co-op. We are hoping to also support mobile devices and
+                            cross platform play. Check out <a style={ { color: '#fff' } } href="#">the Recoup page</a> to see where we're at!
+                            <br /><br />
+                            At the moment, all of our
+                            software is open source, covered by the MIT license.
+                            <br /><br />
+                            Feeling chatty? Come say hi on <a style={ { color: '#fff' } } href="#">our Discord</a>!
+                        </BoldText>
+                    </OrganizationInfo>
                 </Column_FullWidth>
             </Row>
             <Row>
                 <Column_FullWidth
                     style={ { marginBottom: '80px' } }
                 >
-                    <RoleHeading
-                        style={ { color: '#8430a6' } }
-                        onMouseEnter={ Expand_Role_1 }
-                        onClick={ Toggle_Role_1 }
+                    <TeamHeading
+                        onClick={ () => { toggleExpanded_Role_1(!expanded_Role_1) } }
                     >
                         { expanded_Role_1 ? <Minus /> : <Plus /> }
-                        Creativity
-                    </RoleHeading>
-                    <Role
+                        Meet the team
+                    </TeamHeading>
+                    <SlideContainer
                         style = {
                             expanded_Role_1
                                 ? { height: 'auto', visibility: 'visible' }
                                 : { height: '0', visibility: 'hidden'}
                         }
                     >
+                        <Slides className="slides">
+                            <MenuButton onClick={ () => dispatch({ type: "NEXT" } ) }>‹</MenuButton>
 
-                    </Role>
-                </Column_FullWidth>
-                <Column_FullWidth
-                    style={ {  marginBottom: '80px' } }
-                >
-                    <RoleHeading
-                        style={ { color: '#144691' } }
-                        onMouseEnter={ Expand_Role_2 }
-                        onClick={ Toggle_Role_2 }
-                    >
-                        { expanded_Role_2 ? <Minus /> : <Plus /> }
-                        Development
-                    </RoleHeading>
-                    <Role
-                        style = {
-                            expanded_Role_2
-                                ? { height: 'auto', visibility: 'visible' }
-                                : { height: '0', visibility: 'hidden'}
-                        }
-                    >
-                        <Section_1>
-                            <RoleButton
-                                style={ { background: '#144691' } }
-                            >
-                                <FaArrowLeft size={40} />
-                            </RoleButton>
-                        </Section_1>
-                        <Section_2>
-                            <Icon_Left></Icon_Left>
-                        </Section_2>
-                        <Section_3>
-                            <Icon_Middle></Icon_Middle>
-                        </Section_3>
-                        <Section_4>
-                            <Icon_Right></Icon_Right>
-                        </Section_4>
-                        <Section_5>
-                            <RoleButton
-                                style={ { background: '#144691' } }
-                            >
-                                <FaArrowRight size={40} />
-                            </RoleButton>
-                        </Section_5>
-                    </Role>
-                </Column_FullWidth>
-                <Column_FullWidth>
-                    <RoleHeading
-                        style={ { color: '#3e9114' } }
-                        onMouseEnter={ Expand_Role_3 }
-                        onClick={ Toggle_Role_3 }
-                    >
-                        { expanded_Role_3 ? <Minus /> : <Plus /> }
-                        Finance & P.R.
-                    </RoleHeading>
-                    <Role
-                        style = {
-                            expanded_Role_3
-                                ? { height: 'auto', visibility: 'visible' }
-                                : { height: '0', visibility: 'hidden'}
-                        }
-                    >
-                        <Section_1>
-                            <RoleButton
-                                style={ { background: '#3e9114' } }
-                            >
-                                <FaArrowLeft size={40} />
-                            </RoleButton>
-                        </Section_1>
-                        <Section_2>
-                            <Icon_Left></Icon_Left>
-                        </Section_2>
-                        <Section_3>
-                            <Icon_Middle></Icon_Middle>
-                        </Section_3>
-                        <Section_4>
-                            <Icon_Right></Icon_Right>
-                        </Section_4>
-                        <Section_5>
-                            <RoleButton
-                                style={ { background: '#3e9114' } }
-                            ><FaArrowRight size={40} /></RoleButton>
-                        </Section_5>
-                    </Role>
+                            {[...slides, ...slides, ...slides].map((slide, i) => {
+                                let offset = slides.length + (state.slideIndex - i);
+                                return <Slide slide={ slide } offset={ offset } key={ i } />;
+                            })}
+                            <MenuButton onClick={ () => dispatch({ type: "PREV" } ) }>›</MenuButton>
+                        </Slides>
+                    </SlideContainer>
                 </Column_FullWidth>
             </Row>
         </PageContent>

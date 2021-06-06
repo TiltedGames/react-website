@@ -15,7 +15,14 @@
   box-sizing: border-box;
   margin:0;
   padding:0;
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  position: relative;
 }
 
 body::-webkit-scrollbar {
@@ -26,5 +33,18 @@ body {
   background: #000;
 
   -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 5px 0 rgba(132, 48, 166, 0.8);
+  }
+
+  70% {
+    box-shadow: 0 0 5px 10px rgba(132, 48, 166, 0.8);
+  }
+
+  100% {
+    box-shadow: 0 0 5px 0 rgba(132, 48, 166, 0.8);
+  }
 }

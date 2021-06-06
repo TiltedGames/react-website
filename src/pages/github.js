@@ -111,8 +111,8 @@ const Github = () => {
                         Great software begins with great people.
                         Our goal is not just to create games,
                         but to foster an open environment
-                        conducive to learning and creativity.
-                        For this reason, we host our development
+                        that promotes learning and creativity.
+                        For these reasons, we host our development
                         out in the open, on Github, and
                         host <a style={ { color: '#fff' } } href='#'> a Discord server</a> open
                         to the public. Come say hi and see where

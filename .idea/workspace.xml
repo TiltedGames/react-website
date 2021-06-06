@@ -3,14 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5326dec3-9647-4f82-be61-f55db75aae95" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/design.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/design.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/bugreport.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/bugreport.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/github.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/github.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,9 +32,6 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1tGXr5llDs0iH5nlT7XonoDG6ys" />
   <component name="ProjectViewState">
@@ -100,7 +95,9 @@
       <workItem from="1622916076664" duration="3000" />
       <workItem from="1622918039193" duration="9396000" />
       <workItem from="1622928461696" duration="9211000" />
-      <workItem from="1622938159897" duration="631000" />
+      <workItem from="1622938159897" duration="11283000" />
+      <workItem from="1622954827898" duration="32000" />
+      <workItem from="1622954869589" duration="4098000" />
     </task>
     <servers />
   </component>

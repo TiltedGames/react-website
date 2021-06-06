@@ -78,13 +78,12 @@ export const SectionHeading = styled.h1 `
 
 export const BoldText = styled.p `
   font-size: 26px;
-  text-align: center;
-  margin: 0 auto;
-  background: #000;
+  text-align: left;
+  margin: 0 0 0 100px;
   color: #fff;
   width: 100%;
   padding: 75px 25px;
-  max-width: 75%;
+  max-width: calc(100% - 200px);
   
   @media screen and (max-width: 768px) {
     font-size: 20px;
