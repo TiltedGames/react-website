@@ -5,7 +5,7 @@ import {
     FaLinux,
     MdKeyboardArrowDown,
     MdArrowForward,
-    MdKeyboardArrowRight
+    MdKeyboardArrowRight, FaTimesCircle
 } from "react-icons/all";
 
 const buttonBG = '#fff';
@@ -117,3 +117,98 @@ export const SendButton = styled.div `
     text-decoration: underline;
   }
 `
+
+export const Carousel_Expand = styled.div `
+  font-family: Poppins, sans-serif;
+  color: #000;
+  text-align: center;
+  margin: 100px 0 50px 0;
+  padding: 25px;
+  font-weight: bold;
+  align-items: center;
+  font-size: 60px;
+
+  background: rgba(200, 200, 200, 1.0);
+
+  @media screen and (max-width: 2048px) {
+    font-size: 50px;
+  }
+
+  @media screen and (max-width: 1080px) {
+    font-size: 35px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 16px;
+  }
+  
+  animation: pulse 2s infinite;
+`
+
+export const Carousel_L_R = styled.div `
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: white;
+  position: absolute;
+  font-size: 20rem;
+  width: 20rem;
+  height: 20rem;
+  top: 20%;
+  transition: opacity 0.3s;
+  opacity: 0.7;
+  z-index: 5;
+
+  @media screen and (max-width: 1800px) {
+    top: 5%;
+  }
+
+  @media screen and (max-width: 1400px) {
+    top: 15%;
+    font-size: 10rem;
+    width: 15rem;
+    height: 10rem;
+  }
+
+  @media screen and (max-width: 800px) {
+    top: 30%;
+    font-size: 5rem;
+    width: 15rem;
+    height: 5rem;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:first-child {
+    left: -75%;
+  }
+
+  &:last-child {
+    right: -75%;
+  }
+`
+
+export const Carousel_Exit = styled(FaTimesCircle) `
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 250px;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+  
+  &:hover {
+    opacity: 1.0;
+  }
+`
+
+export default Carousel_Exit;

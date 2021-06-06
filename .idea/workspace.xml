@@ -3,9 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="5326dec3-9647-4f82-be61-f55db75aae95" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/buttons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/buttons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/media/img/members/johnny.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/media/img/members/johnny.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/media/img/members/luke.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/media/img/members/luke.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/media/img/members/noah.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/media/img/members/noah.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/media/img/members/noah.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,11 +59,11 @@
       <recent name="C:\Users\noahc\Desktop\react-website\src\components\ContactSection" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\noahc\Desktop\react-website\src\components" />
       <recent name="C:\Users\noahc\Desktop\react-website\src\media\vid" />
       <recent name="C:\Users\noahc\Desktop\react-website\src\media" />
       <recent name="C:\Users\noahc\Desktop\react-website\src\media\img" />
       <recent name="C:\Users\noahc\Desktop\react-website\src" />
-      <recent name="C:\Users\noahc\Desktop\react-website\src\components" />
     </key>
   </component>
   <component name="RunManager">
@@ -94,7 +99,7 @@
       <workItem from="1622928461696" duration="9211000" />
       <workItem from="1622938159897" duration="11283000" />
       <workItem from="1622954827898" duration="32000" />
-      <workItem from="1622954869589" duration="18366000" />
+      <workItem from="1622954869589" duration="22878000" />
     </task>
     <servers />
   </component>

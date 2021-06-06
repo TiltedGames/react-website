@@ -1,7 +1,7 @@
 import './style.css';
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import NavBar from "./pages/navbar";
+import NavBar from "./components/navbar";
 import About from "./pages/about";
 import Game from "./pages/game";
 import Tools from "./pages/tools";
