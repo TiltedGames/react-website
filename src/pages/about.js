@@ -4,7 +4,7 @@ import {
     PageHeading,
     PageSubheading, SectionText,
     Text
-} from '../components/design';
+} from '../components/text';
 import {
     PageContent,
     Row,
@@ -12,7 +12,7 @@ import {
     Column_Heading_Left,
     Column_Heading_Right
 } from '../components/layout';
-import MemberCarousel from '../components/member_carousel';
+import MemberCarousel from '../components/members';
 
 /*
 

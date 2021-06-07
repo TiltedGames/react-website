@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {
     PageHeading,
     PageSubheading
-} from '../components/design';
+} from '../components/text';
 import {
     Column_Dynamic,
     Column_Heading_Left,

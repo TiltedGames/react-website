@@ -10,7 +10,7 @@ import {
     PageHeading,
     PageSubheading,
     Text
-} from '../components/design';
+} from '../components/text';
 import RepoImage_1 from "../media/img/stock_1.jpg"
 import RepoImage_2 from "../media/img/stock_1.jpg"
 import RepoImage_3 from "../media/img/stock_1.jpg"

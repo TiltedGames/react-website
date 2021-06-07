@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const PageContent = styled.div `
   max-width: calc(100vw - 200px);
-  padding: 25px 0;
+  padding: 25px;
   position: relative;
   z-index: 1;
   box-sizing: border-box;

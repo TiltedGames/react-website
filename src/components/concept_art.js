@@ -7,7 +7,7 @@ import img_clothing from '../media/img/concept_art/clothing_design.jpg';
 import img_shirakawa from '../media/img/concept_art/shirakawa.jpg';
 import img_japan from '../media/img/concept_art/japan.jpg';
 import { Carousel_L_R } from './buttons'
-import { SectionText } from './design';
+import { SectionText } from './text';
 
 const slides = [
     {

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const PageHeading = styled.div `
-  font-family: 'NeutralFace-Bold';
+  font-family: 'NeutralFace-Bold', sans-serif;
   color: #fff;
   font-size: 50px;
   text-align: right;
@@ -23,7 +23,7 @@ export const PageHeading = styled.div `
 `
 
 export const PageSubheading = styled.h1 `
-  font-family: 'NeutralFace';
+  font-family: 'NeutralFace', sans-serif;
   color: #000;
   text-align: left;
   margin: 0;

@@ -3,7 +3,7 @@ import {
     SectionText,
     PageHeading,
     PageSubheading
-} from '../components/design';
+} from '../components/text';
 import {
     DownloadButtons,
     WindowsButton,
@@ -20,7 +20,7 @@ import {
     Column_Heading_Left,
     Column_Heading_Right
 } from '../components/layout';
-import ConceptArtCarousel from '../components/concept_art_carousel';
+import ConceptArtCarousel from '../components/concept_art';
 
 /*
 

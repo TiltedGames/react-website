@@ -10,7 +10,7 @@ import {
     PageHeading,
     PageSubheading,
     Text, SectionText
-} from '../components/design';
+} from '../components/text';
 import {
     ButtonWrapper,
     DownloadButtons,

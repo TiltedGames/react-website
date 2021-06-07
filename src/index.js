@@ -2,8 +2,7 @@ import './style.css';
 import React,
 {
     useState,
-    useEffect,
-    useRef
+    useEffect
 } from 'react';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
@@ -24,9 +23,6 @@ function App() {
     const [clicked, setClicked] = useState(false);
     const [linkHovered, setLinkHovered] = useState(false);
     const [hidden, setHidden] = useState(false);
-
-    const myRef = useRef(null)
-    const executeScroll = () => myRef.current.scrollIntoView()
 
     useEffect(() => {
         addEventListeners();
@@ -89,12 +85,6 @@ function App() {
             className={ cursorClasses }
             style={ { left: `${ position.x }px`, top: `${ position.y }px` } }
         />);
-    }
-
-    const scrollTo = (ref) => {
-        if (ref /* + other conditions */) {
-            ref.scrollIntoView({ behavior: 'smooth', block: 'start' })
-        }
     }
 
     return(
