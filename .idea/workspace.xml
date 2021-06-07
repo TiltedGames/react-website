@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5326dec3-9647-4f82-be61-f55db75aae95" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/member_carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/member_carousel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/bugreport.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/bugreport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/github.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/github.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +100,7 @@
       <workItem from="1622954827898" duration="32000" />
       <workItem from="1622954869589" duration="34960000" />
       <workItem from="1623030281883" duration="615000" />
-      <workItem from="1623036724545" duration="18255000" />
+      <workItem from="1623036724545" duration="19799000" />
     </task>
     <servers />
   </component>

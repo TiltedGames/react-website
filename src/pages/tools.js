@@ -5,12 +5,12 @@ import {
     Column_Heading_Right,
     PageContent,
     Row
-} from "../components/layout";
+} from '../components/layout';
 import {
     PageHeading,
     PageSubheading,
     Text, SectionText
-} from "../components/design";
+} from '../components/design';
 import {
     ButtonWrapper,
     DownloadButtons,

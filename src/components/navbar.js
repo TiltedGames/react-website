@@ -1,57 +1,18 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
     FaPlus,
     FaGithub,
     FaDonate
-} from "react-icons/all";
+} from 'react-icons/all';
 import { Link } from 'react-scroll'
-import styled from "styled-components";
-import roundLogo from "../media/img/round-logo.png";
+import styled from 'styled-components';
+import roundLogo from '../media/img/round-logo.png';
 
 /*
 
         NAVBAR COMPONENTS
 
 */
-
-export const RoundLogo = styled.span  `
-  position: absolute;
-  top: 0;
-  left: -22px;
-  background: url(${ roundLogo }) no-repeat;
-  background-size: cover;
-  height: 48px;
-  width: 48px;
-  margin-top: -16px;
-`
-
-export const GithubIcon = styled(FaGithub) `
-  position: absolute;
-  top: -6px;
-  left: -23px;
-  border: 3px solid #fff;
-  border-radius: 100%;
-`
-
-export const DonateIcon = styled(FaDonate) `
-  position: absolute;
-  top: -6px;
-  left: -23px;
-`
-
-export const MobileIcon = styled.div `
-  display:none;
-
-  @media screen and (max-width: 768px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
-    font-size: 1.8rem;
-    color: #fff;
-  }
-`
 
 export const Wrapper = styled.div `
   z-index: 1000;
@@ -102,6 +63,52 @@ export const Label = styled.label `
 export const LinkWrapper = styled.div `
   border-left: 3px solid #fff;
   padding: 25px 0;
+  margin: 0;
+`
+
+export const LinkWrapper_NoSpace = styled.div `
+  border-left: 3px solid #fff;
+  padding: 0;
+  margin-top: 48px;
+`
+
+export const RoundLogo = styled.span  `
+  position: absolute;
+  top: 0;
+  left: -22px;
+  background: url(${ roundLogo }) no-repeat;
+  background-size: cover;
+  height: 48px;
+  width: 48px;
+  margin-top: -16px;
+`
+
+export const GithubIcon = styled(FaGithub) `
+  position: absolute;
+  top: 0;
+  left: -23px;
+  border: 3px solid #fff;
+  border-radius: 100%;
+`
+
+export const DonateIcon = styled(FaDonate) `
+  position: absolute;
+  top: 0;
+  left: -23px;
+`
+
+export const MobileIcon = styled.div `
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    color: #fff;
+  }
 `
 
 export const Caret = styled(FaPlus) `
@@ -257,10 +264,14 @@ const NavBar = () => {
                         {/* [IMG] */}
                         <GithubIcon size={48} />
                     </Link>
+                </Page>
+
+                {/* Empty, for spacing between github / donate icons while no expansion */}
+                <Page>
                     {/* [DIV] (white vertical line) */}
-                    <LinkWrapper>
+                    <LinkWrapper_NoSpace>
                         <Spacer />
-                    </LinkWrapper>
+                    </LinkWrapper_NoSpace>
                 </Page>
 
                 {/* [LI] github donate (logo) section */}
@@ -274,10 +285,11 @@ const NavBar = () => {
                 </Page>
 
                 {/* Empty, for spacing between github / donate icons while no expansion */}
-                <Page style = { { paddingTop: '40px' } }>
+                <Page>
                     {/* [DIV] (white vertical line) */}
-                    <LinkWrapper>
-                    </LinkWrapper>
+                    <LinkWrapper_NoSpace>
+                        <Spacer />
+                    </LinkWrapper_NoSpace>
                 </Page>
             </Pages>
         </Wrapper>

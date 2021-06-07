@@ -2,18 +2,18 @@ import React, { useState } from 'react'
 import {
     PageHeading,
     PageSubheading
-} from "../components/design";
+} from '../components/design';
 import {
     Column_Dynamic,
     Column_Heading_Left,
     Column_Heading_Right,
     PageContent,
     Row
-} from "../components/layout";
+} from '../components/layout';
 import {
     Button,
     ButtonWrapper
-} from "../components/buttons";
+} from '../components/buttons';
 
 /*
 

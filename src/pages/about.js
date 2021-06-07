@@ -1,17 +1,17 @@
-import React, {useEffect, useReducer, useRef, useState} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import {
     PageHeading,
     PageSubheading, SectionText,
     Text
-} from "../components/design";
+} from '../components/design';
 import {
     PageContent,
     Row,
     Column_FullWidth,
     Column_Heading_Left,
     Column_Heading_Right
-} from "../components/layout";
+} from '../components/layout';
 import MemberCarousel from "../components/member_carousel";
 
 /*

@@ -19,41 +19,8 @@ import {
     Column_FullWidth,
     Column_Heading_Left,
     Column_Heading_Right
-} from "../components/layout";
-import img_brennan from "../media/img/members/brennan.jpg";
-import img_ian from "../media/img/members/ian.jpg";
-import img_johnny from "../media/img/members/johnny.jpg";
-import img_luke from "../media/img/members/luke.jpg";
-import img_noah from "../media/img/members/noah.jpg";
-import img_olivia from "../media/img/members/olivia.jpg";
-import ConceptArtCarousel from "../components/concept_art_carousel";
-
-const slides = [
-    {
-        name: "Brennan",
-        image: img_brennan
-    },
-    {
-        name: "Ian",
-        image: img_ian
-    },
-    {
-        name: "Johnny",
-        image: img_johnny
-    },
-    {
-        name: "Luke",
-        image: img_luke
-    },
-    {
-        name: "Noah",
-        image: img_noah
-    },
-    {
-        name: "Olivia",
-        image: img_olivia
-    }
-];
+} from '../components/layout';
+import ConceptArtCarousel from '../components/concept_art_carousel';
 
 /*
 

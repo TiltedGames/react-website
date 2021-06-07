@@ -5,12 +5,12 @@ import {
     Column_FullWidth,
     Column_Heading_Left,
     Column_Heading_Right, Column_Dynamic_Equal_Height
-} from "../components/layout";
+} from '../components/layout';
 import {
     PageHeading,
     PageSubheading,
     Text
-} from "../components/design";
+} from '../components/design';
 import RepoImage_1 from "../media/img/stock_1.jpg"
 import RepoImage_2 from "../media/img/stock_1.jpg"
 import RepoImage_3 from "../media/img/stock_1.jpg"
