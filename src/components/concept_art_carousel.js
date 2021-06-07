@@ -156,6 +156,7 @@ const SlideElement = styled.div `
 
 const Slides = styled.div `
   display: grid;
+  margin-bottom: 100px;
 `
 
 const SlideContent = styled.div `

@@ -7,6 +7,7 @@ export const PageContent = styled.div `
   z-index: 1;
   box-sizing: border-box;
   min-height: 100vh;
+  margin-bottom: 300px;
 `
 
 export const Row = styled.div `

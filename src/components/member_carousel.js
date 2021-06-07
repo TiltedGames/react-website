@@ -12,6 +12,23 @@ import {
     Carousel_Exit
 } from '../components/buttons'
 
+function useOnScreen(ref) {
+
+    const [isIntersecting, setIntersecting] = useState(false)
+
+    const observer = new IntersectionObserver(
+        ([entry]) => setIntersecting(entry.isIntersecting)
+    )
+
+    useEffect(() => {
+        observer.observe(ref.current)
+        // Remove the observer as soon as the component is unmounted
+        return () => { observer.disconnect() }
+    }, [])
+
+    return isIntersecting
+}
+
 const slides = [
     {
         name: "Brennan",
@@ -128,6 +145,9 @@ function Slide({ slide, offset }) {
     const active = offset === 0 ? true : null;
     const ref = useTilt(active);
 
+    const refScroll = useRef()
+    const isVisible = useOnScreen(ref)
+
     return (
         <SlideElement
             ref={ ref }
@@ -140,8 +160,10 @@ function Slide({ slide, offset }) {
         >
             <SlideBackground
                 className="slideBackground"
-                style={ { backgroundImage: `url('${slide.image}')` } }
+                ref={ refScroll }
+                style={ { backgroundImage: `url('${slide.image}')`, visibility: (isVisible) ? `visible` : `hidden` } }
             />
+            }
             <SlideContent
                 className="slideContent"
                 style={ { backgroundImage: `url('${slide.image}')` } }

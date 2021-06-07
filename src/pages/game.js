@@ -76,10 +76,12 @@ const Game = () => {
                     </PageSubheading>
                 </Column_Heading_Right>
             </Row>
-            <Row id='recoup-concept-art'>
-                <ConceptArtCarousel />
-                <SectionText>Download (Alpha)</SectionText>
+            <Row>
+                <Column_FullWidth id='recoup-concept-art'>
+                    <ConceptArtCarousel />
+                </Column_FullWidth>
                 <Column_FullWidth id='recoup-download'>
+                    <SectionText>Download (Alpha)</SectionText>
                         <DownloadButtons>
                             <WindowsButton><a href='https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Windows).zip'><WinIcon size={48} /></a></WindowsButton>
                             <MacButton><a href='https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(macOS).zip'><MacIcon size={48} /></a></MacButton>

@@ -50,7 +50,7 @@ export const PageSubheading = styled.h1 `
 export const SectionText = styled.h2 `
   font-family: 'Poppins', sans-serif;
   color: #fff;
-  text-align: left;
+  text-align: center;
   margin: 100px 0 0 0;
   padding: 25px;
   font-weight: bold;
