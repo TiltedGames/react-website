@@ -1,29 +1,35 @@
 {
   "files": {
-    "main.css": "/static/css/main.3162cbd4.chunk.css",
-    "main.js": "/static/js/main.840e0f91.chunk.js",
-    "main.js.map": "/static/js/main.840e0f91.chunk.js.map",
+    "main.css": "/static/css/main.f3d8707a.chunk.css",
+    "main.js": "/static/js/main.3b368bff.chunk.js",
+    "main.js.map": "/static/js/main.3b368bff.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.3a5dd6d3.js",
     "runtime-main.js.map": "/static/js/runtime-main.3a5dd6d3.js.map",
-    "static/js/2.5d54fcda.chunk.js": "/static/js/2.5d54fcda.chunk.js",
-    "static/js/2.5d54fcda.chunk.js.map": "/static/js/2.5d54fcda.chunk.js.map",
+    "static/js/2.88c0114a.chunk.js": "/static/js/2.88c0114a.chunk.js",
+    "static/js/2.88c0114a.chunk.js.map": "/static/js/2.88c0114a.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.3162cbd4.chunk.css.map": "/static/css/main.3162cbd4.chunk.css.map",
-    "static/js/2.5d54fcda.chunk.js.LICENSE.txt": "/static/js/2.5d54fcda.chunk.js.LICENSE.txt",
+    "static/css/main.f3d8707a.chunk.css.map": "/static/css/main.f3d8707a.chunk.css.map",
+    "static/js/2.88c0114a.chunk.js.LICENSE.txt": "/static/js/2.88c0114a.chunk.js.LICENSE.txt",
     "static/media/style.css": "/static/media/NeutralFace.f5f41755.otf",
     "static/media/brennan.3d2a94c4.jpg": "/static/media/brennan.3d2a94c4.jpg",
+    "static/media/clothing_design.fec28f44.jpg": "/static/media/clothing_design.fec28f44.jpg",
+    "static/media/helmet_1.f15bff55.jpg": "/static/media/helmet_1.f15bff55.jpg",
+    "static/media/helmet_2.2718bc84.jpg": "/static/media/helmet_2.2718bc84.jpg",
+    "static/media/helmet_3.d585c673.jpg": "/static/media/helmet_3.d585c673.jpg",
     "static/media/ian.f86dd1c9.jpg": "/static/media/ian.f86dd1c9.jpg",
-    "static/media/johnny.1d2540e2.jpg": "/static/media/johnny.1d2540e2.jpg",
-    "static/media/luke.973b2712.jpg": "/static/media/luke.973b2712.jpg",
-    "static/media/noah.3150c426.jpg": "/static/media/noah.3150c426.jpg",
+    "static/media/japan.a2e04f6b.jpg": "/static/media/japan.a2e04f6b.jpg",
+    "static/media/johnny.fba757d5.jpg": "/static/media/johnny.fba757d5.jpg",
+    "static/media/luke.0614f42b.jpg": "/static/media/luke.0614f42b.jpg",
+    "static/media/noah.cff4b60c.jpg": "/static/media/noah.cff4b60c.jpg",
     "static/media/olivia.dc56657a.jpg": "/static/media/olivia.dc56657a.jpg",
     "static/media/round-logo.4ad48466.png": "/static/media/round-logo.4ad48466.png",
+    "static/media/shirakawa.cadc4d85.jpg": "/static/media/shirakawa.cadc4d85.jpg",
     "static/media/stock_1.6b2a97de.jpg": "/static/media/stock_1.6b2a97de.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.3a5dd6d3.js",
-    "static/js/2.5d54fcda.chunk.js",
-    "static/css/main.3162cbd4.chunk.css",
-    "static/js/main.840e0f91.chunk.js"
+    "static/js/2.88c0114a.chunk.js",
+    "static/css/main.f3d8707a.chunk.css",
+    "static/js/main.3b368bff.chunk.js"
   ]
 }
