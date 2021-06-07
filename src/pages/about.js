@@ -32,7 +32,7 @@ const OrganizationInfo = styled.p `
 
 const About = () => {
     return (
-        <PageContent id='about'>
+        <PageContent id='home'>
             <Row>
                 <Column_Heading_Left>
                     <PageHeading>
@@ -53,7 +53,7 @@ const About = () => {
                     <OrganizationInfo>
                         <MemberCarousel />
                     </OrganizationInfo>
-                        <SectionText>
+                        <SectionText id='about'>
                             About us
                         </SectionText>
                         <Text>

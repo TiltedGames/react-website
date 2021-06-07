@@ -37,7 +37,7 @@ const Tools = () => {
                 </Column_Heading_Left>
                 <Column_Heading_Right>
                     <PageSubheading>
-                        Host your own server for Recoup, or start your own multiplayer project
+                        Host a Recoup server, or use this to start your own multiplayer project
                     </PageSubheading>
                 </Column_Heading_Right>
             </Row>

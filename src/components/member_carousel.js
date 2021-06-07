@@ -163,7 +163,6 @@ function Slide({ slide, offset }) {
                 ref={ refScroll }
                 style={ { backgroundImage: `url('${slide.image}')`, visibility: (isVisible) ? `visible` : `hidden` } }
             />
-            }
             <SlideContent
                 className="slideContent"
                 style={ { backgroundImage: `url('${slide.image}')` } }
@@ -362,7 +361,7 @@ const MemberCarousel = () => {
                    : { height: '0', visibility: 'hidden',  textDecoration: 'none', color: '#000' }
            }
         >
-            <Carousel_Exit onClick={ () => { toggleShow(false) } }/>
+            <Carousel_Exit onClick={ () => { toggleShow(false) } } />
         </a>
         }
         </>);
