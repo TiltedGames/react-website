@@ -12,26 +12,8 @@ import img_luke from '../media/img/members/luke.jpg';
 import img_noah from '../media/img/members/noah.jpg';
 import img_olivia from '../media/img/members/olivia.jpg';
 import {
-    Carousel_L_R,
-    Carousel_Exit
+    Carousel_L_R
 } from './buttons'
-
-function useOnScreen(ref) {
-
-    const [isIntersecting, setIntersecting] = useState(false)
-
-    const observer = new IntersectionObserver(
-        ([entry]) => setIntersecting(entry.isIntersecting)
-    )
-
-    useEffect(() => {
-        observer.observe(ref.current)
-        // Remove the observer as soon as the component is unmounted
-        return () => { observer.disconnect() }
-    }, [])
-
-    return isIntersecting
-}
 
 const slides = [
     {
@@ -84,103 +66,9 @@ export const SlideContainer = styled.div `
   align-items: center;
 `
 
-function useTilt(active) {
-    const ref = useRef(null);
-
-    useEffect(() => {
-        if (!ref.current || !active) { return; }
-
-        const state = {
-            rect: undefined,
-            mouseX: undefined,
-            mouseY: undefined
-        };
-
-        let el = ref.current;
-
-        const handleMouseMove = (e) => {
-            if (!el) {
-                return;
-            }
-            if (!state.rect) {
-                state.rect = el.getBoundingClientRect();
-            }
-            state.mouseX = e.clientX;
-            state.mouseY = e.clientY;
-            const px = (state.mouseX - state.rect.left) / state.rect.width;
-            const py = (state.mouseY - state.rect.top) / state.rect.height;
-
-            el.style.setProperty('--px', px);
-            el.style.setProperty('--py', py);
-        };
-
-        el.addEventListener('mousemove', handleMouseMove);
-
-        return () => {
-            el.removeEventListener('mousemove', handleMouseMove);
-        };
-    }, [active]);
-
-    return ref;
-}
-
 const initialState = {
     slideIndex: 0
 };
-
-const slidesReducer = (state, event) => {
-    if (event.type === 'PREV') {
-        return {
-            ...state,
-            slideIndex: (state.slideIndex + 1) % slides.length
-        };
-    }
-    else if (event.type === 'NEXT') {
-        return {
-            ...state,
-            slideIndex:
-                state.slideIndex === 0 ? slides.length - 1 : state.slideIndex - 1
-        };
-    }
-};
-
-
-function Slide({ slide, offset }) {
-    const active = offset === 0 ? true : null;
-    const ref = useTilt(active);
-
-    const refScroll = useRef()
-    const isVisible = useOnScreen(ref)
-
-    return (
-        <SlideElement
-            ref={ ref }
-            className='slide'
-            data-active={ active }
-            style={ {
-                '--offset': offset,
-                '--dir': offset === 0 ? 0 : offset > 0 ? 1 : -1
-            } }
-        >
-            <SlideBackground
-                className='slideBackground'
-                ref={ refScroll }
-                style={ { backgroundImage: `url('${slide.image}')`, visibility: (isVisible) ? `visible` : `hidden` } }
-            />
-            <SlideContent
-                className="slideContent"
-                style={ { backgroundImage: `url('${slide.image}')` } }
-            >
-                <SlideContentInner className='slideContentInner'>
-                    <SlideTitle className='slideTitle'>{ slide.name }</SlideTitle>
-                    <SlideSubtitle className='slideSubtitle'>{ slide.role }</SlideSubtitle>
-                    <SlideDescription className='slideDescription'>{ slide.description }</SlideDescription>
-                    <SlideDescription className='slideDescription'>{ slide.email }</SlideDescription>
-                </SlideContentInner>
-            </SlideContent>
-        </SlideElement>
-    );
-}
 
 const SlideElement = styled.div `
   grid-area: 1 / -1;
@@ -340,8 +228,117 @@ const SlideDescription = styled.p `
   }
 `
 
+function useOnScreen(ref) {
+
+    const [isIntersecting, setIntersecting] = useState(false)
+
+    const observer = new IntersectionObserver(
+        ([entry]) => setIntersecting(entry.isIntersecting)
+    )
+
+    useEffect(() => {
+        observer.observe(ref.current)
+        // Remove the observer as soon as the component is unmounted
+        return () => { observer.disconnect() }
+    }, [])
+
+    return isIntersecting
+}
+
+function useTilt(active) {
+    const ref = useRef(null);
+
+    useEffect(() => {
+        if (!ref.current || !active) { return; }
+
+        const state = {
+            rect: undefined,
+            mouseX: undefined,
+            mouseY: undefined
+        };
+
+        let el = ref.current;
+
+        const handleMouseMove = (e) => {
+            if (!el) {
+                return;
+            }
+            if (!state.rect) {
+                state.rect = el.getBoundingClientRect();
+            }
+            state.mouseX = e.clientX;
+            state.mouseY = e.clientY;
+            const px = (state.mouseX - state.rect.left) / state.rect.width;
+            const py = (state.mouseY - state.rect.top) / state.rect.height;
+
+            el.style.setProperty('--px', px);
+            el.style.setProperty('--py', py);
+        };
+
+        el.addEventListener('mousemove', handleMouseMove);
+
+        return () => {
+            el.removeEventListener('mousemove', handleMouseMove);
+        };
+    }, [active]);
+
+    return ref;
+}
+
+const slidesReducer = (state, event) => {
+    if (event.type === 'PREV') {
+        return {
+            ...state,
+            slideIndex: (state.slideIndex + 1) % slides.length
+        };
+    }
+    else if (event.type === 'NEXT') {
+        return {
+            ...state,
+            slideIndex:
+                state.slideIndex === 0 ? slides.length - 1 : state.slideIndex - 1
+        };
+    }
+};
+
+function Slide({ slide, offset }) {
+    const active = offset === 0 ? true : null;
+    const ref = useTilt(active);
+
+    const refScroll = useRef()
+    const isVisible = useOnScreen(ref)
+
+    return (
+        <SlideElement
+            ref={ ref }
+            className='slide'
+            data-active={ active }
+            style={ {
+                '--offset': offset,
+                '--dir': offset === 0 ? 0 : offset > 0 ? 1 : -1
+            } }
+        >
+            <SlideBackground
+                className='slideBackground'
+                ref={ refScroll }
+                style={ { backgroundImage: `url('${slide.image}')`, visibility: (isVisible) ? `visible` : `hidden` } }
+            />
+            <SlideContent
+                className="slideContent"
+                style={ { backgroundImage: `url('${slide.image}')` } }
+            >
+                <SlideContentInner className='slideContentInner'>
+                    <SlideTitle className='slideTitle'>{ slide.name }</SlideTitle>
+                    <SlideSubtitle className='slideSubtitle'>{ slide.role }</SlideSubtitle>
+                    <SlideDescription className='slideDescription'>{ slide.description }</SlideDescription>
+                    <SlideDescription className='slideDescription'>{ slide.email }</SlideDescription>
+                </SlideContentInner>
+            </SlideContent>
+        </SlideElement>
+    );
+}
+
 const MemberCarousel = () => {
-    const [showing, toggleShow] = useState(false);
     const [state, dispatch] = React.useReducer(slidesReducer, initialState);
 
     return(<>
@@ -356,18 +353,6 @@ const MemberCarousel = () => {
                 <Carousel_L_R onClick={ () => dispatch({ type: 'PREV' } ) }>›</Carousel_L_R>
             </Slides>
         </SlideContainer>
-
-        { showing &&
-        <a href='#'
-           style={
-               showing
-                   ? { height: 'auto', visibility: 'visible',  textDecoration: 'none', color: '#000' }
-                   : { height: '0', visibility: 'hidden',  textDecoration: 'none', color: '#000' }
-           }
-        >
-            <Carousel_Exit onClick={ () => { toggleShow(false) } } />
-        </a>
-        }
         </>);
 }
 

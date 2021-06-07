@@ -14,21 +14,9 @@ import {
 } from '../components/layout';
 import MemberCarousel from '../components/members';
 
-/*
-
-        ABOUT PAGE COMPONENTS
-
-*/
-
 const OrganizationInfo = styled.p `
   margin: 150px 0 0 0;
 `
-
-/*
-
-        ABOUT PAGE
-
-*/
 
 const About = () => {
     return (

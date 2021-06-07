@@ -22,12 +22,6 @@ import {
 } from '../components/layout';
 import ConceptArtCarousel from '../components/concept_art';
 
-/*
-
-        PAGE COMPONENT
-
-*/
-
 const Game = () => {
     return (
         <PageContent id='recoup'>

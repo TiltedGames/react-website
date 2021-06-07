@@ -36,84 +36,6 @@ const slides = [
     }
 ];
 
-export const SlideContainer = styled.div `
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
-  text-align: center;
-`
-
-const initialState = {
-    slideIndex: 0
-};
-
-const slidesReducer = (state, event) => {
-    if (event.type === 'PREV') {
-        return {
-            ...state,
-            slideIndex: (state.slideIndex + 1) % slides.length
-        };
-    }
-    if (event.type === 'NEXT') {
-        return {
-            ...state,
-            slideIndex:
-                state.slideIndex === 0 ? slides.length - 1 : state.slideIndex - 1
-        };
-    }
-};
-
-
-function Slide({ slide, offset }) {
-    const active = offset === 0 ? true : null;
-
-    return (
-        <SlideElement
-            className='slide'
-            data-active={ active }
-            style={ {
-                '--offset': offset,
-                '--dir': offset === 0 ? 0 : offset > 0 ? 1 : -1
-            } }
-        >
-            <SlideContent
-                className='slideContent'
-                style={ { backgroundImage: `url('${slide.image}')` } }
-            >
-                <SlideContentInner className='slideContentInner'>
-                    <SlideNumber className='slideTitle'>{slide.name}</SlideNumber>
-                </SlideContentInner>
-            </SlideContent>
-        </SlideElement>
-    );
-}
-
-const SlideElement = styled.div `
-  grid-area: 1 / -1;
-
-  &[data-active] {
-    z-index: 2;
-    pointer-events: auto;
-
-    .slideContentInner {
-      opacity: 1;
-    }
-
-    .slideContent {
-
-      --x: calc(var(--px) - 0.5);
-      --y: calc(var(--py) - 0.5);
-      opacity: 1;
-
-      &:hover {
-        transition: none;
-        rotateX(calc(var(--y) * -45deg));
-      }
-    }
-  }
-`
-
 const Slides = styled.div `
   display: grid;
   margin-bottom: 100px;
@@ -178,6 +100,84 @@ const SlideDescription = styled.p `
   color: #fff;
 `
 
+export const SlideContainer = styled.div `
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  text-align: center;
+`
+
+const initialState = {
+    slideIndex: 0
+};
+
+const SlideElement = styled.div `
+  grid-area: 1 / -1;
+
+  &[data-active] {
+    z-index: 2;
+    pointer-events: auto;
+
+    .slideContentInner {
+      opacity: 1;
+    }
+
+    .slideContent {
+
+      --x: calc(var(--px) - 0.5);
+      --y: calc(var(--py) - 0.5);
+      opacity: 1;
+
+      &:hover {
+        transition: none;
+        rotateX(calc(var(--y) * -45deg));
+      }
+    }
+  }
+`
+
+const slidesReducer = (state, event) => {
+    if (event.type === 'PREV') {
+        return {
+            ...state,
+            slideIndex: (state.slideIndex + 1) % slides.length
+        };
+    }
+    if (event.type === 'NEXT') {
+        return {
+            ...state,
+            slideIndex:
+                state.slideIndex === 0 ? slides.length - 1 : state.slideIndex - 1
+        };
+    }
+};
+
+
+function Slide({ slide, offset }) {
+    const active = offset === 0 ? true : null;
+
+    return (
+        <SlideElement
+            className='slide'
+            data-active={ active }
+            style={ {
+                '--offset': offset,
+                '--dir': offset === 0 ? 0 : offset > 0 ? 1 : -1
+            } }
+        >
+            <SlideContent
+                className='slideContent'
+                style={ { backgroundImage: `url('${slide.image}')` } }
+            >
+                <SlideContentInner className='slideContentInner'>
+                    <SlideNumber className='slideTitle'>{slide.name}</SlideNumber>
+                </SlideContentInner>
+            </SlideContent>
+        </SlideElement>
+    );
+}
+
 const ConceptArtCarousel = () => {
     const [state, dispatch] = React.useReducer(slidesReducer, initialState);
 
@@ -194,7 +194,6 @@ const ConceptArtCarousel = () => {
                 <Carousel_L_R onClick={ () => dispatch({ type: 'PREV' } ) }>›</Carousel_L_R>
             </Slides>
         </SlideContainer>
-        }
         </>);
 }
 

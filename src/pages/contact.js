@@ -15,12 +15,6 @@ import {
     ButtonWrapper
 } from '../components/buttons';
 
-/*
-
-        PAGE COMPONENT
-
-*/
-
 const Contact = () => {
     const [hover, setHover] = useState(false)
 

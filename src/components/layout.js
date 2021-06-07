@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const PageContent = styled.div `
   max-width: calc(100vw - 200px);
@@ -16,7 +16,7 @@ export const Row = styled.div `
   padding-right: 100px;
   
   :after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
     box-sizing: border-box;

@@ -8,12 +8,6 @@ import { Link } from 'react-scroll'
 import styled from 'styled-components';
 import roundLogo from '../media/img/round-logo.png';
 
-/*
-
-        NAVBAR COMPONENTS
-
-*/
-
 export const Wrapper = styled.div `
   z-index: 1000;
   right: 50px;
@@ -124,12 +118,6 @@ export const Spacer = styled.div `
   width: 100%;
   background: transparent;
 `
-
-/*
-
-        NAVBAR COMPONENT
-
-*/
 
 const NavBar = () => {
 

@@ -15,12 +15,6 @@ import {
     ButtonWrapper
 } from '../components/buttons';
 
-/*
-
-        PAGE COMPONENT
-
-*/
-
 const BugReport = () => {
     const [hover, setHover] = useState(false)
 

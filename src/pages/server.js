@@ -18,12 +18,6 @@ import {
     WinIcon,
 } from '../components/buttons';
 
-/*
-
-        PAGE COMPONENT
-
-*/
-
 const Server = () => {
     return (
         <PageContent id='server'>

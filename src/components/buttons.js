@@ -117,37 +117,6 @@ export const SendButton = styled.div `
   }
 `
 
-export const Carousel_Expand = styled.div `
-  font-family: Poppins, sans-serif;
-  color: #000;
-  text-align: center;
-  margin: 100px 0 50px 0;
-  padding: 25px;
-  font-weight: bold;
-  align-items: center;
-  font-size: 60px;
-
-  background: rgba(200, 200, 200, 1.0);
-
-  @media screen and (max-width: 2048px) {
-    font-size: 50px;
-  }
-
-  @media screen and (max-width: 1080px) {
-    font-size: 35px;
-  }
-
-  @media screen and (max-width: 768px) {
-    font-size: 20px;
-  }
-
-  @media screen and (max-width: 480px) {
-    font-size: 16px;
-  }
-  
-  animation: pulse 2s infinite;
-`
-
 export const Carousel_L_R = styled.div `
   appearance: none;
   background: transparent;
@@ -196,18 +165,3 @@ export const Carousel_L_R = styled.div `
     right: -50%;
   }
 `
-
-export const Carousel_Exit = styled(FaTimesCircle) `
-  color: #fff;
-  width: 100px;
-  height: 100px;
-  margin: 0 auto 250px auto;
-  opacity: 0.7;
-  transition: opacity 0.3s;
-  
-  &:hover {
-    opacity: 1.0;
-  }
-`
-
-export default Carousel_Exit;
