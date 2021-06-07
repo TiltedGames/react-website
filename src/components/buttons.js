@@ -3,8 +3,7 @@ import {
     FaWindows,
     FaApple,
     FaLinux,
-    MdArrowForward,
-    FaTimesCircle
+    MdArrowForward
 } from 'react-icons/all';
 
 const buttonBG = '#fff';
@@ -99,24 +98,6 @@ export const ButtonWrapper = styled.div `
   z-index: 100;
 `
 
-export const SendButton = styled.div `
-  background: ${ buttonBG }
-  color: ${ buttonText }
-  padding: ${ ({ big }) => (big ? bigButtonPadding : smallButtonPadding) };
-  font-size: ${ ({ big }) => (big ? bigFontSize : smallFontSize) };
-  white-space: nowrap;
-  outline: none;
-  border: none;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.2s ease-in-out;
-  
-  &:hover {
-    text-decoration: underline;
-  }
-`
-
 export const Carousel_L_R = styled.div `
   appearance: none;
   background: transparent;
@@ -124,28 +105,24 @@ export const Carousel_L_R = styled.div `
   color: white;
   position: absolute;
   font-size: 20rem;
-  width: 20rem;
+  width: 15rem;
   height: 20rem;
-  top: 2%;
+  top: 5%;
   transition: opacity 0.3s;
   opacity: 0.7;
   z-index: 5;
 
-  @media screen and (max-width: 1440px) {
-    top: 3%;
-  }
-
   @media screen and (max-height: 1080px) {
     top: 15%;
     font-size: 10rem;
-    width: 15rem;
+    width: 8rem;
     height: 10rem;
   }
 
   @media screen and (max-height: 480px) {
     top: 20%;
     font-size: 5rem;
-    width: 10rem;
+    width: 6rem;
     height: 5rem;
   }
 
@@ -158,10 +135,10 @@ export const Carousel_L_R = styled.div `
   }
 
   &:first-child {
-    left: -50%;
+    left: -32%;
   }
 
   &:last-child {
-    right: -50%;
+    right: -32%;
   }
 `

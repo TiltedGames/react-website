@@ -8,7 +8,7 @@ import {
     Column_Heading_Left,
     Column_Heading_Right,
     PageContent,
-    Row
+    Row, Row_Header
 } from '../components/layout';
 import {
     Button,
@@ -24,7 +24,7 @@ const Contact = () => {
 
     return (
         <PageContent id='contact'>
-            <Row>
+            <Row_Header>
                 <Column_Heading_Left>
                     <PageHeading>
                         Contact
@@ -35,7 +35,7 @@ const Contact = () => {
                         We'd love to hear from you
                     </PageSubheading>
                 </Column_Heading_Right>
-            </Row>
+            </Row_Header>
             <Row>
                 <Column_Dynamic>
                     <ButtonWrapper

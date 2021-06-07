@@ -1,10 +1,14 @@
 import React from 'react'
 import {
-    Column_FullWidth,
+    Card,
+    CardDescription,
+    CardName,
+    Column_Dynamic,
     Column_Heading_Left,
     Column_Heading_Right,
     PageContent,
-    Row
+    Row,
+    Row_Header
 } from '../components/layout';
 import {
     PageHeading,
@@ -17,11 +21,12 @@ import {
     WindowsButton,
     WinIcon,
 } from '../components/buttons';
+import {CloneTextbox, CopyButton} from "./github";
 
 const Server = () => {
     return (
         <PageContent id='server'>
-            <Row>
+            <Row_Header>
                 <Column_Heading_Left>
                     <PageHeading>
                         One<br />
@@ -34,44 +39,80 @@ const Server = () => {
                         Host a Recoup server, or use this to start your own multiplayer project
                     </PageSubheading>
                 </Column_Heading_Right>
+            </Row_Header>
+            <Row>
+                <Column_Dynamic>
+                    <Card>
+                        <CardName>
+                            Voice Chat
+                        </CardName>
+                        <CardDescription>
+                            Talk with your friends on an encrypted voice server
+                        </CardDescription>
+                    </Card>
+                </Column_Dynamic>
+                <Column_Dynamic>
+                    <Card>
+                        <CardName>
+                            Text Chat
+                        </CardName>
+                        <CardDescription>
+                            No mic? No problem! Chat with your friends via text
+                        </CardDescription>
+                    </Card>
+                </Column_Dynamic>
+                <Column_Dynamic>
+                    <Card>
+                        <CardName>
+                            Built for ML
+                        </CardName>
+                        <CardDescription>
+                            Hand-crafted from the ground up to support machine learning
+                        </CardDescription>
+                    </Card>
+                </Column_Dynamic>
+                <Column_Dynamic>
+                    <Card>
+                        <CardName>
+                            .NET Web Sockets
+                        </CardName>
+                        <CardDescription>
+                            Built on a strong foundation, developed and supported by Microsoft
+                        </CardDescription>
+                    </Card>
+                </Column_Dynamic>
+                <Column_Dynamic>
+                    <Card>
+                        <CardName>
+                            Storage
+                        </CardName>
+                        <CardDescription>
+                            Save and load network data incredibly fast using Redis!
+                        </CardDescription>
+                    </Card>
+                </Column_Dynamic>
+                <Column_Dynamic>
+                    <Card>
+                        <CardName>
+                            Lightning Fast
+                        </CardName>
+                        <CardDescription>
+                            Speed, where you need it most!
+                        </CardDescription>
+                    </Card>
+                </Column_Dynamic>
             </Row>
             <Row>
-                <Column_FullWidth>
-                    <Text>
-                        Lightning Fast<br />
-                        Speed, where you need it most!
-                    </Text>
-                    <Text>
-                        Voice Chat<br />
-                        Talk with your friends on an encrypted voice server
-                    </Text>
-                    <Text>
-                        Text Chat<br />
-                        No mic? No problem! Chat with your friends via text
-                    </Text>
-                    <Text>
-                        Built for ML<br />
-                        Hand-crafted from the ground up to support machine learning
-                    </Text>
-                    <Text>
-                        .NET Web Sockets<br />
-                        Built on a strong foundation, developed and supported by Microsoft
-                    </Text>
-                    <Text>
-                        Storage<br />
-                        Save and load network data incredibly fast using Redis!
-                    </Text>
-                    <ButtonWrapper id='server-download'>
-                        <SectionText>
-                            Download
-                        </SectionText>
-                        <DownloadButtons>
-                            <WindowsButton>
-                                <a href='#'><WinIcon size={48} /></a>
-                            </WindowsButton>
-                        </DownloadButtons>
-                    </ButtonWrapper>
-                </Column_FullWidth>
+                <ButtonWrapper id='server-download'>
+                    <SectionText>
+                        Download
+                    </SectionText>
+                    <DownloadButtons>
+                        <WindowsButton>
+                            <a href='#'><WinIcon size={48} /></a>
+                        </WindowsButton>
+                    </DownloadButtons>
+                </ButtonWrapper>
             </Row>
         </PageContent>
     );

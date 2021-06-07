@@ -11,7 +11,7 @@ import roundLogo from '../media/img/round-logo.png';
 export const Wrapper = styled.div `
   z-index: 1000;
   right: 50px;
-  top: 80px;
+  bottom: calc(50vh - 240px);
   color: #fff;
   position:fixed;
 `
@@ -56,7 +56,7 @@ export const Label = styled.label `
 
 export const LinkWrapper = styled.div `
   border-left: 3px solid #fff;
-  padding: 25px 0;
+  padding: 18px 0;
   margin: 0;
 `
 
@@ -66,7 +66,7 @@ export const LinkWrapper_NoSpace = styled.div `
   margin-top: 48px;
 `
 
-export const RoundLogo = styled.span  `
+export const RoundLogo = styled.div  `
   position: absolute;
   top: 0;
   left: -22px;
@@ -74,7 +74,8 @@ export const RoundLogo = styled.span  `
   background-size: cover;
   height: 48px;
   width: 48px;
-  margin-top: -16px;
+  margin: 0;
+  z-index: 1000;
 `
 
 export const GithubIcon = styled(FaGithub) `
@@ -83,12 +84,14 @@ export const GithubIcon = styled(FaGithub) `
   left: -23px;
   border: 3px solid #fff;
   border-radius: 100%;
+  z-index: 1000;
 `
 
 export const DonateIcon = styled(FaDonate) `
   position: absolute;
   top: 0;
   left: -23px;
+  z-index: 1000;
 `
 
 export const MobileIcon = styled.div `
@@ -113,8 +116,14 @@ export const Caret = styled(FaPlus) `
   height: 10px;
 `
 
+export const TopSpacer = styled.div `
+  height: 73px;
+  width: 100%;
+  background: transparent;
+`
+
 export const Spacer = styled.div `
-  height: 50px;
+  height: 25px;
   width: 100%;
   background: transparent;
 `
@@ -139,7 +148,7 @@ const NavBar = () => {
         <Wrapper>
             {/* [UL] navigation bar implemented */}
             <Pages>
-                {/* [LI] Tilted Games (logo) section */}
+                {/* [LI] Tilted Games / Landing section */}
                 <Page onMouseEnter={ onHover_tgIcon } onMouseLeave={ onHover_tgIcon }>
                     <Link to='home' spy={ true } smooth={ true }>
                         {/* [IMG] */}
@@ -147,11 +156,11 @@ const NavBar = () => {
                     </Link>
                 </Page>
 
-                {/* [LI] Recoup section */}
-                <Page onMouseEnter={ onHover_recoupText } onMouseLeave={ onHover_recoupText }>
+                {/* [LI] About Us section */}
+                <Page >
                     {/* [DIV] (white vertical line) */}
                     <LinkWrapper>
-                        <Spacer />
+                        <TopSpacer />
                         {/* [LABEL] */}
                         <Link to='about' spy={ true } smooth={ true }>
                             <Label>About Us</Label>

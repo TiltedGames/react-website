@@ -2,7 +2,8 @@ import React from 'react'
 import {
     SectionText,
     PageHeading,
-    PageSubheading
+    PageSubheading,
+    Text
 } from '../components/text';
 import {
     DownloadButtons,
@@ -16,16 +17,16 @@ import {
 import {
     PageContent,
     Row,
-    Column_FullWidth,
     Column_Heading_Left,
-    Column_Heading_Right
+    Column_Heading_Right,
+    Row_Header
 } from '../components/layout';
 import ConceptArtCarousel from '../components/concept_art';
 
 const Game = () => {
     return (
         <PageContent id='recoup'>
-            <Row>
+            <Row_Header>
                 <Column_Heading_Left>
                     <PageHeading>
                         Recoup
@@ -36,19 +37,25 @@ const Game = () => {
                         Recoup is still early in development. Stay tuned for more updates!
                     </PageSubheading>
                 </Column_Heading_Right>
-            </Row>
+            </Row_Header>
             <Row>
-                <Column_FullWidth id='recoup-concept-art'>
-                    <ConceptArtCarousel />
-                </Column_FullWidth>
-                <Column_FullWidth id='recoup-download'>
-                    <SectionText>Download (Alpha)</SectionText>
-                        <DownloadButtons>
-                            <WindowsButton><a href='https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Windows).zip'><WinIcon size={48} /></a></WindowsButton>
-                            <MacButton><a href='https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(macOS).zip'><MacIcon size={48} /></a></MacButton>
-                            <LinuxButton><a href='https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Linux).zip'><LinIcon size={48} /></a></LinuxButton>
-                        </DownloadButtons>
-                </Column_FullWidth>
+                <Text>
+                    Recoup is an online, co-op experience coming to PC, Xbox, Playstation.
+                    We're also hoping to support mobile devices and cross platform play.
+                    Check out <a style={ { color: '#fff' } } href="#">the Recoup page</a> to
+                    see where we're at!
+                </Text>
+            </Row>
+            <Row id='recoup-concept-art'>
+                <ConceptArtCarousel />
+            </Row>
+            <Row id='recoup-download'>
+                <SectionText>Download (Alpha)</SectionText>
+                <DownloadButtons>
+                    <WindowsButton><a href='https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Windows).zip'><WinIcon size={48} /></a></WindowsButton>
+                    <MacButton><a href='https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(macOS).zip'><MacIcon size={48} /></a></MacButton>
+                    <LinuxButton><a href='https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Linux).zip'><LinIcon size={48} /></a></LinuxButton>
+                </DownloadButtons>
             </Row>
         </PageContent>
     );

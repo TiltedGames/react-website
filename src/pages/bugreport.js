@@ -8,7 +8,7 @@ import {
     Column_Heading_Left,
     Column_Heading_Right,
     PageContent,
-    Row
+    Row, Row_Header
 } from '../components/layout';
 import {
     Button,
@@ -24,7 +24,7 @@ const BugReport = () => {
 
     return (
         <PageContent id='bugreport'>
-            <Row>
+            <Row_Header>
                 <Column_Heading_Left>
                     <PageHeading>
                         Report a bug
@@ -35,7 +35,7 @@ const BugReport = () => {
                         Your feedback is incredibly helpful!
                     </PageSubheading>
                 </Column_Heading_Right>
-            </Row>
+            </Row_Header>
             <Row>
                 <Column_Dynamic>
                     <ButtonWrapper

@@ -23,13 +23,25 @@ export const Row = styled.div `
   }
 `
 
+export const Row_Header = styled.div `
+  max-width: 1200px;
+  margin: 0 auto 100px auto;
+  padding-right: 100px;
+  
+  :after {
+    content: '';
+    display: table;
+    clear: both;
+    box-sizing: border-box;
+  }
+`
+
 export const Column_Heading_Left = styled.div `
   width: 25%;
   box-sizing: border-box;
   height: 100%;
   display: table-cell;
   padding: 25px 0 25px 25px;
-  margin: 0;
   vertical-align: center;
   align-items: center;
   border-bottom: 1px solid #fff;
@@ -49,11 +61,11 @@ export const Column_Heading_Right = styled.div `
 `
 
 export const Column_Dynamic_Equal_Height = styled.div `
-  background: #fff;
   box-sizing: border-box;
   display: table-cell;
   height: 100%;
   padding: 25px;
+  float: left;
 `
 
 export const Column_Dynamic = styled.div `
@@ -65,23 +77,29 @@ export const Column_Dynamic = styled.div `
   }
 `
 
-export const Column_ThirdWidth = styled.div `
-  float: left;
-  width: 40%;
-  box-sizing: border-box;
-`
-
-
-export const Column_HalfWidth = styled.div `
-  float: left;
-  width: 40%;
-  box-sizing: border-box;
-`
-
-export const Column_FullWidth = styled.div `
-  float: left;
-  width: 100%;
-  box-sizing: border-box;
+export const Card = styled.div `
   text-align: center;
+  padding: 20px;
+  background: #fff;
+  margin: 5px;
+  border-radius: 10px;
 `
 
+export const RepoLink = styled.a `
+  color: #000;
+`
+
+export const CardName = styled.p `
+  color: #000;
+  text-align: center;
+  font-size: 32px;
+  padding: 20px 0;
+`
+
+export const CardDescription = styled.p `
+  color: #000;
+  width: 400px;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px 0;
+`

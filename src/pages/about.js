@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import {
     PageHeading,
     PageSubheading, SectionText,
@@ -8,20 +7,16 @@ import {
 import {
     PageContent,
     Row,
-    Column_FullWidth,
     Column_Heading_Left,
-    Column_Heading_Right
+    Column_Heading_Right,
+    Row_Header
 } from '../components/layout';
 import MemberCarousel from '../components/members';
-
-const OrganizationInfo = styled.p `
-  margin: 150px 0 0 0;
-`
 
 const About = () => {
     return (
         <PageContent id='home'>
-            <Row>
+            <Row_Header>
                 <Column_Heading_Left>
                     <PageHeading>
                         Tilted<br />
@@ -33,28 +28,21 @@ const About = () => {
                         Bringing a new and exciting experience to you
                     </PageSubheading>
                 </Column_Heading_Right>
-            </Row>
+            </Row_Header>
             <Row>
-                <Column_FullWidth
-                    style={ { marginBottom: '80px' } }
-                >
-                    <OrganizationInfo>
-                        <MemberCarousel />
-                    </OrganizationInfo>
-                        <SectionText id='about'>
-                            About us
-                        </SectionText>
-                        <Text>
-                            Our focus is currently on a game called Recoup! It's an online, co-op experience
-                            coming to PC, Xbox, Playstation. We're also hoping to support mobile devices and
-                            cross platform play. Check out <a style={ { color: '#fff' } } href="#">the Recoup page</a> to see where we're at!
-                            <br /><br />
-                            At the moment, all of our
-                            software is open source, covered by the MIT license.
-                            <br /><br />
-                            Feeling chatty? Come say hi on <a style={ { color: '#fff' } } href="#">our Discord</a>!
-                        </Text>
-                </Column_FullWidth>
+                <MemberCarousel />
+            </Row>
+            <Row id='about'>
+                <SectionText>
+                    About us
+                </SectionText>
+                <Text>
+                    Tilted Games is a small game studio based in the Los Angeles. At the moment,
+                    all software produced by Tilted Games is free, open source, and developed in
+                    public on Github. Right now, our focus is on a game called Recoup! Check it out here.
+                    <br /><br />
+                    Feeling chatty? Come say hi on <a style={ { color: '#fff' } } href="#">our Discord</a>!
+                </Text>
             </Row>
         </PageContent>
     );
