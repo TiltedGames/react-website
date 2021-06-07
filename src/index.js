@@ -1,14 +1,19 @@
 import './style.css';
-import React, {useState, useEffect, useRef} from 'react';
+import React,
+{
+    useState,
+    useEffect,
+    useRef
+} from 'react';
 import ReactDOM from 'react-dom';
-import NavBar from "./components/navbar";
-import About from "./pages/about";
-import Game from "./pages/game";
-import Tools from "./pages/tools";
-import Github from "./pages/github";
-import Contact from "./pages/contact";
-import BugReport from "./pages/bugreport";
-import classNames from "classnames";
+import classNames from 'classnames';
+import NavBar from './components/navbar';
+import About from './pages/about';
+import Game from './pages/game';
+import Server from './pages/server';
+import Github from './pages/github';
+import Contact from './pages/contact';
+import BugReport from './pages/bugreport';
 
 function App() {
     // toggle mobile menu mode
@@ -98,7 +103,7 @@ function App() {
             <NavBar toggle={ toggleMobileMenu } />
             <About />
             <Game />
-            <Tools />
+            <Server />
             <Github />
             <Contact />
             <BugReport />

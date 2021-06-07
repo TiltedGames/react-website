@@ -24,7 +24,7 @@ import {
 
 */
 
-const Tools = () => {
+const Server = () => {
     return (
         <PageContent id='server'>
             <Row>
@@ -83,4 +83,4 @@ const Tools = () => {
     );
 }
 
-export default Tools;
+export default Server;

@@ -1,39 +1,37 @@
-import React, { useReducer, useState, useEffect, useRef } from 'react'
-import styled from "styled-components";
-import img_helmet_1 from "../media/img/concept_art/helmet_1.jpg";
-import img_helmet_2 from "../media/img/concept_art/helmet_2.jpg";
-import img_helmet_3 from "../media/img/concept_art/helmet_3.jpg";
-import img_clothing from "../media/img/concept_art/clothing_design.jpg";
-import img_shirakawa from "../media/img/concept_art/shirakawa.jpg";
-import img_japan from "../media/img/concept_art/japan.jpg";
-import {
-    Carousel_L_R
-} from '../components/buttons'
-import { SectionText } from "./design";
+import React from 'react'
+import styled from 'styled-components';
+import img_helmet_1 from '../media/img/concept_art/helmet_1.jpg';
+import img_helmet_2 from '../media/img/concept_art/helmet_2.jpg';
+import img_helmet_3 from '../media/img/concept_art/helmet_3.jpg';
+import img_clothing from '../media/img/concept_art/clothing_design.jpg';
+import img_shirakawa from '../media/img/concept_art/shirakawa.jpg';
+import img_japan from '../media/img/concept_art/japan.jpg';
+import { Carousel_L_R } from './buttons'
+import { SectionText } from './design';
 
 const slides = [
     {
-        name: "1/6",
+        name: '1/6',
         image: img_helmet_1
     },
     {
-        name: "2/6",
+        name: '2/6',
         image: img_helmet_2
     },
     {
-        name: "3/6",
+        name: '3/6',
         image: img_helmet_3
     },
     {
-        name: "4/6",
+        name: '4/6',
         image: img_clothing
     },
     {
-        name: "5/6",
+        name: '5/6',
         image: img_shirakawa
     },
     {
-        name: "6/6",
+        name: '6/6',
         image: img_japan
     }
 ];
@@ -46,54 +44,18 @@ export const SlideContainer = styled.div `
   text-align: center;
 `
 
-function useTilt(active) {
-    const ref = useRef(null);
-
-    useEffect(() => {
-        if (!ref.current || !active) { return; }
-
-        const state = {
-            rect: undefined,
-            mouseX: undefined,
-            mouseY: undefined
-        };
-
-        let el = ref.current;
-
-        const handleMouseMove = (e) => {
-            if (!el) { return; }
-
-            if (!state.rect) { state.rect = el.getBoundingClientRect(); }
-
-            state.mouseX = e.clientX;
-            state.mouseY = e.clientY;
-            const px = (state.mouseX - state.rect.left) / state.rect.width;
-            const py = (state.mouseY - state.rect.top) / state.rect.height;
-
-            el.style.setProperty("--px", px);
-            el.style.setProperty("--py", py);
-        };
-
-        el.addEventListener("mousemove", handleMouseMove);
-
-        return () => { el.removeEventListener("mousemove", handleMouseMove); };
-    }, [active]);
-
-    return ref;
-}
-
 const initialState = {
     slideIndex: 0
 };
 
 const slidesReducer = (state, event) => {
-    if (event.type === "PREV") {
+    if (event.type === 'PREV') {
         return {
             ...state,
             slideIndex: (state.slideIndex + 1) % slides.length
         };
     }
-    if (event.type === "NEXT") {
+    if (event.type === 'NEXT') {
         return {
             ...state,
             slideIndex:
@@ -105,24 +67,22 @@ const slidesReducer = (state, event) => {
 
 function Slide({ slide, offset }) {
     const active = offset === 0 ? true : null;
-    const ref = useTilt(active);
 
     return (
         <SlideElement
-            ref={ ref }
-            className="slide"
+            className='slide'
             data-active={ active }
             style={ {
-                "--offset": offset,
-                "--dir": offset === 0 ? 0 : offset > 0 ? 1 : -1
+                '--offset': offset,
+                '--dir': offset === 0 ? 0 : offset > 0 ? 1 : -1
             } }
         >
             <SlideContent
-                className="slideContent"
+                className='slideContent'
                 style={ { backgroundImage: `url('${slide.image}')` } }
             >
-                <SlideContentInner className="slideContentInner">
-                    <SlideNumber className="slideTitle">{slide.name}</SlideNumber>
+                <SlideContentInner className='slideContentInner'>
+                    <SlideNumber className='slideTitle'>{slide.name}</SlideNumber>
                 </SlideContentInner>
             </SlideContent>
         </SlideElement>
@@ -219,20 +179,19 @@ const SlideDescription = styled.p `
 `
 
 const ConceptArtCarousel = () => {
-    const [showing, toggleShow] = useState(false);
     const [state, dispatch] = React.useReducer(slidesReducer, initialState);
 
     return(<>
         <SectionText>Concept Art</SectionText>
         <SlideContainer>
-            <Slides className="slides">
-                <Carousel_L_R onClick={ () => dispatch({ type: "NEXT" } ) }>‹</Carousel_L_R>
+            <Slides className='slides'>
+                <Carousel_L_R onClick={ () => dispatch({ type: 'NEXT' } ) }>‹</Carousel_L_R>
 
                 {[...slides, ...slides, ...slides].map((slide, i) => {
                     let offset = slides.length + (state.slideIndex - i);
                     return <Slide slide={ slide } offset={ offset } key={ i } />;
                 })}
-                <Carousel_L_R onClick={ () => dispatch({ type: "PREV" } ) }>›</Carousel_L_R>
+                <Carousel_L_R onClick={ () => dispatch({ type: 'PREV' } ) }>›</Carousel_L_R>
             </Slides>
         </SlideContainer>
         }

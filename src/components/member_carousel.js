@@ -1,16 +1,20 @@
-import React, { useReducer, useState, useEffect, useRef } from 'react'
-import styled from "styled-components";
-import img_brennan from "../media/img/members/brennan.jpg";
-import img_ian from "../media/img/members/ian.jpg";
-import img_johnny from "../media/img/members/johnny.jpg";
-import img_luke from "../media/img/members/luke.jpg";
-import img_noah from "../media/img/members/noah.jpg";
-import img_olivia from "../media/img/members/olivia.jpg";
+import React,
+{
+    useState,
+    useEffect,
+    useRef
+} from 'react'
+import styled from 'styled-components';
+import img_brennan from '../media/img/members/brennan.jpg';
+import img_ian from '../media/img/members/ian.jpg';
+import img_johnny from '../media/img/members/johnny.jpg';
+import img_luke from '../media/img/members/luke.jpg';
+import img_noah from '../media/img/members/noah.jpg';
+import img_olivia from '../media/img/members/olivia.jpg';
 import {
-    Carousel_Expand,
     Carousel_L_R,
     Carousel_Exit
-} from '../components/buttons'
+} from './buttons'
 
 function useOnScreen(ref) {
 
@@ -31,42 +35,42 @@ function useOnScreen(ref) {
 
 const slides = [
     {
-        name: "Brennan",
+        name: 'Brennan',
         role: 'Artist, printer',
         email: 'brennan@tiltedgames.org',
         description: 'Creative Direction',
         image: img_brennan
     },
     {
-        name: "Ian",
+        name: 'Ian',
         role: 'Comp. Game Science, U.C. Irvine',
         email: 'relreo@tiltedgames.org',
         description: 'Developer (Unity) & Creative Direction',
         image: img_ian
     },
     {
-        name: "Johnny",
+        name: 'Johnny',
         role: 'Economics, U.C. Santa Barbara',
         email: 'jbravo@tiltedgames.org',
         description: 'Accountant & Public Relations Director',
         image: img_johnny
     },
     {
-        name: "Luke",
+        name: 'Luke',
         role: 'Writer',
         email: 'blaeku@tiltedgames.org',
         description: 'Publicist & Creative Direction',
         image: img_luke
     },
     {
-        name: "Noah",
+        name: 'Noah',
         role: 'Comp. Engineering, U.C. Santa Barbara',
         email: 'noah@tiltedgames.org',
         description: 'Developer (Unity, Server & Website)',
         image: img_noah
     },
     {
-        name: "Olivia",
+        name: 'Olivia',
         role: 'Artist',
         email: 'olivia@tiltedgames.org',
         description: 'Creative Direction & Map Design',
@@ -106,14 +110,14 @@ function useTilt(active) {
             const px = (state.mouseX - state.rect.left) / state.rect.width;
             const py = (state.mouseY - state.rect.top) / state.rect.height;
 
-            el.style.setProperty("--px", px);
-            el.style.setProperty("--py", py);
+            el.style.setProperty('--px', px);
+            el.style.setProperty('--py', py);
         };
 
-        el.addEventListener("mousemove", handleMouseMove);
+        el.addEventListener('mousemove', handleMouseMove);
 
         return () => {
-            el.removeEventListener("mousemove", handleMouseMove);
+            el.removeEventListener('mousemove', handleMouseMove);
         };
     }, [active]);
 
@@ -125,13 +129,13 @@ const initialState = {
 };
 
 const slidesReducer = (state, event) => {
-    if (event.type === "PREV") {
+    if (event.type === 'PREV') {
         return {
             ...state,
             slideIndex: (state.slideIndex + 1) % slides.length
         };
     }
-    else if (event.type === "NEXT") {
+    else if (event.type === 'NEXT') {
         return {
             ...state,
             slideIndex:
@@ -151,15 +155,15 @@ function Slide({ slide, offset }) {
     return (
         <SlideElement
             ref={ ref }
-            className="slide"
+            className='slide'
             data-active={ active }
             style={ {
-                "--offset": offset,
-                "--dir": offset === 0 ? 0 : offset > 0 ? 1 : -1
+                '--offset': offset,
+                '--dir': offset === 0 ? 0 : offset > 0 ? 1 : -1
             } }
         >
             <SlideBackground
-                className="slideBackground"
+                className='slideBackground'
                 ref={ refScroll }
                 style={ { backgroundImage: `url('${slide.image}')`, visibility: (isVisible) ? `visible` : `hidden` } }
             />
@@ -167,11 +171,11 @@ function Slide({ slide, offset }) {
                 className="slideContent"
                 style={ { backgroundImage: `url('${slide.image}')` } }
             >
-                <SlideContentInner className="slideContentInner">
-                    <SlideTitle className="slideTitle">{ slide.name }</SlideTitle>
-                    <SlideSubtitle className="slideSubtitle">{ slide.role }</SlideSubtitle>
-                    <SlideDescription className="slideDescription">{ slide.description }</SlideDescription>
-                    <SlideDescription className="slideDescription">{ slide.email }</SlideDescription>
+                <SlideContentInner className='slideContentInner'>
+                    <SlideTitle className='slideTitle'>{ slide.name }</SlideTitle>
+                    <SlideSubtitle className='slideSubtitle'>{ slide.role }</SlideSubtitle>
+                    <SlideDescription className='slideDescription'>{ slide.description }</SlideDescription>
+                    <SlideDescription className='slideDescription'>{ slide.email }</SlideDescription>
                 </SlideContentInner>
             </SlideContent>
         </SlideElement>
@@ -343,13 +347,13 @@ const MemberCarousel = () => {
     return(<>
         <SlideContainer>
             <Slides className="slides">
-                <Carousel_L_R onClick={ () => dispatch({ type: "NEXT" } ) }>‹</Carousel_L_R>
+                <Carousel_L_R onClick={ () => dispatch({ type: 'NEXT' } ) }>‹</Carousel_L_R>
 
                 {[...slides, ...slides, ...slides].map((slide, i) => {
                     let offset = slides.length + (state.slideIndex - i);
                     return <Slide slide={ slide } offset={ offset } key={ i } />;
                 })}
-                <Carousel_L_R onClick={ () => dispatch({ type: "PREV" } ) }>›</Carousel_L_R>
+                <Carousel_L_R onClick={ () => dispatch({ type: 'PREV' } ) }>›</Carousel_L_R>
             </Slides>
         </SlideContainer>
 

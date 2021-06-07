@@ -3,10 +3,9 @@ import {
     FaWindows,
     FaApple,
     FaLinux,
-    MdKeyboardArrowDown,
     MdArrowForward,
-    MdKeyboardArrowRight, FaTimesCircle
-} from "react-icons/all";
+    FaTimesCircle
+} from 'react-icons/all';
 
 const buttonBG = '#fff';
 const buttonText = '#000';

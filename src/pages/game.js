@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
     SectionText,
     PageHeading,
     PageSubheading
-} from "../components/design";
+} from '../components/design';
 import {
     DownloadButtons,
     WindowsButton,
