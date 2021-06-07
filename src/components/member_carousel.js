@@ -195,10 +195,6 @@ const Slides = styled.div `
 `
 
 const SlideContent = styled.div `
-  width: 30vw;
-  height: 40vw;
-  max-width: 600px;
-  max-height: 750px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -209,8 +205,26 @@ const SlideContent = styled.div `
   align-content: center;
 
   transform-style: preserve-3d;
-  transform: perspective(1000px) translateX(calc(100% * var(--offset)))
+  transform: perspective(1000px) translateX(calc(80% * var(--offset)))
   rotateY(calc(-45deg * var(--dir)));
+
+  width: 750px;
+  height: 750px;
+
+  @media screen and (max-width: 1600px) {
+    width: 500px;
+    height: 500px;
+  }
+
+  @media screen and (max-width: 1080px) {
+    width: 375px;
+    height: 375px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 250px;
+    height: 250px;
+  }
 `
 
 const SlideContentInner = styled.div `

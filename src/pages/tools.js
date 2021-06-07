@@ -9,7 +9,7 @@ import {
 import {
     PageHeading,
     PageSubheading,
-    BoldText, SectionText
+    Text, SectionText
 } from "../components/design";
 import {
     ButtonWrapper,
@@ -41,30 +41,30 @@ const Tools = () => {
             </Row>
             <Row>
                 <Column_FullWidth>
-                    <BoldText>
+                    <Text>
                         Lightning Fast<br />
                         Speed, where you need it most!
-                    </BoldText>
-                    <BoldText>
+                    </Text>
+                    <Text>
                         Voice Chat<br />
                         Talk with your friends on an encrypted voice server
-                    </BoldText>
-                    <BoldText>
+                    </Text>
+                    <Text>
                         Text Chat<br />
                         No mic? No problem! Chat with your friends via text
-                    </BoldText>
-                    <BoldText>
+                    </Text>
+                    <Text>
                         Built for ML<br />
                         Hand-crafted from the ground up to support machine learning
-                    </BoldText>
-                    <BoldText>
+                    </Text>
+                    <Text>
                         .NET Web Sockets<br />
                         Built on a strong foundation, developed and supported by Microsoft
-                    </BoldText>
-                    <BoldText>
+                    </Text>
+                    <Text>
                         Storage<br />
                         Save and load network data incredibly fast using Redis!
-                    </BoldText>
+                    </Text>
                     <ButtonWrapper>
                         <SectionText>Download</SectionText>
                         <DownloadButtons>

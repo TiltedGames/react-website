@@ -9,7 +9,7 @@ import {
 import {
     PageHeading,
     PageSubheading,
-    BoldText
+    Text
 } from "../components/design";
 import RepoImage_1 from "../media/img/stock_1.jpg"
 import RepoImage_2 from "../media/img/stock_1.jpg"
@@ -106,7 +106,7 @@ const Github = () => {
             </Row>
             <Row>
                 <Column_FullWidth>
-                    <BoldText>
+                    <Text>
                         Great software begins with great people.
                         Our goal is not just to create games,
                         but to foster an open environment
@@ -116,7 +116,7 @@ const Github = () => {
                         host <a style={ { color: '#fff' } } href='#'> a Discord server</a> open
                         to the public. Come say hi and see where
                         development is at!
-                    </BoldText>
+                    </Text>
                 </Column_FullWidth>
             </Row>
             <RepoCards>

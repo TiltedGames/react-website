@@ -159,10 +159,19 @@ const Slides = styled.div `
 `
 
 const SlideContent = styled.div `
-  width: 30vw;
-  height: 40vw;
-  max-width: 600px;
-  max-height: 750px;
+  width: 600px;
+  height: 750px;
+
+  @media screen and (max-width: 1080px) {
+    width: 300px;
+    height: 375px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 200px;
+    height: 250px;
+  }
+  
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;

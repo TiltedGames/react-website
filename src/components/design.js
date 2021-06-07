@@ -47,35 +47,6 @@ export const PageSubheading = styled.h1 `
   }
 `
 
-export const SectionHeading = styled.h1 `
-  font-family: 'NeutralFace';
-  color: #fff;
-  text-align: center;
-  margin: 0;
-  padding: 25px;
-  font-weight: bold;
-  vertical-align: center;
-  align-items: center;
-  font-size: 100px;
-  height: 100%;
-
-  @media screen and (max-width: 2048px) {
-    font-size: 50px;
-  }
-
-  @media screen and (max-width: 1080px) {
-    font-size: 35px;
-  }
-
-  @media screen and (max-width: 768px) {
-    font-size: 20px;
-  }
-
-  @media screen and (max-width: 480px) {
-    font-size: 16px;
-  }
-`
-
 export const SectionText = styled.h2 `
   font-family: 'Poppins', sans-serif;
   color: #fff;
@@ -104,13 +75,13 @@ export const SectionText = styled.h2 `
   }
 `
 
-export const BoldText = styled.p `
+export const Text = styled.p `
   font-size: 26px;
   text-align: left;
   margin: 0 0 0 100px;
   color: #fff;
   width: 100%;
-  padding: 75px 25px;
+  padding: 25px;
   max-width: calc(100% - 200px);
   
   @media screen and (max-width: 768px) {

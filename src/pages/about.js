@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import {
     PageHeading,
     PageSubheading,
-    BoldText
+    Text
 } from "../components/design";
 import {
     PageContent,
@@ -20,8 +20,8 @@ import MemberCarousel from "../components/member_carousel";
 
 */
 
-const OrganizationInfo = styled.h1 `
-  margin: 100px 0;
+const OrganizationInfo = styled.p `
+  margin: 75px 0;
 `
 
 /*
@@ -49,7 +49,7 @@ const About = () => {
             <Row>
                 <Column_FullWidth>
                     <OrganizationInfo>
-                        <BoldText>
+                        <Text>
                             Our focus is currently on a game called Recoup! It's an online, co-op experience
                             coming to PC, Xbox, Playstation. We're also hoping to support mobile devices and
                             cross platform play. Check out <a style={ { color: '#fff' } } href="#">the Recoup page</a> to see where we're at!
@@ -58,7 +58,7 @@ const About = () => {
                             software is open source, covered by the MIT license.
                             <br /><br />
                             Feeling chatty? Come say hi on <a style={ { color: '#fff' } } href="#">our Discord</a>!
-                        </BoldText>
+                        </Text>
                     </OrganizationInfo>
                 </Column_FullWidth>
             </Row>
