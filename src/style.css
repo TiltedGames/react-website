@@ -37,14 +37,11 @@ body {
   -ms-overflow-style: none;  /* IE and Edge */
 }
 
-@keyframes pulse {
-  0% {
-    background: rgba(200, 200, 200, 1.0);
-  }
-
-  50% {
-    background: rgba(200, 200, 200, 0.8);
-  }
+::selection {
+  background: transparent; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: transparent; /* Gecko Browsers */
 }
 
 .cursor {

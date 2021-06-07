@@ -57,37 +57,6 @@ const slides = [
     }
 ];
 
-const TeamButton = styled.div `
-  font-family: Poppins, sans-serif;
-  color: #000;
-  text-align: center;
-  margin: 100px 0 50px 0;
-  padding: 25px;
-  font-weight: bold;
-  align-items: center;
-  font-size: 60px;
-
-  background: rgba(200, 200, 200, 1.0);
-
-  @media screen and (max-width: 2048px) {
-    font-size: 50px;
-  }
-
-  @media screen and (max-width: 1080px) {
-    font-size: 35px;
-  }
-
-  @media screen and (max-width: 768px) {
-    font-size: 20px;
-  }
-
-  @media screen and (max-width: 480px) {
-    font-size: 16px;
-  }
-  
-  animation: pulse 2s infinite;
-`
-
 export const SlideContainer = styled.div `
   display: flex;
   justify-content: center;
@@ -146,7 +115,7 @@ const slidesReducer = (state, event) => {
             slideIndex: (state.slideIndex + 1) % slides.length
         };
     }
-    if (event.type === "NEXT") {
+    else if (event.type === "NEXT") {
         return {
             ...state,
             slideIndex:
@@ -162,31 +131,27 @@ function Slide({ slide, offset }) {
 
     return (
         <SlideElement
-            ref={ref}
+            ref={ ref }
             className="slide"
-            data-active={active}
-            style={{
+            data-active={ active }
+            style={ {
                 "--offset": offset,
                 "--dir": offset === 0 ? 0 : offset > 0 ? 1 : -1
-            }}
+            } }
         >
             <SlideBackground
                 className="slideBackground"
-                style={{
-                    backgroundImage: `url('${slide.image}')`
-                }}
+                style={ { backgroundImage: `url('${slide.image}')` } }
             />
             <SlideContent
                 className="slideContent"
-                style={{
-                    backgroundImage: `url('${slide.image}')`
-                }}
+                style={ { backgroundImage: `url('${slide.image}')` } }
             >
                 <SlideContentInner className="slideContentInner">
-                    <SlideTitle className="slideTitle">{slide.name}</SlideTitle>
-                    <SlideSubtitle className="slideSubtitle">{slide.role}</SlideSubtitle>
-                    <SlideDescription className="slideDescription">{slide.description}</SlideDescription>
-                    <SlideDescription className="slideDescription">{slide.email}</SlideDescription>
+                    <SlideTitle className="slideTitle">{ slide.name }</SlideTitle>
+                    <SlideSubtitle className="slideSubtitle">{ slide.role }</SlideSubtitle>
+                    <SlideDescription className="slideDescription">{ slide.description }</SlideDescription>
+                    <SlideDescription className="slideDescription">{ slide.email }</SlideDescription>
                 </SlideContentInner>
             </SlideContent>
         </SlideElement>
@@ -310,25 +275,7 @@ const MemberCarousel = () => {
     const [state, dispatch] = React.useReducer(slidesReducer, initialState);
 
     return(<>
-        <a href='#'
-           style={
-               !showing
-                   ? { height: 'auto', visibility: 'visible',  textDecoration: 'none', color: '#000' }
-                   : { height: '0', visibility: 'hidden',  textDecoration: 'none', color: '#000' }
-           }
-        >
-            <Carousel_Expand onClick={ () => { toggleShow(true) } }>
-                Meet the team
-            </Carousel_Expand>
-        </a>
-
-        <SlideContainer
-            style = {
-                showing
-                    ? { height: 'auto', visibility: 'visible' }
-                    : { height: '0', visibility: 'hidden'}
-            }
-        >
+        <SlideContainer>
             <Slides className="slides">
                 <Carousel_L_R onClick={ () => dispatch({ type: "NEXT" } ) }>‹</Carousel_L_R>
 

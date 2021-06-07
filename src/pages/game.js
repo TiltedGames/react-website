@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {
-    DownloadText,
+    SectionText,
     PageHeading,
     PageSubheading
 } from "../components/design";
@@ -78,7 +78,7 @@ const Game = () => {
             </Row>
             <Row>
                 <ConceptArtCarousel />
-                <DownloadText>Download (Alpha)</DownloadText>
+                <SectionText>Download (Alpha)</SectionText>
                 <Column_FullWidth>
                         <DownloadButtons>
                             <WindowsButton><a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Windows).zip"><WinIcon size={48} /></a></WindowsButton>

@@ -1,41 +1,40 @@
 import React, { useReducer, useState, useEffect, useRef } from 'react'
 import styled from "styled-components";
-import img_brennan from "../media/img/members/brennan.jpg";
-import img_ian from "../media/img/members/ian.jpg";
-import img_johnny from "../media/img/members/johnny.jpg";
-import img_luke from "../media/img/members/luke.jpg";
-import img_noah from "../media/img/members/noah.jpg";
-import img_olivia from "../media/img/members/olivia.jpg";
+import img_helmet_1 from "../media/img/concept_art/helmet_1.jpg";
+import img_helmet_2 from "../media/img/concept_art/helmet_2.jpg";
+import img_helmet_3 from "../media/img/concept_art/helmet_3.jpg";
+import img_clothing from "../media/img/concept_art/clothing_design.jpg";
+import img_shirakawa from "../media/img/concept_art/shirakawa.jpg";
+import img_japan from "../media/img/concept_art/japan.jpg";
 import {
-    Carousel_Expand,
-    Carousel_L_R,
-    Carousel_Exit
+    Carousel_L_R
 } from '../components/buttons'
+import { SectionText } from "./design";
 
 const slides = [
     {
-        name: "1",
-        image: img_brennan
+        name: "1/6",
+        image: img_helmet_1
     },
     {
-        name: "2",
-        image: img_ian
+        name: "2/6",
+        image: img_helmet_2
     },
     {
-        name: "3",
-        image: img_johnny
+        name: "3/6",
+        image: img_helmet_3
     },
     {
-        name: "4",
-        image: img_luke
+        name: "4/6",
+        image: img_clothing
     },
     {
-        name: "5",
-        image: img_noah
+        name: "5/6",
+        image: img_shirakawa
     },
     {
-        name: "6",
-        image: img_olivia
+        name: "6/6",
+        image: img_japan
     }
 ];
 
@@ -43,7 +42,8 @@ export const SlideContainer = styled.div `
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 250px;
+  margin-top: 40px;
+  text-align: center;
 `
 
 function useTilt(active) {
@@ -61,12 +61,10 @@ function useTilt(active) {
         let el = ref.current;
 
         const handleMouseMove = (e) => {
-            if (!el) {
-                return;
-            }
-            if (!state.rect) {
-                state.rect = el.getBoundingClientRect();
-            }
+            if (!el) { return; }
+
+            if (!state.rect) { state.rect = el.getBoundingClientRect(); }
+
             state.mouseX = e.clientX;
             state.mouseY = e.clientY;
             const px = (state.mouseX - state.rect.left) / state.rect.width;
@@ -78,9 +76,7 @@ function useTilt(active) {
 
         el.addEventListener("mousemove", handleMouseMove);
 
-        return () => {
-            el.removeEventListener("mousemove", handleMouseMove);
-        };
+        return () => { el.removeEventListener("mousemove", handleMouseMove); };
     }, [active]);
 
     return ref;
@@ -113,31 +109,20 @@ function Slide({ slide, offset }) {
 
     return (
         <SlideElement
-            ref={ref}
+            ref={ ref }
             className="slide"
-            data-active={active}
-            style={{
+            data-active={ active }
+            style={ {
                 "--offset": offset,
                 "--dir": offset === 0 ? 0 : offset > 0 ? 1 : -1
-            }}
+            } }
         >
-            <SlideBackground
-                className="slideBackground"
-                style={{
-                    backgroundImage: `url('${slide.image}')`
-                }}
-            />
             <SlideContent
                 className="slideContent"
-                style={{
-                    backgroundImage: `url('${slide.image}')`
-                }}
+                style={ { backgroundImage: `url('${slide.image}')` } }
             >
                 <SlideContentInner className="slideContentInner">
-                    <SlideTitle className="slideTitle">{slide.name}</SlideTitle>
-                    <SlideSubtitle className="slideSubtitle">{slide.role}</SlideSubtitle>
-                    <SlideDescription className="slideDescription">{slide.description}</SlideDescription>
-                    <SlideDescription className="slideDescription">{slide.email}</SlideDescription>
+                    <SlideNumber className="slideTitle">{slide.name}</SlideNumber>
                 </SlideContentInner>
             </SlideContent>
         </SlideElement>
@@ -151,25 +136,18 @@ const SlideElement = styled.div `
     z-index: 2;
     pointer-events: auto;
 
-    .slideBackground {
-      opacity: 0.2;
-      transform: none;
-    }
-
     .slideContentInner {
       opacity: 1;
     }
 
     .slideContent {
+
       --x: calc(var(--px) - 0.5);
       --y: calc(var(--py) - 0.5);
       opacity: 1;
 
-      transform: perspective(1000px);
-
       &:hover {
         transition: none;
-        transform: perspective(1000px) rotateY(calc(var(--x) * 45deg))
         rotateX(calc(var(--y) * -45deg));
       }
     }
@@ -190,9 +168,10 @@ const SlideContent = styled.div `
   background-repeat: no-repeat;
   transition: transform 0.5s ease-in-out;
   opacity: 0.7;
+  text-align: center;
 
   display: grid;
-  align-content: center;
+  align-content: end;
 
   transform-style: preserve-3d;
   transform: perspective(1000px) translateX(calc(100% * var(--offset)))
@@ -207,45 +186,18 @@ const SlideContentInner = styled.div `
   opacity: 0;
 `
 
-const SlideBackground = styled.div `
-  position: fixed;
-  top: 0;
-  left: -10%;
-  right: -10%;
-  bottom: 0;
-  background-size: cover;
-  background-position: center center;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.3s linear, transform 0.3s ease-in-out;
-  pointer-events: none;
-
-  transform: translateX(calc(10% * var(--dir)));
-`
-
-const SlideTitle = styled.h2 `
+const SlideNumber = styled.h2 `
   font-family: NeutralFace-Bold, sans-serif;
   font-size: 3rem;
-  text-align:left;
   font-weight: normal;
   letter-spacing: 0.2ch;
   text-transform: uppercase;
-  margin: 0;
+  margin-bottom: -30px;
   color: #fff;
 
   @media screen and (max-width: 800px) {
     font-size: 2rem;
   }
-`
-
-const SlideSubtitle = styled.h3 `
-  font-size: 1.5rem;
-  text-align:left;
-  font-weight: normal;
-  letter-spacing: 0.2ch;
-  text-transform: uppercase;
-  margin: 30px 0 30px 0;
-  color: #fff;
 `
 
 const SlideDescription = styled.p `
@@ -261,25 +213,8 @@ const ConceptArtCarousel = () => {
     const [state, dispatch] = React.useReducer(slidesReducer, initialState);
 
     return(<>
-        <a href='#'
-           style={
-               !showing
-                   ? { height: 'auto', visibility: 'visible',  textDecoration: 'none', color: '#000' }
-                   : { height: '0', visibility: 'hidden',  textDecoration: 'none', color: '#000' }
-           }
-        >
-            <Carousel_Expand onClick={ () => { toggleShow(true) } }>
-                Concept Art
-            </Carousel_Expand>
-        </a>
-
-        <SlideContainer
-            style = {
-                showing
-                    ? { height: 'auto', visibility: 'visible' }
-                    : { height: '0', visibility: 'hidden'}
-            }
-        >
+        <SectionText>Concept Art</SectionText>
+        <SlideContainer>
             <Slides className="slides">
                 <Carousel_L_R onClick={ () => dispatch({ type: "NEXT" } ) }>‹</Carousel_L_R>
 
@@ -290,17 +225,6 @@ const ConceptArtCarousel = () => {
                 <Carousel_L_R onClick={ () => dispatch({ type: "PREV" } ) }>›</Carousel_L_R>
             </Slides>
         </SlideContainer>
-
-        { showing &&
-        <a href='#'
-           style={
-               showing
-                   ? { height: 'auto', visibility: 'visible',  textDecoration: 'none', color: '#000' }
-                   : { height: '0', visibility: 'hidden',  textDecoration: 'none', color: '#000' }
-           }
-        >
-            <Carousel_Exit onClick={ () => { toggleShow(false) } }/>
-        </a>
         }
         </>);
 }

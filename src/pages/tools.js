@@ -9,7 +9,7 @@ import {
 import {
     PageHeading,
     PageSubheading,
-    BoldText, DownloadText
+    BoldText, SectionText
 } from "../components/design";
 import {
     ButtonWrapper,
@@ -35,7 +35,7 @@ const Tools = () => {
                 </Column_Heading_Left>
                 <Column_Heading_Right>
                     <PageSubheading>
-                        Host your own server for Recoup, or start your own multiplayer project!
+                        Host your own server for Recoup, or start your own multiplayer project
                     </PageSubheading>
                 </Column_Heading_Right>
             </Row>
@@ -66,7 +66,7 @@ const Tools = () => {
                         Save and load network data incredibly fast using Redis!
                     </BoldText>
                     <ButtonWrapper>
-                        <DownloadText>Download</DownloadText>
+                        <SectionText>Download</SectionText>
                         <DownloadButtons>
                             <WindowsButton><a href="#"><WinIcon size={48} /></a></WindowsButton>
                         </DownloadButtons>

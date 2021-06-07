@@ -100,8 +100,7 @@ const Github = () => {
                 </Column_Heading_Left>
                 <Column_Heading_Right>
                     <PageSubheading>
-                        We proudly support open-source
-                        software. Access ours on Github, for free!
+                        We proudly develop open-source software
                     </PageSubheading>
                 </Column_Heading_Right>
             </Row>
