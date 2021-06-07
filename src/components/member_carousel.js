@@ -61,7 +61,6 @@ export const SlideContainer = styled.div `
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 250px;
 `
 
 function useTilt(active) {
@@ -209,21 +208,21 @@ const SlideContent = styled.div `
   rotateY(calc(-45deg * var(--dir)));
 
   width: 750px;
-  height: 750px;
+  height: 600px;
 
-  @media screen and (max-width: 1600px) {
-    width: 500px;
+  @media screen and (max-height: 1440px) {
+    width: 600px;
     height: 500px;
   }
 
-  @media screen and (max-width: 1080px) {
-    width: 375px;
-    height: 375px;
+  @media screen and (max-height: 1080px) {
+    width: 400px;
+    height: 325px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-height: 480px) {
     width: 250px;
-    height: 250px;
+    height: 200px;
   }
 `
 
@@ -261,8 +260,16 @@ const SlideTitle = styled.h2 `
   margin: 0;
   color: #fff;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-height: 1440px) {
     font-size: 2rem;
+  }
+
+  @media screen and (max-height: 1080px) {
+    font-size: 1.5rem;
+  }
+
+  @media screen and (max-height: 480px) {
+    font-size: 1rem;
   }
 `
 
@@ -274,6 +281,18 @@ const SlideSubtitle = styled.h3 `
   text-transform: uppercase;
   margin: 30px 0 30px 0;
   color: #fff;
+
+  @media screen and (max-height: 1440px) {
+    font-size: 1rem;
+  }
+
+  @media screen and (max-height: 1080px) {
+    font-size: 0.8rem;
+  }
+
+  @media screen and (max-height: 480px) {
+    font-size: 0.6rem;
+  }
 `
 
 const SlideDescription = styled.p `
@@ -282,6 +301,18 @@ const SlideDescription = styled.p `
   font-size: 1.0rem;
   letter-spacing: 0.2ch;
   color: #fff;
+
+  @media screen and (max-height: 1440px) {
+    font-size: 0.8rem;
+  }
+
+  @media screen and (max-height: 1080px) {
+    font-size: 0.6rem;
+  }
+
+  @media screen and (max-height: 480px) {
+    font-size: 0.5rem;
+  }
 `
 
 const MemberCarousel = () => {

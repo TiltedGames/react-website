@@ -29,7 +29,7 @@ const Contact = () => {
     }
 
     return (
-        <PageContent>
+        <PageContent id='contact'>
             <Row>
                 <Column_Heading_Left>
                     <PageHeading>

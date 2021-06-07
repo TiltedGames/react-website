@@ -26,7 +26,7 @@ const BugReport = () => {
     }
 
     return (
-        <PageContent>
+        <PageContent id='bugreport'>
             <Row>
                 <Column_Heading_Left>
                     <PageHeading>

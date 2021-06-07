@@ -63,7 +63,7 @@ const slides = [
 
 const Game = () => {
     return (
-        <PageContent>
+        <PageContent id='recoup'>
             <Row>
                 <Column_Heading_Left>
                     <PageHeading>
@@ -76,14 +76,14 @@ const Game = () => {
                     </PageSubheading>
                 </Column_Heading_Right>
             </Row>
-            <Row>
+            <Row id='recoup-concept-art'>
                 <ConceptArtCarousel />
                 <SectionText>Download (Alpha)</SectionText>
-                <Column_FullWidth>
+                <Column_FullWidth id='recoup-download'>
                         <DownloadButtons>
-                            <WindowsButton><a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Windows).zip"><WinIcon size={48} /></a></WindowsButton>
-                            <MacButton><a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(macOS).zip"><MacIcon size={48} /></a></MacButton>
-                            <LinuxButton><a href="https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Linux).zip"><LinIcon size={48} /></a></LinuxButton>
+                            <WindowsButton><a href='https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Windows).zip'><WinIcon size={48} /></a></WindowsButton>
+                            <MacButton><a href='https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(macOS).zip'><MacIcon size={48} /></a></MacButton>
+                            <LinuxButton><a href='https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Linux).zip'><LinIcon size={48} /></a></LinuxButton>
                         </DownloadButtons>
                 </Column_FullWidth>
             </Row>

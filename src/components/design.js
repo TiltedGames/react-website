@@ -50,8 +50,8 @@ export const PageSubheading = styled.h1 `
 export const SectionText = styled.h2 `
   font-family: 'Poppins', sans-serif;
   color: #fff;
-  text-align: center;
-  margin: 200px 0 0 0;
+  text-align: left;
+  margin: 100px 0 0 0;
   padding: 25px;
   font-weight: bold;
   align-items: center;
@@ -76,7 +76,7 @@ export const SectionText = styled.h2 `
 `
 
 export const Text = styled.p `
-  font-size: 26px;
+  font-size: 20px;
   text-align: left;
   margin: 0 0 0 100px;
   color: #fff;
@@ -85,10 +85,10 @@ export const Text = styled.p `
   max-width: calc(100% - 200px);
   
   @media screen and (max-width: 768px) {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 16px;
+    font-size: 14px;
   }
 `

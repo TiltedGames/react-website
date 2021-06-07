@@ -91,7 +91,7 @@ const Github = () => {
     }
 
     return (
-        <PageContent>
+        <PageContent id='github'>
             <Row>
                 <Column_Heading_Left>
                     <PageHeading>
@@ -126,7 +126,9 @@ const Github = () => {
                                 href='#'
                                 style={ { color: '#fff'}}
                             >
-                                <RepoName>Recoup</RepoName>
+                                <RepoName>
+                                    Recoup
+                                </RepoName>
                             </a>
                             <RepoDescription>
                                 This repo hosts the Unity project and all art assets used in the making of Recoup. It also includes binaries ready to play of the current development version.
@@ -141,7 +143,9 @@ const Github = () => {
                                 href='#'
                                 style={ { color: '#fff'}}
                             >
-                                <RepoName>One Click Server</RepoName>
+                                <RepoName>
+                                    One Click Server
+                                </RepoName>
                             </a>
                             <RepoDescription>
                                 This repo hosts the server that drives Recoup. Its a great starting point for making your own multiplayer game or project!
@@ -156,7 +160,9 @@ const Github = () => {
                                 href='#'
                                 style={ { color: '#fff'}}
                             >
-                                <RepoName>This Website</RepoName>
+                                <RepoName>
+                                    This Website
+                                </RepoName>
                             </a>
                             <RepoDescription>
                                 Like the website? Check out the React project here!

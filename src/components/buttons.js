@@ -158,26 +158,26 @@ export const Carousel_L_R = styled.div `
   font-size: 20rem;
   width: 20rem;
   height: 20rem;
-  top: 20%;
+  top: 2%;
   transition: opacity 0.3s;
   opacity: 0.7;
   z-index: 5;
 
-  @media screen and (max-width: 1800px) {
-    top: 5%;
+  @media screen and (max-width: 1440px) {
+    top: 3%;
   }
 
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-height: 1080px) {
     top: 15%;
     font-size: 10rem;
     width: 15rem;
     height: 10rem;
   }
 
-  @media screen and (max-width: 800px) {
-    top: 30%;
+  @media screen and (max-height: 480px) {
+    top: 20%;
     font-size: 5rem;
-    width: 15rem;
+    width: 10rem;
     height: 5rem;
   }
 

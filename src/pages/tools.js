@@ -26,11 +26,13 @@ import {
 
 const Tools = () => {
     return (
-        <PageContent>
+        <PageContent id='server'>
             <Row>
                 <Column_Heading_Left>
                     <PageHeading>
-                        One<br />Click<br />Server
+                        One<br />
+                        Click<br />
+                        Server
                     </PageHeading>
                 </Column_Heading_Left>
                 <Column_Heading_Right>
@@ -65,10 +67,14 @@ const Tools = () => {
                         Storage<br />
                         Save and load network data incredibly fast using Redis!
                     </Text>
-                    <ButtonWrapper>
-                        <SectionText>Download</SectionText>
+                    <ButtonWrapper id='server-download'>
+                        <SectionText>
+                            Download
+                        </SectionText>
                         <DownloadButtons>
-                            <WindowsButton><a href="#"><WinIcon size={48} /></a></WindowsButton>
+                            <WindowsButton>
+                                <a href='#'><WinIcon size={48} /></a>
+                            </WindowsButton>
                         </DownloadButtons>
                     </ButtonWrapper>
                 </Column_FullWidth>

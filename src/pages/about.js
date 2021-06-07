@@ -2,7 +2,7 @@ import React, { useReducer, useState } from 'react'
 import styled from 'styled-components'
 import {
     PageHeading,
-    PageSubheading,
+    PageSubheading, SectionText,
     Text
 } from "../components/design";
 import {
@@ -21,7 +21,7 @@ import MemberCarousel from "../components/member_carousel";
 */
 
 const OrganizationInfo = styled.p `
-  margin: 75px 0;
+  margin: 150px 0 0 0;
 `
 
 /*
@@ -32,7 +32,7 @@ const OrganizationInfo = styled.p `
 
 const About = () => {
     return (
-        <PageContent>
+        <PageContent id='about'>
             <Row>
                 <Column_Heading_Left>
                     <PageHeading>
@@ -47,8 +47,15 @@ const About = () => {
                 </Column_Heading_Right>
             </Row>
             <Row>
-                <Column_FullWidth>
+                <Column_FullWidth
+                    style={ { marginBottom: '80px' } }
+                >
                     <OrganizationInfo>
+                        <MemberCarousel />
+                    </OrganizationInfo>
+                        <SectionText>
+                            About us
+                        </SectionText>
                         <Text>
                             Our focus is currently on a game called Recoup! It's an online, co-op experience
                             coming to PC, Xbox, Playstation. We're also hoping to support mobile devices and
@@ -59,14 +66,6 @@ const About = () => {
                             <br /><br />
                             Feeling chatty? Come say hi on <a style={ { color: '#fff' } } href="#">our Discord</a>!
                         </Text>
-                    </OrganizationInfo>
-                </Column_FullWidth>
-            </Row>
-            <Row>
-                <Column_FullWidth
-                    style={ { marginBottom: '80px' } }
-                >
-                    <MemberCarousel />
                 </Column_FullWidth>
             </Row>
         </PageContent>

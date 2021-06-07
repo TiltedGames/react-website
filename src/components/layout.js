@@ -2,13 +2,11 @@ import styled from "styled-components";
 
 export const PageContent = styled.div `
   max-width: calc(100vw - 200px);
-  padding: 0;
+  padding: 25px 0;
   position: relative;
   z-index: 1;
   box-sizing: border-box;
-  min-height: 90vh;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  min-height: 100vh;
 `
 
 export const Row = styled.div `

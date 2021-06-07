@@ -4,6 +4,7 @@ import {
     FaGithub,
     FaDonate
 } from "react-icons/all";
+import { Link } from 'react-scroll'
 import styled from "styled-components";
 import roundLogo from "../media/img/round-logo.png";
 
@@ -125,29 +126,17 @@ export const Caret = styled(FaPlus) `
 
 */
 
-const NavBar = ({ toggle }) => {
+const NavBar = ({ myRef, scroll }) => {
 
     // states for subpage expansion (toggle via hover / active page)
     const [AboutExpanded, toggleAboutExpanded] = useState(true);
     const [RecoupExpanded, toggleRecoupExpanded] = useState(false);
     const [ServerExpanded, toggleServerExpanded] = useState(false);
     const [ContactExpanded, toggleContactExpanded] = useState(false);
-    const [GithubHomeExpanded, toggleGithubHomeExpanded] = useState(false);
-    const [GithubRecoupExpanded, toggleGithubRecoupExpanded] = useState(false);
-    const [GithubServerExpanded, toggleGithubServerExpanded] = useState(false);
-    const [GithubWebsiteExpanded, toggleGithubWebsiteExpanded] = useState(false);
-    const [GithubDonateExpanded, toggleGithubDonatExpanded] = useState(false);
-    const [GithubExpanded, toggleGithubExpanded] = useState(false);
     const onHover_0 = () => { toggleAboutExpanded(!AboutExpanded) }
     const onHover_1 = () => { toggleRecoupExpanded(!RecoupExpanded) }
     const onHover_2 = () => { toggleServerExpanded(!ServerExpanded)}
     const onHover_3 = () => { toggleContactExpanded(!ContactExpanded) }
-    const onHover_4 = () => { toggleGithubExpanded(!GithubExpanded) }
-    const onHover_5 = () => { toggleGithubHomeExpanded(!GithubHomeExpanded) }
-    const onHover_6 = () => { toggleGithubRecoupExpanded(!GithubRecoupExpanded) }
-    const onHover_7 = () => { toggleGithubServerExpanded(!GithubServerExpanded) }
-    const onHover_8 = () => { toggleGithubWebsiteExpanded(!GithubWebsiteExpanded) }
-    const onHover_9 = () => { toggleGithubDonatExpanded(!GithubDonateExpanded) }
 
     return (<>
 
@@ -168,9 +157,9 @@ const NavBar = ({ toggle }) => {
                 >
 
                     {/* [IMG] */}
-                    <a href='#' style={ { color: '#fff', textDecoration: 'none'}}>
-                        <RoundLogo />
-                    </a>
+
+                    <RoundLogo />
+
 
                 </Page>
 
@@ -201,9 +190,10 @@ const NavBar = ({ toggle }) => {
                         />
 
                         {/* [LABEL] */}
-                        <a href='#' style={ { color: '#fff', textDecoration: 'none'}}>
+                        <Link to='recoup' spy={ true } smooth={ true }>
                             <Label>Recoup</Label>
-                        </a>
+                        </Link>
+
 
                         {/* [UL] Subpage links */}
                         <SubpageLinks
@@ -214,6 +204,7 @@ const NavBar = ({ toggle }) => {
                             }
                         >
 
+                            <Link to='recoup-concept-art' spy={ true } smooth={ true }>
                             {/* [LI] */}
                             <SubpageLink
                                 style = {
@@ -223,25 +214,12 @@ const NavBar = ({ toggle }) => {
                                 }
                             >
                                 {/* [LABEL] */}
-                                <a href='#' style={ { color: '#fff', textDecoration: 'none'}}>
-                                    <Label>Concept Art</Label>
-                                </a>
-                            </SubpageLink>
+                                <Label>Concept Art</Label>
 
-                            {/* [LI] */}
-                            <SubpageLink
-                                style = {
-                                    RecoupExpanded
-                                        ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' }
-                                        : { }
-                                }
-                            >
-                                {/* [LABEL] */}
-                                <a href='#' style={ { color: '#fff', textDecoration: 'none'}}>
-                                    <Label>Download</Label>
-                                </a>
                             </SubpageLink>
+                            </Link>
 
+                            <Link to='recoup-download' spy={ true } smooth={ true }>
                             {/* [LI] */}
                             <SubpageLink
                                 style = {
@@ -251,10 +229,25 @@ const NavBar = ({ toggle }) => {
                                 }
                             >
                                 {/* [LABEL] */}
-                                <a href='#' style={ { color: '#fff', textDecoration: 'none'}}>
-                                    <Label>Report a bug</Label>
-                                </a>
+                                <Label>Download</Label>
+
                             </SubpageLink>
+                            </Link>
+
+                            <Link to='bugreport' spy={ true } smooth={ true }>
+                            {/* [LI] */}
+                            <SubpageLink
+                                style = {
+                                    RecoupExpanded
+                                        ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' }
+                                        : { }
+                                }
+                            >
+                                {/* [LABEL] */}
+                                <Label>Report a bug</Label>
+
+                            </SubpageLink>
+                            </Link>
 
                         </SubpageLinks>
                     </LinkWrapper>
@@ -275,10 +268,10 @@ const NavBar = ({ toggle }) => {
                             style={ ServerExpanded && { visibility: 'visible' } }
                         />
 
+                        <Link to='server' spy={ true } smooth={ true }>
                         {/* [LABEL] */}
-                        <a href='#' style={ { color: '#fff', textDecoration: 'none'}}>
-                            <Label>Game server</Label>
-                        </a>
+                        <Label>Game server</Label>
+                        </Link>
 
                         {/* [UL] Subpage links */}
                         <SubpageLinks
@@ -289,6 +282,7 @@ const NavBar = ({ toggle }) => {
                             }
                         >
 
+                            <Link to='server-download' spy={ true } smooth={ true }>
                             {/* [LI] */}
                             <SubpageLink
                                 style = {
@@ -300,7 +294,9 @@ const NavBar = ({ toggle }) => {
                                 {/* [LABEL] */}
                                 <Label>Download</Label>
                             </SubpageLink>
+                            </Link>
 
+                            <Link to='bugreport' spy={ true } smooth={ true }>
                             {/* [LI] */}
                             <SubpageLink
                                 style = {
@@ -310,11 +306,10 @@ const NavBar = ({ toggle }) => {
                                 }
                             >
                                 {/* [LABEL] */}
-                                <a href='#' style={ { color: '#fff', textDecoration: 'none'}}>
-                                    <Label>Report a bug</Label>
-                                </a>
-                            </SubpageLink>
+                                <Label>Report a bug</Label>
 
+                            </SubpageLink>
+                            </Link>
                         </SubpageLinks>
 
                     </LinkWrapper>
@@ -335,10 +330,10 @@ const NavBar = ({ toggle }) => {
                             style={ ContactExpanded && { visibility: 'visible' } }
                         />
 
+                        <Link to='contact' spy={ true } smooth={ true }>
                         {/* [LABEL] */}
-                        <a href='#' style={ { color: '#fff', textDecoration: 'none'}}>
-                            <Label>Contact</Label>
-                        </a>
+                        <Label>Contact</Label>
+                        </Link>
 
                     </LinkWrapper>
 
@@ -354,29 +349,17 @@ const NavBar = ({ toggle }) => {
 
                 </Page>
 
-                <GithubContainer
-                    onMouseEnter={ onHover_4 }
-                    onMouseLeave={ onHover_4 }
-                >
+                <GithubContainer>
 
                     {/* [LI] github (logo) section */}
                     <Page
-                        onMouseEnter={ onHover_5 }
-                        onMouseLeave={ onHover_5 }
-
-                        style={
-                            { zIndex: '1000', paddingBottom: '48px' }
-                        }
+                        style={ { zIndex: '1000', paddingBottom: '48px' } }
                     >
 
-                        <a
-                            href='#'
-                            style={ { textDecoration: 'none', color: '#fff' } }
-                        >
+                        <Link to='github' spy={ true } smooth={ true }>
                             {/* [IMG] */}
                             <GithubIcon />
-                        </a>
-
+                        </Link>
                     </Page>
 
                     {/* Empty, for spacing */}
@@ -385,90 +368,6 @@ const NavBar = ({ toggle }) => {
                         <LinkWrapper>
 
 
-                        </LinkWrapper>
-
-                    </Page>
-
-                    {/* [LI] (github) Recoup section */}
-                    <Page
-                        onMouseEnter={ onHover_6 }
-                        onMouseLeave={ onHover_6 }
-
-                        style = {
-                            GithubExpanded
-                                ? { padding: '0 0 0 0', visibility: 'visible', height: 'auto' }
-                                : { padding: '0 0 0 0', visibility: 'hidden', height: '0' }
-                        }
-                    >
-
-                        {/* [DIV] (white vertical line) */}
-                        <LinkWrapper>
-
-                            {/* [IMG] */}
-                            <Caret
-                                style={ GithubRecoupExpanded && { visibility: 'visible' } }
-                            />
-
-                            {/* [LABEL] */}
-                            <a href='#' style={ { color: '#fff', textDecoration: 'none'}}>
-                                <Label>Recoup</Label>
-                            </a>
-                        </LinkWrapper>
-
-                    </Page>
-
-                    {/* [LI] (github) game Server section */}
-                    <Page
-                        onMouseEnter={ onHover_7 }
-                        onMouseLeave={ onHover_7 }
-
-                        style = {
-                            GithubExpanded
-                                ? { padding: '0 0 0 0', visibility: 'visible', height: 'auto' }
-                                : { padding: '0 0 0 0', visibility: 'hidden', height: '0' }
-                        }
-                    >
-
-                        {/* [DIV] (white vertical line) */}
-                        <LinkWrapper>
-
-                            {/* [IMG] */}
-                            <Caret
-                                style={ GithubServerExpanded && { visibility: 'visible' } }
-                            />
-
-                            {/* [LABEL] */}
-                            <a href='#' style={ { color: '#fff', textDecoration: 'none'}}>
-                                <Label>Game server</Label>
-                            </a>
-                        </LinkWrapper>
-
-                    </Page>
-
-                    {/* [LI] (github) Website section */}
-                    <Page
-                        onMouseEnter={ onHover_8 }
-                        onMouseLeave={ onHover_8 }
-
-                        style = {
-                            GithubExpanded
-                                ? { padding: '0 0 0 0', visibility: 'visible', height: 'auto' }
-                                : { padding: '0 0 0 0', visibility: 'hidden', height: '0' }
-                        }
-                    >
-
-                        {/* [DIV] (white vertical line) */}
-                        <LinkWrapper>
-
-                            {/* [IMG] */}
-                            <Caret
-                                style={ GithubWebsiteExpanded && { visibility: 'visible' } }
-                            />
-
-                            {/* [LABEL] */}
-                            <a href='#' style={ { color: '#fff', textDecoration: 'none'}}>
-                                <Label>This website</Label>
-                            </a>
                         </LinkWrapper>
 
                     </Page>
@@ -486,26 +385,22 @@ const NavBar = ({ toggle }) => {
                 </Page>
 
                 {/* [LI] github donate (logo) section */}
-                <Page
-                    onMouseEnter={ onHover_9 }
-                    onMouseLeave={ onHover_9 }
-                >
-
+                <Page>
                     <a
                         href='#'
                         style={ { textDecoration: 'none', color: '#fff' } }
                     >
+                        <Link to='donate' spy={ true } smooth={ true }>
                         {/* [IMG] */}
                         <DonateIcon size={48} />
+                        </Link>
                     </a>
 
                 </Page>
 
                 {/* Empty, for spacing between github / donate icons while no expansion */}
                 <Page
-                    style = {
-                        { paddingTop: '40px' }
-                    }
+                    style = { { paddingTop: '40px' } }
                 >
                     {/* [DIV] (white vertical line) */}
                     <LinkWrapper>
@@ -514,9 +409,7 @@ const NavBar = ({ toggle }) => {
                     </LinkWrapper>
 
                 </Page>
-
             </Pages>
-
         </Wrapper>
     </>);
 };

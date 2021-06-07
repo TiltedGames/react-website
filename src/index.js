@@ -1,5 +1,5 @@
 import './style.css';
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import ReactDOM from 'react-dom';
 import NavBar from "./components/navbar";
 import About from "./pages/about";
@@ -19,6 +19,9 @@ function App() {
     const [clicked, setClicked] = useState(false);
     const [linkHovered, setLinkHovered] = useState(false);
     const [hidden, setHidden] = useState(false);
+
+    const myRef = useRef(null)
+    const executeScroll = () => myRef.current.scrollIntoView()
 
     useEffect(() => {
         addEventListeners();
@@ -81,6 +84,12 @@ function App() {
             className={ cursorClasses }
             style={ { left: `${ position.x }px`, top: `${ position.y }px` } }
         />);
+    }
+
+    const scrollTo = (ref) => {
+        if (ref /* + other conditions */) {
+            ref.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
     }
 
     return(
