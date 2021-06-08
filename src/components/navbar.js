@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import {
     FaPlus,
     FaGithub,
-    FaDonate
+    FaDonate,
+    FaHeart
 } from 'react-icons/all';
 import { Link } from 'react-scroll'
 import styled from 'styled-components';
@@ -10,7 +11,7 @@ import roundLogo from '../media/img/round-logo.png';
 
 export const Wrapper = styled.div `
   z-index: 1000;
-  right: 50px;
+  right: 10px;
   bottom: calc(50vh - 240px);
   color: #fff;
   position:fixed;
@@ -49,7 +50,13 @@ export const SubpageLink = styled.li `
 `
 
 export const Label = styled.label `
-  padding-left: 40px;
+  padding: 5px 30px;
+  text-align: left;
+  color: #fff;
+`
+
+export const SmallLabel = styled.label `
+  padding: 5px 15px;
   text-align: left;
   color: #fff;
 `
@@ -107,9 +114,17 @@ export const MobileIcon = styled.div `
   }
 `
 
-export const Caret = styled(FaPlus) `
+export const ExpandIcon = styled(FaPlus) `
   position: absolute;
   top: 26px;
+  left: -40px;
+  width: 10px;
+  height: 10px;
+`
+
+export const HiddenDonateIcon = styled(FaHeart) `
+  position: absolute;
+  top: 20px;
   left: -40px;
   width: 10px;
   height: 10px;
@@ -242,7 +257,7 @@ const NavBar = () => {
                     {/* [DIV] (white vertical line) */}
                     <LinkWrapper>
                         {/* [IMG] */}
-                        <Caret />
+                        <ExpandIcon />
 
                         {/* [LABEL] */}
                         <Link to='recoup' spy={ true } smooth={ true }>
@@ -251,27 +266,27 @@ const NavBar = () => {
 
                         {/* [UL] Subpage links */}
                         <SubpageLinks style = { hovered_Recoup ? { height: 'auto', visibility: 'visible' } : { } } >
-                            <Link to='recoup-concept-art' spy={ true } smooth={ true }>
+                            <Link to='recoup-concept-art' spy={ true } smooth={ true } onMouseEnter={ onHover_recoupText_Concept_Art } onMouseLeave={ onHover_recoupText_Concept_Art }>
                                 {/* [LI] */}
                                 <SubpageLink style = { hovered_Recoup ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' } : { } }>
                                     {/* [LABEL] */}
-                                    <Label>Concept Art</Label>
+                                    <SmallLabel style = { hovered_Recoup_Concept_Art ? { borderBottom: '2px solid #fff' } : { borderBottom: '0' } }>Concept Art</SmallLabel>
                                 </SubpageLink>
                             </Link>
 
-                            <Link to='recoup-download' spy={ true } smooth={ true }>
+                            <Link to='recoup-download' spy={ true } smooth={ true } onMouseEnter={ onHover_recoupText_Download } onMouseLeave={ onHover_recoupText_Download }>
                                 {/* [LI] */}
                                 <SubpageLink style = { hovered_Recoup ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' } : { } }>
                                     {/* [LABEL] */}
-                                    <Label>Download</Label>
+                                    <SmallLabel style = { hovered_Recoup_Download ? { borderBottom: '2px solid #fff' } : { borderBottom: '0' } }>Download</SmallLabel>
                                 </SubpageLink>
                             </Link>
 
-                            <Link to='bugreport' spy={ true } smooth={ true }>
+                            <Link to='bugreport' spy={ true } smooth={ true } onMouseEnter={ onHover_recoupText_Bug_Report } onMouseLeave={ onHover_recoupText_Bug_Report }>
                                 {/* [LI] */}
                                 <SubpageLink style = { hovered_Recoup ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' } : { } }>
                                     {/* [LABEL] */}
-                                    <Label>Report a bug</Label>
+                                    <SmallLabel style = { hovered_Recoup_Bug_Report ? { borderBottom: '2px solid #fff' } : { borderBottom: '0' } }>Report a bug</SmallLabel>
                                 </SubpageLink>
                             </Link>
                         </SubpageLinks>
@@ -285,7 +300,7 @@ const NavBar = () => {
                     {/* [DIV] (white vertical line) */}
                     <LinkWrapper>
                         {/* [IMG] */}
-                        <Caret />
+                        <ExpandIcon />
 
                         <Link to='server' spy={ true } smooth={ true }>
                             {/* [LABEL] */}
@@ -294,19 +309,19 @@ const NavBar = () => {
 
                         {/* [UL] Subpage links */}
                         <SubpageLinks style = { hovered_Server ? { height: 'auto', visibility: 'visible' } : { } }>
-                            <Link to='server-download' spy={ true } smooth={ true }>
+                            <Link to='server-download' spy={ true } smooth={ true } onMouseEnter={ onHover_serverText_Download } onMouseLeave={ onHover_serverText_Download }>
                                 {/* [LI] */}
                                 <SubpageLink style = { hovered_Server ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' } : { } }>
                                     {/* [LABEL] */}
-                                    <Label>Download</Label>
+                                    <SmallLabel style = { hovered_Server_Download ? { borderBottom: '2px solid #fff' } : { borderBottom: '0' } }>Download</SmallLabel>
                                 </SubpageLink>
                             </Link>
 
-                            <Link to='bugreport' spy={ true } smooth={ true }>
+                            <Link to='bugreport' spy={ true } smooth={ true } onMouseEnter={ onHover_serverText_Bug_Report } onMouseLeave={ onHover_serverText_Bug_Report }>
                                 {/* [LI] */}
                                 <SubpageLink style = { hovered_Server ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' } : { } }>
                                     {/* [LABEL] */}
-                                    <Label>Report a bug</Label>
+                                    <SmallLabel style = { hovered_Server_Bug_Report ? { borderBottom: '2px solid #fff' } : { borderBottom: '0' } }>Report a bug</SmallLabel>
                                 </SubpageLink>
                             </Link>
                         </SubpageLinks>
@@ -333,7 +348,7 @@ const NavBar = () => {
 
                     <Link to='github' spy={ true } smooth={ true }>
                         {/* [IMG] */}
-                        <GithubIcon size={48} />
+                        <GithubIcon size={ 48 } />
                     </Link>
                 </Page>
 
@@ -352,7 +367,10 @@ const NavBar = () => {
                     <a href='#' style={ { textDecoration: 'none', color: '#fff' } }>
                         <Link to='donate' spy={ true } smooth={ true }>
                             {/* [IMG] */}
-                            <DonateIcon size={48} />
+                            <HiddenDonateIcon style = { hovered_Donate ? { visibility: 'visible' } : { visibility: 'hidden' } }/>
+
+                            {/* [IMG] */}
+                            <DonateIcon size={ 48 } />
                         </Link>
                     </a>
                 </Page>

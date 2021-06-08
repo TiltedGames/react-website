@@ -55,9 +55,9 @@ export const Column_Heading_Right = styled.div `
   box-sizing: border-box;
   display: table-cell;
   height: 100%;
-  padding: 25px 25px 25px 0;
-  vertical-align: center;
-  align-items: center;
+  padding: 30px 25px 30px 0;
+  vertical-align: top;
+  align-items: start;
 `
 
 export const Column_Dynamic_Equal_Height = styled.div `

@@ -1,7 +1,7 @@
 import React from 'react'
 import {
     PageHeading,
-    PageSubheading, SectionText,
+    PageSubheadingSmall,
     Text
 } from '../components/text';
 import {
@@ -24,25 +24,17 @@ const About = () => {
                     </PageHeading>
                 </Column_Heading_Left>
                 <Column_Heading_Right>
-                    <PageSubheading>
-                        Bringing a new and exciting experience to you
-                    </PageSubheading>
+                    <PageSubheadingSmall>
+                        We are a small game studio based in the Los Angeles area producing
+                        free, open source software. Right now, our focus is on a game named
+                        Recoup. All development is done in public on Github.
+                        <br /><br />
+                        Feeling chatty? Come say hi on <a style={ { color: '#000' } } href="#">our Discord</a>!
+                    </PageSubheadingSmall>
                 </Column_Heading_Right>
             </Row_Header>
             <Row>
                 <MemberCarousel />
-            </Row>
-            <Row id='about'>
-                <SectionText>
-                    About us
-                </SectionText>
-                <Text>
-                    Tilted Games is a small game studio based in the Los Angeles. At the moment,
-                    all software produced by Tilted Games is free, open source, and developed in
-                    public on Github. Right now, our focus is on a game called Recoup! Check it out here.
-                    <br /><br />
-                    Feeling chatty? Come say hi on <a style={ { color: '#fff' } } href="#">our Discord</a>!
-                </Text>
             </Row>
         </PageContent>
     );

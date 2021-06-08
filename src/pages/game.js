@@ -34,7 +34,7 @@ const Game = () => {
                 </Column_Heading_Left>
                 <Column_Heading_Right>
                     <PageSubheading>
-                        Recoup is still early in development. Stay tuned for more updates!
+                        Still early in development. Stay tuned for more updates!
                     </PageSubheading>
                 </Column_Heading_Right>
             </Row_Header>
