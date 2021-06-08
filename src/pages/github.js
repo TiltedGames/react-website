@@ -21,9 +21,9 @@ import RepoImage_2 from "../media/img/stock_1.jpg"
 import RepoImage_3 from "../media/img/stock_1.jpg"
 import styled from 'styled-components'
 
-const CloneText_1 = 'https://tiltedgames.org';
-const CloneText_2 = 'https://tiltedgames.org';
-const CloneText_3 = 'https://tiltedgames.org';
+const CloneText_1 = 'https://github.com/TiltedGames/recoup.git';
+const CloneText_2 = 'https://github.com/TiltedGames/one-click-server.git';
+const CloneText_3 = 'https://github.com/TiltedGames/react-website.git';
 
 export const CloneTextbox = styled.textarea `
   color: #000;

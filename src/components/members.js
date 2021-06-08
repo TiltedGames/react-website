@@ -11,9 +11,7 @@ import img_johnny from '../media/img/members/johnny.jpg';
 import img_luke from '../media/img/members/luke.jpg';
 import img_noah from '../media/img/members/noah.jpg';
 import img_olivia from '../media/img/members/olivia.jpg';
-import {
-    Carousel_L_R
-} from './buttons'
+import { Carousel_L_R } from './buttons'
 
 const slides = [
     {

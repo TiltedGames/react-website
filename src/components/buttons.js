@@ -105,12 +105,18 @@ export const Carousel_L_R = styled.div `
   color: white;
   position: absolute;
   font-size: 20rem;
-  width: 15rem;
-  height: 20rem;
-  top: 5%;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
   transition: opacity 0.3s;
   opacity: 0.7;
   z-index: 5;
+  text-align: center;
+  top: 10%;
+
+  @media screen and (max-height: 1440px) {
+    top: 0;
+  }
 
   @media screen and (max-height: 1080px) {
     top: 15%;
@@ -135,10 +141,19 @@ export const Carousel_L_R = styled.div `
   }
 
   &:first-child {
-    left: -32%;
+    margin-left: -25%;
+    width: 25%;
+    text-align: center;
+    left: 0;
+    height: min-content;
   }
 
   &:last-child {
-    right: -32%;
+    margin-right: -25%;
+    width: 25%;
+    vertical-align: center;
+    height: min-content;
+    text-align: center;
+    right: 0;
   }
 `

@@ -55,13 +55,13 @@ export const Label = styled.label `
 `
 
 export const LinkWrapper = styled.div `
-  border-left: 3px solid #fff;
+  border-left: 2px solid #fff;
   padding: 18px 0;
   margin: 0;
 `
 
 export const LinkWrapper_NoSpace = styled.div `
-  border-left: 3px solid #fff;
+  border-left: 2px solid #fff;
   padding: 0;
   margin-top: 48px;
 `
@@ -74,7 +74,6 @@ export const RoundLogo = styled.div  `
   background-size: cover;
   height: 48px;
   width: 48px;
-  margin: 0;
   z-index: 1000;
 `
 
@@ -82,7 +81,7 @@ export const GithubIcon = styled(FaGithub) `
   position: absolute;
   top: 0;
   left: -23px;
-  border: 3px solid #fff;
+  border: 2px solid #fff;
   border-radius: 100%;
   z-index: 1000;
 `
@@ -110,38 +109,95 @@ export const MobileIcon = styled.div `
 
 export const Caret = styled(FaPlus) `
   position: absolute;
-  top: 32px;
+  top: 26px;
   left: -40px;
   width: 10px;
   height: 10px;
 `
 
+export const SlideIn = styled.div `
+  position: absolute;
+  top: 54px;
+  left: 300px;
+  width: 300px;
+  height: 2px;
+  background: transparent;
+  border-bottom: 2px solid #fff;
+  transition: all 200ms ease-in-out;
+`
+
+export const LowSlideIn = styled.div `
+  position: absolute;
+  top: 64px;
+  left: 300px;
+  width: 300px;
+  height: 2px;
+  background: transparent;
+  border-bottom: 2px solid #fff;
+  transition: all 200ms ease-in-out;
+`
+
 export const TopSpacer = styled.div `
-  height: 73px;
+  height: 63px;
   width: 100%;
   background: transparent;
 `
 
 export const Spacer = styled.div `
-  height: 25px;
+  height: 20px;
   width: 100%;
   background: transparent;
 `
 
 const NavBar = () => {
 
-    // states for subpage expansion (toggle via hover / active page)
-    const [AboutExpanded, toggleTop] = useState(true);
-    const onHover_tgIcon = () => { toggleTop(!AboutExpanded) }
+    // show fly-in underline
+    const [hovered_Home, toggle_Home] = useState(true);
+    const onHover_tgIcon = () => { toggle_Home(!hovered_Home) }
 
-    const [RecoupExpanded, toggleRecoupExpanded] = useState(false);
-    const onHover_recoupText = () => { toggleRecoupExpanded(!RecoupExpanded) }
+    // show fly-in underline
+    const [hovered_About, toggle_About] = useState(true);
+    const onHover_aboutUsText = () => { toggle_About(!hovered_About) }
 
-    const [ServerExpanded, toggleServerExpanded] = useState(false);
-    const onHover_serverText = () => { toggleServerExpanded(!ServerExpanded)}
+    // show fly-in underline, expand menu
+    const [hovered_Recoup, toggle_Recoup] = useState(false);
+    const onHover_recoupText = () => { toggle_Recoup(!hovered_Recoup) }
 
-    const [ContactExpanded, toggleContactExpanded] = useState(false);
-    const onHover_contactText = () => { toggleContactExpanded(!ContactExpanded) }
+    // show fly-in underline
+    const [hovered_Recoup_Concept_Art, toggle_Recoup_Concept_Art] = useState(false);
+    const onHover_recoupText_Concept_Art = () => { toggle_Recoup_Concept_Art(!hovered_Recoup_Concept_Art) }
+
+    // show fly-in underline
+    const [hovered_Recoup_Download, toggle_Recoup_Download] = useState(false);
+    const onHover_recoupText_Download = () => { toggle_Recoup_Download(!hovered_Recoup_Download) }
+
+    // show fly-in underline
+    const [hovered_Recoup_Bug_Report, toggle_Recoup_Bug_Report] = useState(false);
+    const onHover_recoupText_Bug_Report = () => { toggle_Recoup_Bug_Report(!hovered_Recoup_Bug_Report) }
+
+    // show fly-in underline, expand menu
+    const [hovered_Server, toggle_Server] = useState(false);
+    const onHover_serverText = () => { toggle_Server(!hovered_Server)}
+
+    // show fly-in underline
+    const [hovered_Server_Download, toggle_Server_Download] = useState(false);
+    const onHover_serverText_Download = () => { toggle_Server_Download(!hovered_Server_Download) }
+
+    // show fly-in underline
+    const [hovered_Server_Bug_Report, toggle_Server_Bug_Report] = useState(false);
+    const onHover_serverText_Bug_Report = () => { toggle_Server_Bug_Report(!hovered_Server_Bug_Report) }
+
+    // show fly-in underline
+    const [hovered_Contact, toggle_Contact] = useState(false);
+    const onHover_contactText = () => { toggle_Contact(!hovered_Contact) }
+
+    // show fly-in underline
+    const [hovered_Github, toggle_Github] = useState(false);
+    const onHover_githubIcon = () => { toggle_Github(!hovered_Github) }
+
+    // show fly-in underline
+    const [hovered_Donate, toggle_Donate] = useState(false);
+    const onHover_donateIcon = () => { toggle_Donate(!hovered_Donate) }
 
     return (<>
         {/* Wrapper for the navigation bar (for position control) */}
@@ -150,17 +206,28 @@ const NavBar = () => {
             <Pages>
                 {/* [LI] Tilted Games / Landing section */}
                 <Page onMouseEnter={ onHover_tgIcon } onMouseLeave={ onHover_tgIcon }>
+                    <LowSlideIn style = { hovered_Home ? { left: '300px' } : { left: '-50px'} } />
+
                     <Link to='home' spy={ true } smooth={ true }>
                         {/* [IMG] */}
                         <RoundLogo />
                     </Link>
                 </Page>
 
+                {/* Empty, for spacing between github / donate icons while no expansion */}
+                <Page>
+                    {/* [DIV] (white vertical line) */}
+                    <LinkWrapper_NoSpace>
+                        <TopSpacer />
+                    </LinkWrapper_NoSpace>
+                </Page>
+
                 {/* [LI] About Us section */}
-                <Page >
+                <Page onMouseEnter={ onHover_aboutUsText } onMouseLeave={ onHover_aboutUsText }>
+                    <SlideIn style = { hovered_About ? { left: '300px' } : { left: '-50px'} }/>
+
                     {/* [DIV] (white vertical line) */}
                     <LinkWrapper>
-                        <TopSpacer />
                         {/* [LABEL] */}
                         <Link to='about' spy={ true } smooth={ true }>
                             <Label>About Us</Label>
@@ -170,6 +237,8 @@ const NavBar = () => {
 
                 {/* [LI] Recoup section */}
                 <Page onMouseEnter={ onHover_recoupText } onMouseLeave={ onHover_recoupText }>
+                    <SlideIn style = { hovered_Recoup ? { left: '-50px' } : { left: '300px'} }/>
+
                     {/* [DIV] (white vertical line) */}
                     <LinkWrapper>
                         {/* [IMG] */}
@@ -180,12 +249,11 @@ const NavBar = () => {
                             <Label>Recoup</Label>
                         </Link>
 
-
                         {/* [UL] Subpage links */}
-                        <SubpageLinks style = { RecoupExpanded ? { height: 'auto', visibility: 'visible' } : { } } >
+                        <SubpageLinks style = { hovered_Recoup ? { height: 'auto', visibility: 'visible' } : { } } >
                             <Link to='recoup-concept-art' spy={ true } smooth={ true }>
                                 {/* [LI] */}
-                                <SubpageLink style = { RecoupExpanded ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' } : { } }>
+                                <SubpageLink style = { hovered_Recoup ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' } : { } }>
                                     {/* [LABEL] */}
                                     <Label>Concept Art</Label>
                                 </SubpageLink>
@@ -193,7 +261,7 @@ const NavBar = () => {
 
                             <Link to='recoup-download' spy={ true } smooth={ true }>
                                 {/* [LI] */}
-                                <SubpageLink style = { RecoupExpanded ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' } : { } }>
+                                <SubpageLink style = { hovered_Recoup ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' } : { } }>
                                     {/* [LABEL] */}
                                     <Label>Download</Label>
                                 </SubpageLink>
@@ -201,7 +269,7 @@ const NavBar = () => {
 
                             <Link to='bugreport' spy={ true } smooth={ true }>
                                 {/* [LI] */}
-                                <SubpageLink style = { RecoupExpanded ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' } : { } }>
+                                <SubpageLink style = { hovered_Recoup ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' } : { } }>
                                     {/* [LABEL] */}
                                     <Label>Report a bug</Label>
                                 </SubpageLink>
@@ -212,6 +280,8 @@ const NavBar = () => {
 
                 {/* [LI] game server section */}
                 <Page onMouseEnter={ onHover_serverText } onMouseLeave={ onHover_serverText }>
+                    <SlideIn style = { hovered_Server ? { left: '-50px' } : { left: '300px'} } />
+
                     {/* [DIV] (white vertical line) */}
                     <LinkWrapper>
                         {/* [IMG] */}
@@ -223,10 +293,10 @@ const NavBar = () => {
                         </Link>
 
                         {/* [UL] Subpage links */}
-                        <SubpageLinks style = { ServerExpanded ? { height: 'auto', visibility: 'visible' } : { } }>
+                        <SubpageLinks style = { hovered_Server ? { height: 'auto', visibility: 'visible' } : { } }>
                             <Link to='server-download' spy={ true } smooth={ true }>
                                 {/* [LI] */}
-                                <SubpageLink style = { ServerExpanded ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' } : { } }>
+                                <SubpageLink style = { hovered_Server ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' } : { } }>
                                     {/* [LABEL] */}
                                     <Label>Download</Label>
                                 </SubpageLink>
@@ -234,7 +304,7 @@ const NavBar = () => {
 
                             <Link to='bugreport' spy={ true } smooth={ true }>
                                 {/* [LI] */}
-                                <SubpageLink style = { ServerExpanded ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' } : { } }>
+                                <SubpageLink style = { hovered_Server ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' } : { } }>
                                     {/* [LABEL] */}
                                     <Label>Report a bug</Label>
                                 </SubpageLink>
@@ -245,6 +315,8 @@ const NavBar = () => {
 
                 {/* [LI] contact section */}
                 <Page onMouseEnter={ onHover_contactText } onMouseLeave={ onHover_contactText }>
+                    <SlideIn style = { hovered_Contact ? { left: '-50px' } : { left: '300px'} }/>
+
                     {/* [DIV] (white vertical line) */}
                     <LinkWrapper>
                         <Link to='contact' spy={ true } smooth={ true }>
@@ -256,7 +328,9 @@ const NavBar = () => {
                 </Page>
 
                 {/* [LI] github (logo) section */}
-                <Page>
+                <Page onMouseEnter={ onHover_githubIcon } onMouseLeave={ onHover_githubIcon }>
+                    <LowSlideIn style = { hovered_Github ? { left: '-50px' } : { left: '300px'} } />
+
                     <Link to='github' spy={ true } smooth={ true }>
                         {/* [IMG] */}
                         <GithubIcon size={48} />
@@ -267,12 +341,14 @@ const NavBar = () => {
                 <Page>
                     {/* [DIV] (white vertical line) */}
                     <LinkWrapper_NoSpace>
-                        <Spacer />
+                        <TopSpacer />
                     </LinkWrapper_NoSpace>
                 </Page>
 
                 {/* [LI] github donate (logo) section */}
-                <Page>
+                <Page onMouseEnter={ onHover_donateIcon } onMouseLeave={ onHover_donateIcon }>
+                    <LowSlideIn style = { hovered_Donate ? { left: '-50px' } : { left: '300px'} } />
+
                     <a href='#' style={ { textDecoration: 'none', color: '#fff' } }>
                         <Link to='donate' spy={ true } smooth={ true }>
                             {/* [IMG] */}
@@ -285,7 +361,7 @@ const NavBar = () => {
                 <Page>
                     {/* [DIV] (white vertical line) */}
                     <LinkWrapper_NoSpace>
-                        <Spacer />
+                        <TopSpacer />
                     </LinkWrapper_NoSpace>
                 </Page>
             </Pages>
