@@ -40,7 +40,7 @@ export const SubpageLinks = styled.ul `
 `
 
 export const SubpageLink = styled.li `
-  position: initial;
+  position: relative;
   padding: 0 0 0 20px;
   color: #fff;
   text-decoration: none;
@@ -144,8 +144,19 @@ export const SlideIn = styled.div `
 export const LowSlideIn = styled.div `
   position: absolute;
   top: 64px;
-  left: 300px;
-  width: 300px;
+  left: 200px;
+  width: 75px;
+  height: 2px;
+  background: transparent;
+  border-bottom: 2px solid #fff;
+  transition: all 200ms ease-in-out;
+`
+
+export const SlideInIndent = styled.div `
+  position: absolute;
+  top: 60px;
+  right: -270px;
+  width: 200px;
   height: 2px;
   background: transparent;
   border-bottom: 2px solid #fff;
@@ -215,169 +226,137 @@ const NavBar = () => {
     const onHover_donateIcon = () => { toggle_Donate(!hovered_Donate) }
 
     return (<>
-        {/* Wrapper for the navigation bar (for position control) */}
         <Wrapper>
-            {/* [UL] navigation bar implemented */}
             <Pages>
-                {/* [LI] Tilted Games / Landing section */}
                 <Page onMouseEnter={ onHover_tgIcon } onMouseLeave={ onHover_tgIcon }>
-                    <LowSlideIn style = { hovered_Home ? { left: '300px' } : { left: '-50px'} } />
+                    <LowSlideIn style = { hovered_Home ? { left: '300px' } : { left: '-25px' } } />
 
                     <Link to='home' spy={ true } smooth={ true }>
-                        {/* [IMG] */}
                         <RoundLogo />
                     </Link>
                 </Page>
 
-                {/* Empty, for spacing between github / donate icons while no expansion */}
                 <Page>
-                    {/* [DIV] (white vertical line) */}
                     <LinkWrapper_NoSpace>
                         <TopSpacer />
                     </LinkWrapper_NoSpace>
                 </Page>
 
-                {/* [LI] About Us section */}
                 <Page onMouseEnter={ onHover_aboutUsText } onMouseLeave={ onHover_aboutUsText }>
                     <SlideIn style = { hovered_About ? { left: '300px' } : { left: '-50px'} }/>
 
-                    {/* [DIV] (white vertical line) */}
                     <LinkWrapper>
-                        {/* [LABEL] */}
                         <Link to='about' spy={ true } smooth={ true }>
                             <Label>About Us</Label>
                         </Link>
                     </LinkWrapper>
                 </Page>
 
-                {/* [LI] Recoup section */}
                 <Page onMouseEnter={ onHover_recoupText } onMouseLeave={ onHover_recoupText }>
-                    <SlideIn style = { hovered_Recoup ? { left: '-50px' } : { left: '300px'} }/>
-
-                    {/* [DIV] (white vertical line) */}
+                    <SlideIn style = { (hovered_Recoup && !(hovered_Recoup_Concept_Art || hovered_Recoup_Download || hovered_Recoup_Bug_Report)) ? { left: '-50px' } : { left: '300px'} }/>
                     <LinkWrapper>
-                        {/* [IMG] */}
                         <ExpandIcon />
 
-                        {/* [LABEL] */}
                         <Link to='recoup' spy={ true } smooth={ true }>
                             <Label>Recoup</Label>
                         </Link>
 
-                        {/* [UL] Subpage links */}
                         <SubpageLinks style = { hovered_Recoup ? { height: 'auto', visibility: 'visible' } : { } } >
                             <Link to='recoup-concept-art' spy={ true } smooth={ true } onMouseEnter={ onHover_recoupText_Concept_Art } onMouseLeave={ onHover_recoupText_Concept_Art }>
-                                {/* [LI] */}
                                 <SubpageLink style = { hovered_Recoup ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' } : { } }>
-                                    {/* [LABEL] */}
-                                    <SmallLabel style = { hovered_Recoup_Concept_Art ? { borderBottom: '2px solid #fff' } : { borderBottom: '0' } }>Concept Art</SmallLabel>
+                                    <SlideInIndent style = { hovered_Recoup_Concept_Art ? { right: '-50px' } : { right: '-300px'} }/>
+
+                                    <SmallLabel>Concept Art</SmallLabel>
                                 </SubpageLink>
                             </Link>
 
                             <Link to='recoup-download' spy={ true } smooth={ true } onMouseEnter={ onHover_recoupText_Download } onMouseLeave={ onHover_recoupText_Download }>
-                                {/* [LI] */}
                                 <SubpageLink style = { hovered_Recoup ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' } : { } }>
-                                    {/* [LABEL] */}
-                                    <SmallLabel style = { hovered_Recoup_Download ? { borderBottom: '2px solid #fff' } : { borderBottom: '0' } }>Download</SmallLabel>
+                                    <SlideInIndent style = { hovered_Recoup_Download ? { right: '-50px' } : { right: '-300px'} }/>
+
+                                    <SmallLabel>Download</SmallLabel>
                                 </SubpageLink>
                             </Link>
 
                             <Link to='bugreport' spy={ true } smooth={ true } onMouseEnter={ onHover_recoupText_Bug_Report } onMouseLeave={ onHover_recoupText_Bug_Report }>
-                                {/* [LI] */}
                                 <SubpageLink style = { hovered_Recoup ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' } : { } }>
-                                    {/* [LABEL] */}
-                                    <SmallLabel style = { hovered_Recoup_Bug_Report ? { borderBottom: '2px solid #fff' } : { borderBottom: '0' } }>Report a bug</SmallLabel>
+                                    <SlideInIndent style = { hovered_Recoup_Bug_Report ? { right: '-50px' } : { right: '-300px'} }/>
+
+                                    <SmallLabel>Report a bug</SmallLabel>
                                 </SubpageLink>
                             </Link>
                         </SubpageLinks>
                     </LinkWrapper>
                 </Page>
 
-                {/* [LI] game server section */}
                 <Page onMouseEnter={ onHover_serverText } onMouseLeave={ onHover_serverText }>
-                    <SlideIn style = { hovered_Server ? { left: '-50px' } : { left: '300px'} } />
+                    <SlideIn style = { (hovered_Server && !(hovered_Server_Download || hovered_Server_Bug_Report)) ? { left: '-50px' } : { left: '300px'} } />
 
-                    {/* [DIV] (white vertical line) */}
                     <LinkWrapper>
-                        {/* [IMG] */}
                         <ExpandIcon />
 
                         <Link to='server' spy={ true } smooth={ true }>
-                            {/* [LABEL] */}
                             <Label>Game server</Label>
                         </Link>
 
-                        {/* [UL] Subpage links */}
                         <SubpageLinks style = { hovered_Server ? { height: 'auto', visibility: 'visible' } : { } }>
                             <Link to='server-download' spy={ true } smooth={ true } onMouseEnter={ onHover_serverText_Download } onMouseLeave={ onHover_serverText_Download }>
-                                {/* [LI] */}
                                 <SubpageLink style = { hovered_Server ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' } : { } }>
-                                    {/* [LABEL] */}
-                                    <SmallLabel style = { hovered_Server_Download ? { borderBottom: '2px solid #fff' } : { borderBottom: '0' } }>Download</SmallLabel>
+                                    <SlideInIndent style = { hovered_Server_Download ? { right: '-50px' } : { right: '-300px'} }/>
+
+                                    <SmallLabel>Download</SmallLabel>
                                 </SubpageLink>
                             </Link>
 
                             <Link to='bugreport' spy={ true } smooth={ true } onMouseEnter={ onHover_serverText_Bug_Report } onMouseLeave={ onHover_serverText_Bug_Report }>
-                                {/* [LI] */}
                                 <SubpageLink style = { hovered_Server ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' } : { } }>
-                                    {/* [LABEL] */}
-                                    <SmallLabel style = { hovered_Server_Bug_Report ? { borderBottom: '2px solid #fff' } : { borderBottom: '0' } }>Report a bug</SmallLabel>
+                                    <SlideInIndent style = { hovered_Server_Bug_Report ? { right: '-50px' } : { right: '-300px'} }/>
+
+                                    <SmallLabel>Report a bug</SmallLabel>
                                 </SubpageLink>
                             </Link>
                         </SubpageLinks>
                     </LinkWrapper>
                 </Page>
 
-                {/* [LI] contact section */}
                 <Page onMouseEnter={ onHover_contactText } onMouseLeave={ onHover_contactText }>
                     <SlideIn style = { hovered_Contact ? { left: '-50px' } : { left: '300px'} }/>
 
-                    {/* [DIV] (white vertical line) */}
                     <LinkWrapper>
                         <Link to='contact' spy={ true } smooth={ true }>
-                            {/* [LABEL] */}
                             <Label>Contact</Label>
                         </Link>
                         <Spacer />
                     </LinkWrapper>
                 </Page>
 
-                {/* [LI] github (logo) section */}
                 <Page onMouseEnter={ onHover_githubIcon } onMouseLeave={ onHover_githubIcon }>
-                    <LowSlideIn style = { hovered_Github ? { left: '-50px' } : { left: '300px'} } />
+                    <LowSlideIn style = { hovered_Github ? { left: '-25px' } : { left: '300px'} } />
 
                     <Link to='github' spy={ true } smooth={ true }>
-                        {/* [IMG] */}
                         <GithubIcon size={ 48 } />
                     </Link>
                 </Page>
 
-                {/* Empty, for spacing between github / donate icons while no expansion */}
                 <Page>
-                    {/* [DIV] (white vertical line) */}
                     <LinkWrapper_NoSpace>
                         <TopSpacer />
                     </LinkWrapper_NoSpace>
                 </Page>
 
-                {/* [LI] github donate (logo) section */}
                 <Page onMouseEnter={ onHover_donateIcon } onMouseLeave={ onHover_donateIcon }>
-                    <LowSlideIn style = { hovered_Donate ? { left: '-50px' } : { left: '300px'} } />
+                    <LowSlideIn style = { hovered_Donate ? { left: '-25px' } : { left: '300px'} } />
 
                     <a href='#' style={ { textDecoration: 'none', color: '#fff' } }>
                         <Link to='donate' spy={ true } smooth={ true }>
-                            {/* [IMG] */}
                             <HiddenDonateIcon style = { hovered_Donate ? { visibility: 'visible' } : { visibility: 'hidden' } }/>
 
-                            {/* [IMG] */}
                             <DonateIcon size={ 48 } />
                         </Link>
                     </a>
                 </Page>
 
-                {/* Empty, for spacing between github / donate icons while no expansion */}
                 <Page>
-                    {/* [DIV] (white vertical line) */}
                     <LinkWrapper_NoSpace>
                         <TopSpacer />
                     </LinkWrapper_NoSpace>
