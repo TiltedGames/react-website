@@ -73,7 +73,7 @@ export const PageSubheadingSmall = styled.p `
 `
 
 export const SectionText = styled.h2 `
-  font-family: 'Poppins', sans-serif;
+  font-family: 'NeutralFace-Bold', sans-serif;
   color: #fff;
   text-align: center;
   margin: 100px 0 0 0;
@@ -102,7 +102,7 @@ export const SectionText = styled.h2 `
 export const Text = styled.p `
   font-size: 20px;
   text-align: left;
-  margin: 0 0 0 100px;
+  margin: 0 auto;
   color: #fff;
   width: 100%;
   padding: 25px;

@@ -26,14 +26,6 @@ export const CopyButton = styled.button `
   margin: 20px;
   background: #eee;
   border: 1px solid #888;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 150px;
-
-  :hover {
-    width: auto;
-  }
 `
 
 const Github = () => {
@@ -72,7 +64,6 @@ const Github = () => {
                 </Text>
             </Row>
             <Row>
-                <Column_Dynamic_Equal_Height>
                     <Card>
                         <a href='https://github.com/TiltedGames/recoup' style={ { color: '#000', textDecoration: 'none' } }>
                             <CardName>
@@ -82,13 +73,12 @@ const Github = () => {
                         <CardDescription>
                             This repo hosts the Unity project and all art assets used in the making of Recoup. It also includes binaries ready to play of the current development version.
                         </CardDescription>
-                        <br />
                         <CopyToClipboard text='git clone https://github.com/TiltedGames/recoup.git'>
-                            <CopyButton>git clone https://github.com/TiltedGames/recoup.git</CopyButton>
+                            <CopyButton>(Click to copy) git clone https://github.com/TiltedGames/recoup.git</CopyButton>
                         </CopyToClipboard>
                     </Card>
-                </Column_Dynamic_Equal_Height>
-                <Column_Dynamic_Equal_Height>
+            </Row>
+            <Row>
                     <Card>
                         <a href='https://github.com/TiltedGames/one-click-server' style={ { color: '#000', textDecoration: 'none' } }>
                             <CardName>
@@ -96,15 +86,14 @@ const Github = () => {
                             </CardName>
                         </a>
                         <CardDescription>
-                            This repo hosts the server that drives Recoup. Its a great starting point for making your own multiplayer game or project!
+                            This repo hosts the server that drives Recoup. It's a great starting point for making your own multiplayer game or project!
                         </CardDescription>
-                        <br />
                         <CopyToClipboard text='git clone https://github.com/TiltedGames/one-click-server.git'>
-                            <CopyButton>git clone https://github.com/TiltedGames/one-click-server.git</CopyButton>
+                            <CopyButton>(Click to copy) git clone https://github.com/TiltedGames/one-click-server.git</CopyButton>
                         </CopyToClipboard>
                     </Card>
-                </Column_Dynamic_Equal_Height>
-                <Column_Dynamic_Equal_Height>
+            </Row>
+            <Row>
                     <Card>
                         <a href='https://github.com/TiltedGames/react-website' style={ { color: '#000', textDecoration: 'none' } }>
                             <CardName>
@@ -114,12 +103,11 @@ const Github = () => {
                         <CardDescription>
                             Like the website? Check out the React project here!
                         </CardDescription>
-                        <br />
                         <CopyToClipboard text='git clone https://github.com/TiltedGames/react-website.git'>
-                            <CopyButton>git clone https://github.com/TiltedGames/react-website.git</CopyButton>
+                            <CopyButton>(Click to copy) git clone https://github.com/TiltedGames/react-website.git</CopyButton>
                         </CopyToClipboard>
                     </Card>
-                </Column_Dynamic_Equal_Height>
+
             </Row>
         </PageContent>
     );

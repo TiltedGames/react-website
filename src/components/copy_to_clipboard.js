@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const CloneTextbox = styled.div `
   color: #000;
   padding: 20px;
-  margin: 20px;
+  margin: 0;
   background: #eee;
   border: 1px solid #888;
   overflow: hidden;

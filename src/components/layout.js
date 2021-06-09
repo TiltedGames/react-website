@@ -79,27 +79,29 @@ export const Column_Dynamic = styled.div `
 
 export const Card = styled.div `
   text-align: center;
-  padding: 20px;
-  background: #fff;
-  margin: 5px;
-  border-radius: 10px;
+  background: #ddd;
+  margin: 20px auto;
+  max-width: 75%;
 `
 
 export const RepoLink = styled.a `
-  color: #000;
+  color: #ddd;
 `
 
 export const CardName = styled.p `
-  color: #000;
+  font-family: NeutralFace-Bold, sans-serif;
+  color: #ddd;
+  border: 1px solid #ddd;
+  background: #000;
   text-align: center;
-  font-size: 32px;
+  font-size: 24px;
   padding: 20px 0;
 `
 
 export const CardDescription = styled.p `
+  margin-top: 20px;
   color: #000;
-  width: 400px;
   text-align: center;
   font-size: 18px;
-  padding: 20px 0;
+  padding: 30px;
 `
