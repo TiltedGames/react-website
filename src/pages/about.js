@@ -29,7 +29,7 @@ const About = () => {
                         free, open source software. Right now, our focus is on a game named
                         Recoup. All development is done in public on Github.
                         <br /><br />
-                        Feeling chatty? Come say hi on <a style={ { color: '#000' } } href="#">our Discord</a>!
+                        Feeling chatty? Come say hi on <a style={ { color: '#000' } } href="https://discord.gg/nmpJZAsq">our Discord</a>!
                     </PageSubheadingSmall>
                 </Column_Heading_Right>
             </Row_Header>

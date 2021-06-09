@@ -109,7 +109,7 @@ const Server = () => {
                     </SectionText>
                     <DownloadButtons>
                         <WindowsButton>
-                            <a href='#'><WinIcon size={48} /></a>
+                            <a href='https://github.com/TiltedGames/one-click-server/archive/refs/heads/main.zip'><WinIcon size={48} /></a>
                         </WindowsButton>
                     </DownloadButtons>
                 </ButtonWrapper>

@@ -133,7 +133,6 @@ export const HiddenDonateIcon = styled(FaHeart) `
 export const SlideIn = styled.div `
   position: absolute;
   top: 54px;
-  left: 300px;
   width: 300px;
   height: 2px;
   background: transparent;
@@ -144,7 +143,6 @@ export const SlideIn = styled.div `
 export const LowSlideIn = styled.div `
   position: absolute;
   top: 64px;
-  left: 200px;
   width: 75px;
   height: 2px;
   background: transparent;
@@ -152,10 +150,9 @@ export const LowSlideIn = styled.div `
   transition: all 200ms ease-in-out;
 `
 
-export const SlideInIndent = styled.div `
+export const IndentedSlideIn = styled.div `
   position: absolute;
   top: 60px;
-  right: -270px;
   width: 200px;
   height: 2px;
   background: transparent;
@@ -177,51 +174,41 @@ export const Spacer = styled.div `
 
 const NavBar = () => {
 
-    // show fly-in underline
-    const [hovered_Home, toggle_Home] = useState(true);
-    const onHover_tgIcon = () => { toggle_Home(!hovered_Home) }
-
-    // show fly-in underline
-    const [hovered_About, toggle_About] = useState(true);
-    const onHover_aboutUsText = () => { toggle_About(!hovered_About) }
-
-    // show fly-in underline, expand menu
-    const [hovered_Recoup, toggle_Recoup] = useState(false);
-    const onHover_recoupText = () => { toggle_Recoup(!hovered_Recoup) }
-
-    // show fly-in underline
-    const [hovered_Recoup_Concept_Art, toggle_Recoup_Concept_Art] = useState(false);
-    const onHover_recoupText_Concept_Art = () => { toggle_Recoup_Concept_Art(!hovered_Recoup_Concept_Art) }
-
-    // show fly-in underline
-    const [hovered_Recoup_Download, toggle_Recoup_Download] = useState(false);
-    const onHover_recoupText_Download = () => { toggle_Recoup_Download(!hovered_Recoup_Download) }
-
-    // show fly-in underline
-    const [hovered_Recoup_Bug_Report, toggle_Recoup_Bug_Report] = useState(false);
-    const onHover_recoupText_Bug_Report = () => { toggle_Recoup_Bug_Report(!hovered_Recoup_Bug_Report) }
-
-    // show fly-in underline, expand menu
+    // show slide-in underline & expand menu
     const [hovered_Server, toggle_Server] = useState(false);
     const onHover_serverText = () => { toggle_Server(!hovered_Server)}
 
-    // show fly-in underline
+    const [hovered_Recoup, toggle_Recoup] = useState(false);
+    const onHover_recoupText = () => { toggle_Recoup(!hovered_Recoup) }
+
+    // show slide-in underline
+    const [hovered_Home, toggle_Home] = useState(false);
+    const onHover_tgIcon = () => { toggle_Home(!hovered_Home) }
+
+    const [hovered_About, toggle_About] = useState(false);
+    const onHover_aboutUsText = () => { toggle_About(!hovered_About) }
+
+    const [hovered_Recoup_Concept_Art, toggle_Recoup_Concept_Art] = useState(false);
+    const onHover_recoupText_Concept_Art = () => { toggle_Recoup_Concept_Art(!hovered_Recoup_Concept_Art) }
+
+    const [hovered_Recoup_Download, toggle_Recoup_Download] = useState(false);
+    const onHover_recoupText_Download = () => { toggle_Recoup_Download(!hovered_Recoup_Download) }
+
+    const [hovered_Recoup_Bug_Report, toggle_Recoup_Bug_Report] = useState(false);
+    const onHover_recoupText_Bug_Report = () => { toggle_Recoup_Bug_Report(!hovered_Recoup_Bug_Report) }
+
     const [hovered_Server_Download, toggle_Server_Download] = useState(false);
     const onHover_serverText_Download = () => { toggle_Server_Download(!hovered_Server_Download) }
 
-    // show fly-in underline
     const [hovered_Server_Bug_Report, toggle_Server_Bug_Report] = useState(false);
     const onHover_serverText_Bug_Report = () => { toggle_Server_Bug_Report(!hovered_Server_Bug_Report) }
 
-    // show fly-in underline
     const [hovered_Contact, toggle_Contact] = useState(false);
     const onHover_contactText = () => { toggle_Contact(!hovered_Contact) }
 
-    // show fly-in underline
     const [hovered_Github, toggle_Github] = useState(false);
     const onHover_githubIcon = () => { toggle_Github(!hovered_Github) }
 
-    // show fly-in underline
     const [hovered_Donate, toggle_Donate] = useState(false);
     const onHover_donateIcon = () => { toggle_Donate(!hovered_Donate) }
 
@@ -229,7 +216,7 @@ const NavBar = () => {
         <Wrapper>
             <Pages>
                 <Page onMouseEnter={ onHover_tgIcon } onMouseLeave={ onHover_tgIcon }>
-                    <LowSlideIn style = { hovered_Home ? { left: '300px' } : { left: '-25px' } } />
+                    <LowSlideIn style = { hovered_Home ? { left: '-25px' } : { left: '300px' } } />
 
                     <Link to='home' spy={ true } smooth={ true }>
                         <RoundLogo />
@@ -243,7 +230,7 @@ const NavBar = () => {
                 </Page>
 
                 <Page onMouseEnter={ onHover_aboutUsText } onMouseLeave={ onHover_aboutUsText }>
-                    <SlideIn style = { hovered_About ? { left: '300px' } : { left: '-50px'} }/>
+                    <SlideIn style = { hovered_About ? { left: '-50px' } : { left: '300px'} }/>
 
                     <LinkWrapper>
                         <Link to='about' spy={ true } smooth={ true }>
@@ -254,6 +241,7 @@ const NavBar = () => {
 
                 <Page onMouseEnter={ onHover_recoupText } onMouseLeave={ onHover_recoupText }>
                     <SlideIn style = { (hovered_Recoup && !(hovered_Recoup_Concept_Art || hovered_Recoup_Download || hovered_Recoup_Bug_Report)) ? { left: '-50px' } : { left: '300px'} }/>
+
                     <LinkWrapper>
                         <ExpandIcon />
 
@@ -264,7 +252,7 @@ const NavBar = () => {
                         <SubpageLinks style = { hovered_Recoup ? { height: 'auto', visibility: 'visible' } : { } } >
                             <Link to='recoup-concept-art' spy={ true } smooth={ true } onMouseEnter={ onHover_recoupText_Concept_Art } onMouseLeave={ onHover_recoupText_Concept_Art }>
                                 <SubpageLink style = { hovered_Recoup ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' } : { } }>
-                                    <SlideInIndent style = { hovered_Recoup_Concept_Art ? { right: '-50px' } : { right: '-300px'} }/>
+                                    <IndentedSlideIn style = { hovered_Recoup_Concept_Art ? { right: '-50px' } : { right: '-300px'} }/>
 
                                     <SmallLabel>Concept Art</SmallLabel>
                                 </SubpageLink>
@@ -272,7 +260,7 @@ const NavBar = () => {
 
                             <Link to='recoup-download' spy={ true } smooth={ true } onMouseEnter={ onHover_recoupText_Download } onMouseLeave={ onHover_recoupText_Download }>
                                 <SubpageLink style = { hovered_Recoup ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' } : { } }>
-                                    <SlideInIndent style = { hovered_Recoup_Download ? { right: '-50px' } : { right: '-300px'} }/>
+                                    <IndentedSlideIn style = { hovered_Recoup_Download ? { right: '-50px' } : { right: '-300px'} }/>
 
                                     <SmallLabel>Download</SmallLabel>
                                 </SubpageLink>
@@ -280,7 +268,7 @@ const NavBar = () => {
 
                             <Link to='bugreport' spy={ true } smooth={ true } onMouseEnter={ onHover_recoupText_Bug_Report } onMouseLeave={ onHover_recoupText_Bug_Report }>
                                 <SubpageLink style = { hovered_Recoup ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' } : { } }>
-                                    <SlideInIndent style = { hovered_Recoup_Bug_Report ? { right: '-50px' } : { right: '-300px'} }/>
+                                    <IndentedSlideIn style = { hovered_Recoup_Bug_Report ? { right: '-50px' } : { right: '-300px'} }/>
 
                                     <SmallLabel>Report a bug</SmallLabel>
                                 </SubpageLink>
@@ -302,7 +290,7 @@ const NavBar = () => {
                         <SubpageLinks style = { hovered_Server ? { height: 'auto', visibility: 'visible' } : { } }>
                             <Link to='server-download' spy={ true } smooth={ true } onMouseEnter={ onHover_serverText_Download } onMouseLeave={ onHover_serverText_Download }>
                                 <SubpageLink style = { hovered_Server ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' } : { } }>
-                                    <SlideInIndent style = { hovered_Server_Download ? { right: '-50px' } : { right: '-300px'} }/>
+                                    <IndentedSlideIn style = { hovered_Server_Download ? { right: '-50px' } : { right: '-300px'} }/>
 
                                     <SmallLabel>Download</SmallLabel>
                                 </SubpageLink>
@@ -310,7 +298,7 @@ const NavBar = () => {
 
                             <Link to='bugreport' spy={ true } smooth={ true } onMouseEnter={ onHover_serverText_Bug_Report } onMouseLeave={ onHover_serverText_Bug_Report }>
                                 <SubpageLink style = { hovered_Server ? { padding: '30px 0 0 20px', visibility: 'visible', height: 'auto' } : { } }>
-                                    <SlideInIndent style = { hovered_Server_Bug_Report ? { right: '-50px' } : { right: '-300px'} }/>
+                                    <IndentedSlideIn style = { hovered_Server_Bug_Report ? { right: '-50px' } : { right: '-300px'} }/>
 
                                     <SmallLabel>Report a bug</SmallLabel>
                                 </SubpageLink>

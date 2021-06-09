@@ -40,10 +40,9 @@ const Game = () => {
             </Row_Header>
             <Row>
                 <Text>
-                    Recoup is an online, co-op experience coming to PC, Xbox, Playstation.
+                    Recoup is an online, co-op experience coming to PC, Xbox & Playstation.
                     We're also hoping to support mobile devices and cross platform play.
-                    Check out <a style={ { color: '#fff' } } href="#">the Recoup page</a> to
-                    see where we're at!
+                    Check back here for updates on the game's status!
                 </Text>
             </Row>
             <Row id='recoup-concept-art'>

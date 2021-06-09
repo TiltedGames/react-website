@@ -8,34 +8,32 @@ import {
     Row_Header,
     Card,
     CardName,
-    CardDescription,
-    RepoLink
+    CardDescription
 } from '../components/layout';
 import {
     PageHeading,
     PageSubheading,
     Text
 } from '../components/text';
-import RepoImage_1 from "../media/img/stock_1.jpg"
-import RepoImage_2 from "../media/img/stock_1.jpg"
-import RepoImage_3 from "../media/img/stock_1.jpg"
+import { FaLink } from "react-icons/all";
 import styled from 'styled-components'
-
-const CloneText_1 = 'https://github.com/TiltedGames/recoup.git';
-const CloneText_2 = 'https://github.com/TiltedGames/one-click-server.git';
-const CloneText_3 = 'https://github.com/TiltedGames/react-website.git';
-
-export const CloneTextbox = styled.textarea `
-  color: #000;
-  padding: 20px 0;
-`
+import {CopyToClipboard} from "react-copy-to-clipboard/lib/Component";
 
 export const CopyButton = styled.button `
   text-align: center;
   color: #000;
-  padding: 20px 0;
-  height: 50px;
-  width: 50%;
+  padding: 20px;
+  margin: 20px;
+  background: #eee;
+  border: 1px solid #888;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 150px;
+
+  :hover {
+    width: auto;
+  }
 `
 
 const Github = () => {
@@ -68,7 +66,7 @@ const Github = () => {
                     that promotes learning and creativity.
                     For these reasons, we host our development
                     out in the open, on Github, and
-                    host <a style={ { color: '#fff' } } href='#'> a Discord server</a> open
+                    host <a style={ { color: '#fff' } } href='https://discord.gg/nmpJZAsq'> a Discord server</a> open
                     to the public. Come say hi and see where
                     development is at!
                 </Text>
@@ -76,50 +74,50 @@ const Github = () => {
             <Row>
                 <Column_Dynamic_Equal_Height>
                     <Card>
-                        <CardName>
-                            Recoup
-                        </CardName>
+                        <a href='https://github.com/TiltedGames/recoup' style={ { color: '#000', textDecoration: 'none' } }>
+                            <CardName>
+                                <FaLink size={ 24 } style={ { marginRight: '15px' } }/>Recoup
+                            </CardName>
+                        </a>
                         <CardDescription>
                             This repo hosts the Unity project and all art assets used in the making of Recoup. It also includes binaries ready to play of the current development version.
                         </CardDescription>
-                        <a href='#' style={ { color: '#000' } }>
-                            On Github
-                        </a>
                         <br />
-                        <CloneTextbox text={CloneText_1}/>
-                        <CopyButton/>
+                        <CopyToClipboard text='git clone https://github.com/TiltedGames/recoup.git'>
+                            <CopyButton>git clone https://github.com/TiltedGames/recoup.git</CopyButton>
+                        </CopyToClipboard>
                     </Card>
                 </Column_Dynamic_Equal_Height>
                 <Column_Dynamic_Equal_Height>
                     <Card>
-                        <CardName>
-                            One Click Server
-                        </CardName>
+                        <a href='https://github.com/TiltedGames/one-click-server' style={ { color: '#000', textDecoration: 'none' } }>
+                            <CardName>
+                                <FaLink size={ 24 } style={ { marginRight: '15px' } }/>One Click Server
+                            </CardName>
+                        </a>
                         <CardDescription>
                             This repo hosts the server that drives Recoup. Its a great starting point for making your own multiplayer game or project!
                         </CardDescription>
-                        <a href='#' style={ { color: '#000' } }>
-                            On Github
-                        </a>
                         <br />
-                        <CloneTextbox text={CloneText_2}/>
-                        <CopyButton/>
+                        <CopyToClipboard text='git clone https://github.com/TiltedGames/one-click-server.git'>
+                            <CopyButton>git clone https://github.com/TiltedGames/one-click-server.git</CopyButton>
+                        </CopyToClipboard>
                     </Card>
                 </Column_Dynamic_Equal_Height>
                 <Column_Dynamic_Equal_Height>
                     <Card>
-                        <CardName>
-                            This Website
-                        </CardName>
+                        <a href='https://github.com/TiltedGames/react-website' style={ { color: '#000', textDecoration: 'none' } }>
+                            <CardName>
+                                <FaLink size={ 24 } style={ { marginRight: '15px' } }/>This Website
+                            </CardName>
+                        </a>
                         <CardDescription>
                             Like the website? Check out the React project here!
                         </CardDescription>
-                        <a href='#' style={ { color: '#000' } }>
-                            On Github
-                        </a>
                         <br />
-                        <CloneTextbox text={CloneText_3}/>
-                        <CopyButton />
+                        <CopyToClipboard text='git clone https://github.com/TiltedGames/react-website.git'>
+                            <CopyButton>git clone https://github.com/TiltedGames/react-website.git</CopyButton>
+                        </CopyToClipboard>
                     </Card>
                 </Column_Dynamic_Equal_Height>
             </Row>
