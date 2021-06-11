@@ -13,7 +13,7 @@ import {
 import {
     PageHeading,
     PageSubheading,
-    Text, SectionText
+    SectionText
 } from '../components/text';
 import {
     ButtonWrapper,
@@ -21,7 +21,6 @@ import {
     WindowsButton,
     WinIcon,
 } from '../components/buttons';
-import {CloneTextbox, CopyButton} from "./github";
 
 const Server = () => {
     return (

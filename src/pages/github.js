@@ -4,7 +4,6 @@ import {
     Row,
     Column_Heading_Left,
     Column_Heading_Right,
-    Column_Dynamic_Equal_Height,
     Row_Header,
     Card,
     CardName,
@@ -17,24 +16,19 @@ import {
 } from '../components/text';
 import { FaLink } from "react-icons/all";
 import styled from 'styled-components'
-import {CopyToClipboard} from "react-copy-to-clipboard/lib/Component";
+import { CopyToClipboard } from "react-copy-to-clipboard/lib/Component";
 
 export const CopyButton = styled.button `
   text-align: center;
-  color: #000;
+  color: #fff;
   padding: 20px;
   margin: 20px;
-  background: #eee;
-  border: 1px solid #888;
+  background: #000;
+  border: 1px solid #777;
+  
 `
 
 const Github = () => {
-
-    const [hover, setHover] = useState(false)
-
-    const onHover = () => {
-        setHover(!hover)
-    }
 
     return (
         <PageContent id='github'>
@@ -64,50 +58,49 @@ const Github = () => {
                 </Text>
             </Row>
             <Row>
-                    <Card>
-                        <a href='https://github.com/TiltedGames/recoup' style={ { color: '#000', textDecoration: 'none' } }>
-                            <CardName>
-                                <FaLink size={ 24 } style={ { marginRight: '15px' } }/>Recoup
-                            </CardName>
-                        </a>
-                        <CardDescription>
-                            This repo hosts the Unity project and all art assets used in the making of Recoup. It also includes binaries ready to play of the current development version.
-                        </CardDescription>
-                        <CopyToClipboard text='git clone https://github.com/TiltedGames/recoup.git'>
-                            <CopyButton>(Click to copy) git clone https://github.com/TiltedGames/recoup.git</CopyButton>
-                        </CopyToClipboard>
-                    </Card>
+                <Card>
+                    <a href='https://github.com/TiltedGames/recoup' style={ { color: '#000', textDecoration: 'none' } }>
+                        <CardName>
+                            <FaLink size={ 24 } style={ { marginRight: '15px' } }/>Recoup
+                        </CardName>
+                    </a>
+                    <CardDescription>
+                        This repo hosts the Unity project and all art assets used in the making of Recoup. It also includes binaries ready to play of the current development version.
+                    </CardDescription>
+                    <CopyToClipboard text='git clone https://github.com/TiltedGames/recoup.git'>
+                        <CopyButton>(Click to copy) git clone https://github.com/TiltedGames/recoup.git</CopyButton>
+                    </CopyToClipboard>
+                </Card>
             </Row>
             <Row>
-                    <Card>
-                        <a href='https://github.com/TiltedGames/one-click-server' style={ { color: '#000', textDecoration: 'none' } }>
-                            <CardName>
-                                <FaLink size={ 24 } style={ { marginRight: '15px' } }/>One Click Server
-                            </CardName>
-                        </a>
-                        <CardDescription>
-                            This repo hosts the server that drives Recoup. It's a great starting point for making your own multiplayer game or project!
-                        </CardDescription>
-                        <CopyToClipboard text='git clone https://github.com/TiltedGames/one-click-server.git'>
-                            <CopyButton>(Click to copy) git clone https://github.com/TiltedGames/one-click-server.git</CopyButton>
-                        </CopyToClipboard>
-                    </Card>
+                <Card>
+                    <a href='https://github.com/TiltedGames/one-click-server' style={ { color: '#000', textDecoration: 'none' } }>
+                        <CardName>
+                            <FaLink size={ 24 } style={ { marginRight: '15px' } }/>One Click Server
+                        </CardName>
+                    </a>
+                    <CardDescription>
+                        This repo hosts the server that drives Recoup. It's a great starting point for making your own multiplayer game or project!
+                    </CardDescription>
+                    <CopyToClipboard text='git clone https://github.com/TiltedGames/one-click-server.git'>
+                        <CopyButton>(Click to copy) git clone https://github.com/TiltedGames/one-click-server.git</CopyButton>
+                    </CopyToClipboard>
+                </Card>
             </Row>
             <Row>
-                    <Card>
-                        <a href='https://github.com/TiltedGames/react-website' style={ { color: '#000', textDecoration: 'none' } }>
-                            <CardName>
-                                <FaLink size={ 24 } style={ { marginRight: '15px' } }/>This Website
-                            </CardName>
-                        </a>
-                        <CardDescription>
-                            Like the website? Check out the React project here!
-                        </CardDescription>
-                        <CopyToClipboard text='git clone https://github.com/TiltedGames/react-website.git'>
-                            <CopyButton>(Click to copy) git clone https://github.com/TiltedGames/react-website.git</CopyButton>
-                        </CopyToClipboard>
-                    </Card>
-
+                <Card>
+                    <a href='https://github.com/TiltedGames/react-website' style={ { color: '#000', textDecoration: 'none' } }>
+                        <CardName>
+                            <FaLink size={ 24 } style={ { marginRight: '15px' } }/>This Website
+                        </CardName>
+                    </a>
+                    <CardDescription>
+                        Like the website? Check out the React project here!
+                    </CardDescription>
+                    <CopyToClipboard text='git clone https://github.com/TiltedGames/react-website.git'>
+                        <CopyButton>(Click to copy) git clone https://github.com/TiltedGames/react-website.git</CopyButton>
+                    </CopyToClipboard>
+                </Card>
             </Row>
         </PageContent>
     );

@@ -1,8 +1,7 @@
 import React from 'react'
 import {
     PageHeading,
-    PageSubheadingSmall,
-    Text
+    PageSubheadingSmall
 } from '../components/text';
 import {
     PageContent,
