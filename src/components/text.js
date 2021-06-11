@@ -73,14 +73,13 @@ export const PageSubheadingSmall = styled.p `
 `
 
 export const SectionText = styled.h2 `
-  font-family: 'NeutralFace-Bold', sans-serif;
+  font-family: 'NeutralFace', sans-serif;
   color: #fff;
   text-align: center;
-  margin: 100px 0 0 0;
-  padding: 25px;
+  margin: 125px 0;
   font-weight: bold;
   align-items: center;
-  font-size: 60px;
+  font-size: 48px;
 
   @media screen and (max-width: 2048px) {
     font-size: 50px;

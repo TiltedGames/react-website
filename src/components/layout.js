@@ -90,8 +90,10 @@ export const Column_Dynamic = styled.div `
 export const Card_Large = styled.div `
   text-align: center;
   background: #ddd;
-  margin: 20px auto;
-  max-width: 75%;
+  margin: 100px auto 0 auto;
+  width: 75%;
+  min-width: 500px;
+  max-width: 1000px;
 `
 
 export const Card_Small = styled.div `

@@ -41,8 +41,8 @@ const Game = () => {
             <Row>
                 <Text>
                     Recoup is an online, co-op experience coming to PC, Xbox & Playstation.
-                    We're also hoping to support mobile devices and cross platform play.
-                    Check back here for updates on the game's status!
+                    We're also hoping to support mobile devices and cross platform play.<br /><br />
+                    Check back here for updates!
                 </Text>
             </Row>
             <Row_LimitWidth id='recoup-concept-art'>

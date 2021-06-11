@@ -28,14 +28,12 @@ const Server = () => {
             <Row_Header>
                 <Column_Heading_Left>
                     <PageHeading>
-                        One<br />
-                        Click<br />
-                        Server
+                        Game Server
                     </PageHeading>
                 </Column_Heading_Left>
                 <Column_Heading_Right>
                     <PageSubheading>
-                        Host a Recoup server, or use this to start your own multiplayer project
+                        Host a server or start your own multiplayer project
                     </PageSubheading>
                 </Column_Heading_Right>
             </Row_Header>

@@ -14,7 +14,7 @@ import MemberCarousel from '../components/members';
 
 const About = () => {
     return (
-        <PageContent id='home'>
+        <PageContent id='home' style={ { marginTop: '80px' } }>
             <Row_Header>
                 <Column_Heading_Left>
                     <PageHeading>

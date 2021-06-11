@@ -7,8 +7,8 @@
       <change beforePath="$PROJECT_DIR$/src/components/text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/text.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/github.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/github.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +105,7 @@
       <workItem from="1623036724545" duration="31369000" />
       <workItem from="1623112211093" duration="10525000" />
       <workItem from="1623255882824" duration="14333000" />
-      <workItem from="1623421702797" duration="3036000" />
+      <workItem from="1623421702797" duration="7126000" />
     </task>
     <servers />
   </component>
