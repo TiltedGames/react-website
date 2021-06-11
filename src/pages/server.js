@@ -2,7 +2,7 @@ import React from 'react'
 import {
     Card_Large, Card_Small,
     CardDescription_Large, CardDescription_Small,
-    CardName,
+    CardName_Small,
     Column_Dynamic,
     Column_Heading_Left,
     Column_Heading_Right,
@@ -39,49 +39,49 @@ const Server = () => {
             </Row_Header>
             <Row>
                     <Card_Small>
-                        <CardName>
+                        <CardName_Small>
                             Voice Chat
-                        </CardName>
+                        </CardName_Small>
                         <CardDescription_Small>
                             Talk with your friends on an encrypted voice server
                         </CardDescription_Small>
                     </Card_Small>
                     <Card_Small>
-                        <CardName>
+                        <CardName_Small>
                             Text Chat
-                        </CardName>
+                        </CardName_Small>
                         <CardDescription_Small>
                             No mic? No problem! Chat with your friends via text
                         </CardDescription_Small>
                     </Card_Small>
                     <Card_Small>
-                        <CardName>
+                        <CardName_Small>
                             Built for ML
-                        </CardName>
+                        </CardName_Small>
                         <CardDescription_Small>
                             Hand-crafted from the ground up to support machine learning
                         </CardDescription_Small>
                     </Card_Small>
                     <Card_Small>
-                        <CardName>
+                        <CardName_Small>
                             .NET Web Sockets
-                        </CardName>
+                        </CardName_Small>
                         <CardDescription_Small>
                             Built on a strong foundation, developed and supported by Microsoft
                         </CardDescription_Small>
                     </Card_Small>
                         <Card_Small>
-                        <CardName>
+                        <CardName_Small>
                             Storage
-                        </CardName>
+                        </CardName_Small>
                         <CardDescription_Small>
                             Save and load network data incredibly fast using Redis!
                         </CardDescription_Small>
                     </Card_Small>
                     <Card_Small>
-                        <CardName>
+                        <CardName_Small>
                             Lightning Fast
-                        </CardName>
+                        </CardName_Small>
                         <CardDescription_Small>
                             Speed, where you need it most!
                         </CardDescription_Small>

@@ -12,7 +12,7 @@ import roundLogo from '../media/img/round-logo.png';
 export const Wrapper = styled.div `
   z-index: 1000;
   right: 10px;
-  bottom: calc(50vh - 240px);
+  bottom: 100px;
   color: #fff;
   position:fixed;
 `

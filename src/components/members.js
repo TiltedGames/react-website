@@ -109,7 +109,7 @@ const SlideContent = styled.div `
   background-position: center center;
   background-repeat: no-repeat;
   transition: transform 0.5s ease-in-out;
-  opacity: 0.7;
+  opacity: 0.6;
 
   display: grid;
   align-content: center;

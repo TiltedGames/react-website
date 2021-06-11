@@ -25,10 +25,9 @@ const About = () => {
                 <Column_Heading_Right>
                     <PageSubheadingSmall>
                         We are a small game studio based in the Los Angeles area producing
-                        free, open source software. Right now, our focus is on a game named
-                        Recoup. All development is done in public on Github.
+                        free, open source software. All development is done in public on Github.
                         <br /><br />
-                        Feeling chatty? Come say hi on <a style={ { color: '#000' } } href="https://discord.gg/nmpJZAsq">our Discord</a>!
+                        Come say hi on <a style={ { color: '#000' } } href="https://discord.gg/nmpJZAsq">our Discord</a>!
                     </PageSubheadingSmall>
                 </Column_Heading_Right>
             </Row_Header>

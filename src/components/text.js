@@ -99,7 +99,7 @@ export const SectionText = styled.h2 `
 `
 
 export const Text = styled.p `
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   margin: 0 auto;
   color: #fff;

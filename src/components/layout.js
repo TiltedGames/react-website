@@ -35,7 +35,6 @@ export const Row_LimitWidth = styled.div `
 export const Row_Header = styled.div `
   max-width: 1200px;
   margin: 0 auto 100px auto;
-  background: #fff;
   
   :after {
     content: '';
@@ -46,7 +45,6 @@ export const Row_Header = styled.div `
 `
 
 export const Column_Heading_Left = styled.div `
-  background: #000;
   width: 25%;
   box-sizing: border-box;
   height: 100%;
@@ -60,13 +58,13 @@ export const Column_Heading_Left = styled.div `
 `
 
 export const Column_Heading_Right = styled.div `
-  width: 75%;
   box-sizing: border-box;
   display: table-cell;
   height: 100%;
   padding: 30px 25px 30px 0;
   vertical-align: top;
   align-items: start;
+  background: #fff;
 `
 
 export const Column_Dynamic_Equal_Height = styled.div `
@@ -107,7 +105,22 @@ export const RepoLink = styled.a `
   color: #ddd;
 `
 
-export const CardName = styled.p `
+export const CardName_Large = styled.p `
+  font-family: NeutralFace-Bold, sans-serif;
+  color: #ddd;
+  border: 1px solid #777;
+  background: transparent;
+  text-align: center;
+  font-size: 24px;
+  padding: 20px 0;
+  transition: all 0.1s ease-in-out;
+  
+  &:hover {
+    border: 1px solid #fff;
+  }
+`
+
+export const CardName_Small = styled.p `
   font-family: NeutralFace-Bold, sans-serif;
   color: #ddd;
   border: 1px solid #ddd;
@@ -123,6 +136,14 @@ export const CardDescription_Large = styled.p `
   text-align: center;
   font-size: 18px;
   padding: 30px;
+  transition: all 0.1s ease-in-out;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+
+  &:hover {
+    border-left: 1px solid #777;
+    border-right: 1px solid #777;
+  }
 `
 
 export const CardDescription_Small = styled.p `

@@ -34,13 +34,13 @@ const Game = () => {
                 </Column_Heading_Left>
                 <Column_Heading_Right>
                     <PageSubheading>
-                        An online RPG
+                        Currently in development
                     </PageSubheading>
                 </Column_Heading_Right>
             </Row_Header>
             <Row>
                 <Text>
-                    Recoup is a role playing game set in a Japan-esque world, and is early in development.
+                    Recoup is a role playing game set in a Japan-esque world.
                     Feel free to download the game and see where progress is at!<br /><br />
                     At the moment, we're planning for releases on PC, Xbox, and Playstation.
                     We're also hoping to support cross platform play.
