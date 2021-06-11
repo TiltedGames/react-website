@@ -7,7 +7,7 @@ export const PageHeading = styled.div `
   text-align: right;
   margin: 0;
   font-weight: bold;
-  padding: 0 20px 0 0;
+  padding: 0 20px;
 
   @media screen and (max-width: 1080px) {
     font-size: 35px;
@@ -28,22 +28,22 @@ export const PageSubheading = styled.h1 `
   text-align: left;
   margin: 0;
   font-weight: bold;
-  padding: 0 0 0 20px;
+  padding: 0 20px;
   vertical-align: center;
   align-items: center;
-  font-size: 35px;
+  font-size: 40px;
   height: 100%;
 
   @media screen and (max-width: 1080px) {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   @media screen and (max-width: 768px) {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 14px;
+    font-size: 16px;
   }
 `
 
@@ -73,7 +73,7 @@ export const PageSubheadingSmall = styled.p `
 `
 
 export const SectionText = styled.h2 `
-  font-family: 'NeutralFace', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #fff;
   text-align: center;
   margin: 125px 0;

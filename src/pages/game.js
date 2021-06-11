@@ -34,18 +34,20 @@ const Game = () => {
                 </Column_Heading_Left>
                 <Column_Heading_Right>
                     <PageSubheading>
-                        Still early in development. Stay tuned for more updates!
+                        An online RPG
                     </PageSubheading>
                 </Column_Heading_Right>
             </Row_Header>
             <Row>
                 <Text>
-                    Recoup is an online, co-op experience coming to PC, Xbox & Playstation.
-                    We're also hoping to support mobile devices and cross platform play.<br /><br />
-                    Check back here for updates!
+                    Recoup is a role playing game set in a Japan-esque world, and is early in development.
+                    Feel free to download the game and see where progress is at!<br /><br />
+                    At the moment, we're planning for releases on PC, Xbox, and Playstation.
+                    We're also hoping to support cross platform play.
                 </Text>
             </Row>
             <Row_LimitWidth id='recoup-concept-art'>
+                <SectionText>Concept Art</SectionText>
                 <ConceptArtCarousel />
             </Row_LimitWidth>
             <Row_LimitWidth id='recoup-download'>

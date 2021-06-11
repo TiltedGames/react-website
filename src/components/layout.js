@@ -35,6 +35,7 @@ export const Row_LimitWidth = styled.div `
 export const Row_Header = styled.div `
   max-width: 1200px;
   margin: 0 auto 100px auto;
+  background: #fff;
   
   :after {
     content: '';
@@ -45,6 +46,7 @@ export const Row_Header = styled.div `
 `
 
 export const Column_Heading_Left = styled.div `
+  background: #000;
   width: 25%;
   box-sizing: border-box;
   height: 100%;
@@ -58,7 +60,6 @@ export const Column_Heading_Left = styled.div `
 `
 
 export const Column_Heading_Right = styled.div `
-  background: #fff;
   width: 75%;
   box-sizing: border-box;
   display: table-cell;
@@ -89,7 +90,6 @@ export const Column_Dynamic = styled.div `
 
 export const Card_Large = styled.div `
   text-align: center;
-  background: #ddd;
   margin: 100px auto 0 auto;
   width: 75%;
   min-width: 500px;
@@ -98,7 +98,6 @@ export const Card_Large = styled.div `
 
 export const Card_Small = styled.div `
   text-align: center;
-  background: #ddd;
   float: left;
   max-width: 40%;
   margin: 20px;
@@ -112,7 +111,7 @@ export const CardName = styled.p `
   font-family: NeutralFace-Bold, sans-serif;
   color: #ddd;
   border: 1px solid #ddd;
-  background: #000;
+  background: transparent;
   text-align: center;
   font-size: 24px;
   padding: 20px 0;
@@ -120,13 +119,14 @@ export const CardName = styled.p `
 
 export const CardDescription_Large = styled.p `
   margin-top: 20px;
-  color: #000;
+  color: #fff;
   text-align: center;
   font-size: 18px;
   padding: 30px;
 `
 
 export const CardDescription_Small = styled.p `
+  background: #ddd;
   color: #000;
   text-align: center;
   font-size: 18px;
