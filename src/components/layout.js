@@ -11,6 +11,18 @@ export const PageContent = styled.div `
 `
 
 export const Row = styled.div `
+  margin: 0 auto;
+  padding-right: 100px;
+  
+  :after {
+    content: '';
+    display: table;
+    clear: both;
+    box-sizing: border-box;
+  }
+`
+
+export const Row_LimitWidth = styled.div `
   max-width: 1200px;
   margin: 0 auto;
   padding-right: 100px;
@@ -69,19 +81,29 @@ export const Column_Dynamic_Equal_Height = styled.div `
 `
 
 export const Column_Dynamic = styled.div `
-  float: left;
   box-sizing: border-box;
+  display: table-cell;
+  height: 100%;
+  padding: 25px;
 
   @media screen and (max-width: 500px) {
     width: 100%;
   }
 `
 
-export const Card = styled.div `
+export const Card_Large = styled.div `
   text-align: center;
   background: #ddd;
   margin: 20px auto;
   max-width: 75%;
+`
+
+export const Card_Small = styled.div `
+  text-align: center;
+  background: #ddd;
+  float: left;
+  max-width: 40%;
+  margin: 20px;
 `
 
 export const RepoLink = styled.a `
@@ -98,8 +120,15 @@ export const CardName = styled.p `
   padding: 20px 0;
 `
 
-export const CardDescription = styled.p `
+export const CardDescription_Large = styled.p `
   margin-top: 20px;
+  color: #000;
+  text-align: center;
+  font-size: 18px;
+  padding: 30px;
+`
+
+export const CardDescription_Small = styled.p `
   color: #000;
   text-align: center;
   font-size: 18px;

@@ -1,13 +1,13 @@
 import React from 'react'
 import {
-    Card,
-    CardDescription,
+    Card_Large, Card_Small,
+    CardDescription_Large, CardDescription_Small,
     CardName,
     Column_Dynamic,
     Column_Heading_Left,
     Column_Heading_Right,
     PageContent,
-    Row,
+    Row, Row_LimitWidth,
     Row_Header
 } from '../components/layout';
 import {
@@ -40,66 +40,54 @@ const Server = () => {
                 </Column_Heading_Right>
             </Row_Header>
             <Row>
-                <Column_Dynamic>
-                    <Card>
+                    <Card_Small>
                         <CardName>
                             Voice Chat
                         </CardName>
-                        <CardDescription>
+                        <CardDescription_Small>
                             Talk with your friends on an encrypted voice server
-                        </CardDescription>
-                    </Card>
-                </Column_Dynamic>
-                <Column_Dynamic>
-                    <Card>
+                        </CardDescription_Small>
+                    </Card_Small>
+                    <Card_Small>
                         <CardName>
                             Text Chat
                         </CardName>
-                        <CardDescription>
+                        <CardDescription_Small>
                             No mic? No problem! Chat with your friends via text
-                        </CardDescription>
-                    </Card>
-                </Column_Dynamic>
-                <Column_Dynamic>
-                    <Card>
+                        </CardDescription_Small>
+                    </Card_Small>
+                    <Card_Small>
                         <CardName>
                             Built for ML
                         </CardName>
-                        <CardDescription>
+                        <CardDescription_Small>
                             Hand-crafted from the ground up to support machine learning
-                        </CardDescription>
-                    </Card>
-                </Column_Dynamic>
-                <Column_Dynamic>
-                    <Card>
+                        </CardDescription_Small>
+                    </Card_Small>
+                    <Card_Small>
                         <CardName>
                             .NET Web Sockets
                         </CardName>
-                        <CardDescription>
+                        <CardDescription_Small>
                             Built on a strong foundation, developed and supported by Microsoft
-                        </CardDescription>
-                    </Card>
-                </Column_Dynamic>
-                <Column_Dynamic>
-                    <Card>
+                        </CardDescription_Small>
+                    </Card_Small>
+                        <Card_Small>
                         <CardName>
                             Storage
                         </CardName>
-                        <CardDescription>
+                        <CardDescription_Small>
                             Save and load network data incredibly fast using Redis!
-                        </CardDescription>
-                    </Card>
-                </Column_Dynamic>
-                <Column_Dynamic>
-                    <Card>
+                        </CardDescription_Small>
+                    </Card_Small>
+                    <Card_Small>
                         <CardName>
                             Lightning Fast
                         </CardName>
-                        <CardDescription>
+                        <CardDescription_Small>
                             Speed, where you need it most!
-                        </CardDescription>
-                    </Card>
-                </Column_Dynamic>
+                        </CardDescription_Small>
+                    </Card_Small>
             </Row>
             <Row>
                 <ButtonWrapper id='server-download'>
