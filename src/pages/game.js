@@ -19,7 +19,7 @@ import {
     Row,
     Column_Heading_Left,
     Column_Heading_Right,
-    Row_Header
+    Row_Header, Row_LimitWidth
 } from '../components/layout';
 import ConceptArtCarousel from '../components/concept_art';
 
@@ -45,17 +45,17 @@ const Game = () => {
                     Check back here for updates on the game's status!
                 </Text>
             </Row>
-            <Row id='recoup-concept-art'>
+            <Row_LimitWidth id='recoup-concept-art'>
                 <ConceptArtCarousel />
-            </Row>
-            <Row id='recoup-download'>
+            </Row_LimitWidth>
+            <Row_LimitWidth id='recoup-download'>
                 <SectionText>Download (Alpha)</SectionText>
                 <DownloadButtons>
                     <WindowsButton><a href='https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Windows).zip'><WinIcon size={48} /></a></WindowsButton>
                     <MacButton><a href='https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(macOS).zip'><MacIcon size={48} /></a></MacButton>
                     <LinuxButton><a href='https://github.com/TiltedGames/Recoup/raw/main/Build/Recoup%20(Linux).zip'><LinIcon size={48} /></a></LinuxButton>
                 </DownloadButtons>
-            </Row>
+            </Row_LimitWidth>
         </PageContent>
     );
 }

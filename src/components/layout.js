@@ -11,8 +11,7 @@ export const PageContent = styled.div `
 `
 
 export const Row = styled.div `
-  margin: 0 auto;
-  padding-right: 100px;
+  text-align: center;
   
   :after {
     content: '';
@@ -23,10 +22,8 @@ export const Row = styled.div `
 `
 
 export const Row_LimitWidth = styled.div `
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-right: 100px;
-  
+  text-align: center;
+
   :after {
     content: '';
     display: table;
@@ -38,7 +35,6 @@ export const Row_LimitWidth = styled.div `
 export const Row_Header = styled.div `
   max-width: 1200px;
   margin: 0 auto 100px auto;
-  padding-right: 100px;
   
   :after {
     content: '';

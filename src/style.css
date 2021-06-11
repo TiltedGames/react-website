@@ -65,6 +65,7 @@ body {
 }
 
 .cursor--clicked {
+  background-color: #b03427;
   transform: translate(-50%, -50%) scale(0.5);
   transition: all 400ms ease;
 }

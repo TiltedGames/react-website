@@ -89,7 +89,7 @@ const Server = () => {
                         </CardDescription_Small>
                     </Card_Small>
             </Row>
-            <Row>
+            <Row_LimitWidth>
                 <ButtonWrapper id='server-download'>
                     <SectionText>
                         Download
@@ -100,7 +100,7 @@ const Server = () => {
                         </WindowsButton>
                     </DownloadButtons>
                 </ButtonWrapper>
-            </Row>
+            </Row_LimitWidth>
         </PageContent>
     );
 }

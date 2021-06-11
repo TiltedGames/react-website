@@ -8,7 +8,7 @@ import {
     Row,
     Column_Heading_Left,
     Column_Heading_Right,
-    Row_Header
+    Row_Header, Row_LimitWidth
 } from '../components/layout';
 import MemberCarousel from '../components/members';
 
@@ -32,9 +32,9 @@ const About = () => {
                     </PageSubheadingSmall>
                 </Column_Heading_Right>
             </Row_Header>
-            <Row>
+            <Row_LimitWidth>
                 <MemberCarousel />
-            </Row>
+            </Row_LimitWidth>
         </PageContent>
     );
 }

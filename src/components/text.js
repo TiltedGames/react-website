@@ -101,7 +101,7 @@ export const SectionText = styled.h2 `
 
 export const Text = styled.p `
   font-size: 20px;
-  text-align: left;
+  text-align: center;
   margin: 0 auto;
   color: #fff;
   width: 100%;
